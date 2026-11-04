@@ -65,7 +65,7 @@ Textbook used is David J. Griffiths - Introduction to Electrodynamics Fifth Edit
 \section{Vector Analysis}
 \marginpar{August 31 - September 4, 2026}
 
-\subsection{Terminologies}
+\subsection{Vector Algebra}
 \begin{definition}[Scalar]
     A scalar is a quantity with just a magnitude.
 \end{definition}
@@ -90,7 +90,7 @@ Textbook used is David J. Griffiths - Introduction to Electrodynamics Fifth Edit
     Note $\vec{v}\times\vec{w} = -\vec{w}\times\vec{v}$, and $|\vec{v}| = \sqrt{\vec{v}\cdot\vec{v}}$.
 \end{remark}
 \begin{definition}[Field]
-    A field is something with a value at every point in space. A scalar field assigns a number to each point, like temperature $T(x,y,z)$ or the height of a hill. A vector field assigns a vector to each point, like fluid velocity or $\vec{E}$.
+    A field is something with a value at every point in space. A scalar field assigns a number to each point. A vector field assigns a vector to each point.
 \end{definition}
 
 \subsection{Differential Calculus}
@@ -125,19 +125,8 @@ Textbook used is David J. Griffiths - Introduction to Electrodynamics Fifth Edit
 \begin{remark}
     Divergence and curl are themselves fields: they can vanish in some places and not others, and a general field has both.
 \end{remark}
-\begin{example}
-    Judging by eye, then checking:
-    \begin{itemize}
-        \item $\vec{v} = \hat{x}$: nothing spreads, nothing twists, so $\vec{\nabla}\cdot\vec{v} = 0$ and $\vec{\nabla}\times\vec{v} = 0$.
-        \item $\vec{v} = -y\hat{x} + x\hat{y}$: pure rotation, so $\vec{\nabla}\cdot\vec{v} = 0$ and $\vec{\nabla}\times\vec{v} = 2\hat{z}$.
-        \item $\vec{v} = (y+c)\hat{y}$: arrows grow along the direction they point, so $\vec{\nabla}\cdot\vec{v} = 1$ and $\vec{\nabla}\times\vec{v} = 0$.
-    \end{itemize}
-\end{example}
 
 \subsection{Integral Calculus}
-\begin{definition}[Integral]
-    An integral is an instruction to move along a region, evaluate something at each step, and add it to a running total.
-\end{definition}
 \begin{definition}[Line Integral]
     A line integral sums $\vec{F}$ along a curve, picking up only the component tangent to the path:
     \[\int_C \vec{F}\cdot d\vec{l}.\]
@@ -180,34 +169,32 @@ Textbook used is David J. Griffiths - Introduction to Electrodynamics Fifth Edit
     Flux is the total amount of a vector field flowing through a surface. Divergence is the flux per unit volume at a specific point.
 \end{remark}
 \begin{definition}[Volume Integral]
-    A volume integral sums a scalar over a region\footnote{A volume integral gives the mass if $f$ is a density}:
-    \[\int_V f\,d^3\vec{r} = \int_V f\,dx\,dy\,dz.\]
+    A volume integral sums a scalar over a region:
+    \[\int_V f\,d^3\vec{r} = \iiint_V f\,dx\,dy\,dz.\]
 \end{definition}
 \begin{remark}
     We write $\oint$ when the curve is a closed loop or the surface is closed.
 \end{remark}
 
-\subsubsection{The Three Fundamental Theorems}
-Integrating a derivative over a region reduces to evaluating the original object on the boundary of that region.
-\begin{theorem}[Gradient theorem]
-    The boundary of a curve is two points:
-    \[\int_C \vec{\nabla}h\cdot d\vec{l} = h(b) - h(a).\]
-    To find my altitude change climbing a hill, I can compare before and after, or add up all the little changes along the way.
+\subsubsection{The Fundamental Theorems}
+\begin{theorem}[The Fundamental Theorem of Calculus]
+    The boundary of an interval is two points:
+    \[\int_a^b f'(x)\,dx = f(b) - f(a).\]
 \end{theorem}
-\begin{theorem}[Stokes' theorem]
-    The boundary of a surface is a curve:
-    \begin{equation}
-        \iint_S (\vec{\nabla}\times\vec{F})\cdot d\vec{S} = \oint_C \vec{F}\cdot d\vec{l}.
-    \end{equation}
-    To get the total swirl, I can work out the rotation at the boundary, or add up all the little whirlpools inside. Neighbouring whirlpools cancel along their shared edges, leaving only the boundary.
+\begin{theorem}[The Fundamental Theorem for Gradients]
+    \[\int_a^b \vec{\nabla}T \cdot d\vec{l} = T(b) - T(a).\]
+    The boundary of a curve is its two endpoints. To find the Eiffel Tower's height, you can sum the rise of every step (left side) or subtract altimeter readings at the top and bottom (right side).
 \end{theorem}
-\begin{theorem}[Gauss' divergence theorem]
-    \label{Gauss-div}
-    The boundary of a volume is a surface:
-    \begin{equation}
-        \oiint_S (\vec{F}\cdot\hat{n})dS = \iiint_V(\vec{\nabla}\cdot\vec{F})dV.
-    \end{equation}
-    To find the total flux leaking out through the surface, I can add up all the sources inside. Flux between neighbouring cells cancels, leaving only the outer surface.
+\begin{theorem}[The Fundamental Theorem for Curls]
+    Another name for this theorem is Stokes' theorem.
+    \[\iint_S (\vec{\nabla}\times\vec{F})\cdot d\vec{S} = \oint_C \vec{F}\cdot d\vec{l}.\]
+    Geometric meaning: to get the total swirl, I can work out the rotation at the boundary, or add up all the little whirlpools inside. Neighbouring whirlpools cancel along their shared edges, leaving only the boundary.
+\end{theorem}
+\begin{theorem}[The Fundamental Theorem for Divergence]
+    \label{FTD}
+    It has 2 important names: Gauss's theorem (or the divergence theorem) and Green's theorem. Respectively:
+    \[\oiint_S (\vec{F}\cdot\hat{n})dS = \iiint_V(\vec{\nabla}\cdot\vec{F})dV,\]
+    \[\oint_C Pdx + Qdy = \iint_R (\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}) dxdy.\]
 \end{theorem}
 
 \subsection{Spherical Coordinates}
@@ -298,34 +285,32 @@ The full list of second derivative identities:
     \end{tabular}
     \caption{Second derivative identities.}
 \end{table}
+The curl of a curl identity and the divergence of a gradient identity are proved in Appendix \ref{app:identities}.
 
-\subsubsection{Proving the Identities}
-\begin{proof}[Curl of a Curl]
-    Set $\vec{G} \equiv \vec{\nabla}\times(\vec{\nabla}\times\vec{F})$. Then,
-    \[G_i = \sum_{j,k}\varepsilon_{ijk}\partial_j\sum_{m,n} \varepsilon_{kmn}\partial_m F_n=\sum_{j,k,m,n}\varepsilon_{ijk}\varepsilon_{kmn}\partial_j\partial_mF_n.\]
-    Using the cyclic permutation $\varepsilon_{ijk} = \varepsilon_{kij}$, so that the summed index $k$ sits first in both epsilons, the epsilon-delta identity~\ref{Epsilon-delta-id} gives
-    \[\sum_k \varepsilon_{kij}\varepsilon_{kmn} = \delta_{im}\delta_{jn} - \delta_{in}\delta_{jm}.\]
-    Reading off the proposition with the summed index $k$ removed:
-    \[G_i = \sum_{j,m,n}\left(\delta_{im}\delta_{jn} - \delta_{in}\delta_{jm}\right)\partial_j\partial_m F_n.\]
-    Each Kronecker delta collapses one sum by setting its indices equal. In the first term $\delta_{im}$ forces $m = i$ and $\delta_{jn}$ forces $n = j$; in the second, $\delta_{in}$ forces $n = i$ and $\delta_{jm}$ forces $m = j$:
-    \[G_i = \sum_j \partial_j\partial_i F_j - \sum_j \partial_j\partial_j F_i \overset{\footnotemark}{=} \partial_i\sum_j\partial_j F_j - \sum_j \partial_j\partial_j F_i = \left(\vec{\nabla}(\vec{\nabla}\cdot\vec{F})\right)_i - (\nabla^2\vec{F})_i.\]
-    \footnotetext{This equality uses $\partial_j\partial_i = \partial_i\partial_j$, valid for $\vec{F}$ twice continuously differentiable.}
-    \[\therefore \vec{\nabla}\times(\vec{\nabla}\times\vec{F}) = \vec{\nabla}(\vec{\nabla}\cdot\vec{F}) - \nabla^2\vec{F}.\]
-\end{proof}
-\begin{proof}[Curl of a Gradient]
-    Let $f$ be twice continuously differentiable. With $(\vec{\nabla}f)_k = \partial_k f$,
-    \[\left(\vec{\nabla}\times(\vec{\nabla}f)\right)_i = \sum_{j,k}\varepsilon_{ijk}\partial_j\partial_k f.\]
-    The indices $j$ and $k$ are summed over, so they can be renamed $j \leftrightarrow k$:
-    \[\left(\vec{\nabla}\times(\vec{\nabla}f)\right)_i = \sum_{j,k}\varepsilon_{ikj}\partial_k\partial_j f.\]
-    Now use antisymmetry, $\varepsilon_{ikj} = -\varepsilon_{ijk}$, and the fact that partial derivatives commute, $\partial_k\partial_j f = \partial_j\partial_k f$:
-    \[\left(\vec{\nabla}\times(\vec{\nabla}f)\right)_i = -\sum_{j,k}\varepsilon_{ijk}\partial_j\partial_k f = -\left(\vec{\nabla}\times(\vec{\nabla}f)\right)_i.\]
-    A number equal to its own negative is zero, so every component vanishes and $\vec{\nabla}\times(\vec{\nabla}f) = \vec{0}$.
-\end{proof}
+\subsection{The Dirac Delta Function}
+\begin{definition}[Dirac delta]
+    $\delta(x)$ is zero everywhere except at $x = 0$, where it is an infinitely tall spike of unit area:
+    \[\int_{-\infty}^{\infty}\delta(x)\,dx = 1.\]
+\end{definition}
+\begin{proposition}[Properties]
+    \begin{enumerate}[label=(\roman*)]
+        \item Sifting: $\int_a^b f(x)\,\delta(x - x_0)\,dx = f(x_0)$ if $a < x_0 < b$, and $0$ if $x_0$ is outside $[a,b]$.
+        \item Scaling: $\delta(kx) = \frac{1}{|k|}\delta(x)$.
+        \item In 3D: $\int_V f(\vec{r})\,\delta^3(\vec{r} - \vec{r}_0)\,d\tau = f(\vec{r}_0)$ if $\vec{r}_0 \in V$.
+    \end{enumerate}
+\end{proposition}
+\begin{example}
+    $\int_0^3 x^3\delta(x+1)\,dx = 0$ since $x = -1$ is outside the range, while
+    \[\int_{-1}^{1}9x^2\,\delta(3x+1)\,dx = \frac{1}{3}\int_{-1}^{1}9x^2\,\delta\!\left(x+\tfrac{1}{3}\right)dx = \frac{1}{3}\cdot 9\cdot\frac{1}{9} = \frac{1}{3}.\]
+\end{example}
+\begin{theorem}[Divergence of $\hat{r}/r^2$]
+    \label{div-r2}
+    By the spherical divergence, $\vec{\nabla}\cdot\left(\hat{r}/r^2\right) = \frac{1}{r^2}\partial_r(1) = 0$ for $r \neq 0$, yet its flux through any sphere is $\oint\frac{1}{R^2}R^2\sin\theta\,d\theta\,d\phi = 4\pi$. By the divergence theorem, everything sits at the origin:
+    \[\vec{\nabla}\cdot\left(\frac{\hat{r}}{r^2}\right) = 4\pi\,\delta^3(\vec{r}).\]
+    So for a point charge, $\vec{\nabla}\cdot\vec{E} = \frac{q}{\epsilon_0}\delta^3(\vec{r}) = \rho/\epsilon_0$, as Gauss' law requires.
+\end{theorem}
 
 \subsection{The Theory of Vector Fields}
-\begin{theorem}[Helmholtz]
-    If $\vec{\nabla}\cdot\vec{F}$ and $\vec{\nabla}\times\vec{F}$ are specified everywhere and $\vec{F}\to 0$ at infinity, then $\vec{F}$ is uniquely determined. It can be written as $\vec{F} = \vec{\nabla}\psi + \vec{\nabla}\times\vec{A}$, an irrotational part plus a solenoidal part.
-\end{theorem}
 \begin{remark}
     The condition at infinity is needed: a field can be both curl-free and divergence-free without being zero, e.g.\ $\vec{F} = yz\,\hat{x} + zx\,\hat{y} + xy\,\hat{z} = \vec{\nabla}(xyz)$. Adding it to any field changes neither $\vec{\nabla}\cdot\vec{F}$ nor $\vec{\nabla}\times\vec{F}$.
 \end{remark}
@@ -350,74 +335,51 @@ The full list of second derivative identities:
 \begin{remark}
     In electrostatics we will find $\vec{\nabla}\times\vec{E} = 0$, which licenses $\vec{E} = -\vec{\nabla}V$ and the electric potential. In magnetostatics we will find $\vec{\nabla}\cdot\vec{B} = 0$, which licenses $\vec{B} = \vec{\nabla}\times\vec{A}$, the vector potential.
 \end{remark}
-
-\subsection{The Dirac Delta Function}
-\begin{definition}[Dirac delta]
-    $\delta(x)$ is zero everywhere except at $x = 0$, where it is an infinitely tall spike of unit area:
-    \[\int_{-\infty}^{\infty}\delta(x)\,dx = 1.\]
-    It has units of $1/(\text{length})$. In 3D, $\delta^3(\vec{r}) = \delta(x)\delta(y)\delta(z)$, with units $1/(\text{volume})$.
-\end{definition}
-\begin{proposition}[Properties]
-    \begin{enumerate}[label=(\roman*)]
-        \item Sifting: $\int_a^b f(x)\,\delta(x - x_0)\,dx = f(x_0)$ if $a < x_0 < b$, and $0$ if $x_0$ is outside $[a,b]$.
-        \item Scaling: $\delta(kx) = \frac{1}{|k|}\delta(x)$.
-        \item In 3D: $\int_V f(\vec{r})\,\delta^3(\vec{r} - \vec{r}_0)\,d\tau = f(\vec{r}_0)$ if $\vec{r}_0 \in V$.
-    \end{enumerate}
-\end{proposition}
-\begin{example}
-    $\int_0^3 x^3\delta(x+1)\,dx = 0$ since $x = -1$ is outside the range, while
-    \[\int_{-1}^{1}9x^2\,\delta(3x+1)\,dx = \frac{1}{3}\int_{-1}^{1}9x^2\,\delta\!\left(x+\tfrac{1}{3}\right)dx = \frac{1}{3}\cdot 9\cdot\frac{1}{9} = \frac{1}{3}.\]
-\end{example}
-\begin{proposition}[Charge densities with deltas]
-    Each is fixed by requiring $\int\rho\,d\tau$ to give the total charge:
-    \begin{itemize}
-        \item Point charge $q$ at $\vec{r}'$: $\rho(\vec{r}) = q\,\delta^3(\vec{r} - \vec{r}')$.
-        \item Dipole, $-q$ at the origin and $+q$ at $\vec{a}$: $\rho(\vec{r}) = q\,\delta^3(\vec{r} - \vec{a}) - q\,\delta^3(\vec{r})$.
-        \item Thin shell of radius $R$ and charge $Q$: $\rho(r) = \frac{Q}{4\pi R^2}\delta(r - R)$, since $\int\rho\,r^2\sin\theta\,dr\,d\theta\,d\phi = \frac{Q}{4\pi R^2}R^2\cdot 4\pi = Q$.
-        \item $\rho = C\,\delta(x)\,\delta(z-2)$ is a line of charge along $y$ at $x = 0$, $z = 2$. Two deltas cost $1/\text{m}^2$, so $C$ is a line density $\lambda$ in C/m.
-    \end{itemize}
-\end{proposition}
-\begin{theorem}[Divergence of $\hat{r}/r^2$]
-    \label{div-r2}
-    By the spherical divergence, $\vec{\nabla}\cdot\left(\hat{r}/r^2\right) = \frac{1}{r^2}\partial_r(1) = 0$ for $r \neq 0$, yet its flux through any sphere is $\oint\frac{1}{R^2}R^2\sin\theta\,d\theta\,d\phi = 4\pi$. By the divergence theorem, everything sits at the origin:
-    \begin{equation}
-        \vec{\nabla}\cdot\left(\frac{\hat{r}}{r^2}\right) = 4\pi\,\delta^3(\vec{r}).
-    \end{equation}
-    So for a point charge, $\vec{\nabla}\cdot\vec{E} = \frac{q}{\epsilon_0}\delta^3(\vec{r}) = \rho/\epsilon_0$, as Gauss' law requires.
+\begin{theorem}[Helmholtz]
+    If $\vec{\nabla}\cdot\vec{F}$ and $\vec{\nabla}\times\vec{F}$ are specified everywhere and $\vec{F}\to 0$ at infinity, then $\vec{F}$ is uniquely determined. It can be written as $\vec{F} = \vec{\nabla}\psi + \vec{\nabla}\times\vec{A}$, an irrotational part plus a solenoidal part.
 \end{theorem}
 
 
 \section{Electrostatics}
 \marginpar{September 11-16 \& 21-25, 2026}
+\begin{definition}[Electrostatics]
+    Electrostatics is the study of stationary electric charges.
+\end{definition}
 
 \subsection{Electric Field}
+Goal of electrodynamics: given source charges with known positions, find the force on a test charge $Q$.
+\begin{proposition}[Principle of Superposition]
+    \label{Superposition}
+    The force between two charges is unaffected by other charges, so
+    \[\vec{F} = \sum_i \vec{F}_i.\]
+\end{proposition}
 \begin{law}[Coulomb's law]
-    The force on a point charge $q_2$ due to a point charge $q_1$ is
+    The force on a test charge $Q$ due to a point charge $q$ is
     \begin{equation}
-        \vec{F} = \frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{\mathfrak{r}^2}\,\hat{\mathfrak{r}},
+        \vec{F} = \frac{1}{4\pi\epsilon_0}\frac{qQ}{\mathfrak{r}^2}\,\hat{\mathfrak{r}} \left[N\right],
     \end{equation}
-    where $\vec{\mathfrak{r}}$ points from $q_1$ to $q_2$.\footnote{Coulomb's law has the same shape as Newton's gravity. The reason is geometric rather than a coincidence, and Gauss' law makes that explicit: in $d$ spatial dimensions the flux spreads over a $(d-1)$-dimensional sphere, so $F\propto 1/\mathfrak{r}^{d-1}$, and the $4\pi$ is the area of the unit sphere in $d=3$.}
+    where $\vec{\mathfrak{r}} = \vec{r} - \vec{r'}$ is the separation vector from the location of $q$ ($\vec{r'}$) to $Q$ ($\vec{r}$).
 \end{law}
+\begin{remark}
+    Coulomb's law has the same shape as Newton's gravity. The reason is geometric rather than a coincidence, and Gauss' law makes that explicit: in $d$ spatial dimensions the flux spreads over a $(d-1)$-dimensional sphere, so $F\propto 1/\mathfrak{r}^{d-1}$, and the $4\pi$ is the area of the unit sphere in $d=3$.
+\end{remark}
 \begin{definition}[Permittivity of free space]
     The permittivity of free space measures how easily an electric field can form in a classical vacuum:
-    \[\epsilon_0 = 8.85 \times 10^{-12}\ \mathrm{C^2/(N\cdot m^2)}.\]
+    \[\epsilon_0 = 8.85 \times 10^{-12}\ \left[\frac{C^2}{N\cdot m^2}\right].\]
 \end{definition}
+By the principle of superposition, the total force on a test charge $Q$ due to several point charges is
+\[\vec{F} = \frac{Q}{4\pi\epsilon_0}\sum_{i=1}^{n}\frac{q_i}{\mathfrak{r}_i^2}\,\hat{\mathfrak{r}}_i.\]
+Which leads us to the definition of the electric field
+\[\vec{F} = Q\vec{E}.\]
 \begin{definition}[Electric field]
-    The electric field is the force per unit test charge. For a set of point charges $q_i$,
+    The electric field is the force per unit test charge.
     \begin{equation}
-        \vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0}\sum_{i=1}^{n}\frac{q_i}{\mathfrak{r}_i^2}\,\hat{\mathfrak{r}}_i,
-        \qquad \vec{\mathfrak{r}}_i \equiv \vec{r} - \vec{r}_i.
+        \vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0}\sum_{i=1}^{n}\frac{q_i}{\mathfrak{r}_i^2}\,\hat{\mathfrak{r}}_i.
     \end{equation}
+    $\vec{\mathfrak{r}}_i \equiv \vec{r} - \vec{r}_i$, where $\vec{r}$ is the location of the field point, where we want to know what force a charge would feel, and $\vec{r}_i$ is the location of the source charge $q_i$.
 \end{definition}
-\begin{principle}[Superposition]
-    \label{Superposition}
-    The field of several sources is the sum of their individual fields, $\vec{E} = \vec{E}_1 + \vec{E}_2 + \dots$
-\end{principle}
-\begin{remark}[Field theory]
-    Source charges create $\vec{E}$; a test charge $Q$ then feels $\vec{F} = Q\vec{E}$.
-\end{remark}
 
-\subsubsection{Continuous Charge Distributions}
+\subsubsection{Continuous Charge Distributions}%Correct
 \begin{definition}[Continuous distributions]
     Replacing $q_i$ by $dq = \lambda\,dl' = \sigma\,da' = \rho\,d\tau'$ turns the sum into an integral:
     \begin{equation}
@@ -498,7 +460,7 @@ The full list of second derivative identities:
     \end{itemize}
 \end{proof}
 \begin{proposition}[Differential form]
-    Apply the divergence theorem (Theorem~\ref{Gauss-div}) to the left side and write $Q_{enc} = \iiint_V\rho\,d\tau$:
+    Apply the divergence theorem (Theorem~\ref{FTD}) to the left side and write $Q_{enc} = \iiint_V\rho\,d\tau$:
     \[\iiint_V(\vec{\nabla}\cdot\vec{E})\,d\tau = \frac{1}{\epsilon_0}\iiint_V \rho\,d\tau.\]
     Since this holds for every volume $V$, the integrands match:
     \begin{equation}
@@ -1213,7 +1175,7 @@ We want $V$ because $\vec{E} = -\vec{\nabla}V$. The integral $V = \frac{1}{4\pi\
     where $da_\perp$ is the differential cross section perpendicular to the flow.
 \end{definition}
 \begin{remark}
-    Applying the divergence theorem (Theorem~\ref{Gauss-div}) to $\vec{J}$ is how conservation of charge gets written down: the charge inside $V$ can only decrease by flowing out through $S$,
+    Applying the divergence theorem (Theorem~\ref{FTD}) to $\vec{J}$ is how conservation of charge gets written down: the charge inside $V$ can only decrease by flowing out through $S$,
     \[\frac{d}{dt}\iiint_V\rho\, dV = - \oiint_S\vec{J}\cdot d\vec{A} = -\iiint_V \vec{\nabla}\cdot\vec{J}\,dV \quad\Longrightarrow\quad \frac{\partial\rho}{\partial t} = -\vec{\nabla}\cdot\vec{J}.\]
 \end{remark}
 
@@ -1236,6 +1198,30 @@ We want $V$ because $\vec{E} = -\vec{\nabla}V$. The integral $V = \frac{1}{4\pi\
 Griffiths' form of the multipole expansion, with $\alpha$ the angle between $\vec{r}$ and $\vec{r}'$ and $P_n$ the Legendre polynomials:
 \[V(\vec{r}) = \frac{1}{4\pi\epsilon_0}\sum_{n=0}^{\infty}\frac{1}{r^{n+1}}\int(r')^nP_n(\cos\alpha)\rho(\vec{r}')\,d\tau'.\]
 $P_0 = 1$ gives the monopole, $P_1 = \cos\alpha$ the dipole (since $r'\cos\alpha = \vec{r}'\cdot\hat{r}$), and $P_2 = \frac{1}{2}(3\cos^2\alpha - 1)$ the quadrupole.
+
+\subsection{Proving the Identities}
+\label{app:identities}
+\begin{proof}[Curl of a Curl]
+    Set $\vec{G} \equiv \vec{\nabla}\times(\vec{\nabla}\times\vec{F})$. Then,
+    \[G_i = \sum_{j,k}\varepsilon_{ijk}\partial_j\sum_{m,n} \varepsilon_{kmn}\partial_m F_n=\sum_{j,k,m,n}\varepsilon_{ijk}\varepsilon_{kmn}\partial_j\partial_mF_n.\]
+    Using the cyclic permutation $\varepsilon_{ijk} = \varepsilon_{kij}$, so that the summed index $k$ sits first in both epsilons, the epsilon-delta identity~\ref{Epsilon-delta-id} gives
+    \[\sum_k \varepsilon_{kij}\varepsilon_{kmn} = \delta_{im}\delta_{jn} - \delta_{in}\delta_{jm}.\]
+    Reading off the proposition with the summed index $k$ removed:
+    \[G_i = \sum_{j,m,n}\left(\delta_{im}\delta_{jn} - \delta_{in}\delta_{jm}\right)\partial_j\partial_m F_n.\]
+    Each Kronecker delta collapses one sum by setting its indices equal. In the first term $\delta_{im}$ forces $m = i$ and $\delta_{jn}$ forces $n = j$; in the second, $\delta_{in}$ forces $n = i$ and $\delta_{jm}$ forces $m = j$:
+    \[G_i = \sum_j \partial_j\partial_i F_j - \sum_j \partial_j\partial_j F_i \overset{\footnotemark}{=} \partial_i\sum_j\partial_j F_j - \sum_j \partial_j\partial_j F_i = \left(\vec{\nabla}(\vec{\nabla}\cdot\vec{F})\right)_i - (\nabla^2\vec{F})_i.\]
+    \footnotetext{This equality uses $\partial_j\partial_i = \partial_i\partial_j$, valid for $\vec{F}$ twice continuously differentiable.}
+    \[\therefore \vec{\nabla}\times(\vec{\nabla}\times\vec{F}) = \vec{\nabla}(\vec{\nabla}\cdot\vec{F}) - \nabla^2\vec{F}.\]
+\end{proof}
+\begin{proof}[Curl of a Gradient]
+    Let $f$ be twice continuously differentiable. With $(\vec{\nabla}f)_k = \partial_k f$,
+    \[\left(\vec{\nabla}\times(\vec{\nabla}f)\right)_i = \sum_{j,k}\varepsilon_{ijk}\partial_j\partial_k f.\]
+    The indices $j$ and $k$ are summed over, so they can be renamed $j \leftrightarrow k$:
+    \[\left(\vec{\nabla}\times(\vec{\nabla}f)\right)_i = \sum_{j,k}\varepsilon_{ikj}\partial_k\partial_j f.\]
+    Now use antisymmetry, $\varepsilon_{ikj} = -\varepsilon_{ijk}$, and the fact that partial derivatives commute, $\partial_k\partial_j f = \partial_j\partial_k f$:
+    \[\left(\vec{\nabla}\times(\vec{\nabla}f)\right)_i = -\sum_{j,k}\varepsilon_{ijk}\partial_j\partial_k f = -\left(\vec{\nabla}\times(\vec{\nabla}f)\right)_i.\]
+    A number equal to its own negative is zero, so every component vanishes and $\vec{\nabla}\times(\vec{\nabla}f) = \vec{0}$.
+\end{proof}
 
 
 \section{Useful Links}

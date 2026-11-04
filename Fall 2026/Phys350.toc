@@ -1,39 +1,39 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Vector Analysis}{1}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Terminologies}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.1}Vector Algebra}{1}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Differential Calculus}{1}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Integral Calculus}{2}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}The Three Fundamental Theorems}{3}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1}The Fundamental Theorems}{3}{subsubsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.4}Spherical Coordinates}{4}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Index Notation}{5}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Second Derivatives Identities}{6}{subsection.2.6}%
-\contentsline {subsubsection}{\numberline {2.6.1}Proving the Identities}{6}{subsubsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.7}The Theory of Vector Fields}{7}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}The Dirac Delta Function}{8}{subsection.2.8}%
-\contentsline {section}{\numberline {3}Electrostatics}{9}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Electric Field}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {2.7}The Dirac Delta Function}{6}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}The Theory of Vector Fields}{7}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Electrostatics}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Electric Field}{8}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Continuous Charge Distributions}{9}{subsubsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.2}Gauss' Law}{10}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Spherical symmetry}{12}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1}Spherical symmetry}{11}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Cylindrical symmetry}{12}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Planar symmetry}{13}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3}Planar symmetry}{12}{subsubsection.3.2.3}%
 \contentsline {subsubsection}{\numberline {3.2.4}Why the fall-off depends on the geometry}{14}{subsubsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.3}The Curl of $\vec {E}$}{15}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}The Curl of $\vec {E}$}{14}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Electric Potential}{15}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Boundary Conditions}{17}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Work and Energy in Electrostatics}{18}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Conductors}{20}{subsection.3.7}%
-\contentsline {section}{\numberline {4}Potentials}{23}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Laplace's Equation}{23}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The Method of Images}{25}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Separation of Variables: Cartesian}{26}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Separation of Variables: Spherical}{27}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Multipole Expansion}{28}{subsection.4.5}%
+\contentsline {subsection}{\numberline {3.5}Boundary Conditions}{16}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Work and Energy in Electrostatics}{17}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Conductors}{19}{subsection.3.7}%
+\contentsline {section}{\numberline {4}Potentials}{22}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Laplace's Equation}{22}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The Method of Images}{24}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Separation of Variables: Cartesian}{25}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Separation of Variables: Spherical}{26}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Multipole Expansion}{27}{subsection.4.5}%
 \contentsline {section}{\numberline {5}Electric Fields in Matter}{31}{section.5}%
 \contentsline {section}{\numberline {6}Magnetostatics}{31}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Current Density}{31}{subsection.6.1}%
 \contentsline {section}{\numberline {7}Magnetic Fields in Matter}{31}{section.7}%
 \contentsline {section}{\numberline {8}Electrodynamics}{31}{section.8}%
-\contentsline {section}{\numberline {A}Appendix}{31}{appendix.A}%
+\contentsline {section}{\numberline {A}Appendix}{32}{appendix.A}%
 \contentsline {subsection}{\numberline {A.1}Multipole Expansion with Legendre Polynomials}{32}{subsection.A.1}%
-\contentsline {section}{\numberline {B}Useful Links}{32}{appendix.B}%
+\contentsline {subsection}{\numberline {A.2}Proving the Identities}{32}{subsection.A.2}%
+\contentsline {section}{\numberline {B}Useful Links}{33}{appendix.B}%

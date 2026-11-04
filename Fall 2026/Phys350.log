@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  30 SEP 2026 14:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  4 NOV 2026 15:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -663,116 +663,112 @@ l.109 \end{remark}
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.171     O
+l.160     O
            n the circle $d\vec{l} = \frac{d\vec{r}}{d\phi}d\phi = R(-\sin\ph... [2]
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.194 ...c{\nabla}h\cdot d\vec{l} = h(b) - h(a).\]
-                                                   [3
+l.187 \end{theorem}
+                    [3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.194 ...c{\nabla}h\cdot d\vec{l} = h(b) - h(a).\]
-                                                  ]
-Overfull \hbox (31.36554pt too wide) detected at line 216
+l.187 \end{theorem}
+                   ]
+Overfull \hbox (31.36554pt too wide) detected at line 203
 \OML/cmm/m/it/10 d[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 dr [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 r d^^R [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 r [] ^^R d^^^ [];  d^^\ \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 r[] [] ^^R dr d^^R d^^^;  d[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R[] [] ^^R d^^R d^^^ []:
  []
 
 
-Overfull \hbox (66.61136pt too wide) detected at line 224
+Overfull \hbox (66.61136pt too wide) detected at line 211
 []
  []
 
-[4] [5]
-Overfull \hbox (0.13968pt too wide) detected at line 311
-\OML/cmm/m/it/10 G[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 @[]@[]F[] \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 @[]@[]F[] [] @[] [] @[]F[] \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 @[]@[]F[] \OT1/cmr/m/n/10 = [][] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 r[][]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 :
- []
-
-[6
+[4] [5] [6
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.314 \end{proof}
-                 ] [7]
-Overfull \hbox (46.1496pt too wide) in paragraph at lines 376--377
-[]\OT1/cmr/m/it/10 Thin shell of ra-dius $\OML/cmm/m/it/10 R$ \OT1/cmr/m/it/10 and charge $\OML/cmm/m/it/10 Q$\OT1/cmr/m/it/10 : $\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 ) = []\OML/cmm/m/it/10 ^^N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 R\OT1/cmr/m/n/10 )$\OT1/cmr/m/it/10 , since $[] \OML/cmm/m/it/10 ^^Z r[] [] ^^R dr d^^R d^^^ \OT1/cmr/m/n/10 =
- []
-
-
-Underfull \hbox (badness 8113) in paragraph at lines 391--391
+l.309 ...{r^2}\right) = 4\pi\,\delta^3(\vec{r}).\]
+                                                  ]
+Underfull \hbox (badness 8113) in paragraph at lines 344--344
 \OT1/cmr/m/n/10 16 & 21-25,
  []
 
-[8]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 397.
+[7]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 359.
  (C:\Users\erenr\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [9]
-Overfull \hbox (51.81577pt too wide) detected at line 470
+) [8]
+Overfull \hbox (51.81577pt too wide) detected at line 432
 [] \OT1/cmr/m/n/10 = [] [][] [] \OML/cmm/m/it/10 dx[] \OT1/cmr/m/n/10 = [] [] \OML/cmm/m/it/10 :
  []
 
-[10
+[9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.492     \[
-            \oiint_S\vec{E}\cdot d\vec{a} = \frac{q}{4\pi\epsilon_0 r^2}\oii...] [11] [12] [13
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.593     \end{equation}
-                        ]
-Overfull \hbox (29.53162pt too wide) detected at line 611
+l.438         \item F
+                     ar from the line ($z \gg L$), it looks like a point cha...] [10] [11] [12]
+Overfull \hbox (29.53162pt too wide) detected at line 573
 []\OML/cmm/m/it/10 E \OMS/cmsy/m/n/10 / []\OML/cmm/m/it/10 ;  []E \OMS/cmsy/m/n/10 / []\OML/cmm/m/it/10 ;  []E \OMS/cmsy/m/n/10 / \OML/cmm/m/it/10 r[][]:
  []
 
+[13
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.573 ...ne: } E \propto r^0 \text{ (constant)}.\]
+                                                  ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 621.
+(hyperref)                removing `math shift' on input line 583.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 621.
+(hyperref)                removing `math shift' on input line 583.
 
 [14] [15]
-Overfull \hbox (26.8111pt too wide) in paragraph at lines 717--718
+Overfull \hbox (26.8111pt too wide) in paragraph at lines 679--680
  [][] 
  []
 
-[16] [17
+[16
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.748     \begin{equation}
-                          ] [18] [19] [20
+l.688     \[
+            E^{\parallel}_{\text{above}}\,l - E^{\parallel}_{\text{below}}\,...] [17] [18] [19
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.864 \end{example}
-                   ] [21] [22] [23] [24
+l.806         \item A
+                     ny net charge therefore sits on the surface.]
+Overfull \hbox (1.37308pt too wide) in paragraph at lines 815--816
+[][]\OT1/cmr/bx/n/10 Proposition 16 \OT1/cmr/m/n/10 (Field at the sur-face of a con-duc-tor)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 The-o-rem [][]10[][] with $[] \OT1/cmr/m/n/10 =
+ []
+
+[20] [21] [22] [23
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.986         \item R
-                     epeat until the values stop changing.] [25
-pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1026 \end{example}
-                    ]
-Overfull \hbox (66.0683pt too wide) detected at line 1039
+l.937 \end{theorem}
+                   ] [24]
+Overfull \hbox (66.0683pt too wide) detected at line 1001
 \OML/cmm/m/it/10 c \OT1/cmr/m/n/10 = +\OML/cmm/m/it/10 k[] \OT1/cmr/m/n/10 :  \OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Ae[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 Be[];  c \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 k[] \OT1/cmr/m/n/10 :  \OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 A [] kx \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B [] kx;  c \OT1/cmr/m/n/10 = 0 :  \OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 A \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 Bx:
  []
 
-[26]
-Overfull \hbox (17.89851pt too wide) in paragraph at lines 1075--1076
+[25
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1006 \end{remark}
+                   ] [26]
+Overfull \hbox (17.89851pt too wide) in paragraph at lines 1037--1038
 [][]\OT1/cmr/m/it/10 Inside, $\OML/cmm/m/it/10 V$ \OT1/cmr/m/it/10 must
  []
 
 
-Overfull \hbox (8.37344pt too wide) in paragraph at lines 1079--1080
+Overfull \hbox (8.37344pt too wide) in paragraph at lines 1041--1042
 []\OT1/cmr/m/it/10 The sur-face charge comes from the jump in slope, $\OML/cmm/m/it/10 ^^[ \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 ^^O[] [][]$\OT1/cmr/m/it/10 ,
  []
 
@@ -780,32 +776,37 @@ Overfull \hbox (8.37344pt too wide) in paragraph at lines 1079--1080
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1126     \[
-             \mathfrak{r}_{1,2}^2 = r^2 + \left(\frac{d}{2}\right)^2 \mp rd\...] [29]
-Overfull \hbox (1.96169pt too wide) detected at line 1173
+l.1100     \end{equation}
+                         ]
+Overfull \hbox (1.96169pt too wide) detected at line 1135
 \OML/cmm/m/it/10 Q \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 ([]) \OML/cmm/m/it/10 d^^\[];  [] \OT1/cmr/m/n/10 = [] []\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 ([]) \OML/cmm/m/it/10 d^^\[];  Q[] \OT1/cmr/m/n/10 = [] [] [] \OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 ([]) \OML/cmm/m/it/10 d^^\[]:
  []
 
-[30] [31] [32] (Phys350.aux)
+[29] [30] [31]
+Overfull \hbox (0.13968pt too wide) detected at line 1212
+\OML/cmm/m/it/10 G[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 @[]@[]F[] \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 @[]@[]F[] [] @[] [] @[]F[] \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 @[]@[]F[] \OT1/cmr/m/n/10 = [][] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 r[][]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 :
+ []
+
+[32] [33] (Phys350.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `Phys350.out' has not changed.
-(rerunfilecheck)             Checksum: 42D7AED47C93F911C4742EB4591B5EAC;6343.
+(rerunfilecheck)             Checksum: 907F1173DEC7366A1656065BC793748D;6309.
  ) 
 Here is how much of TeX's memory you used:
- 49838 strings out of 467871
- 1293662 string characters out of 5418377
- 2035225 words of memory out of 5000000
- 77843 multiletter control sequences out of 15000+600000
+ 49833 strings out of 467871
+ 1293551 string characters out of 5418377
+ 2034305 words of memory out of 5000000
+ 77842 multiletter control sequences out of 15000+600000
  641105 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,118p,797b,965s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\erenr\AppData\Local\MiKTeX\fonts/pk/ljfour/public/esint/dpi600\esint10.pk> <C:\Users\erenr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Phys350.pdf (35 pages, 584328 bytes).
+ <C:\Users\erenr\AppData\Local\MiKTeX\fonts/pk/ljfour/public/esint/dpi600\esint10.pk> <C:\Users\erenr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Phys350.pdf (36 pages, 569897 bytes).
 PDF statistics:
- 843 PDF objects out of 1000 (max. 8388607)
- 310 named destinations out of 1000 (max. 500000)
+ 835 PDF objects out of 1000 (max. 8388607)
+ 306 named destinations out of 1000 (max. 500000)
  325 words of extra memory for PDF output out of 10000 (max. 10000000)
 
