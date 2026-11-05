@@ -697,9 +697,15 @@ A surface charge $\sigma$ makes $\vec{E}$ jump as you cross it. To fix this we u
 \end{problem}
 
 \subsection{Conductors}
-\begin{definition}[Conductor]
-    A conductor is a material with charges that are free to move (in a metal, the electrons). Placed in an external field, the free charges drift: negative ones pile up on one side and positive ones on the other, until the field they create, $\vec{E}_{\text{int}}$, exactly cancels $\vec{E}_{\text{ext}}$ inside. This happens almost instantly, and the result is electrostatic equilibrium.
+\begin{definition}[Insulator]
+    In an insulator, such as glass or ruber, each electron is on a short leash, attached to a particular atom.
 \end{definition}
+\begin{definition}[Conductor]
+    A conductor is a material with charges that are free to move (in a metal, the electrons). 
+\end{definition}
+\begin{proposition}
+    In an external field, a conductor's free charges move to its surface until their field $\vec{E}_{\text{int}}$ cancels $\vec{E}_{\text{ext}}$ inside. In practice, it's the negative charges (the electrons) that do the moving, leaving a positive charge on the far side.
+\end{proposition}
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}[>=stealth]
@@ -718,30 +724,63 @@ A surface charge $\sigma$ makes $\vec{E}$ jump as you cross it. To fix this we u
         \node[violet, below] at (1.5,1) {$\vec{E}_{\text{int}}$};
         \node at (1.5,2) {$\vec{E} = 0$};
     \end{tikzpicture}
-    \caption{A conductor in an external field. The induced charges create $\vec{E}_{\text{int}}$, which cancels $\vec{E}_{\text{ext}}$ inside the metal. Outside, field lines end on the $-$ charges and start again from the $+$ charges.}
+    \caption{A conductor in an external field.}
 \end{figure}
-\begin{proposition}[Properties of a conductor in equilibrium]
+\begin{proposition}[Properties of a conductor in equilibrium]\leavevmode
     \begin{enumerate}[label=(\roman*)]
         \item $\vec{E} = 0$ inside, otherwise the free charges would still be moving.
-        \item $\rho = 0$ inside, since $\rho = \epsilon_0\vec{\nabla}\cdot\vec{E} = 0$.
+        \item $\rho = 0$ inside, since $\rho = \epsilon_0\vec{\nabla}\cdot\vec{E} = \epsilon_0 \cdot 0 = 0$.
         \item Any net charge therefore sits on the surface.
-        \item The conductor is an equipotential: for any two points in it, $V(\vec{b}) - V(\vec{a}) = -\int_{\vec{a}}^{\vec{b}}\vec{E}\cdot d\vec{l} = 0$.
-        \item Just outside, $\vec{E}$ is perpendicular to the surface. A tangential part would push the surface charges along the surface, so they would not be in equilibrium.
+        \item A conductor is an equipotential: for any two points within (or at the surface of) a conductor, $V(\vec{b}) - V(\vec{a}) = -\int_{\vec{a}}^{\vec{b}}\vec{E}\cdot d\vec{l} = 0$.
+        \item Just outside, $\vec{E}$ is perpendicular to the surface. A tangential part would push the surface charges along the surface, and they would not be in equilibrium.
     \end{enumerate}
 \end{proposition}
 \begin{remark}
-    Grounding a conductor connects it to $V(\infty) = 0$, so its whole body, not just its surface, sits at $V = 0$. Charge flows to or from the ground as needed to make this happen.
+    Grounding a conductor connects it to $V(\infty) = 0$, so its whole body, not just its surface, sits at $V = 0$. Positive charge flows to the ground if the conductor would otherwise be at $V > 0$, or from the ground if it would be at $V < 0$, until $V = 0$.
 \end{remark}
+
+\subsubsection{Induced Charges}
+\begin{remark}[Induced Charges]
+    If a conductor has a cavity with a charge $q$ inside, $q$ induces $-q$ on the cavity wall and $+q$ on the outer surface (for a neutral conductor), and the outside cannot tell how the charge inside is arranged. In particular, for a sphere the outer charge spreads uniformly even if the cavity is off centre, so the field outside is that of a point charge at the centre of the sphere, not of the cavity.
+\end{remark}
+\begin{remark}[Induced Charges with External Field]
+    Same setup as the previous remark, but now add an external field: the charge on the cavity wall is still $-q$ and the outer surface still carries $+q$, but the external field induces a nonuniform distribution on the outer surface. The field inside the cavity is unchanged, since it is due only to $q$ and the wall charge.
+    \begin{center}
+    \begin{tikzpicture}[scale=0.8]
+        \foreach \y in {-1,0,1} {
+            \draw[->, thick] (-5,\y) -- (-3.3,\y);
+            \draw[->, thick] (3.3,\y) -- (5,\y);
+        }
+        \node[above] at (-4.15,1.1) {$\vec{E}_{\text{ext}}$};
+        \filldraw[fill=gray!25, draw=black, rounded corners=12pt] (-3,-2) rectangle (3,2);
+        \filldraw[fill=white, draw=black] (0,0) circle (1.1);
+        \foreach \a in {0,45,...,315}
+            \draw[->, red!70!black] (\a:0.3) -- (\a:0.95);
+        \filldraw[red!70!black] (0,0) circle (0.12);
+        \node[red!70!black] at (292:0.6) {\scriptsize $q$};
+        \foreach \a in {0,45,...,315}
+            \node[blue!70!black] at (\a:1.35) {$-$};
+        \foreach \y in {-1.5,-0.5,0.5,1.5}
+            \node[blue!70!black] at (-2.75,\y) {$-$};
+        \foreach \y in {-1.65,-1,-0.33,0.33,1,1.65}
+            \node[red!70!black] at (2.75,\y) {$+$};
+        \node at (-1.9,-1.6) {\scriptsize $\vec{E}=0$};
+    \end{tikzpicture}
+    \end{center}
+\end{remark}
+\begin{remark}[Faraday Cage]
+    If a conductor has an empty cavity, the field inside the cavity is zero: its wall is an equipotential, and a solution of Laplace's equation with constant boundary values is constant (no maxima or minima, see the Laplace's equation section).
+\end{remark}
+
+\subsubsection{Surface Charge and the Force on a Conductor}
 \begin{proposition}[Field at the surface of a conductor]
     Theorem~\ref{BC-E} with $\vec{E}_{\text{below}} = 0$ (inside the metal) gives, just outside,
-    \begin{equation}
-        \vec{E} = \frac{\sigma}{\epsilon_0}\hat{n},
-    \end{equation}
-    or in terms of the potential, $\frac{\partial V}{\partial n} = -\frac{\sigma}{\epsilon_0}$. Where $\sigma$ is large, the field outside is strong.
+    \[\vec{E} = \frac{\sigma}{\epsilon_0}\hat{n}.\]
 \end{proposition}
-\begin{remark}
-    Compare the infinite sheet, $E = \sigma/2\epsilon_0$. A sheet sends half its flux up and half down; a conductor has no field inside, so all the flux goes out one side and the field is doubled.
+\begin{remark}[]
+    
 \end{remark}
+
 \begin{example}[Neutral conductor near a charged rod]
     A neutral metal block sits near an insulating rod with uniform positive charge. Negative charge is induced on the side facing the rod and an equal positive charge on the far side. The negative charges are closer, and Coulomb's force falls off with distance, so the attraction beats the repulsion: the neutral conductor is pulled toward the rod.
 \end{example}
@@ -751,9 +790,7 @@ A surface charge $\sigma$ makes $\vec{E}$ jump as you cross it. To fix this we u
 \begin{remark}
     In general, charge on a conductor concentrates where the surface is most sharply curved (edges, corners, points). Since $E = \sigma/\epsilon_0$ there, the field is strongest at sharp points, which is how lightning rods work.
 \end{remark}
-\begin{remark}[Cavities]
-    If a conductor has an empty cavity, the field inside the cavity is zero: its wall is an equipotential, and a solution of Laplace's equation with constant boundary values is constant (no maxima or minima, see the Laplace's equation section). This is a Faraday cage. If a charge $q$ sits in the cavity, it induces $-q$ on the cavity wall and $+q$ on the outer surface (for a neutral conductor), and the outside cannot tell how the charge inside is arranged. In particular, for a sphere the outer charge spreads uniformly even if the cavity is off centre, so the field outside is that of a point charge at the centre of the sphere, not of the cavity.
-\end{remark}
+
 \begin{example}[Concentric conducting shells]
     A metal sphere of radius $R$ with charge $q$ sits inside a thick neutral metal shell of inner radius $a$ and outer radius $b$.
     \begin{enumerate}[label=(\roman*)]
@@ -768,29 +805,9 @@ A surface charge $\sigma$ makes $\vec{E}$ jump as you cross it. To fix this we u
 \begin{problem}[Problem Set 4, Q3]
     A neutral conducting sphere of radius $R$ has two spherical cavities, of radii $a$ and $b$, with point charges $q_a$ and $q_b$ at their centres. (i) Find $\sigma_a$, $\sigma_b$, $\sigma_R$; (ii) the field outside; (iii) the field in each cavity; (iv) the force on $q_a$ and $q_b$; (v) what changes if a charge $q_c$ is brought near the outside?
 \end{problem}
-\begin{solution}
-    \begin{enumerate}[label=(\roman*)]
-        \item Each cavity wall carries minus the charge inside it, spread uniformly since the charge is at the centre, and the outer surface carries the rest. The metal shields the outer surface from the cavities, so its charge spreads uniformly as on an isolated sphere:
-        \[\sigma_a = -\frac{q_a}{4\pi a^2}, \qquad \sigma_b = -\frac{q_b}{4\pi b^2}, \qquad \sigma_R = \frac{q_a + q_b}{4\pi R^2}.\]
-        \item Outside, $\vec{E} = \frac{1}{4\pi\epsilon_0}\frac{q_a + q_b}{r^2}\hat{r}$, with $r$ measured from the centre of the big sphere.
-        \item Inside cavity $a$, $\vec{E} = \frac{1}{4\pi\epsilon_0}\frac{q_a}{r_a^2}\hat{r}_a$, with $\vec{r}_a$ measured from the centre of the cavity; the same holds for cavity $b$.
-        \item The force on $q_a$ and $q_b$ is zero. Apart from its own field, $q_a$ only feels the uniform shell of charge on its cavity wall, which produces no field inside it; everything beyond the wall is shielded by the metal.
-        \item Bringing $q_c$ near the outside changes $\sigma_R$ (it is no longer uniform) and the field outside, but nothing inside: $\sigma_a$, $\sigma_b$, the cavity fields and the forces on $q_a$ and $q_b$ stay the same. The conductor shields in both directions.
-    \end{enumerate}
-\end{solution}
 \begin{problem}[Midterm 2025, Q3]
     A thick conducting shell (inner radius $a$, outer radius $b$, empty cavity) has net charge $-Q$. (a) Where is the charge? (b) Sketch $E_r(r)$. (c) Sketch $V(r)$ with $V(\infty) = 0$. (d) A charge $+q$ with $q > Q$ is placed outside: sketch the negative charge. (e) Find the total charge on the inner surface and (f) on the outer surface.
 \end{problem}
-\begin{solution}
-    \begin{enumerate}[label=(\alph*)]
-        \item $\rho = 0$ in the metal. A Gaussian sphere in the metal has $\vec{E} = 0$, and the cavity is empty, so the inner surface has $\sigma_a = 0$. All the charge is on the outer surface: $\sigma_b = -\frac{Q}{4\pi b^2}$.
-        \item $E_r = 0$ for $r < b$ (cavity and metal); $E_r = -\frac{Q}{4\pi\epsilon_0 r^2}$ for $r > b$ (pointing inward). It jumps at $b$ to its most negative value $-\frac{Q}{4\pi\epsilon_0 b^2}$, then rises toward $0$ as $1/r^2$.
-        \item $V = -\frac{Q}{4\pi\epsilon_0 r}$ for $r > b$, and constant $V = -\frac{Q}{4\pi\epsilon_0 b}$ for all $r \leq b$. It is continuous, with a kink at $b$.
-        \item Negative charge crowds onto the part of the outer surface facing $+q$. Since $q > Q$, the side facing away ends up positive.
-        \item $q_{tot,a} = 0$. A Gaussian surface inside the metal still has $\vec{E} = 0$ on it and encloses only the empty cavity, so the inner wall carries no net charge (and in fact none at all, since the cavity field is zero).
-        \item $q_{tot,b} = -Q$ by charge conservation; only its distribution changed.
-    \end{enumerate}
-\end{solution}
 
 
 \section{Potentials}

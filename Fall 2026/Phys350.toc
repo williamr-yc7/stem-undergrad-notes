@@ -28,17 +28,19 @@
 \contentsline {subsubsection}{\numberline {3.4.2}The Energy of a Continuous Charge Distribution}{16}{subsubsection.3.4.2}%
 \contentsline {subsubsection}{\numberline {3.4.3}Comments on Electrostatic Energy}{16}{subsubsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.5}Conductors}{16}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Induced Charges}{17}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Surface Charge and the Force on a Conductor}{18}{subsubsection.3.5.2}%
 \contentsline {section}{\numberline {4}Potentials}{19}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Laplace's Equation}{19}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}The Method of Images}{21}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Separation of Variables: Cartesian}{22}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Separation of Variables: Spherical}{23}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Multipole Expansion}{24}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Electric Fields in Matter}{28}{section.5}%
-\contentsline {section}{\numberline {6}Magnetostatics}{28}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Current Density}{28}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Magnetic Fields in Matter}{28}{section.7}%
-\contentsline {section}{\numberline {8}Electrodynamics}{28}{section.8}%
-\contentsline {section}{\numberline {A}Extra Material}{29}{appendix.A}%
-\contentsline {section}{\numberline {B}Proofs}{29}{appendix.B}%
-\contentsline {section}{\numberline {C}Useful Links}{31}{appendix.C}%
+\contentsline {section}{\numberline {5}Electric Fields in Matter}{27}{section.5}%
+\contentsline {section}{\numberline {6}Magnetostatics}{27}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Current Density}{27}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Magnetic Fields in Matter}{27}{section.7}%
+\contentsline {section}{\numberline {8}Electrodynamics}{27}{section.8}%
+\contentsline {section}{\numberline {A}Extra Material}{28}{appendix.A}%
+\contentsline {section}{\numberline {B}Proofs}{28}{appendix.B}%
+\contentsline {section}{\numberline {C}Useful Links}{30}{appendix.C}%
