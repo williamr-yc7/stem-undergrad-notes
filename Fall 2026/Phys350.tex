@@ -771,46 +771,47 @@ A surface charge $\sigma$ makes $\vec{E}$ jump as you cross it. To fix this we u
 \begin{remark}[Faraday Cage]
     If a conductor has an empty cavity, the field inside the cavity is zero: its wall is an equipotential, and a solution of Laplace's equation with constant boundary values is constant (no maxima or minima, see the Laplace's equation section).
 \end{remark}
-
-\subsubsection{Surface Charge and the Force on a Conductor}
-\begin{proposition}[Field at the surface of a conductor]
-    Theorem~\ref{BC-E} with $\vec{E}_{\text{below}} = 0$ (inside the metal) gives, just outside,
-    \[\vec{E} = \frac{\sigma}{\epsilon_0}\hat{n}.\]
-\end{proposition}
-\begin{remark}[]
-    
-\end{remark}
-
 \begin{example}[Neutral conductor near a charged rod]
     A neutral metal block sits near an insulating rod with uniform positive charge. Negative charge is induced on the side facing the rod and an equal positive charge on the far side. The negative charges are closer, and Coulomb's force falls off with distance, so the attraction beats the repulsion: the neutral conductor is pulled toward the rod.
 \end{example}
-\begin{example}[Conducting versus insulating disk]
-    For a disk with uniform $\sigma$ (an insulator), the disk is not an equipotential and the field lines are not perpendicular to it. That arrangement cannot last on a conductor: the field along the surface pushes charge outward, i.e.\ ``downhill'' in potential, and it piles up at the rim. So a charged conducting disk has a higher $\sigma$ near its edge than near its centre, its surface is an equipotential, and its field lines leave it at right angles.
-\end{example}
-\begin{remark}
-    In general, charge on a conductor concentrates where the surface is most sharply curved (edges, corners, points). Since $E = \sigma/\epsilon_0$ there, the field is strongest at sharp points, which is how lightning rods work.
-\end{remark}
-
-\begin{example}[Concentric conducting shells]
-    A metal sphere of radius $R$ with charge $q$ sits inside a thick neutral metal shell of inner radius $a$ and outer radius $b$.
-    \begin{enumerate}[label=(\roman*)]
-        \item A Gaussian sphere inside the shell's metal ($a < r < b$) has $\vec{E} = 0$ on it, so it encloses zero charge: the inner surface carries $-q$. The shell is neutral, so the outer surface carries $+q$. By symmetry each is uniform:
-        \[\sigma_R = \frac{q}{4\pi R^2}, \qquad \sigma_a = -\frac{q}{4\pi a^2}, \qquad \sigma_b = \frac{q}{4\pi b^2}.\]
-        \item The field is $\frac{q}{4\pi\epsilon_0 r^2}\hat{r}$ for $r > b$ and $R < r < a$, and zero in both metals. Integrating in from infinity,
-        \[V(0) = -\int_\infty^b\frac{q\,dr}{4\pi\epsilon_0 r^2} - \int_a^R\frac{q\,dr}{4\pi\epsilon_0 r^2} = \frac{q}{4\pi\epsilon_0}\left(\frac{1}{b} + \frac{1}{R} - \frac{1}{a}\right).\]
-        \item Grounding the outer surface sets $V(b) = 0 = V(\infty)$, so there can be no field outside and $\sigma_b = 0$. The Gauss argument in (i) is unchanged, so $\sigma_R$ and $\sigma_a$ stay the same, and the first integral in (ii) disappears: $V(0) = \frac{q}{4\pi\epsilon_0}\left(\frac{1}{R} - \frac{1}{a}\right)$.
-        \item The outer surface now has zero charge; the $+q$ flowed away to the ground, leaving the shell with net charge $-q$. If the outer surface kept a charge $Q'$, the total charge inside a sphere just outside $b$ would be $Q'$, giving $V(b) = \frac{Q'}{4\pi\epsilon_0 b} \neq 0$.
-    \end{enumerate}
-\end{example}
-\begin{problem}[Problem Set 4, Q3]
-    A neutral conducting sphere of radius $R$ has two spherical cavities, of radii $a$ and $b$, with point charges $q_a$ and $q_b$ at their centres. (i) Find $\sigma_a$, $\sigma_b$, $\sigma_R$; (ii) the field outside; (iii) the field in each cavity; (iv) the force on $q_a$ and $q_b$; (v) what changes if a charge $q_c$ is brought near the outside?
-\end{problem}
 \begin{problem}[Midterm 2025, Q3]
     A thick conducting shell (inner radius $a$, outer radius $b$, empty cavity) has net charge $-Q$. (a) Where is the charge? (b) Sketch $E_r(r)$. (c) Sketch $V(r)$ with $V(\infty) = 0$. (d) A charge $+q$ with $q > Q$ is placed outside: sketch the negative charge. (e) Find the total charge on the inner surface and (f) on the outer surface.
 \end{problem}
 
+\subsubsection{Surface Charge}
+\begin{proposition}[Field at the surface of a conductor]
+    Theorem~\ref{BC-E} with $\vec{E}_{\text{below}} = 0$ (inside the metal) gives, just outside,
+    \[\vec{E} = \frac{\sigma}{\epsilon_0}\hat{n}.\]
+\end{proposition}
+\begin{remark}
+    In general, charge on a conductor concentrates where the surface is most sharply curved (edges, corners, points). Since $E = \sigma/\epsilon_0$ there, the field is strongest at sharp points, which is how lightning rods work.
+\end{remark}
 
-\section{Potentials}
+\subsubsection{Capacitors}
+\begin{definition}[Capacitor]
+    A capacitor is a device that stores electrical energy in an electric field. It typically consists of two conductors separated by an insulating material (dielectric).
+\end{definition}
+\begin{definition}[Capacitance]
+    The capacitance $C$ of a capacitor is the ratio of the charge $Q$ on one conductor to the potential difference $V$ between the conductors:
+    \begin{equation}
+        C \equiv \frac{Q}{V}.
+    \end{equation}
+\end{definition}
+\begin{proposition}[Work done to charge a capacitor]
+    The work done to charge a capacitor is
+    \begin{equation}
+        W = \frac{1}{2}CV^2 = \frac{Q^2}{2C} = \frac{1}{2}QV.
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    Charge the capacitor by moving charge from the negative plate to the positive one. When the plates hold $\pm q$, the potential difference is $q/C$, so moving an extra $dq$ costs
+    \[dW = \left(\frac{q}{C}\right)dq.\]
+    Integrating from $q = 0$ to $q = Q$,
+    \[W = \frac{1}{C}\int_0^Q q\,dq = \frac{Q^2}{2C},\]
+    and $Q = CV$ gives the other two forms.
+\end{proof}
+
+\section{Potentials}%Correct
 \marginpar{September 18-25, 2026}
 
 \subsection{Laplace's Equation}
