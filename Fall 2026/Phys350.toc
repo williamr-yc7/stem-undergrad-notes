@@ -12,28 +12,33 @@
 \contentsline {section}{\numberline {3}Electrostatics}{7}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Electric Field}{8}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Continuous Charge Distributions}{9}{subsubsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.2}Gauss' Law}{10}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Spherical symmetry}{11}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Cylindrical symmetry}{12}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Planar symmetry}{12}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Why the fall-off depends on the geometry}{14}{subsubsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.3}The Curl of $\vec {E}$}{14}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Electric Potential}{15}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Boundary Conditions}{16}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Work and Energy in Electrostatics}{17}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Conductors}{19}{subsection.3.7}%
-\contentsline {section}{\numberline {4}Potentials}{22}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Laplace's Equation}{22}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The Method of Images}{24}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Separation of Variables: Cartesian}{25}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Separation of Variables: Spherical}{26}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Multipole Expansion}{27}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Electric Fields in Matter}{31}{section.5}%
-\contentsline {section}{\numberline {6}Magnetostatics}{31}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Current Density}{31}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Magnetic Fields in Matter}{31}{section.7}%
-\contentsline {section}{\numberline {8}Electrodynamics}{31}{section.8}%
-\contentsline {section}{\numberline {A}Appendix}{32}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Multipole Expansion with Legendre Polynomials}{32}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}Proving the Identities}{32}{subsection.A.2}%
-\contentsline {section}{\numberline {B}Useful Links}{33}{appendix.B}%
+\contentsline {subsection}{\numberline {3.2}Divergence and Curl of Electrostatic Fields}{10}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Gauss's Law}{10}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Applications of Gauss's Law}{10}{subsubsection.3.2.2}%
+\contentsline {paragraph}{Spherical Symmetry.}{10}{section*.2}%
+\contentsline {paragraph}{Cylindrical Symmetry.}{11}{section*.3}%
+\contentsline {paragraph}{Planar Symmetry.}{11}{section*.4}%
+\contentsline {subsubsection}{\numberline {3.2.3}The Curl of $\vec {E}$}{12}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}Electric Potential}{13}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Poisson's Equation and Laplace's Equation}{14}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}The Potential of a Localized Charge Distribution}{14}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Boundary Conditions}{14}{subsubsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.4}Work and Energy in Electrostatics}{15}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}The Energy of a Point Charge Distribution}{15}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}The Energy of a Continuous Charge Distribution}{16}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Comments on Electrostatic Energy}{16}{subsubsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.5}Conductors}{16}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Potentials}{19}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Laplace's Equation}{19}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The Method of Images}{21}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Separation of Variables: Cartesian}{22}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Separation of Variables: Spherical}{23}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Multipole Expansion}{24}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Electric Fields in Matter}{28}{section.5}%
+\contentsline {section}{\numberline {6}Magnetostatics}{28}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Current Density}{28}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Magnetic Fields in Matter}{28}{section.7}%
+\contentsline {section}{\numberline {8}Electrodynamics}{28}{section.8}%
+\contentsline {section}{\numberline {A}Extra Material}{29}{appendix.A}%
+\contentsline {section}{\numberline {B}Proofs}{29}{appendix.B}%
+\contentsline {section}{\numberline {C}Useful Links}{31}{appendix.C}%
