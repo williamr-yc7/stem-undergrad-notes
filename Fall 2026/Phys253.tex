@@ -141,8 +141,15 @@ The textbook is \textit{An Introduction to Thermal Physics} by Daniel V. Schroed
   \subsubsection{Internal Combustion Engines}
   \subsubsection{The Steam Engine}
 
+\newpage
 \section{Entropy}
+As previously mentioned, Sadi Carnot was the first to recognize that heat flowing from hot to cold can be used to produce work, but never all of it. The explanation behind this limit is entropy. The second law of thermodynamics can be restated in terms of entropy:
+\begin{law}[The Second Law of Thermodynamics (Entropy Formulation)]
+    the entropy of an isolated system never decreases with time. As a result, isolated systems evolve toward a thermodynamic equilibrium state where the entropy is maximized.
+\end{law}
+
 \subsection{The Clausius Inequality}
+
 \subsection{Entropy}
   \subsubsection{Entropy as a State Function}
   \subsubsection{Entropy Changes in Irreversible Processes}
@@ -156,25 +163,38 @@ The textbook is \textit{An Introduction to Thermal Physics} by Daniel V. Schroed
   \subsubsection{Free Expansion}
   \subsubsection{Measuring Entropies}
 
-\newpage
-\section{Statistical Mechanics}
+
+  \section{Statistical Mechanics}
 \subsection{Introduction to Probability and Statistics}
-  \subsubsection{Microstates, Macrostates and Multiplicity}
-    \begin{definition}[Microstate]
-        A microstate is a specific configuration of the particles in a system.
-    \end{definition}
-    \begin{definition}[Macrostate]
-        A macrostate is a description of the system in terms of macroscopic properties, such as temperature, pressure, and volume.    
-    \end{definition}
-    \begin{definition}[Multiplicity]
-        The multiplicity $\Omega$ of a macrostate is the number of microstates corresponding to that macrostate.    
-    \end{definition}
-    The probability of any particular macrostate can be written as
-    \begin{equation}
-        P(n) = \frac{\Omega(n)}{\Omega(all)}.
-    \end{equation}
-  \subsubsection{The Binomial Distribution}
-  \subsubsection{Stirling's Approximation}
+\begin{definition}[Microstate]
+    A microstate is a specific configuration of the particles in a system.
+\end{definition}
+\begin{definition}[Macrostate]
+    A macrostate is a description of the system in terms of macroscopic properties, such as temperature, pressure, and volume. Different macrostates can be distinguished by a measurement, while different microstates of the same macrostate cannot.
+\end{definition}
+Assuming all microstates are equally probable, the probability of any macrostate is given by the multiplicity of that macrostate divided by the sum of all the multiplicities:
+\begin{equation}
+    P(n) = \frac{\Omega(n)}{\sum_i \Omega(i)}.
+\end{equation}
+For $N$ two-state particles, the multiplicity $\Omega(N, n)$ of the macrostate with $n$ out of the $N$ particles in one of the two states can be calculated using the binomial coefficient:
+\begin{equation}
+    \Omega(N, n) = \binom{N}{n} = \frac{N!}{n!(N-n)!}.
+\end{equation}
+There are $N+1$ macrostates and $2^N$ microstates in total:
+\begin{equation}
+    \sum_{n=0}^{N} \binom{N}{n} = 2^N.
+\end{equation}
+The distribution has mean $N/2$ and standard deviation $\sigma = \sqrt{N}/2$, so its relative width is
+\begin{equation}
+    \frac{\sigma}{N} = \frac{1}{2\sqrt{N}},
+\end{equation}
+meaning the multiplicity becomes sharply peaked at $n = N/2$ as $N$ grows.
+
+For $N \gg 1$, factorials are evaluated with Stirling's approximation:
+\begin{equation}
+    N! \approx N^N e^{-N}\sqrt{2\pi N}, \qquad \ln N! \approx N\ln N - N.
+\end{equation}
+
 \subsection{Microscopic View of Entropy}
   \subsubsection{The Two-State Paramagnet}
   \subsubsection{The Einstein Solid}
