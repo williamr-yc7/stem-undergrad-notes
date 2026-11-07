@@ -152,9 +152,35 @@ As previously mentioned, Sadi Carnot was the first to recognize that heat flowin
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{../images/clausius-inequality.png}
-    \caption{Fill}
+    \caption{Clausius' thought experiment: Carnot engines route all heat exchanged by the gas through a single reservoir at $T_0$.}
     \label{fig:clausius-inequality}
 \end{figure}
+The question is: could an engine run on heat drawn from the surrounding air alone, without burning fuel? Clausius imagined a setup where a gas in a cylinder (it may be air; what matters is its temperature, not its substance) goes around an arbitrary cycle through states $1, 2, 3, \dots$ at temperatures $T_1, T_2, T_3, \dots$, all different from the outside air at $T_0$, the single principal reservoir. Going from state $i$ to $i+1$ requires a small heat $\delta Q_i$ at $T_i$. The idea behind his thought experiment is to consider the composite system of the gas, the Carnot engines, and the auxiliary reservoirs. In it, a Carnot engine $C_i$ draws heat $\delta Q_i \frac{T_0}{T_i}$ from the air (via an auxiliary reservoir at $T_0$), converts part of it into work $\delta W_i$, and delivers the remaining $\delta Q_i$ to an auxiliary reservoir at $T_i$, which passes it to the gas. Each auxiliary reservoir gives exactly what it receives, so it ends unchanged.
+\begin{remark}[]
+    The factor $\frac{T_0}{T_i}$ comes from the Carnot relation $\frac{Q_{T_0}}{Q_{T_i}} = \frac{T_0}{T_i}$.\footnote{For example, with $T_0 = 600$~K, $T_1 = 300$~K and $\delta Q_1 = 10$~J, the Carnot engine takes $20$~J from the air, delivers $10$~J to the gas, and the difference, $10$~J, is the work $\delta W_1$.}
+\end{remark}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../images/clausius-inequality2.png}
+    \caption{The composite system: gas, Carnot engines and auxiliary reservoirs, exchanging heat only with the reservoir at $T_0$.}
+    \label{fig:clausius-inequality-2}
+\end{figure}
+We can easily better understand the result of this thought experiment by compressing Figure~\ref{fig:clausius-inequality} into the composite system of Figure~\ref{fig:clausius-inequality-2}. After a full cycle everything in it is back to its original state, so $\Delta U = 0$, and the first law gives
+\begin{equation}
+    W = Q = T_0\sum_i \frac{\delta Q_i}{T_i},
+\end{equation}
+where $W = \sum_i \delta W_i$ is the total work done and $Q$ the heat drawn from $T_0$. A positive $W = Q$ would mean heat from a single reservoir fully converted into work, forbidden by:
+\begin{law}[Kelvin Statement of the Second Law of Thermodynamics]
+    No process is possible whose sole result is the absorption of heat from a reservoir and the conversion of this heat into work.
+\end{law}
+Hence $W = Q \le 0$, and since $T_0 > 0$, $\sum_i \frac{\delta Q_i}{T_i} \le 0$. Taking the steps infinitesimal turns the sum into an integral:
+\begin{law}[Clausius Inequality]
+    For any cyclic process,
+    \begin{equation}
+        \oint \frac{\delta Q}{T} \le 0,
+    \end{equation}
+    where $T$ is the temperature at which $\delta Q$ is supplied, with equality if and only if the cycle is reversible.
+\end{law}
 
 \subsection{Entropy}
   \subsubsection{Entropy as a State Function}

@@ -60,46 +60,46 @@
 \contentsline {subsubsection}{\numberline {5.6.4}The Steam Engine}{3}{subsubsection.5.6.4}%
 \contentsline {section}{\numberline {6}Entropy}{4}{section.6}%
 \contentsline {subsection}{\numberline {6.1}The Clausius Inequality}{4}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Entropy}{5}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Entropy as a State Function}{5}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}Entropy Changes in Irreversible Processes}{5}{subsubsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.3}The Principle of Increasing Entropy}{5}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Isolated Systems}{5}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}Entropy of the Universe}{5}{subsubsection.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.3.3}Entropy Maximization and the Arrow of Time}{5}{subsubsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.4}Entropy--Temperature Diagrams}{5}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}The Thermodynamic Identity}{5}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Other Examples of Entropy Calculations}{5}{subsection.6.6}%
-\contentsline {subsubsection}{\numberline {6.6.1}Free Expansion}{5}{subsubsection.6.6.1}%
-\contentsline {subsubsection}{\numberline {6.6.2}Measuring Entropies}{5}{subsubsection.6.6.2}%
-\contentsline {section}{\numberline {7}Statistical Mechanics}{5}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Introduction to Probability and Statistics}{5}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Microscopic View of Entropy}{7}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}The Two-State Paramagnet}{7}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}The Einstein Solid}{7}{subsubsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.3}Interacting Systems}{7}{subsubsection.7.2.3}%
-\contentsline {subsubsection}{\numberline {7.2.4}Large Systems and the Thermodynamic Limit}{7}{subsubsection.7.2.4}%
-\contentsline {subsubsection}{\numberline {7.2.5}Entropy as Multiplicity}{7}{subsubsection.7.2.5}%
-\contentsline {subsubsection}{\numberline {7.2.6}Maxwell's Demon}{7}{subsubsection.7.2.6}%
-\contentsline {subsubsection}{\numberline {7.2.7}Temperature from Entropy}{7}{subsubsection.7.2.7}%
-\contentsline {subsubsection}{\numberline {7.2.8}Pressure from Entropy}{7}{subsubsection.7.2.8}%
-\contentsline {subsubsection}{\numberline {7.2.9}Heat Capacities from Multiplicity}{7}{subsubsection.7.2.9}%
-\contentsline {subsection}{\numberline {7.3}Ideal Gases}{7}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Multiplicity of an Ideal Gas}{7}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Interacting Ideal Gases}{7}{subsubsection.7.3.2}%
-\contentsline {subsubsection}{\numberline {7.3.3}Entropy of an Ideal Gas}{7}{subsubsection.7.3.3}%
-\contentsline {subsubsection}{\numberline {7.3.4}Entropy of Mixing}{7}{subsubsection.7.3.4}%
-\contentsline {section}{\numberline {8}The Thermodynamic Potentials and the Maxwell Relations}{7}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Thermodynamic Potentials}{7}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Internal Energy}{7}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Enthalpy}{7}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Helmholtz Function}{7}{subsection.8.4}%
-\contentsline {subsubsection}{\numberline {8.4.1}Maximum Work}{7}{subsubsection.8.4.1}%
-\contentsline {subsubsection}{\numberline {8.4.2}Equilibrium at Constant Volume}{7}{subsubsection.8.4.2}%
-\contentsline {subsection}{\numberline {8.5}Gibbs Function}{7}{subsection.8.5}%
-\contentsline {subsubsection}{\numberline {8.5.1}Equilibrium at Constant Pressure}{7}{subsubsection.8.5.1}%
-\contentsline {subsubsection}{\numberline {8.5.2}Useful Work}{7}{subsubsection.8.5.2}%
-\contentsline {subsection}{\numberline {8.6}The Thermodynamic Square}{7}{subsection.8.6}%
-\contentsline {subsection}{\numberline {8.7}Example Using a Maxwell Relation}{7}{subsection.8.7}%
-\contentsline {section}{\numberline {A}Appendix}{8}{appendix.A}%
-\contentsline {section}{\numberline {B}Useful Links}{8}{appendix.B}%
+\contentsline {subsection}{\numberline {6.2}Entropy}{6}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Entropy as a State Function}{6}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Entropy Changes in Irreversible Processes}{6}{subsubsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.3}The Principle of Increasing Entropy}{6}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Isolated Systems}{6}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Entropy of the Universe}{6}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3}Entropy Maximization and the Arrow of Time}{6}{subsubsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.4}Entropy--Temperature Diagrams}{6}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}The Thermodynamic Identity}{6}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Other Examples of Entropy Calculations}{6}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}Free Expansion}{6}{subsubsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.2}Measuring Entropies}{6}{subsubsection.6.6.2}%
+\contentsline {section}{\numberline {7}Statistical Mechanics}{6}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Introduction to Probability and Statistics}{6}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Microscopic View of Entropy}{8}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}The Two-State Paramagnet}{8}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}The Einstein Solid}{8}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Interacting Systems}{8}{subsubsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.4}Large Systems and the Thermodynamic Limit}{8}{subsubsection.7.2.4}%
+\contentsline {subsubsection}{\numberline {7.2.5}Entropy as Multiplicity}{8}{subsubsection.7.2.5}%
+\contentsline {subsubsection}{\numberline {7.2.6}Maxwell's Demon}{8}{subsubsection.7.2.6}%
+\contentsline {subsubsection}{\numberline {7.2.7}Temperature from Entropy}{8}{subsubsection.7.2.7}%
+\contentsline {subsubsection}{\numberline {7.2.8}Pressure from Entropy}{8}{subsubsection.7.2.8}%
+\contentsline {subsubsection}{\numberline {7.2.9}Heat Capacities from Multiplicity}{8}{subsubsection.7.2.9}%
+\contentsline {subsection}{\numberline {7.3}Ideal Gases}{8}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Multiplicity of an Ideal Gas}{8}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Interacting Ideal Gases}{8}{subsubsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3}Entropy of an Ideal Gas}{8}{subsubsection.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.4}Entropy of Mixing}{8}{subsubsection.7.3.4}%
+\contentsline {section}{\numberline {8}The Thermodynamic Potentials and the Maxwell Relations}{8}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Thermodynamic Potentials}{8}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Internal Energy}{8}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Enthalpy}{8}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Helmholtz Function}{8}{subsection.8.4}%
+\contentsline {subsubsection}{\numberline {8.4.1}Maximum Work}{8}{subsubsection.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.4.2}Equilibrium at Constant Volume}{8}{subsubsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.5}Gibbs Function}{8}{subsection.8.5}%
+\contentsline {subsubsection}{\numberline {8.5.1}Equilibrium at Constant Pressure}{8}{subsubsection.8.5.1}%
+\contentsline {subsubsection}{\numberline {8.5.2}Useful Work}{8}{subsubsection.8.5.2}%
+\contentsline {subsection}{\numberline {8.6}The Thermodynamic Square}{8}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Example Using a Maxwell Relation}{8}{subsection.8.7}%
+\contentsline {section}{\numberline {A}Appendix}{9}{appendix.A}%
+\contentsline {section}{\numberline {B}Useful Links}{9}{appendix.B}%
