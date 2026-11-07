@@ -1,5 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1793925702.95789 "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys253.tex" "Phys253.pdf" "Phys253" 1793925707.3053 0
+["pdflatex"] 1793991530.68986 "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys253.tex" "Phys253.pdf" "Phys253" 1793991791.68766 0
+  "../images/clausius-inequality.png" 1793991114 69517 c5e79d2e6cc347e7e5503c1c220c270c ""
   "C:/Users/erenr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1790466715 82666 6ae954049cbd801ff08c004e318ae5a8 ""
   "C:/Users/erenr/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1767801684 11548 9ea6db1ff0b947846d8751dabcdcf90a ""
   "C:/Users/erenr/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1767801679 13333486 ad3a4e5807f6f25ced943a60862e7471 ""
@@ -224,11 +225,11 @@
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/translations/translations.sty" 1644048522 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "Phys253.aux" 1793925706 14272 3cab15bb9c5a99e9a152b1daa12f1196 "pdflatex"
-  "Phys253.out" 1793925706 19102 062c3bb5e7cd5ce88529305bf47b555f "pdflatex"
-  "Phys253.tex" 1793925701 9101 1820a55a0101becf8d146f7694e46266 ""
-  "Phys253.toc" 1793925706 9804 7b3d48b9279110c3f2f26f955d77aace "pdflatex"
-  "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys253.tex" 1793925701 9101 1820a55a0101becf8d146f7694e46266 ""
+  "Phys253.aux" 1793991789 14448 60feb148c405aa455dce3bea831fc7f0 "pdflatex"
+  "Phys253.out" 1793991789 19102 062c3bb5e7cd5ce88529305bf47b555f "pdflatex"
+  "Phys253.tex" 1793991526 9285 5c0d2129392116ae0931ab8d5ba687ea ""
+  "Phys253.toc" 1793991789 9804 8f6f6b74ecc2aaa1896497869d6c9476 "pdflatex"
+  "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys253.tex" 1793991526 9285 5c0d2129392116ae0931ab8d5ba687ea ""
   (generated)
   "Phys253.aux"
   "Phys253.log"

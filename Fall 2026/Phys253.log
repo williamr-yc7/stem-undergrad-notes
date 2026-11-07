@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  5 NOV 2026 19:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  6 NOV 2026 13:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -704,21 +704,32 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has b
                    \relax 
 l.144 \newpage
                [3]
-Overfull \hbox (13.41734pt too wide) in paragraph at lines 175--176
-[]\OT1/cmr/m/n/10 Assuming all mi-crostates are equally prob-a-ble, the prob-a-bil-ity of any macrostate
- []
-
+<../images/clausius-inequality.png, id=575, 322.70563pt x 322.20375pt>
+File: ../images/clausius-inequality.png Graphic file (type png)
+<use ../images/clausius-inequality.png>
+Package pdftex.def Info: ../images/clausius-inequality.png  used on input line 154.
+(pdftex.def)             Requested size: 172.5pt x 172.23225pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.178 \end{equation}
-                     [4]
-Overfull \hbox (19.4312pt too wide) in paragraph at lines 214--214
+l.177 \end{definition}
+                       [4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.177 \end{definition}
+                       <../images/clausius-inequality.png>]
+Overfull \hbox (13.41734pt too wide) in paragraph at lines 181--182
+[]\OT1/cmr/m/n/10 Assuming all mi-crostates are equally prob-a-ble, the prob-a-bil-ity of any macrostate
+ []
+
+[5]
+Overfull \hbox (19.4312pt too wide) in paragraph at lines 220--220
 []\OT1/cmr/bx/n/14.4 The Ther-mo-dy-namic Po-ten-tials and the Maxwell
  []
 
-[5] [6] [7] (Phys253.aux)
+[6] [7] [8] (Phys253.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -727,17 +738,17 @@ Package rerunfilecheck Info: File `Phys253.out' has not changed.
 (rerunfilecheck)             Checksum: 062C3BB5E7CD5CE88529305BF47B555F;19102.
  ) 
 Here is how much of TeX's memory you used:
- 53162 strings out of 467871
- 1406032 string characters out of 5418377
- 2119217 words of memory out of 5000000
- 81363 multiletter control sequences out of 15000+600000
+ 53177 strings out of 467871
+ 1406442 string characters out of 5418377
+ 2119243 words of memory out of 5000000
+ 81376 multiletter control sequences out of 15000+600000
  635625 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,8n,118p,797b,1102s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,8n,118p,797b,1176s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\erenr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Phys253.pdf (11 pages, 286913 bytes).
+Output written on Phys253.pdf (12 pages, 340796 bytes).
 PDF statistics:
- 694 PDF objects out of 1000 (max. 8388607)
- 123 named destinations out of 1000 (max. 500000)
- 853 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 702 PDF objects out of 1000 (max. 8388607)
+ 125 named destinations out of 1000 (max. 500000)
+ 858 words of extra memory for PDF output out of 10000 (max. 10000000)
 
