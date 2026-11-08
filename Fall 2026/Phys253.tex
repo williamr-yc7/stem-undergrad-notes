@@ -105,6 +105,18 @@ The textbook is \textit{An Introduction to Thermal Physics} by Daniel V. Schroed
 \section{The First Law of Thermodynamics}
 \subsection{The Work of Thompson and Joule}
 \subsection{The First Law of Thermodynamics}
+\begin{law}[First Law of Thermodynamics]
+    If a thermally isolated system is brought from one equilibrium state to another, the work necessary to achieve this change is independent of the process used.
+\end{law}
+This adiabatic work therefore defines a state function, the internal energy, through $\Delta U = W_{\text{adiabatic}}$. For a non-adiabatic process, the difference defines the heat:
+\begin{equation}
+    \label{eq:first-law-thermo}
+    \Delta U = W + Q,
+\end{equation}
+where $W$ is the work done on the system and $Q$ the heat added to it.
+\begin{definition}[Heat]
+    Heat $Q$ is the nonmechanical exchange of energy between the system and the surroundings because of their temperature difference.
+\end{definition}
 \subsection{Heat Capacity}
   \subsubsection{$C_V$ and $C_P$}
   \subsubsection{Calorimetry}
@@ -116,6 +128,15 @@ The textbook is \textit{An Introduction to Thermal Physics} by Daniel V. Schroed
   \subsubsection{Frozen-Out Degrees of Freedom}
   \subsubsection{Heat Capacities from Equipartition}
 \subsection{Ideal Gases and the First Law}
+\begin{definition}[Free Expansion]
+    Free expansion is the expansion of a gas into a vacuum, with no external pressure applied.
+    \begin{itemize}
+        \item The process is irreversible;
+        \item There is no temperature change;
+        \item No heat enters the system, since the walls are adiabatic;
+        \item No work is done, since there is no external pressure;
+    \end{itemize}   
+\end{definition}
   \subsubsection{Internal Energy of an Ideal Gas}
   \subsubsection{Isothermal Processes}
   \subsubsection{Adiabatic Processes}
@@ -177,12 +198,9 @@ Hence $W = Q \le 0$, and since $T_0 > 0$, taking the steps infinitesimal gives:
 \begin{law}[Clausius Inequality]
     For any cyclic process,
     \begin{equation}
-        \oint \frac{\delta Q}{T_{0}} \leq 0,
+        \oint \frac{\delta Q}{T_{\text{surr}}} \leq 0,
     \end{equation}
-    where $T_{0}$\footnote{The integral does not depend on $T_{i}$.} is the temperature, of the auxiliary reservoirs supplying heat to the working substance, at which $\delta Q$ is supplied\footnote{The `surr' can be dropped because for a fully reversible process $T_i = T_{sys} = T_{surr} = T_0$ (no finite difference in $T$ at any point over the cycle).}, with equality if and only if the cycle is reversible. If the you run the cycle in reverse, then
-    \begin{equation}
-        \oint \frac{\delta Q}{T_{0}} \geq 0.
-    \end{equation}
+    where $T_{\text{surr}}$ is the temperature of the auxiliary reservoirs supplying $\delta Q_i$ (not of the system). If the cycle is reversible, $T_{\text{surr}} = T_{\text{sys}}$ and running it in reverse gives $\oint \frac{\delta Q}{T_{\text{surr}}} \geq 0$, so equality holds if and only if the cycle is reversible.
 \end{law}
 \begin{remark}
     Physically, an engine needs a hot source and a colder sink: a car takes heat from burning fuel, turns part of it into work, and dumps the rest into the colder air. With only one reservoir, there is nowhere to dump heat, so no net work is possible.
@@ -201,21 +219,22 @@ The integral is the same along any reversible path between $i$ and $f$, so it is
     \begin{equation}
         \Delta S = S_f - S_i = \int_i^f \frac{\delta Q_{\text{rev}}}{T},
     \end{equation}
-    where the integral is taken along any reversible path, for which $T_{\text{sys}} = T_{\text{surr}}$. Only entropy differences ($\Delta S$) are defined, in units of J/K. For an infinitesimal reversible process
+    where the integral is taken along any reversible path\footnote{Irreversibility comes from the temperature gap between system and source. The source must be at $T + dT$ hotter than the system at every moment.}, for which $T_{\text{sys}} = T_{\text{surr}}$. Only entropy differences ($\Delta S$) are defined, in units of J/K, using absolute temperature $T$ in Kelvin. For an infinitesimal reversible process
     \begin{equation}
         dS = \frac{\delta Q_{\text{rev}}}{T}.
     \end{equation}
 \end{definition}
-\begin{remark}
-    Since $S$ is a state function, $\Delta S$ for an irreversible process is computed along any reversible path between the same end states.
+\begin{remark}[Entropy Change in Irreversible Processes]
+    Since $S$ is a state function, $\Delta S$ for an irreversible process equals $\Delta S$ along any reversible process between the same end states.
 \end{remark}
-\begin{remark}
-    Water heated from $T_i = 20^\circ$C to $T_f = 100^\circ$C on a stove at $100^\circ$C is irreversible (finite temperature difference). Along a reversible path, $\delta Q_{\text{rev}} = C_P\,dT$, so
-    \begin{equation}
-        \Delta S = \int_{T_i}^{T_f} \frac{C_P\,dT}{T} = C_P \ln\frac{T_f}{T_i},
-    \end{equation}
-    with temperatures in kelvin.
-\end{remark}
+\begin{example}[Entropy Change of Heating Water]
+    Consider heating water from $T_i$ to $T_f$, isobarically, through a series of reservoirs, each at $T + dT$ when the water is at $T$. The heat entering the water reversibly at each step is
+    \[\delta Q_{\text{rev}} = C_P\,dT,\]
+    where $C_P$ is the water's heat capacity at constant pressure. Hence, the entropy change of the water is
+    \[dS = \frac{\delta Q_{\text{rev}}}{T} = \frac{C_P\,dT}{T},\]
+    or, for constant $C_P$,
+    \[\Delta S = C_P\int_{T_i}^{T_f}\frac{dT}{T} = C_P \ln\frac{T_f}{T_i}.\]
+\end{example}
 \subsection{The Principle of Increasing Entropy}
   \subsubsection{Isolated Systems}
   \subsubsection{Entropy of the Universe}
