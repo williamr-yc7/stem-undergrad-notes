@@ -155,36 +155,67 @@ As previously mentioned, Sadi Carnot was the first to recognize that heat flowin
     \caption{Clausius' thought experiment: Carnot engines route all heat exchanged by the gas through a single reservoir at $T_0$.}
     \label{fig:clausius-inequality}
 \end{figure}
-The question is: could an engine run on heat drawn from the surrounding air alone, without burning fuel? Clausius imagined a setup where a gas in a cylinder (it may be air; what matters is its temperature, not its substance) goes around an arbitrary cycle through states $1, 2, 3, \dots$ at temperatures $T_1, T_2, T_3, \dots$, all different from the outside air at $T_0$, the single principal reservoir. Going from state $i$ to $i+1$ requires a small heat $\delta Q_i$ at $T_i$. The idea behind his thought experiment is to consider the composite system of the gas, the Carnot engines, and the auxiliary reservoirs. In it, a Carnot engine $C_i$ draws heat $\delta Q_i \frac{T_0}{T_i}$ from the air (via an auxiliary reservoir at $T_0$), converts part of it into work $\delta W_i$, and delivers the remaining $\delta Q_i$ to an auxiliary reservoir at $T_i$, which passes it to the gas. Each auxiliary reservoir gives exactly what it receives, so it ends unchanged.
-\begin{remark}[]
-    The factor $\frac{T_0}{T_i}$ comes from the Carnot relation $\frac{Q_{T_0}}{Q_{T_i}} = \frac{T_0}{T_i}$.\footnote{For example, with $T_0 = 600$~K, $T_1 = 300$~K and $\delta Q_1 = 10$~J, the Carnot engine takes $20$~J from the air, delivers $10$~J to the gas, and the difference, $10$~J, is the work $\delta W_1$.}
+Could an engine run on heat drawn from the surrounding air alone, without burning fuel?
+\begin{remark}[Clausius' Thought Experiment]
+    Consider Figure~\ref{fig:clausius-inequality}. Heat $\delta Q_1 \frac{T_0}{T_1}$ flows from the principal reservoir (PR) at $T_0$ (e.g.\ the surrounding air) to an auxiliary reservoir at $T_0$. A Carnot engine takes this heat, transforms part of it into work, and transfers the rest, $\delta Q_1$, to an auxiliary reservoir at the gas's temperature $T_1$, which passes it to the gas, changing its state from $(P_1, V_1, T_1)$ to $(P_2, V_2, T_2)$. Each auxiliary reservoir gives exactly what it receives, so it ends unchanged. This continues until the gas is back at its original state. The question is whether heat from a single reservoir can thus be fully converted into work, with no other effect on the surroundings.
 \end{remark}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{../images/clausius-inequality2.png}
-    \caption{The composite system: gas, Carnot engines and auxiliary reservoirs, exchanging heat only with the reservoir at $T_0$.}
+    \caption{The composite system exchanges heat only with the reservoir at $T_0$.}
     \label{fig:clausius-inequality-2}
 \end{figure}
-We can easily better understand the result of this thought experiment by compressing Figure~\ref{fig:clausius-inequality} into the composite system of Figure~\ref{fig:clausius-inequality-2}. After a full cycle everything in it is back to its original state, so $\Delta U = 0$, and the first law gives
+After a full cycle, everything in the composite system (Figure~\ref{fig:clausius-inequality-2}) is back to its original state, so $\Delta U = 0$ and the first law gives
 \begin{equation}
     W = Q = T_0\sum_i \frac{\delta Q_i}{T_i},
 \end{equation}
-where $W = \sum_i \delta W_i$ is the total work done and $Q$ the heat drawn from $T_0$. A positive $W = Q$ would mean heat from a single reservoir fully converted into work, forbidden by:
+where $W = \sum_i \delta W_i$ is the total work done and $Q$ the heat drawn from $T_0$. A positive $W = Q$ is forbidden by:
 \begin{law}[Kelvin Statement of the Second Law of Thermodynamics]
     No process is possible whose sole result is the absorption of heat from a reservoir and the conversion of this heat into work.
 \end{law}
-Hence $W = Q \le 0$, and since $T_0 > 0$, $\sum_i \frac{\delta Q_i}{T_i} \le 0$. Taking the steps infinitesimal turns the sum into an integral:
+Hence $W = Q \le 0$, and since $T_0 > 0$, taking the steps infinitesimal gives:
 \begin{law}[Clausius Inequality]
     For any cyclic process,
     \begin{equation}
-        \oint \frac{\delta Q}{T} \le 0,
+        \oint \frac{\delta Q}{T_{0}} \leq 0,
     \end{equation}
-    where $T$ is the temperature at which $\delta Q$ is supplied, with equality if and only if the cycle is reversible.
+    where $T_{0}$\footnote{The integral does not depend on $T_{i}$.} is the temperature, of the auxiliary reservoirs supplying heat to the working substance, at which $\delta Q$ is supplied\footnote{The `surr' can be dropped because for a fully reversible process $T_i = T_{sys} = T_{surr} = T_0$ (no finite difference in $T$ at any point over the cycle).}, with equality if and only if the cycle is reversible. If the you run the cycle in reverse, then
+    \begin{equation}
+        \oint \frac{\delta Q}{T_{0}} \geq 0.
+    \end{equation}
 \end{law}
+\begin{remark}
+    Physically, an engine needs a hot source and a colder sink: a car takes heat from burning fuel, turns part of it into work, and dumps the rest into the colder air. With only one reservoir, there is nowhere to dump heat, so no net work is possible.
+\end{remark}
 
 \subsection{Entropy}
-  \subsubsection{Entropy as a State Function}
-  \subsubsection{Entropy Changes in Irreversible Processes}
+Suppose a system is taken along a reversible path $\text{Route}_1$ from an initial state $i$ to a final state $f$ and then back again to the initial state along another reversible path $\text{Route}_2$, completing a reversible cycle. Since the cycle is reversible, the Clausius inequality holds with equality:
+\[\oint\frac{\delta Q_{\text{Route}}}{T} = \underset{\text{Route}_{1}}{\int_i^f}\frac{\delta Q_{\text{Route}}}{T} + \underset{\text{Route}_{2}}{\int_f^i}\frac{\delta Q_{\text{Route}}}{T} = 0,\]
+therefore
+\[\underset{\text{Route}_{1}}{\int_i^f}\frac{\delta Q_{\text{Route}}}{T} = -\underset{\text{Route}_{2}}{\int_f^i}\frac{\delta Q_{\text{Route}}}{T}.\]
+Since $\text{Route}_2$ is reversible, traversing it from $i$ to $f$ instead flips the sign of every $\delta Q$, so $\underset{\text{Route}_{2}}{\int_f^i} = -\underset{\text{Route}_{2}}{\int_i^f}$ and
+\[\underset{\text{Route}_{1}}{\int_i^f}\frac{\delta Q_{\text{Route}}}{T} = \underset{\text{Route}_{2}}{\int_i^f}\frac{\delta Q_{\text{Route}}}{T}.\]
+The integral is the same along any reversible path between $i$ and $f$, so it is path independent (depends only on the end states) and defines a state function.
+\begin{definition}[Entropy]
+    The entropy $S$ is the state function defined by
+    \begin{equation}
+        \Delta S = S_f - S_i = \int_i^f \frac{\delta Q_{\text{rev}}}{T},
+    \end{equation}
+    where the integral is taken along any reversible path, for which $T_{\text{sys}} = T_{\text{surr}}$. Only entropy differences ($\Delta S$) are defined, in units of J/K. For an infinitesimal reversible process
+    \begin{equation}
+        dS = \frac{\delta Q_{\text{rev}}}{T}.
+    \end{equation}
+\end{definition}
+\begin{remark}
+    Since $S$ is a state function, $\Delta S$ for an irreversible process is computed along any reversible path between the same end states.
+\end{remark}
+\begin{remark}
+    Water heated from $T_i = 20^\circ$C to $T_f = 100^\circ$C on a stove at $100^\circ$C is irreversible (finite temperature difference). Along a reversible path, $\delta Q_{\text{rev}} = C_P\,dT$, so
+    \begin{equation}
+        \Delta S = \int_{T_i}^{T_f} \frac{C_P\,dT}{T} = C_P \ln\frac{T_f}{T_i},
+    \end{equation}
+    with temperatures in kelvin.
+\end{remark}
 \subsection{The Principle of Increasing Entropy}
   \subsubsection{Isolated Systems}
   \subsubsection{Entropy of the Universe}
