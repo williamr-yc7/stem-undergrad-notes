@@ -104,6 +104,31 @@ The textbook is \textit{An Introduction to Thermal Physics} by Daniel V. Schroed
 
 \section{The First Law of Thermodynamics}
 \subsection{The Work of Thompson and Joule}
+Joseph Black, professor of medicine at the University of Glasgow, discovered the following principle:
+\begin{principle}[Black's Principle of Calorimetry]
+    When two bodies are put in thermal contact, the heat lost by one is equal to the heat gained by the other.
+\end{principle}
+This suggested that heat was a conserved substance, called caloric.
+\begin{definition}[Caloric]
+    Caloric is a hypothetical weightless, invisible fluid, once believed to be heat itself, conserved and flowing from hotter to colder bodies.
+\end{definition}
+Then came Benjamin Thompson, working in the arsenal in Munich, who noticed while boring cannons that friction produced seemingly unlimited heat:
+\begin{principle}[Thompson's Observation]
+    Heat is not a finite substance such as caloric, and there is a direct relation between the work done and the heat produced.
+\end{principle}
+About 50 years later, James Joule finished the job with a careful series of experiments, using a tub containing a paddle wheel rotated by weights falling outside the tub. The water inside was stirred (irreversibly, because of turbulence), raising its temperature between two equilibrium states. The walls of the tub were insulating, so the work was performed under adiabatic conditions.
+\begin{definition}[Adiabatic Work]
+    Adiabatic work is work done on a system enclosed by adiabatic (thermally insulating) walls, so that no heat is exchanged with the surroundings.
+\end{definition}
+Joule found:
+\begin{result}[Mechanical Equivalent of Heat]
+    $4.2$~kJ of work is required to raise the temperature of $1$~kg of water by $1$~K.
+\end{result}
+\begin{result}[Adiabatic Work]
+    No matter how the adiabatic work is performed, the same amount of work is required to take a system between the same two equilibrium states.
+\end{result}
+This second result is exactly the First Law of Thermodynamics, stated in the next subsection.
+
 \subsection{The First Law of Thermodynamics}
 \begin{law}[First Law of Thermodynamics]
     If a thermally isolated system is brought from one equilibrium state to another, the work necessary to achieve this change is independent of the process used.
@@ -117,6 +142,9 @@ where $W$ is the work done on the system and $Q$ the heat added to it.
 \begin{definition}[Heat]
     Heat $Q$ is the nonmechanical exchange of energy between the system and the surroundings because of their temperature difference.
 \end{definition}
+\begin{remark}[Sign convention for Heat]
+    Heat $Q$ is positive when it enters the system and is negative when it leaves the system.
+\end{remark}
 \subsection{Heat Capacity}
   \subsubsection{$C_V$ and $C_P$}
   \subsubsection{Calorimetry}
@@ -255,6 +283,7 @@ The integral is the same along any reversible path between $i$ and $f$, so it is
 \end{proof}
 For an isolated system $\delta Q = 0$, so $\Delta S \geq 0$:
 \begin{law}[Principle of Increasing Entropy]
+    \label{poie}
     The entropy of a thermally isolated system increases in any irreversible process and is constant in a reversible process; it never decreases.
 \end{law}
 \begin{remark}
@@ -271,10 +300,15 @@ For an isolated system $\delta Q = 0$, so $\Delta S \geq 0$:
     \[\Delta S = Q\left(\frac{1}{T_B} - \frac{1}{T_A}\right) > 0,\]
     since $T_A > T_B$, so the entropy of the whole system increases.
 \end{example}
-Since the entropy of an isolated system can only increase, spontaneous changes continue until no further increase is possible, so equilibrium is reached when $S$ is maximum:
+Since the entropy of an isolated system can only increase, spontaneous changes continue until no further increase is possible, so equilibrium is reached when $S$ is maximum.
 \begin{proposition}[Principle of Entropy Maximization]
     For a system that is thermally isolated from the surroundings, $S$ tends to its maximum, whilst for a system that is totally isolated (thermally and mechanically), $S$ tends to its maximum with $U$ remaining constant.
 \end{proposition}
+
+\subsubsection{Entropy and the Arrow of Time}
+\begin{remark}[Entropy and the Arrow of Time]
+    Most physical laws are unchanged by replacing $t$ with $-t$ (e.g.\ $F = m\frac{d^2\vec{r}}{dt^2}$), so they allow processes to run backward as well as forward. Yet a smashed teacup never reassembles itself: by the principle of increasing entropy (Law~\ref{poie}), the broken pieces have higher entropy than the unbroken cup. Entropy increase thus gives time its direction.
+\end{remark}
 
 \subsection{Entropy--Temperature Diagrams}
 \subsection{The Thermodynamic Identity}
