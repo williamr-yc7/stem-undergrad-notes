@@ -261,8 +261,36 @@ It follows from Equation~\eqref{eq:ideal-gas-law} that the isotherms for an idea
 \end{remark}
 
 \subsubsection{Thermal Expansion}
+\begin{definition}[Linear Coefficient of Thermal Expansion]
+    For a small increase in temperature $\Delta T$ at constant tension $F$, the increase in length of a solid bar of length $L$ is $\Delta L = \alpha L \Delta T$, where
+    \begin{equation}
+        \alpha = \frac{1}{L}\left(\frac{\partial L}{\partial T}\right)_F
+    \end{equation}
+    is the linear coefficient of thermal expansion, in units of $\text{K}^{-1}$.
+\end{definition}
+\begin{definition}[Volume Coefficient of Thermal Expansion]
+    For a small increase in temperature $\Delta T$ at constant pressure $P$, the increase in volume of a solid or liquid of volume $V$ is $\Delta V = \beta V \Delta T$, where in the limit as $\Delta T$ approaches zero,
+    \begin{equation}
+        \beta = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P
+    \end{equation}
+    is the volume coefficient of thermal expansion, in units of $\text{K}^{-1}$.
+\end{definition}
+\begin{remark}
+    Slow thermal expansion is reversible: cooling by $\Delta T$ undoes the volume change from heating by $\Delta T$.
+\end{remark}
+\begin{remark}
+    For solid material, $\alpha$ and $\beta$ are related
+    \[\beta \approx 3\alpha.\]
+\end{remark}
 
 \subsubsection{Bulk Modulus}
+\begin{definition}[Isothermal Bulk Modulus]
+    The bulk modulus of a solid or fluid is the stress (pressure increase) divided by the fractional volume decrease, at constant temperature:
+    \begin{equation}
+        B = -V\left(\frac{\partial P}{\partial V}\right)_T \equiv \frac{1}{\kappa},
+    \end{equation}
+    where $\kappa$ is the isothermal compressibility and the negative sign ensures that $B$ stays positive.
+\end{definition}
 
 \subsection{Work}
 
@@ -475,7 +503,10 @@ The integral is the same along any reversible path between $i$ and $f$, so it is
     where $C_P$ is the water's heat capacity at constant pressure. Hence, the entropy change of the water is
     \[dS = \frac{\delta Q_{\text{rev}}}{T} = \frac{C_P\,dT}{T},\]
     or, for constant $C_P$,
-    \[\Delta S = C_P\int_{T_i}^{T_f}\frac{dT}{T} = C_P \ln\frac{T_f}{T_i}.\]
+    \begin{equation}
+        \label{eq:centropy-water}
+        \Delta S = C_P\int_{T_i}^{T_f}\frac{dT}{T} = C_P \ln\frac{T_f}{T_i}.
+    \end{equation}
 \end{example}
 \begin{definition}[Isentropic]
     A process is isentropic if the entropy of the system stays constant, $dS = 0$ at every step.
@@ -578,8 +609,27 @@ For constant $c_v$, integrating from a reference state $(T_0, v_0)$, usually tak
 \end{equation}
 where $s_0$ is the molar entropy of the reference state, which cancels when entropy differences are taken.
 
-\subsubsection{Measuring Entropies}
-
+\subsubsection{Entropy Change of the Universe when Heating Water}
+\begin{example}[Single-Stage Heating]
+    Heating water from $T_i = 293$~K on a reservoir at $T_f = 373$~K, the reservoir loses $Q = C_P(T_f - T_i)$ at constant temperature $T_f$, so
+    \[\Delta S_{\text{universe}} = \Delta S_{\text{water}} + \Delta S_{\text{reservoir}},\]
+    where $\Delta S_{\text{water}}$ comes from Equation~\eqref{eq:centropy-water}, so
+    \[\Delta S_{\text{universe}} = C_P\left[\ln\frac{T_f}{T_i} - \frac{T_f - T_i}{T_f}\right] = C_P(0.241 - 0.214) = 0.027\,C_P > 0.\]
+    The water's entropy gain only slightly exceeds the reservoir's loss, but no choice of parameters makes the total negative.
+\end{example}
+\begin{example}[Two-Stage Heating]
+    Heating in two stages, first on a reservoir at $323$~K, then at $373$~K, leaves $\Delta S_{\text{water}}$ unchanged (same end states), while
+    \[\Delta S_{\text{universe}} = C_P\left[\ln\frac{373}{293} - \frac{323-293}{323} - \frac{373-323}{373}\right] = 0.014\,C_P,\]
+    about half.
+\end{example}
+\begin{remark}
+    More stages bring the process closer to reversibility.
+\end{remark}
+\begin{example}[Reversible Heating with a Carnot Engine]
+    An infinitesimal Carnot engine runs between the reservoir at $T_f = 373$~K and the water at $T$, with cycles so small that only differential heat and work are exchanged per cycle. To deliver $\delta Q_2 = C_P\,dT$ to the water, it draws $\delta Q_1 = \frac{T_f}{T}\,\delta Q_2$ from the reservoir and outputs work $\delta W$. Then
+    \[\Delta S_{\text{reservoir}} = -\int_{T_i}^{T_f}\frac{\delta Q_1}{T_f} = -\int_{T_i}^{T_f}\frac{C_P\,dT}{T} = -C_P\ln\frac{T_f}{T_i} = -\Delta S_{\text{water}},\]
+    so $\Delta S_{\text{universe}} = 0$, as it must be for a reversible process.
+\end{example}
 
 \section{Statistical Mechanics}
 \subsection{Introduction to Probability and Statistics}
