@@ -285,6 +285,7 @@ Then came Benjamin Thompson, working in the arsenal in Munich, who noticed while
 \end{principle}
 About 50 years later, James Joule finished the job with a careful series of experiments, using a tub containing a paddle wheel rotated by weights falling outside the tub. The water inside was stirred (irreversibly, because of turbulence), raising its temperature between two equilibrium states. The walls of the tub were insulating, so the work was performed under adiabatic conditions.
 \begin{definition}[Adiabatic Work]
+    \label{def:adiabatic-work}
     Adiabatic work is work done on a system enclosed by adiabatic (thermally insulating) walls, so that no heat is exchanged with the surroundings.
 \end{definition}
 Joule found:
@@ -298,14 +299,29 @@ This second result is exactly the First Law of Thermodynamics, stated in the nex
 
 \subsection{The First Law of Thermodynamics}
 \begin{law}[First Law of Thermodynamics]
+    \label{law:first-law}
     If a thermally isolated system is brought from one equilibrium state to another, the work necessary to achieve this change is independent of the process used.
 \end{law}
-This adiabatic work therefore defines a state function, the internal energy, through $\Delta U = W_{\text{adiabatic}}$. For a non-adiabatic process, the difference defines the heat:
+
+\subsubsection{Internal Energy}
+By Law~\ref{law:first-law}, the adiabatic work~\ref{def:adiabatic-work} depends only on the end states, whether the process is reversible or not, so it defines a state function:
+\begin{definition}[Internal Energy]
+    The internal energy $U$ is the state function satisfying
+    \[W_{\text{adiabatic}} = U_2 - U_1.\]
+\end{definition}
+\begin{remark}
+    $U$ is the kinetic and potential energy of the individual molecules (random motion, mutual attraction), not of the object as a whole.
+\end{remark}
+
+\subsubsection{Heat}
+\begin{remark}
+    If the system is not thermally isolated, the work between two equilibrium states depends on the path and generally differs from the adiabatic work.
+\end{remark}
+The difference between $\Delta U$ and $W$ is called heat $Q$.
 \begin{equation}
     \label{eq:first-law-thermo}
-    \Delta U = W + Q,
+    \Delta U = W + Q.
 \end{equation}
-where $W$ is the work done on the system and $Q$ the heat added to it.
 \begin{definition}[Heat]
     Heat $Q$ is the nonmechanical exchange of energy between the system and the surroundings due to their temperature difference, flowing spontaneously from the hotter to the colder one.
 \end{definition}
@@ -320,15 +336,25 @@ where $W$ is the work done on the system and $Q$ the heat added to it.
     \end{equation}
     The $\delta$ are used to indicate that their integrals are in general path dependent (inexact differentials\footnote{Exactness, including the test $\left(\frac{\partial M}{\partial y}\right)_x = \left(\frac{\partial N}{\partial x}\right)_y$, is treated in detail in my \href{https://github.com/williamr-yc7/stem-undergrad-notes/blob/86199275ed081fd521621a48faec61bef0cb1069/Winter\%202026/Math325.pdf}{Math 325 notes}, in the section ``First-Order Scalar Equation''.}).
 \end{remark}
-\begin{proof}
-    For work, $\delta W = -P\,dV$. Take two paths between the same states $(P_1, V_1)$ and $(P_2, V_2)$, with $P_1 \neq P_2$. Along path A, expand at $P_1$, then change pressure at constant $V_2$ (no work):
-    \[W_A = -P_1(V_2 - V_1).\]
-    Along path B, change pressure at constant $V_1$ (no work), then expand at $P_2$:
-    \[W_B = -P_2(V_2 - V_1).\]
-    Same end states, but $W_A \neq W_B$. In general, for an ideal gas write $\delta W = M\,dV + N\,dT$ with $M = -\frac{nRT}{V}$ and $N = 0$. Exactness would require $\left(\frac{\partial M}{\partial T}\right)_V = \left(\frac{\partial N}{\partial V}\right)_T$, but
-    \[\left(\frac{\partial M}{\partial T}\right)_V = -\frac{nR}{V} \neq 0 = \left(\frac{\partial N}{\partial V}\right)_T,\]
-    so no function $W(V, T)$ satisfies $dW = \delta W$. Since $dU$ is exact, $\delta Q = dU - \delta W$ is then inexact too.
-\end{proof}
+To understand why a non-adiabatic work is an exact differential, refer to \ref{subsection:inexact-differential}.
+\begin{definition}[Reversible Work on a Fluid]
+    The work done on a fluid at pressure $P$ when its volume changes reversibly by $dV$ is
+    \begin{equation}
+        \label{eq:reversible-work}
+        \delta W = -P\,dV,
+    \end{equation}
+    positive for a compression ($dV < 0$), since a piston of area $A$ pushed in by $dx$ does work $PA\,dx = -P\,dV$.
+\end{definition}
+\begin{remark}
+    For a compressible fluid, where $\delta W = -PdV$ for an infinitesimal reversible process, the first law becomes
+    \[dU = -P\,dV + \delta Q,\]
+    or
+    \begin{equation}
+        \label{eq:first-law-reversible}
+        \delta Q = dU + P\,dV \quad \text{(reversible)}.
+    \end{equation}
+\end{remark}
+
 
 \subsection{Heat Capacity}
 \subsubsection{$C_V$ and $C_P$}
@@ -342,6 +368,7 @@ where $W$ is the work done on the system and $Q$ the heat added to it.
 \subsubsection{Heat Capacities from Equipartition}
 \subsection{Ideal Gases and the First Law}
 \begin{definition}[Free Expansion]
+    \label{def:free-expansion}
     Free expansion is the expansion of a gas into a vacuum, with no external pressure applied.
     \begin{itemize}
         \item The process is irreversible;
@@ -430,10 +457,12 @@ The integral is the same along any reversible path between $i$ and $f$, so it is
 \begin{definition}[Entropy]
     The entropy $S$ is the state function defined by
     \begin{equation}
+        \label{eq:entropy-change}
         \Delta S = S_f - S_i = \int_i^f \frac{\delta Q_{\text{rev}}}{T},
     \end{equation}
     where the integral is taken along any reversible path\footnote{Irreversibility comes from the temperature gap between system and source. The source must be at $T + dT$ hotter than the system at every moment.}, for which $T_{\text{sys}} = T_{\text{surr}}$. Only entropy differences ($\Delta S$) are defined, in units of J/K, using absolute temperature $T$ in Kelvin. For an infinitesimal reversible process
     \begin{equation}
+        \label{eq:entropy-differential}
         dS = \frac{\delta Q_{\text{rev}}}{T}.
     \end{equation}
 \end{definition}
@@ -496,9 +525,59 @@ Since the entropy of an isolated system can only increase, spontaneous changes c
 \end{remark}
 
 \subsection{Entropy--Temperature Diagrams}
+\begin{remark}
+    The thermodynamic state of a system can be specified by any pair of independent state variables, for example on a PV diagram or a TS diagram.
+\end{remark}
+\begin{remark}[Reversible Adiabats and Isotherms]
+    By Equation~\eqref{eq:entropy-differential}, a reversible adiabatic process is isentropic, so on a TS diagram (with $T$ vertical) it is a vertical line, while a reversible isothermal process is a horizontal line.
+\end{remark}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../images/tsdiagram.png}
+    \caption{TS diagram for a Carnot cycle: a rectangle of two isotherms and two adiabats.}
+    \label{fig:ts-diagram}
+\end{figure}
+\begin{remark}[Area of a TS Cycle]
+    Since $\delta Q_{\text{rev}} = T\,dS$, the area enclosed by a reversible cycle on a TS diagram is the net heat absorbed, $\oint T\,dS$, which by the first law equals the net work done by the system.
+\end{remark}
+
 \subsection{The Thermodynamic Identity}
+Combining the first and second laws gives the most important equation in thermodynamics.
+\begin{proposition}[Thermodynamic Identity]
+    The thermodynamic identity, or central equation of thermodynamics, states that for any process between equilibrium states,
+    \begin{equation}
+        \label{eq:thermodynamic-identity}
+        dU = T\,dS - P\,dV.
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    For a reversible process, substitute $\delta W = -P\,dV$ (Equation~\eqref{eq:reversible-work}) and $\delta Q = T\,dS$ (Equation~\eqref{eq:entropy-differential}) into the first law (Equation~\eqref{eq:first-law-differential}). Since the result involves only state functions, it holds between any two neighbouring equilibrium states, so for irreversible processes too.
+\end{proof}
+\begin{remark}
+    The whole of thermodynamics is dependent on this equation, jsut as the whole of mechanics is dependent on Newton's laws.
+\end{remark}
+
 \subsection{Other Examples of Entropy Calculations}
-\subsubsection{Free Expansion}
+\subsubsection{Free Expansion of an Ideal Gas}
+Free expansion (Definition~\ref{def:free-expansion}) is irreversible, so to apply Equation~\eqref{eq:entropy-change} we imagine a reversible isothermal expansion between the same end states, e.g.\ letting the gas expand slowly in thermal contact with a reservoir at $T$. Since $T$ is constant, $dU = C_V\,dT = 0$ for an ideal gas, so the first law and $PV = nRT$ give
+\[dS = \frac{\delta Q_{\text{rev}}}{T} = \frac{dU + P\,dV}{T} = \frac{nR}{V}\,dV \implies \Delta S = nR\int_{V_i}^{V_f}\frac{dV}{V} = nR\ln\frac{V_f}{V_i},\]
+which gives $\Delta S = nR\ln 2$ when the volume doubles.
+\begin{remark}
+    Although $Q = 0$ in the actual free expansion, $\Delta S > 0$, as expected for an adiabatic irreversible process.
+\end{remark}
+
+\subsubsection{Entropy of an Ideal Gas in General}
+For an ideal gas, $U = U(T)$, since there are no intermolecular forces, so $dU = C_V\,dT$. The thermodynamic identity (Equation~\eqref{eq:thermodynamic-identity}) and the ideal gas law (Equation~\eqref{eq:ideal-gas-law}) give
+\[T\,dS = C_V\,dT + P\,dV = C_V\,dT + \frac{nRT}{V}\,dV.\]
+Dividing by $nT$ and using molar quantities, $s = S/n$, $c_v = C_V/n$ and $v = V/n$,
+\[ds = \frac{c_v}{T}\,dT + \frac{R}{v}\,dv.\]
+For constant $c_v$, integrating from a reference state $(T_0, v_0)$, usually taken at standard temperature and pressure ($T_0 = 273.15$~K, $P_0 = 101.325$~kPa), gives
+\begin{equation}
+    \label{eq:ideal-gas-entropy}
+    s = c_v\ln\frac{T}{T_0} + R\ln\frac{v}{v_0} + s_0,
+\end{equation}
+where $s_0$ is the molar entropy of the reference state, which cancels when entropy differences are taken.
+
 \subsubsection{Measuring Entropies}
 
 
@@ -565,7 +644,19 @@ For $N \gg 1$, factorials are evaluated with Stirling's approximation:
 
 \newpage
 \appendix
-\section{Appendix}
+\section{Proofs}
+\label{section:proofs}
+\subsection{Inexact differentials}
+\label{subsection:inexact-differential}
+\begin{proof}
+    For work, $\delta W = -P\,dV$. Take two paths between the same states $(P_1, V_1)$ and $(P_2, V_2)$, with $P_1 \neq P_2$. Along path A, expand at $P_1$, then change pressure at constant $V_2$ (no work):
+    \[W_A = -P_1(V_2 - V_1).\]
+    Along path B, change pressure at constant $V_1$ (no work), then expand at $P_2$:
+    \[W_B = -P_2(V_2 - V_1).\]
+    Same end states, but $W_A \neq W_B$. In general, for an ideal gas write $\delta W = M\,dV + N\,dT$ with $M = -\frac{nRT}{V}$ and $N = 0$. Exactness would require $\left(\frac{\partial M}{\partial T}\right)_V = \left(\frac{\partial N}{\partial V}\right)_T$, but
+    \[\left(\frac{\partial M}{\partial T}\right)_V = -\frac{nR}{V} \neq 0 = \left(\frac{\partial N}{\partial V}\right)_T,\]
+    so no function $W(V, T)$ satisfies $dW = \delta W$. Since $dU$ is exact, $\delta Q = dU - \delta W$ is then inexact too.
+\end{proof}
 
 % ============================================================
 %  Useful Links
