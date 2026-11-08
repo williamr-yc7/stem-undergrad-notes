@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  8 NOV 2026 14:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  8 NOV 2026 15:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -583,14 +583,15 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@definition=\count363
 \c@problem=\count364
 \c@solution=\count365
-\c@remark=\count366
-\c@proposition=\count367
-\c@result=\count368
+\c@example=\count366
+\c@remark=\count367
+\c@proposition=\count368
+\c@result=\count369
 Package hyperref Info: Option `colorlinks' set `true' on input line 31.
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 33.
  (C:\Users\erenr\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count369
+\l__color_backend_stack_int=\count370
 ) (Phys253.aux)
 \openout1 = `Phys253.aux'.
 
@@ -614,16 +615,16 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
  (C:\Users\erenr\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count370
+\scratchcounter=\count371
 \scratchdimen=\dimen315
 \scratchbox=\box81
-\nofMPsegments=\count371
-\nofMParguments=\count372
+\nofMPsegments=\count372
+\nofMParguments=\count373
 \everyMPshowfont=\toks53
-\MPscratchCnt=\count373
+\MPscratchCnt=\count374
 \MPscratchDim=\dimen316
-\MPnumerator=\count374
-\makeMPintoPDFobject=\count375
+\MPnumerator=\count375
+\makeMPintoPDFobject=\count376
 \everyMPtoPDFconversion=\toks54
 ) (C:\Users\erenr\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -666,7 +667,7 @@ l.117 \end{definition}
                        [1
 
 ]
-<../images/zerothlaw.png, id=562, 471.26062pt x 301.62688pt>
+<../images/zerothlaw.png, id=558, 471.26062pt x 301.62688pt>
 File: ../images/zerothlaw.png Graphic file (type png)
 <use ../images/zerothlaw.png>
 Package pdftex.def Info: ../images/zerothlaw.png  used on input line 147.
@@ -686,7 +687,7 @@ Overfull \hbox (0.86154pt too wide) in paragraph at lines 159--161
 [][]\OT1/cmr/bx/n/10 Definition 13 \OT1/cmr/m/n/10 (Ther-mo-dy-namic Equi-lib-rium)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 Sys-tems in ther-mo-dy-namic equi-
  []
 
-<../images/pvdiagrams.png, id=576, 602.25pt x 602.25pt>
+<../images/pvdiagrams.png, id=574, 602.25pt x 602.25pt>
 File: ../images/pvdiagrams.png Graphic file (type png)
 <use ../images/pvdiagrams.png>
 Package pdftex.def Info: ../images/pvdiagrams.png  used on input line 174.
@@ -702,7 +703,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has
                                                   \__shipout_drop_firstpage_...
 l.180 \end{definition}
                        <../images/pvdiagrams.png>]
-<../images/isotherms.png, id=589, 310.66063pt x 319.69438pt>
+<../images/isotherms.png, id=587, 310.66063pt x 319.69438pt>
 File: ../images/isotherms.png Graphic file (type png)
 <use ../images/isotherms.png>
 Package pdftex.def Info: ../images/isotherms.png  used on input line 218.
@@ -716,71 +717,71 @@ l.222
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.261 ...nciple}[Black's Principle of Calorimetry]
-                                                   <../images/isotherms.png>] [6]
+l.252 \end{definition}
+                       <../images/isotherms.png>] [6] [7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 320.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 320.
+(hyperref)                removing `math shift' on input line 334.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 320.
+(hyperref)                removing `subscript' on input line 334.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 320.
+(hyperref)                removing `math shift' on input line 334.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 320.
+(hyperref)                removing `math shift' on input line 334.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 320.
+(hyperref)                removing `subscript' on input line 334.
 
-[7] [8] [9]
-<../images/clausius-inequality.png, id=650, 322.70563pt x 322.20375pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 334.
+
+[8] [9]
+<../images/clausius-inequality.png, id=658, 322.70563pt x 322.20375pt>
 File: ../images/clausius-inequality.png Graphic file (type png)
 <use ../images/clausius-inequality.png>
-Package pdftex.def Info: ../images/clausius-inequality.png  used on input line 374.
+Package pdftex.def Info: ../images/clausius-inequality.png  used on input line 388.
 (pdftex.def)             Requested size: 172.5pt x 172.23225pt.
-<../images/clausius-inequality2.png, id=652, 227.85126pt x 239.89626pt>
+<../images/clausius-inequality2.png, id=660, 227.85126pt x 239.89626pt>
 File: ../images/clausius-inequality2.png Graphic file (type png)
 <use ../images/clausius-inequality2.png>
-Package pdftex.def Info: ../images/clausius-inequality2.png  used on input line 384.
+Package pdftex.def Info: ../images/clausius-inequality2.png  used on input line 398.
 (pdftex.def)             Requested size: 172.5pt x 181.62387pt.
  [10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.388 A
+l.402 A
        fter a full cycle, everything in the composite system (Figure~\ref{fi... <../images/clausius-inequality.png>] [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.410 \[
+l.424 \[
         \oint\frac{\delta Q_{\text{Route}}}{T} = \underset{\text{Route}_{1}}... <../images/clausius-inequality2.png>] [12]
-<../images/Entropy-1.png, id=687, 340.27126pt x 160.09813pt>
+<../images/Entropy-1.png, id=696, 340.27126pt x 160.09813pt>
 File: ../images/Entropy-1.png Graphic file (type png)
 <use ../images/Entropy-1.png>
-Package pdftex.def Info: ../images/Entropy-1.png  used on input line 465.
+Package pdftex.def Info: ../images/Entropy-1.png  used on input line 479.
 (pdftex.def)             Requested size: 172.5pt x 81.16037pt.
  [13] [14
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.495 \end{definition}
+l.509 \end{definition}
                        <../images/Entropy-1.png>]
-Overfull \hbox (13.41734pt too wide) in paragraph at lines 499--500
+Overfull \hbox (13.41734pt too wide) in paragraph at lines 513--514
 []\OT1/cmr/m/n/10 Assuming all mi-crostates are equally prob-a-ble, the prob-a-bil-ity of any macrostate
  []
 
 
-Overfull \hbox (19.4312pt too wide) in paragraph at lines 538--538
+Overfull \hbox (19.4312pt too wide) in paragraph at lines 552--552
 []\OT1/cmr/bx/n/14.4 The Ther-mo-dy-namic Po-ten-tials and the Maxwell
  []
 
@@ -790,20 +791,20 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `Phys253.out' has not changed.
-(rerunfilecheck)             Checksum: 7A9AAF1C0F433185638FB4B7C024BEC0;18166.
+(rerunfilecheck)             Checksum: B7822E86361F60E30C23CE3730439D4B;17701.
  ) 
 Here is how much of TeX's memory you used:
- 53310 strings out of 467871
- 1408862 string characters out of 5418377
- 2120273 words of memory out of 5000000
- 81434 multiletter control sequences out of 15000+600000
+ 53326 strings out of 467871
+ 1408994 string characters out of 5418377
+ 2120302 words of memory out of 5000000
+ 81438 multiletter control sequences out of 15000+600000
  636323 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,8n,118p,837b,1275s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,8n,118p,837b,1180s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\erenr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb>
-Output written on Phys253.pdf (21 pages, 642432 bytes).
+Output written on Phys253.pdf (21 pages, 643625 bytes).
 PDF statistics:
- 862 PDF objects out of 1000 (max. 8388607)
- 199 named destinations out of 1000 (max. 500000)
- 859 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 874 PDF objects out of 1000 (max. 8388607)
+ 211 named destinations out of 1000 (max. 500000)
+ 851 words of extra memory for PDF output out of 10000 (max. 10000000)
 
