@@ -24,78 +24,78 @@
 \contentsline {section}{\numberline {4}The First Law of Thermodynamics}{2}{section.4}%
 \contentsline {subsection}{\numberline {4.1}The Work of Thompson and Joule}{2}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}The First Law of Thermodynamics}{3}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Heat Capacity}{4}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}$C_V$ and $C_P$}{4}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Calorimetry}{4}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Latent Heat}{4}{subsubsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.4}Kinetic Theory of Gases}{4}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Pressure and Temperature of an Ideal Gas}{4}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Equipartition of Energy}{4}{subsubsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.3}Counting Quadratic Degrees of Freedom}{4}{subsubsection.4.4.3}%
-\contentsline {subsubsection}{\numberline {4.4.4}Frozen-Out Degrees of Freedom}{4}{subsubsection.4.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.5}Heat Capacities from Equipartition}{4}{subsubsection.4.4.5}%
-\contentsline {subsection}{\numberline {4.5}Ideal Gases and the First Law}{4}{subsection.4.5}%
-\contentsline {subsubsection}{\numberline {4.5.1}Internal Energy of an Ideal Gas}{5}{subsubsection.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.5.2}Isothermal Processes}{5}{subsubsection.4.5.2}%
-\contentsline {subsubsection}{\numberline {4.5.3}Adiabatic Processes}{5}{subsubsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.6}Rates of Processes}{5}{subsection.4.6}%
-\contentsline {subsubsection}{\numberline {4.6.1}Heat Conduction}{5}{subsubsection.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.6.2}Viscosity}{5}{subsubsection.4.6.2}%
-\contentsline {subsubsection}{\numberline {4.6.3}Diffusion}{5}{subsubsection.4.6.3}%
-\contentsline {section}{\numberline {5}The Second Law of Thermodynamics}{5}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Carnot Cycles}{5}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Thermodynamic Cycles}{5}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}The Carnot Cycle}{5}{subsubsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.2}Efficiency of an Engine}{5}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Statements of the Second Law}{5}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}The Kelvin--Planck Statement}{5}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}The Clausius Statement}{5}{subsubsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.3}Equivalence of the Two Statements}{5}{subsubsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.4}Carnot's Theorem}{5}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}The Thermodynamic Temperature Scale}{5}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}Engines and Refrigerators}{5}{subsection.5.6}%
-\contentsline {subsubsection}{\numberline {5.6.1}Refrigerators}{5}{subsubsection.5.6.1}%
-\contentsline {subsubsection}{\numberline {5.6.2}Heat Pumps}{5}{subsubsection.5.6.2}%
-\contentsline {subsubsection}{\numberline {5.6.3}Internal Combustion Engines}{5}{subsubsection.5.6.3}%
-\contentsline {subsubsection}{\numberline {5.6.4}The Steam Engine}{5}{subsubsection.5.6.4}%
-\contentsline {section}{\numberline {6}Entropy}{6}{section.6}%
-\contentsline {subsection}{\numberline {6.1}The Clausius Inequality}{6}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Entropy}{8}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}The Principle of Increasing Entropy}{9}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Entropy and the Arrow of Time}{10}{subsubsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.4}Entropy--Temperature Diagrams}{11}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}The Thermodynamic Identity}{11}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Other Examples of Entropy Calculations}{11}{subsection.6.6}%
-\contentsline {subsubsection}{\numberline {6.6.1}Free Expansion}{11}{subsubsection.6.6.1}%
-\contentsline {subsubsection}{\numberline {6.6.2}Measuring Entropies}{11}{subsubsection.6.6.2}%
-\contentsline {section}{\numberline {7}Statistical Mechanics}{11}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Introduction to Probability and Statistics}{11}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Microscopic View of Entropy}{12}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}The Two-State Paramagnet}{12}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}The Einstein Solid}{12}{subsubsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.3}Interacting Systems}{12}{subsubsection.7.2.3}%
-\contentsline {subsubsection}{\numberline {7.2.4}Large Systems and the Thermodynamic Limit}{12}{subsubsection.7.2.4}%
-\contentsline {subsubsection}{\numberline {7.2.5}Entropy as Multiplicity}{12}{subsubsection.7.2.5}%
-\contentsline {subsubsection}{\numberline {7.2.6}Maxwell's Demon}{12}{subsubsection.7.2.6}%
-\contentsline {subsubsection}{\numberline {7.2.7}Temperature from Entropy}{12}{subsubsection.7.2.7}%
-\contentsline {subsubsection}{\numberline {7.2.8}Pressure from Entropy}{12}{subsubsection.7.2.8}%
-\contentsline {subsubsection}{\numberline {7.2.9}Heat Capacities from Multiplicity}{12}{subsubsection.7.2.9}%
-\contentsline {subsection}{\numberline {7.3}Ideal Gases}{12}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Multiplicity of an Ideal Gas}{12}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Interacting Ideal Gases}{12}{subsubsection.7.3.2}%
-\contentsline {subsubsection}{\numberline {7.3.3}Entropy of an Ideal Gas}{12}{subsubsection.7.3.3}%
-\contentsline {subsubsection}{\numberline {7.3.4}Entropy of Mixing}{12}{subsubsection.7.3.4}%
-\contentsline {section}{\numberline {8}The Thermodynamic Potentials and the Maxwell Relations}{12}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Thermodynamic Potentials}{12}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Internal Energy}{12}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Enthalpy}{12}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Helmholtz Function}{12}{subsection.8.4}%
-\contentsline {subsubsection}{\numberline {8.4.1}Maximum Work}{12}{subsubsection.8.4.1}%
-\contentsline {subsubsection}{\numberline {8.4.2}Equilibrium at Constant Volume}{12}{subsubsection.8.4.2}%
-\contentsline {subsection}{\numberline {8.5}Gibbs Function}{12}{subsection.8.5}%
-\contentsline {subsubsection}{\numberline {8.5.1}Equilibrium at Constant Pressure}{12}{subsubsection.8.5.1}%
-\contentsline {subsubsection}{\numberline {8.5.2}Useful Work}{12}{subsubsection.8.5.2}%
-\contentsline {subsection}{\numberline {8.6}The Thermodynamic Square}{12}{subsection.8.6}%
-\contentsline {subsection}{\numberline {8.7}Example Using a Maxwell Relation}{12}{subsection.8.7}%
-\contentsline {section}{\numberline {A}Appendix}{13}{appendix.A}%
-\contentsline {section}{\numberline {B}Useful Links}{13}{appendix.B}%
+\contentsline {subsection}{\numberline {4.3}Heat Capacity}{5}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}$C_V$ and $C_P$}{5}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Calorimetry}{5}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Latent Heat}{5}{subsubsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.4}Kinetic Theory of Gases}{5}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Pressure and Temperature of an Ideal Gas}{5}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Equipartition of Energy}{5}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Counting Quadratic Degrees of Freedom}{5}{subsubsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.4}Frozen-Out Degrees of Freedom}{5}{subsubsection.4.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.5}Heat Capacities from Equipartition}{5}{subsubsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.5}Ideal Gases and the First Law}{5}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Internal Energy of an Ideal Gas}{6}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Isothermal Processes}{6}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}Adiabatic Processes}{6}{subsubsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.6}Rates of Processes}{6}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Heat Conduction}{6}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}Viscosity}{6}{subsubsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.3}Diffusion}{6}{subsubsection.4.6.3}%
+\contentsline {section}{\numberline {5}The Second Law of Thermodynamics}{6}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Carnot Cycles}{6}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Thermodynamic Cycles}{6}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}The Carnot Cycle}{6}{subsubsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.2}Efficiency of an Engine}{6}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Statements of the Second Law}{6}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}The Kelvin--Planck Statement}{6}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}The Clausius Statement}{6}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}Equivalence of the Two Statements}{6}{subsubsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.4}Carnot's Theorem}{6}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}The Thermodynamic Temperature Scale}{6}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Engines and Refrigerators}{6}{subsection.5.6}%
+\contentsline {subsubsection}{\numberline {5.6.1}Refrigerators}{6}{subsubsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.2}Heat Pumps}{6}{subsubsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.3}Internal Combustion Engines}{6}{subsubsection.5.6.3}%
+\contentsline {subsubsection}{\numberline {5.6.4}The Steam Engine}{6}{subsubsection.5.6.4}%
+\contentsline {section}{\numberline {6}Entropy}{7}{section.6}%
+\contentsline {subsection}{\numberline {6.1}The Clausius Inequality}{7}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Entropy}{9}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}The Principle of Increasing Entropy}{10}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Entropy and the Arrow of Time}{11}{subsubsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.4}Entropy--Temperature Diagrams}{12}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}The Thermodynamic Identity}{12}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Other Examples of Entropy Calculations}{12}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}Free Expansion}{12}{subsubsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.2}Measuring Entropies}{12}{subsubsection.6.6.2}%
+\contentsline {section}{\numberline {7}Statistical Mechanics}{12}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Introduction to Probability and Statistics}{12}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Microscopic View of Entropy}{13}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}The Two-State Paramagnet}{13}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}The Einstein Solid}{13}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Interacting Systems}{13}{subsubsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.4}Large Systems and the Thermodynamic Limit}{13}{subsubsection.7.2.4}%
+\contentsline {subsubsection}{\numberline {7.2.5}Entropy as Multiplicity}{13}{subsubsection.7.2.5}%
+\contentsline {subsubsection}{\numberline {7.2.6}Maxwell's Demon}{13}{subsubsection.7.2.6}%
+\contentsline {subsubsection}{\numberline {7.2.7}Temperature from Entropy}{13}{subsubsection.7.2.7}%
+\contentsline {subsubsection}{\numberline {7.2.8}Pressure from Entropy}{13}{subsubsection.7.2.8}%
+\contentsline {subsubsection}{\numberline {7.2.9}Heat Capacities from Multiplicity}{13}{subsubsection.7.2.9}%
+\contentsline {subsection}{\numberline {7.3}Ideal Gases}{13}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Multiplicity of an Ideal Gas}{13}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Interacting Ideal Gases}{13}{subsubsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3}Entropy of an Ideal Gas}{13}{subsubsection.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.4}Entropy of Mixing}{13}{subsubsection.7.3.4}%
+\contentsline {section}{\numberline {8}The Thermodynamic Potentials and the Maxwell Relations}{13}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Thermodynamic Potentials}{13}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Internal Energy}{13}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Enthalpy}{13}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Helmholtz Function}{13}{subsection.8.4}%
+\contentsline {subsubsection}{\numberline {8.4.1}Maximum Work}{13}{subsubsection.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.4.2}Equilibrium at Constant Volume}{13}{subsubsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.5}Gibbs Function}{13}{subsection.8.5}%
+\contentsline {subsubsection}{\numberline {8.5.1}Equilibrium at Constant Pressure}{13}{subsubsection.8.5.1}%
+\contentsline {subsubsection}{\numberline {8.5.2}Useful Work}{13}{subsubsection.8.5.2}%
+\contentsline {subsection}{\numberline {8.6}The Thermodynamic Square}{13}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Example Using a Maxwell Relation}{13}{subsection.8.7}%
+\contentsline {section}{\numberline {A}Appendix}{14}{appendix.A}%
+\contentsline {section}{\numberline {B}Useful Links}{14}{appendix.B}%

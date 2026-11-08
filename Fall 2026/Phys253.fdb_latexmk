@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1794161127.62077 "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys253.tex" "Phys253.pdf" "Phys253" 1794161135.24525 0
+["pdflatex"] 1794161847.64018 "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys253.tex" "Phys253.pdf" "Phys253" 1794161852.20208 0
   "../images/Entropy-1.png" 1794109328 51223 00825c14e22ca0a48fdfbcf3b8e9833c ""
   "../images/clausius-inequality.png" 1793991114 69517 c5e79d2e6cc347e7e5503c1c220c270c ""
   "../images/clausius-inequality2.png" 1794023865 26709 1ea66cee3d84078e34b20191f976db38 ""
@@ -35,6 +35,7 @@
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1247596667 37912 07513ec114ac737ab54cea0152f4424b ""
+  "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1247596666 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -48,6 +49,7 @@
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1247596667 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb" 1247596667 36607 d654cb3f2bc54f57509240071db3bffa ""
+  "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1247596670 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/generic/bitset/bitset.sty" 1575926576 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -232,11 +234,11 @@
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/translations/translations.sty" 1644048522 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "Phys253.aux" 1794161134 15023 78317de39ffe4541d8b8910d4e998aea "pdflatex"
-  "Phys253.out" 1794161134 18187 4c41a5c3351e807a79c9262b9229642d "pdflatex"
-  "Phys253.tex" 1794161123 21590 c70a4ae4293eb6f220cb86c9ebce6fea ""
-  "Phys253.toc" 1794161134 9417 165f126407cc44102e22011f1b592a06 "pdflatex"
-  "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys253.tex" 1794161123 21590 c70a4ae4293eb6f220cb86c9ebce6fea ""
+  "Phys253.aux" 1794161851 15103 b4d93c7d29568799c66a17df237e125b "pdflatex"
+  "Phys253.out" 1794161851 18187 4c41a5c3351e807a79c9262b9229642d "pdflatex"
+  "Phys253.tex" 1794161844 23391 3191a8cf06d19bd5895075bebc4b4423 ""
+  "Phys253.toc" 1794161851 9418 afa0e66b992514c7123d2d35c4747495 "pdflatex"
+  "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys253.tex" 1794161844 23391 3191a8cf06d19bd5895075bebc4b4423 ""
   (generated)
   "Phys253.aux"
   "Phys253.log"

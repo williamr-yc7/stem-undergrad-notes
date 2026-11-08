@@ -140,11 +140,35 @@ This adiabatic work therefore defines a state function, the internal energy, thr
 \end{equation}
 where $W$ is the work done on the system and $Q$ the heat added to it.
 \begin{definition}[Heat]
-    Heat $Q$ is the nonmechanical exchange of energy between the system and the surroundings because of their temperature difference.
+    Heat $Q$ is the nonmechanical exchange of energy between the system and the surroundings due to their temperature difference, flowing spontaneously from the hotter to the colder one.
 \end{definition}
 \begin{remark}[Sign convention for Heat]
     Heat $Q$ is positive when it enters the system and is negative when it leaves the system.
 \end{remark}
+\begin{remark}[Differential Form]
+    For an infinitesimal process, the first law takes the form
+    \begin{equation}
+        \label{eq:first-law-differential}
+        dU = \delta W + \delta Q.
+    \end{equation}
+    The $\delta$ are used to indicate that their integrals are in general path dependent (inexact differentials).
+\end{remark}
+\begin{definition}[Inexact Differential]
+    An inexact differential $\delta u$ is one for which no function $f$ exists such that $\delta u = df$.\footnote{Exactness, including the test $\left(\frac{\partial M}{\partial y}\right)_x = \left(\frac{\partial N}{\partial x}\right)_y$, is treated in detail in my \href{run:../Winter 2026/Math325.pdf}{MATH 325 (Honours ODEs) notes}, in the section on exact equations.}
+\end{definition}
+\begin{proposition}[Work is an Inexact Differential]
+    $\delta W = -P\,dV$ is inexact: its integral between two states depends on the path.
+\end{proposition}
+\begin{proof}
+    Take two paths between the same states $(P_1, V_1)$ and $(P_2, V_2)$, with $P_1 \neq P_2$. Along path A, expand at $P_1$, then change pressure at constant $V_2$ (no work):
+    \[W_A = -P_1(V_2 - V_1).\]
+    Along path B, change pressure at constant $V_1$ (no work), then expand at $P_2$:
+    \[W_B = -P_2(V_2 - V_1).\]
+    Same end states, but $W_A \neq W_B$. In general, for an ideal gas write $\delta W = M\,dV + N\,dT$ with $M = -\frac{nRT}{V}$ and $N = 0$. Exactness would require $\left(\frac{\partial M}{\partial T}\right)_V = \left(\frac{\partial N}{\partial V}\right)_T$, but
+    \[\left(\frac{\partial M}{\partial T}\right)_V = -\frac{nR}{V} \neq 0 = \left(\frac{\partial N}{\partial V}\right)_T,\]
+    so no function $W(V, T)$ satisfies $dW = \delta W$.
+\end{proof}
+
 \subsection{Heat Capacity}
   \subsubsection{$C_V$ and $C_P$}
   \subsubsection{Calorimetry}
