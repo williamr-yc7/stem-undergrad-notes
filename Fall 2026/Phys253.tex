@@ -235,10 +235,47 @@ The integral is the same along any reversible path between $i$ and $f$, so it is
     or, for constant $C_P$,
     \[\Delta S = C_P\int_{T_i}^{T_f}\frac{dT}{T} = C_P \ln\frac{T_f}{T_i}.\]
 \end{example}
+\begin{definition}[Isentropic]
+    A process is isentropic if the entropy of the system stays constant, $dS = 0$ at every step.
+\end{definition}
+\begin{remark}[Isentropic Conditions]
+    A process that is both adiabatic ($\delta Q = 0$) and reversible is isentropic, since $dS = \frac{\delta Q_{\text{rev}}}{T} = 0$. An adiabatic but irreversible process increases the system's entropy.
+\end{remark}
+
 \subsection{The Principle of Increasing Entropy}
-  \subsubsection{Isolated Systems}
-  \subsubsection{Entropy of the Universe}
-  \subsubsection{Entropy Maximization and the Arrow of Time}
+\begin{proposition}[Clausius Inequality for a Process]
+    For any process between equilibrium states $i$ and $f$,
+    \[\int_i^f \frac{\delta Q}{T_{\text{surr}}} \leq \Delta S, \qquad \text{or, infinitesimally,} \qquad \frac{\delta Q}{T_{\text{surr}}} \leq dS,\]
+    where the equality holds if the process is reversible, and then $T = T_{\text{surr}}$.\footnote{Here $\delta Q$ is the actual heat, not the heat of the imaginary reversible process used to calculate $dS$.}
+\end{proposition}
+\begin{proof}
+    Consider a cycle consisting of an irreversible path $i$ to $f$ followed by a reversible path $f$ to $i$. The Clausius inequality gives
+    \[\int_i^f \frac{\delta Q}{T_{\text{surr}}} + \underset{R}{\int_f^i}\frac{\delta Q}{T_{\text{surr}}} \leq 0 \implies \int_i^f \frac{\delta Q}{T_{\text{surr}}} \leq - \underset{R}{\int_f^i}\frac{\delta Q}{T_{\text{surr}}} = \underset{R}{\int_i^f}\frac{\delta Q}{T} = \Delta S,\]
+    where the last equality is the definition of entropy, since the path is reversible.
+\end{proof}
+For an isolated system $\delta Q = 0$, so $\Delta S \geq 0$:
+\begin{law}[Principle of Increasing Entropy]
+    The entropy of a thermally isolated system increases in any irreversible process and is constant in a reversible process; it never decreases.
+\end{law}
+\begin{remark}
+    Applied to the universe (system plus surroundings), a process can occur spontaneously only if the total entropy increases or stays the same. The principle applies to net changes of the entire system: the entropy of a part of a composite system, or of a non-isolated system, can decrease.
+\end{remark}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../images/Entropy-1.png}
+    \caption{Although the entropy of a thermally isolated system can only increase or stay constant, the entropy of a part of the system can decrease.}
+    \label{fig:entropy-subsystems}
+\end{figure}
+\begin{example}
+    Consider Figure~\ref{fig:entropy-subsystems}, a system consisting of two subsystems which can exchange heat, the whole system being enclosed by adiabatic walls. If initially $T_A > T_B$, a small heat $Q$ naturally flows from subsystem A to subsystem B. This reduces the entropy of subsystem A, $\Delta S_A = -\frac{Q}{T_A}$, while increasing the entropy of subsystem B, $\Delta S_B = \frac{Q}{T_B}$. But the total change is
+    \[\Delta S = Q\left(\frac{1}{T_B} - \frac{1}{T_A}\right) > 0,\]
+    since $T_A > T_B$, so the entropy of the whole system increases.
+\end{example}
+Since the entropy of an isolated system can only increase, spontaneous changes continue until no further increase is possible, so equilibrium is reached when $S$ is maximum:
+\begin{proposition}[Principle of Entropy Maximization]
+    For a system that is thermally isolated from the surroundings, $S$ tends to its maximum, whilst for a system that is totally isolated (thermally and mechanically), $S$ tends to its maximum with $U$ remaining constant.
+\end{proposition}
+
 \subsection{Entropy--Temperature Diagrams}
 \subsection{The Thermodynamic Identity}
 \subsection{Other Examples of Entropy Calculations}
