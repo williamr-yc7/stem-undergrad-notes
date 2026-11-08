@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  8 NOV 2026 13:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  8 NOV 2026 14:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -662,111 +662,137 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.108 ...nciple}[Black's Principle of Calorimetry]
-                                                   [1
+l.117     \end{definition}
+                           [1
 
 ]
+<../images/zerothlaw.png, id=572, 471.26062pt x 301.62688pt>
+File: ../images/zerothlaw.png Graphic file (type png)
+<use ../images/zerothlaw.png>
+Package pdftex.def Info: ../images/zerothlaw.png  used on input line 147.
+(pdftex.def)             Requested size: 172.5pt x 110.40816pt.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.114 \end{definition}
-                       [2]
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.153     \end{equation}
-                         [3]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 173.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 173.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 173.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 173.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 173.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 173.
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.186         \item T
-                     he process is irreversible; [4] [5] [6]
-<../images/clausius-inequality.png, id=588, 322.70563pt x 322.20375pt>
-File: ../images/clausius-inequality.png Graphic file (type png)
-<use ../images/clausius-inequality.png>
-Package pdftex.def Info: ../images/clausius-inequality.png  used on input line 227.
-(pdftex.def)             Requested size: 172.5pt x 172.23225pt.
-<../images/clausius-inequality2.png, id=591, 227.85126pt x 239.89626pt>
-File: ../images/clausius-inequality2.png Graphic file (type png)
-<use ../images/clausius-inequality2.png>
-Package pdftex.def Info: ../images/clausius-inequality2.png  used on input line 237.
-(pdftex.def)             Requested size: 172.5pt x 181.62387pt.
- [7
+l.155     \end{definition}
+                           [2
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.241 A
-       fter a full cycle, everything in the composite system (Figure~\ref{fi... <../images/clausius-inequality.png>] [8
+l.155     \end{definition}
+                           <../images/zerothlaw.png>]
+Overfull \hbox (0.86154pt too wide) in paragraph at lines 159--161
+[][]\OT1/cmr/bx/n/10 Definition 13 \OT1/cmr/m/n/10 (Ther-mo-dy-namic Equi-lib-rium)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 Sys-tems in ther-mo-dy-namic equi-
+ []
+
+<../images/isotherms.png, id=586, 315.1775pt x 318.18875pt>
+File: ../images/isotherms.png Graphic file (type png)
+<use ../images/isotherms.png>
+Package pdftex.def Info: ../images/isotherms.png  used on input line 174.
+(pdftex.def)             Requested size: 172.5pt x 174.14983pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.183     \end{remark}
+                       [3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.263 \[
-        \oint\frac{\delta Q_{\text{Route}}}{T} = \underset{\text{Route}_{1}}... <../images/clausius-inequality2.png>] [9]
-<../images/Entropy-1.png, id=627, 340.27126pt x 160.09813pt>
-File: ../images/Entropy-1.png Graphic file (type png)
-<use ../images/Entropy-1.png>
-Package pdftex.def Info: ../images/Entropy-1.png  used on input line 318.
-(pdftex.def)             Requested size: 172.5pt x 81.16037pt.
- [10] [11
+l.183     \end{remark}
+                       <../images/isotherms.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.231 ...nciple}[Black's Principle of Calorimetry]
+                                                   [4] [5]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 290.
+
+[6] [7] [8]
+<../images/clausius-inequality.png, id=644, 322.70563pt x 322.20375pt>
+File: ../images/clausius-inequality.png Graphic file (type png)
+<use ../images/clausius-inequality.png>
+Package pdftex.def Info: ../images/clausius-inequality.png  used on input line 344.
+(pdftex.def)             Requested size: 172.5pt x 172.23225pt.
+<../images/clausius-inequality2.png, id=646, 227.85126pt x 239.89626pt>
+File: ../images/clausius-inequality2.png Graphic file (type png)
+<use ../images/clausius-inequality2.png>
+Package pdftex.def Info: ../images/clausius-inequality2.png  used on input line 354.
+(pdftex.def)             Requested size: 172.5pt x 181.62387pt.
+ [9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.348 \end{definition}
-                       <../images/Entropy-1.png>]
-Overfull \hbox (13.41734pt too wide) in paragraph at lines 352--353
+l.358     A
+           fter a full cycle, everything in the composite system (Figure~\re... <../images/clausius-inequality.png>] [10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.380     \[
+            \oint\frac{\delta Q_{\text{Route}}}{T} = \underset{\text{Route}_... <../images/clausius-inequality2.png>] [11]
+<../images/Entropy-1.png, id=682, 340.27126pt x 160.09813pt>
+File: ../images/Entropy-1.png Graphic file (type png)
+<use ../images/Entropy-1.png>
+Package pdftex.def Info: ../images/Entropy-1.png  used on input line 435.
+(pdftex.def)             Requested size: 172.5pt x 81.16037pt.
+ [12] [13
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.465     \end{definition}
+                           <../images/Entropy-1.png>]
+Overfull \hbox (13.41734pt too wide) in paragraph at lines 469--470
 []\OT1/cmr/m/n/10 Assuming all mi-crostates are equally prob-a-ble, the prob-a-bil-ity of any macrostate
  []
 
 
-Overfull \hbox (19.4312pt too wide) in paragraph at lines 391--391
+Overfull \hbox (19.4312pt too wide) in paragraph at lines 508--508
 []\OT1/cmr/bx/n/14.4 The Ther-mo-dy-namic Po-ten-tials and the Maxwell
  []
 
-[12] [13] [14] (Phys253.aux)
+[14] [15] [16] (Phys253.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `Phys253.out' has not changed.
-(rerunfilecheck)             Checksum: 4C41A5C3351E807A79C9262B9229642D;18187.
+(rerunfilecheck)             Checksum: DBBEE88BD73244238B5F1C45689E5ECD;18589.
  ) 
 Here is how much of TeX's memory you used:
- 53248 strings out of 467871
- 1407726 string characters out of 5418377
- 2119748 words of memory out of 5000000
- 81407 multiletter control sequences out of 15000+600000
+ 53297 strings out of 467871
+ 1408603 string characters out of 5418377
+ 2120018 words of memory out of 5000000
+ 81427 multiletter control sequences out of 15000+600000
  636323 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,8n,118p,837b,1275s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,8n,118p,841b,1275s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\erenr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb>
-Output written on Phys253.pdf (18 pages, 500437 bytes).
+Output written on Phys253.pdf (20 pages, 573100 bytes).
 PDF statistics:
- 795 PDF objects out of 1000 (max. 8388607)
- 164 named destinations out of 1000 (max. 500000)
- 836 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 856 PDF objects out of 1000 (max. 8388607)
+ 193 named destinations out of 1000 (max. 500000)
+ 870 words of extra memory for PDF output out of 10000 (max. 10000000)
 
