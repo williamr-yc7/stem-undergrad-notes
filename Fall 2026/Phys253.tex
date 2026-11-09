@@ -301,7 +301,7 @@ It follows from Equation~\eqref{eq:ideal-gas-law} that the isotherms for an idea
     or, for an infinitesimal change,
     \begin{equation}
         \label{eq:reversible-work}
-        \delta W = -P\,dV.
+        \delta W = -PdV.
     \end{equation}
 \end{proposition}
 \begin{proof}
@@ -310,10 +310,10 @@ It follows from Equation~\eqref{eq:ideal-gas-law} that the isotherms for an idea
     The minus sign is necessary because during compression the volume decreases, while the work done on the gas is positive.
 \end{proof}
 \begin{remark}[Quasistatic Piston, Irreversible Process]
-    $\delta W = -P\,dV$ also holds for irreversible processes in which the piston itself moves quasistatically (no finite pressure drop across it), even if irreversibility occurs elsewhere, e.g.\ a slow chemical reaction releasing gas, or gas slowly leaking through a small hole.
+    $\delta W = -PdV$ also holds for irreversible processes in which the piston itself moves quasistatically (no finite pressure drop across it), even if irreversibility occurs elsewhere, e.g.\ a slow chemical reaction releasing gas, or gas slowly leaking through a small hole.
 \end{remark}
 \begin{remark}[Work as an Area]
-    The magnitude of the work in a reversible process is the area under its path on a PV diagram~\ref{fig:pvdiagrams}, so it depends on the path. For a cycle, the enclosed area is the magnitude of the net work, with a sign set by the direction of the cycle.
+    The magnitude of the work in a reversible process is the area under its path on a PV diagram (Figure~\ref{fig:pvdiagrams}), so it depends on the path. For a cycle, the enclosed area is the magnitude of the net work, with a sign set by the direction of the cycle.
 \end{remark}
 \begin{example}[Isothermal Work on an Ideal Gas]
     Along an isotherm, $P = \frac{nRT}{V}$, so
@@ -356,7 +356,7 @@ It follows from Equation~\eqref{eq:ideal-gas-law} that the isotherms for an idea
 \begin{example}[Work on a Compressible Fluid]
     For a fluid taken reversibly from $(P_1, T_1)$ to $(P_2, T_2)$, write $V = V(P, T)$:
     \[dV = \left(\frac{\partial V}{\partial P}\right)_T dP + \left(\frac{\partial V}{\partial T}\right)_P dT = -\frac{V}{B}\,dP + \beta V\,dT,\]
-    where $B = -V\left(\frac{\partial P}{\partial V}\right)_T$ and $\beta = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_p$, so
+    where $B = -V\left(\frac{\partial P}{\partial V}\right)_T$ and $\beta = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P$, so
     \[W = -\int P\,dV = \int_{P_1}^{P_2}\frac{PV}{B}\,dP - \int_{T_1}^{T_2}P\beta V\,dT.\]
 \end{example}
 
@@ -396,7 +396,7 @@ This second result is exactly the First Law of Thermodynamics, stated in the nex
 \end{law}
 
 \subsubsection{Internal Energy}
-By Law~\ref{law:first-law}, the adiabatic work~\ref{def:adiabatic-work} depends only on the end states, whether the process is reversible or not, so it defines a state function:
+By Law~\ref{law:first-law}, the adiabatic work (Definition~\ref{def:adiabatic-work}) depends only on the end states, whether the process is reversible or not, so it defines a state function:
 \begin{definition}[Internal Energy]
     The internal energy $U$ is the state function satisfying
     \[W_{\text{adiabatic}} = U_2 - U_1.\]
@@ -428,15 +428,7 @@ The difference between $\Delta U$ and $W$ is called heat $Q$.
     \end{equation}
     The $\delta$ are used to indicate that their integrals are in general path dependent (inexact differentials\footnote{Exactness, including the test $\left(\frac{\partial M}{\partial y}\right)_x = \left(\frac{\partial N}{\partial x}\right)_y$, is treated in detail in my \href{https://github.com/williamr-yc7/stem-undergrad-notes/blob/86199275ed081fd521621a48faec61bef0cb1069/Winter\%202026/Math325.pdf}{Math 325 notes}, in the section ``First-Order Scalar Equation''.}).
 \end{remark}
-To understand why a non-adiabatic work is an exact differential, refer to \ref{subsection:inexact-differential}.
-\begin{definition}[Reversible Work on a Fluid]
-    The work done on a fluid at pressure $P$ when its volume changes reversibly by $dV$ is
-    \begin{equation}
-        \label{eq:reversible-work}
-        \delta W = -P\,dV,
-    \end{equation}
-    positive for a compression ($dV < 0$), since a piston of area $A$ pushed in by $dx$ does work $PA\,dx = -P\,dV$.
-\end{definition}
+To see why non-adiabatic work is an inexact differential, see Appendix~\ref{subsection:inexact-differential}.
 \begin{remark}
     For a compressible fluid, where $\delta W = -PdV$ for an infinitesimal reversible process, the first law becomes
     \[dU = -P\,dV + \delta Q,\]
@@ -466,7 +458,7 @@ To understand why a non-adiabatic work is an exact differential, refer to \ref{s
     \end{equation}
 \end{definition}
 \begin{remark}
-    Lower case $c$ is used consistently for specific heat, wether per unit mass, per mole, or another definite quantity.
+    Lower case $c$ is used consistently for specific heat, whether per unit mass, per mole, or another definite quantity.
 \end{remark}
 
 \subsubsection{Other Heat Capacities}
@@ -482,16 +474,16 @@ To understand why a non-adiabatic work is an exact differential, refer to \ref{s
 \end{definition}
 \begin{definition}[Enthalpy]
     Let's define a new state function, the enthalpy $H$, as
-    \begin{equation*}
+    \begin{equation}
         \label{eq:enthalpy}
         H=U+PV.
-    \end{equation*}
+    \end{equation}
 \end{definition}
 \begin{proposition}[Heat capacity at constant pressure]
     For an infinitesimal isobaric reversible process, the heat capacity at constant pressure is given
     \begin{equation}
         \label{eq:heat-capacity-pressure}
-        C_V = \frac{\delta Q_P}{dT} = \left(\frac{\partial H}{\partial T}\right)_P,
+        C_P = \frac{\delta Q_P}{dT} = \left(\frac{\partial H}{\partial T}\right)_P,
     \end{equation}
     where $H$ is the enthalpy.
 \end{proposition}
@@ -529,7 +521,7 @@ If $c$ is nearly constant over the temperature range, Equation~\eqref{eq:specifi
         \label{eq:latent-heat}
         L=\frac{Q}{m}\left[\frac{J}{kg}\right].
     \end{equation}
-    It is called the latent heat of fusion $L_f$ for melting and of vaporization $L_v$ for boiling, e.g.\ $L_v = 2260$~J/g for water.
+    It is called the latent heat of fusion $L_f$ for melting and of vaporization $L_v$ for boiling.
 \end{definition}
 \begin{remark}
     Since the transformation occurs at constant pressure, $Q = \Delta H$ (Equation~\eqref{eq:heat-capacity-pressure}), so the latent heat is the enthalpy change per unit mass.
@@ -541,6 +533,12 @@ If $c$ is nearly constant over the temperature range, Equation~\eqref{eq:specifi
 \subsubsection{Frozen-Out Degrees of Freedom}
 \subsubsection{Heat Capacities from Equipartition}
 \subsection{Ideal Gases and the First Law}
+An ideal gas obeys the equation of state $PV = nRT$ (Equation~\eqref{eq:ideal-gas-law}). As a consequence of this equation of state, the internal energy is a function of temperature alone:
+\begin{equation}
+    \label{eq:ideal-gas-internal-energy}
+    U = U(T).
+\end{equation}
+
 \subsubsection{Internal Energy of an Ideal Gas}
 \subsubsection{Isothermal Processes}
 \subsubsection{Adiabatic Processes}
@@ -594,7 +592,7 @@ After a full cycle, everything in the composite system (Figure~\ref{fig:clausius
 \begin{equation}
     W = Q = T_0\sum_i \frac{\delta Q_i}{T_i},
 \end{equation}
-where $W = \sum_i \delta W_i$ is the total work done and $Q$ the heat drawn from $T_0$. A positive $W = Q$ is forbidden by:
+where $W = \sum_i \delta W_i$ is the total work done by the composite system (the opposite of our usual sign convention) and $Q$ the heat drawn from $T_0$. A positive $W = Q$ is forbidden by:
 \begin{law}[Kelvin Statement of the Second Law of Thermodynamics]
     No process is possible whose sole result is the absorption of heat from a reservoir and the conversion of this heat into work.
 \end{law}
@@ -718,10 +716,10 @@ Combining the first and second laws gives the most important equation in thermod
     \end{equation}
 \end{proposition}
 \begin{proof}
-    For a reversible process, substitute $\delta W = -P\,dV$ (Equation~\eqref{eq:reversible-work}) and $\delta Q = T\,dS$ (Equation~\eqref{eq:entropy-differential}) into the first law (Equation~\eqref{eq:first-law-differential}). Since the result involves only state functions, it holds between any two neighbouring equilibrium states, so for irreversible processes too.
+    For a reversible process, substitute $\delta W = -PdV$ (Equation~\eqref{eq:reversible-work}) and $\delta Q = T\,dS$ (Equation~\eqref{eq:entropy-differential}) into the first law (Equation~\eqref{eq:first-law-differential}). Since the result involves only state functions, it holds between any two neighbouring equilibrium states, so for irreversible processes too.
 \end{proof}
 \begin{remark}
-    The whole of thermodynamics is dependent on this equation, jsut as the whole of mechanics is dependent on Newton's laws.
+    The whole of thermodynamics is dependent on this equation, just as the whole of mechanics is dependent on Newton's laws.
 \end{remark}
 
 \subsection{Other Examples of Entropy Calculations}
@@ -835,7 +833,7 @@ For $N \gg 1$, factorials are evaluated with Stirling's approximation:
 \subsection{Inexact differentials}
 \label{subsection:inexact-differential}
 \begin{proof}
-    For work, $\delta W = -P\,dV$. Take two paths between the same states $(P_1, V_1)$ and $(P_2, V_2)$, with $P_1 \neq P_2$. Along path A, expand at $P_1$, then change pressure at constant $V_2$ (no work):
+    For work, $\delta W = -PdV$. Take two paths between the same states $(P_1, V_1)$ and $(P_2, V_2)$, with $P_1 \neq P_2$. Along path A, expand at $P_1$, then change pressure at constant $V_2$ (no work):
     \[W_A = -P_1(V_2 - V_1).\]
     Along path B, change pressure at constant $V_1$ (no work), then expand at $P_2$:
     \[W_B = -P_2(V_2 - V_1).\]
