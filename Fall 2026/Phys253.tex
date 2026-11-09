@@ -862,21 +862,33 @@ Consider a collection of microscopic systems that can each store any number of e
 \begin{remark}
     Its allowed energies are equally spaced by $hf$, where $h = 6.63 \times 10^{-34}~\text{J s}$ is Planck's constant and $f = \frac{1}{2\pi}\sqrt{\frac{k_s}{m}}$ is its natural frequency.
 \end{remark}
-\begin{definition}[Einstein Solid]
-    An Einstein solid is a model of a solid as a collection of $N$ identical, independent quantum harmonic oscillators, three per atom (one for each direction of vibration).
-\end{definition}
 \begin{example}
     Examples of quantum oscillators include the vibrational motions of diatomic and polyatomic gas molecules, and the oscillation of atoms in a solid.
 \end{example}
+\begin{definition}[Einstein Solid]
+    An Einstein solid is a model of a solid as a collection of $N$ identical, independent quantum harmonic oscillators. Each atom oscillates in three independent directions, so $N$ oscillators correspond to $N/3$ atoms.
+\end{definition}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{../images/einsteinsolid.jpg}
-    \caption{3d unrealistic view of an einstein solid with springs between atoms}
+    \includegraphics[width=0.3\textwidth]{../images/einsteinsolid.jpg}
+    \caption{Schematic of an Einstein solid: atoms connected by springs.}
     \label{fig:einstein-solid}
 \end{figure}
-\begin{remark}
-    In a 3-dimensional solid, each atom can oscillate in 3 independent directions, so if there are N oscillators, there are only N/3 atoms.
-\end{remark}
+\begin{proposition}[Multiplicity of an Einstein Solid]
+    The multiplicity of an Einstein solid with $N$ oscillators and $q$ units of energy is
+    \begin{equation}
+        \label{eq:einstein-multiplicity}
+        \Omega(N, q) = \binom{q+N-1}{q} = \frac{(q+N-1)!}{q!\,(N-1)!}.
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    Represent each energy unit by a dot and separate the $N$ oscillators by $N-1$ lines, e.g.\ $\bullet\,|\,\bullet\bullet\,|\,|\,\bullet$ for $N = 4$, $q = 4$. Each microstate is an arrangement of $q$ dots and $N-1$ lines, so $\Omega$ is the number of ways to choose which $q$ of the $q+N-1$ symbols are dots.
+\end{proof}
+\begin{example}[Three Oscillators]
+    For $N = 3$, with energy in units of $hf$,
+    \[\Omega(3,0) = 1, \qquad \Omega(3,1) = 3, \qquad \Omega(3,2) = 6, \qquad \Omega(3,3) = 10.\]
+\end{example}
+
 \subsubsection{Interacting Systems}
 \subsubsection{Large Systems and the Thermodynamic Limit}
 \subsubsection{Entropy as Multiplicity}
