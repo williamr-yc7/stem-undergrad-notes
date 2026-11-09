@@ -293,9 +293,73 @@ It follows from Equation~\eqref{eq:ideal-gas-law} that the isotherms for an idea
 \end{definition}
 
 \subsection{Work}
+\begin{proposition}[Reversible Work]
+    The work done on a fluid in a reversible process from $V_1$ to $V_2$ is
+    \begin{equation}
+        W = -\int_{V_1}^{V_2} P\,dV,
+    \end{equation}
+    or, for an infinitesimal change,
+    \begin{equation}
+        \label{eq:reversible-work}
+        \delta W = -P\,dV.
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    A gas in the equilibrium state $(P_1, V_1)$ is compressed to $(P_2, V_2)$ by increasing the external force on a frictionless piston of area $A$, so that $F = PA$. If the force is increased infinitesimally so that the piston moves in by $dx$, the volume changes by $dV = -A\,dx$, and the work done on the gas is
+    \[\delta W = F\,dx = PA\,dx = -P\,dV.\]
+    The minus sign is necessary because during compression the volume decreases, while the work done on the gas is positive.
+\end{proof}
+\begin{remark}[Quasistatic Piston, Irreversible Process]
+    $\delta W = -P\,dV$ also holds for irreversible processes in which the piston itself moves quasistatically (no finite pressure drop across it), even if irreversibility occurs elsewhere, e.g.\ a slow chemical reaction releasing gas, or gas slowly leaking through a small hole.
+\end{remark}
+\begin{remark}[Work as an Area]
+    The magnitude of the work in a reversible process is the area under its path on a PV diagram~\ref{fig:pvdiagrams}, so it depends on the path. For a cycle, the enclosed area is the magnitude of the net work, with a sign set by the direction of the cycle.
+\end{remark}
+\begin{example}[Isothermal Work on an Ideal Gas]
+    Along an isotherm, $P = \frac{nRT}{V}$, so
+    \[W = -\int_{V_1}^{V_2}\frac{nRT}{V}\,dV = -nRT\ln\frac{V_2}{V_1},\]
+    negative for an expansion ($V_2 > V_1$) and positive for a compression.
+\end{example}
+\begin{remark}[Sign Convention for Work]
+    In this course, $W$ is the work done on the system by its surroundings: positive for compression, negative for expansion.
+\end{remark}
 
-\subsubsection{Compression Work}
+\subsubsection{Free Expansion}
+\begin{definition}[Free Expansion]
+    \label{def:free-expansion}
+    Free expansion is the expansion of a gas into a vacuum, with no external pressure applied.
+    \begin{itemize}
+        \item The process is irreversible;
+        \item There is no temperature change;
+        \item No heat enters the system, since the walls are adiabatic;
+        \item No work is done, since there is no external pressure;
+    \end{itemize}   
+\end{definition}
+
 \subsection{Other Kinds of Work}
+\begin{definition}[Work on an Extensible Wire]
+    The work done on a wire under tension $F$ when it is stretched by an infinitesimal length $dL$ is
+    \begin{equation}
+        \label{eq:wire-work}
+        \delta W = F\,dL,
+    \end{equation}
+    positive for an extension ($dL > 0$), consistent with the sign convention for work.
+\end{definition}
+\begin{remark}
+    Work also includes other energy transfers, such as magnetizing a material or running a current through a resistor.
+\end{remark}
+
+\subsection{Calculating Work in a Reversible Process}
+\begin{remark}[Method]
+    To find the change in one state function given the changes in two others, write the equation of state for the wanted one in terms of the other two; since a reversible process is a succession of equilibrium states, it holds at every step.
+\end{remark}
+\begin{example}[Work on a Compressible Fluid]
+    For a fluid taken reversibly from $(P_1, T_1)$ to $(P_2, T_2)$, write $V = V(P, T)$:
+    \[dV = \left(\frac{\partial V}{\partial P}\right)_T dP + \left(\frac{\partial V}{\partial T}\right)_P dT = -\frac{V}{B}\,dP + \beta V\,dT,\]
+    where $B = -V\left(\frac{\partial P}{\partial V}\right)_T$ and $\beta = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_p$, so
+    \[W = -\int P\,dV = \int_{P_1}^{P_2}\frac{PV}{B}\,dP - \int_{T_1}^{T_2}P\beta V\,dT.\]
+\end{example}
+
 
 \section{The First Law of Thermodynamics}
 \subsection{The Work of Thompson and Joule}
@@ -383,11 +447,93 @@ To understand why a non-adiabatic work is an exact differential, refer to \ref{s
     \end{equation}
 \end{remark}
 
-
 \subsection{Heat Capacity}
-\subsubsection{$C_V$ and $C_P$}
+\begin{definition}[Heat Capacity]
+    The heat capacity $C$ of a system is the heat needed per unit temperature rise, in the limit of an infinitesimally small rise, for heat added reversibly:
+    \begin{equation}
+        \label{eq:heat-capacity}
+        C = \lim_{\Delta T \to 0}\frac{Q}{\Delta T} = \frac{\delta Q}{dT}.
+    \end{equation}
+\end{definition}
+\begin{remark}
+    Heat capacities are measured with irreversible heating, but this agrees with the definition as long as the system re-equilibrates much faster than it is heated, so no significant temperature or pressure gradients form.
+\end{remark}
+\begin{definition}[Specific Heat]
+    The specific heat $c$ is the heat capacity per unit mass
+    \begin{equation}
+        \label{eq:specific-heat}
+        c = \frac{1}{m}\frac{\delta Q}{dT}.
+    \end{equation}
+\end{definition}
+\begin{remark}
+    Lower case $c$ is used consistently for specific heat, wether per unit mass, per mole, or another definite quantity.
+\end{remark}
+
+\subsubsection{Other Heat Capacities}
+\begin{remark}
+    Since $Q$ depends on the path, there is a different heat capacity for each path between the same end temperatures. The two most useful are at constant volume and at constant pressure.
+\end{remark}
+\begin{definition}[Heat capacity at constant volume]
+    For an infinitesimal isochoric reversible process, Equation~\eqref{eq:first-law-reversible} gives $\delta Q_V = dU$, thus the heat capacity at constant volume is given
+    \begin{equation}
+        \label{eq:heat-capacity-volume}
+        C_V = \frac{\delta Q_V}{dT} = \left(\frac{\partial U}{\partial T}\right)_V.
+    \end{equation}
+\end{definition}
+\begin{definition}[Enthalpy]
+    Let's define a new state function, the enthalpy $H$, as
+    \begin{equation*}
+        \label{eq:enthalpy}
+        H=U+PV.
+    \end{equation*}
+\end{definition}
+\begin{proposition}[Heat capacity at constant pressure]
+    For an infinitesimal isobaric reversible process, the heat capacity at constant pressure is given
+    \begin{equation}
+        \label{eq:heat-capacity-pressure}
+        C_V = \frac{\delta Q_P}{dT} = \left(\frac{\partial H}{\partial T}\right)_P,
+    \end{equation}
+    where $H$ is the enthalpy.
+\end{proposition}
+\begin{proof}
+    For an infinitesimal process $dH = dU+PdV+VdP$, using the infinitesimal form of the first law Equation~\eqref{eq:first-law-reversible}
+    \[dH = \delta Q + VdP.\]
+    For a reversible, isobaric process
+    \[dH = \delta Q_P.\]
+\end{proof}
+
 \subsubsection{Calorimetry}
+If $c$ is nearly constant over the temperature range, Equation~\eqref{eq:specific-heat} integrates to
+\begin{equation}
+    \label{eq:heat-mcdt}
+    Q = mc\,\Delta T.
+\end{equation}
+\begin{example}[Specific Heat of Water]
+    It takes $4186$~J to heat $1$~kg of water from $20^\circ$C to $21^\circ$C, so $c = \frac{Q}{m\,\Delta T} = 4186~\text{J/(kg K)}$.
+\end{example}
+\begin{definition}[Calorimetry]
+    Calorimetry is the measurement of an unknown specific heat by heat exchange with a standard substance of known specific heat, usually water, in a thermally insulated container.
+\end{definition}
+\begin{example}[Specific Heat of a Metal]
+    A metal of mass $m_m$ at $T_m$ is placed in water of mass $m_w$ at $T_w$, and both reach $T_f$. By Black's principle, the heat lost by the metal equals the heat gained by the water:
+    \[m_m c_m (T_m - T_f) = m_w c_w (T_f - T_w) \implies c_m = \frac{m_w c_w (T_f - T_w)}{m_m (T_m - T_f)}.\]
+\end{example}
+
 \subsubsection{Latent Heat}
+\begin{remark}
+    During a phase transformation at constant pressure, heat is absorbed or released with no change in temperature, so the heat capacity $\frac{\delta Q}{dT}$ is not defined (it would be infinite).
+\end{remark}
+\begin{definition}[Latent Heat]
+    The latent heat $L$ is the heat per unit mass absorbed during a phase transformation at constant temperature and pressure:
+    \begin{equation}
+        \label{eq:latent-heat}
+        L=\frac{Q}{m}\left[\frac{J}{kg}\right].
+    \end{equation}
+    It is called the latent heat of fusion $L_f$ for melting and of vaporization $L_v$ for boiling, e.g.\ $L_v = 2260$~J/g for water.
+\end{definition}
+\begin{remark}
+    Since the transformation occurs at constant pressure, $Q = \Delta H$ (Equation~\eqref{eq:heat-capacity-pressure}), so the latent heat is the enthalpy change per unit mass.
+\end{remark}
 \subsection{Kinetic Theory of Gases}
 \subsubsection{Pressure and Temperature of an Ideal Gas}
 \subsubsection{Equipartition of Energy}
@@ -395,16 +541,6 @@ To understand why a non-adiabatic work is an exact differential, refer to \ref{s
 \subsubsection{Frozen-Out Degrees of Freedom}
 \subsubsection{Heat Capacities from Equipartition}
 \subsection{Ideal Gases and the First Law}
-\begin{definition}[Free Expansion]
-    \label{def:free-expansion}
-    Free expansion is the expansion of a gas into a vacuum, with no external pressure applied.
-    \begin{itemize}
-        \item The process is irreversible;
-        \item There is no temperature change;
-        \item No heat enters the system, since the walls are adiabatic;
-        \item No work is done, since there is no external pressure;
-    \end{itemize}   
-\end{definition}
 \subsubsection{Internal Energy of an Ideal Gas}
 \subsubsection{Isothermal Processes}
 \subsubsection{Adiabatic Processes}
