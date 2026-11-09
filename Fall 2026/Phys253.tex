@@ -765,7 +765,17 @@ where $s_0$ is the molar entropy of the reference state, which cancels when entr
     so $\Delta S_{\text{universe}} = 0$, as it must be for a reversible process.
 \end{example}
 
+
 \section{Statistical Mechanics}
+\begin{remark}
+    Many thermodynamic processes happen in one direction but never the reverse, because every irreversible process increases the total entropy. Classical thermodynamics states this but does not explain why; statistical mechanics does.
+\end{remark}
+\begin{definition}[Statistical Thermodynamics]
+    Statistical thermodynamics is the study of how systems store energy, by counting all the ways that energy can be arranged among their constituents.
+\end{definition}
+\begin{definition}[Combinatorics]
+    Combinatorics is the mathematics of counting ways of arranging things.
+\end{definition}
 \subsection{Introduction to Probability and Statistics}
 \begin{definition}[Microstate]
     A microstate is a specific configuration of the particles in a system.
@@ -773,31 +783,78 @@ where $s_0$ is the molar entropy of the reference state, which cancels when entr
 \begin{definition}[Macrostate]
     A macrostate is a description of the system in terms of macroscopic properties, such as temperature, pressure, and volume. Different macrostates can be distinguished by a measurement, while different microstates of the same macrostate cannot.
 \end{definition}
-Assuming all microstates are equally probable, the probability of any macrostate is given by the multiplicity of that macrostate divided by the sum of all the multiplicities:
-\begin{equation}
-    P(n) = \frac{\Omega(n)}{\sum_i \Omega(i)}.
-\end{equation}
-For $N$ two-state particles, the multiplicity $\Omega(N, n)$ of the macrostate with $n$ out of the $N$ particles in one of the two states can be calculated using the binomial coefficient:
-\begin{equation}
-    \Omega(N, n) = \binom{N}{n} = \frac{N!}{n!(N-n)!}.
-\end{equation}
-There are $N+1$ macrostates and $2^N$ microstates in total:
-\begin{equation}
-    \sum_{n=0}^{N} \binom{N}{n} = 2^N.
-\end{equation}
-The distribution has mean $N/2$ and standard deviation $\sigma = \sqrt{N}/2$, so its relative width is
-\begin{equation}
-    \frac{\sigma}{N} = \frac{1}{2\sqrt{N}},
-\end{equation}
-meaning the multiplicity becomes sharply peaked at $n = N/2$ as $N$ grows.
+\begin{definition}[Multiplicity]
+    The multiplicity $\Omega$ of a macrostate is the number of microstates corresponding to it. For $N$ two-state particles, the multiplicity of the macrostate with $n$ particles in one of the two states is the binomial coefficient
+    \begin{equation}
+        \Omega(N, n) = \binom{N}{n} = \frac{N!}{n!(N-n)!}.
+    \end{equation}
+\end{definition}
+\begin{example}[Three Coins]
+    Flipping three distinguishable fair coins gives $2^3 = 8$ equally probable microstates (e.g.\ HHT). The macrostate is the number of heads: $\Omega(3) = 1$ (HHH), while $\Omega(2) = 3$ (HHT, HTH, THH). Knowing the microstate gives the macrostate, but not the reverse.
+\end{example}
+\begin{definition}[Probability of a macrostate]
+    Assuming all microstates are equally probable, the probability of a macrostate is its multiplicity divided by the total number of microstates:
+    \begin{equation}
+        P(n) = \frac{\Omega(n)}{\sum_i \Omega(i)}.
+    \end{equation}
+\end{definition}
+\begin{proposition}[Total Amount of Microstates]
+    There are $N+1$ macrostates and $2^N$ microstates in total:
+    \begin{equation}
+        \sum_{n=0}^{N} \binom{N}{n} = 2^N.
+    \end{equation}
+\end{proposition}
 
-For $N \gg 1$, factorials are evaluated with Stirling's approximation:
-\begin{equation}
-    N! \approx N^N e^{-N}\sqrt{2\pi N}, \qquad \ln N! \approx N\ln N - N.
-\end{equation}
+\subsubsection{The Multiplicity Function}
+\begin{definition}[Mean of a Binomial Distribution]
+    For $N$ independent trials, each succeeding with probability $p$, the mean number of successes is
+    \[\bar{n} = Np.\]
+\end{definition}
+\begin{definition}[Variance of a Binomial Distribution]
+    The variance measures the spread of a distribution around its mean, $\sigma^2 = \overline{(n - \bar{n})^2}$. For a binomial distribution,
+    \[\sigma^2 = Np(1-p).\]
+\end{definition}
+\begin{definition}[Standard Deviation]
+    The standard deviation is the square root of the variance,
+    \[\sigma = \sqrt{Np(1-p)}.\]
+\end{definition}
+For fair coins, $p = \frac{1}{2}$, so $\bar{n} = \frac{N}{2}$, $\sigma^2 = \frac{N}{4}$, and the standard deviation normalized to the number of coins is
+\[\frac{\sigma}{N} = \frac{1}{2\sqrt{N}}.\]
+\begin{remark}
+    The normalized multiplicity function gets narrower as $N$ increases, becoming sharply peaked at $n = \frac{N}{2}$.
+\end{remark}
+\begin{remark}[Stirling's Approximation]
+    For $N \gg 1$, factorials are evaluated with Stirling's approximation:
+    \begin{equation}
+        N! \approx N^N e^{-N}\sqrt{2\pi N}, \qquad \ln N! \approx N\ln N - N.
+    \end{equation}
+\end{remark}
 
 \subsection{Microscopic View of Entropy}
 \subsubsection{The Two-State Paramagnet}
+\begin{definition}[Paramagnet]
+    A paramagnet is a material in which the constituent particles act like tiny magnetic dipoles, due to `unpaired' electrons or atomic nuclei, that tend to align parallel to any externally applied magnetic field and does not interact significantly with neighboring dipoles.
+\end{definition}
+\begin{definition}[Dipoles]
+    In this section, dipoles are referred to the individual magnetic particles, which can be individual electron, a group of electrons in an atom, or an atomic nucleus.
+\end{definition}
+\begin{remark}[Two-state Paramagnet]
+    Quantum mechanics limits the projection of each dipole onto the axis defined by $\vec{B}$ to only 2 states:
+    \begin{itemize}
+        \item Up state: aligned with $\vec{B}$.
+        \item Down state: anti-aligned with $\vec{B}$.
+    \end{itemize}
+\end{remark}
+\begin{definition}[M-meter]
+    
+\end{definition}
+\begin{remark}
+    In the absence of $\vec{B}$ (or $\vec{B} \approx 0$), the spin up/down state of each dipole is effectibely an independent $50/50$ `coin toss'. So we expect to measure $M = 0$ on our M-meter ($N\uparrow = N\downarrow=0.5N$).
+\end{remark}
+This system has one M-macrostate for each possible value of $N\uparrow$, from 0 to N. The multiplicity of any macrostate is given by
+\[\Omega(N\uparrow) = \begin{pmatrix}N\\N\uparrow\end{pmatrix} = \frac{N!}{N_\uparrow!N\downarrow!}.\]
+
+
 \subsubsection{The Einstein Solid}
 \subsubsection{Interacting Systems}
 \subsubsection{Large Systems and the Thermodynamic Limit}
