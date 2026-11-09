@@ -77,31 +77,31 @@
 \contentsline {subsubsection}{\numberline {7.1.1}The Multiplicity Function}{22}{subsubsection.7.1.1}%
 \contentsline {subsection}{\numberline {7.2}Microscopic View of Entropy}{22}{subsection.7.2}%
 \contentsline {subsubsection}{\numberline {7.2.1}The Two-State Paramagnet}{22}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}The Einstein Solid}{24}{subsubsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.3}Interacting Systems}{24}{subsubsection.7.2.3}%
-\contentsline {subsubsection}{\numberline {7.2.4}Large Systems and the Thermodynamic Limit}{24}{subsubsection.7.2.4}%
-\contentsline {subsubsection}{\numberline {7.2.5}Entropy as Multiplicity}{24}{subsubsection.7.2.5}%
-\contentsline {subsubsection}{\numberline {7.2.6}Maxwell's Demon}{24}{subsubsection.7.2.6}%
-\contentsline {subsubsection}{\numberline {7.2.7}Temperature from Entropy}{24}{subsubsection.7.2.7}%
-\contentsline {subsubsection}{\numberline {7.2.8}Pressure from Entropy}{24}{subsubsection.7.2.8}%
-\contentsline {subsubsection}{\numberline {7.2.9}Heat Capacities from Multiplicity}{24}{subsubsection.7.2.9}%
-\contentsline {subsection}{\numberline {7.3}Ideal Gases}{24}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Multiplicity of an Ideal Gas}{24}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Interacting Ideal Gases}{24}{subsubsection.7.3.2}%
-\contentsline {subsubsection}{\numberline {7.3.3}Entropy of an Ideal Gas}{24}{subsubsection.7.3.3}%
-\contentsline {subsubsection}{\numberline {7.3.4}Entropy of Mixing}{24}{subsubsection.7.3.4}%
-\contentsline {section}{\numberline {8}The Thermodynamic Potentials and the Maxwell Relations}{24}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Thermodynamic Potentials}{24}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Internal Energy}{24}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Enthalpy}{24}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Helmholtz Function}{24}{subsection.8.4}%
-\contentsline {subsubsection}{\numberline {8.4.1}Maximum Work}{24}{subsubsection.8.4.1}%
-\contentsline {subsubsection}{\numberline {8.4.2}Equilibrium at Constant Volume}{24}{subsubsection.8.4.2}%
-\contentsline {subsection}{\numberline {8.5}Gibbs Function}{24}{subsection.8.5}%
-\contentsline {subsubsection}{\numberline {8.5.1}Equilibrium at Constant Pressure}{24}{subsubsection.8.5.1}%
-\contentsline {subsubsection}{\numberline {8.5.2}Useful Work}{24}{subsubsection.8.5.2}%
-\contentsline {subsection}{\numberline {8.6}The Thermodynamic Square}{24}{subsection.8.6}%
-\contentsline {subsection}{\numberline {8.7}Example Using a Maxwell Relation}{24}{subsection.8.7}%
-\contentsline {section}{\numberline {A}Proofs}{25}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Inexact differentials}{25}{subsection.A.1}%
-\contentsline {section}{\numberline {B}Useful Links}{25}{appendix.B}%
+\contentsline {subsubsection}{\numberline {7.2.2}The Einstein Solid}{23}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Interacting Systems}{25}{subsubsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.4}Large Systems and the Thermodynamic Limit}{25}{subsubsection.7.2.4}%
+\contentsline {subsubsection}{\numberline {7.2.5}Entropy as Multiplicity}{25}{subsubsection.7.2.5}%
+\contentsline {subsubsection}{\numberline {7.2.6}Maxwell's Demon}{25}{subsubsection.7.2.6}%
+\contentsline {subsubsection}{\numberline {7.2.7}Temperature from Entropy}{25}{subsubsection.7.2.7}%
+\contentsline {subsubsection}{\numberline {7.2.8}Pressure from Entropy}{25}{subsubsection.7.2.8}%
+\contentsline {subsubsection}{\numberline {7.2.9}Heat Capacities from Multiplicity}{25}{subsubsection.7.2.9}%
+\contentsline {subsection}{\numberline {7.3}Ideal Gases}{25}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Multiplicity of an Ideal Gas}{25}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Interacting Ideal Gases}{25}{subsubsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3}Entropy of an Ideal Gas}{25}{subsubsection.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.4}Entropy of Mixing}{25}{subsubsection.7.3.4}%
+\contentsline {section}{\numberline {8}The Thermodynamic Potentials and the Maxwell Relations}{25}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Thermodynamic Potentials}{25}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Internal Energy}{25}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Enthalpy}{25}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Helmholtz Function}{25}{subsection.8.4}%
+\contentsline {subsubsection}{\numberline {8.4.1}Maximum Work}{25}{subsubsection.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.4.2}Equilibrium at Constant Volume}{25}{subsubsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.5}Gibbs Function}{25}{subsection.8.5}%
+\contentsline {subsubsection}{\numberline {8.5.1}Equilibrium at Constant Pressure}{25}{subsubsection.8.5.1}%
+\contentsline {subsubsection}{\numberline {8.5.2}Useful Work}{25}{subsubsection.8.5.2}%
+\contentsline {subsection}{\numberline {8.6}The Thermodynamic Square}{25}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Example Using a Maxwell Relation}{25}{subsection.8.7}%
+\contentsline {section}{\numberline {A}Proofs}{26}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Inexact differentials}{26}{subsection.A.1}%
+\contentsline {section}{\numberline {B}Useful Links}{26}{appendix.B}%

@@ -854,8 +854,29 @@ For fair coins, $p = \frac{1}{2}$, so $\bar{n} = \frac{N}{2}$, $\sigma^2 = \frac
 This system has one macrostate for each possible value of $N_\uparrow$, from $0$ to $N$. The multiplicity of each macrostate is
 \[\Omega(N_\uparrow) = \binom{N}{N_\uparrow} = \frac{N!}{N_\uparrow!\,N_\downarrow!}.\]
 
-
 \subsubsection{The Einstein Solid}
+Consider a collection of microscopic systems that can each store any number of energy ``units'', all of the same size.
+\begin{definition}[Quantum Harmonic Oscillator]
+    A quantum harmonic oscillator is a particle in a potential $\frac{1}{2}k_s x^2$, where $k_s$ is the ``spring constant''.
+\end{definition}
+\begin{remark}
+    Its allowed energies are equally spaced by $hf$, where $h = 6.63 \times 10^{-34}~\text{J s}$ is Planck's constant and $f = \frac{1}{2\pi}\sqrt{\frac{k_s}{m}}$ is its natural frequency.
+\end{remark}
+\begin{definition}[Einstein Solid]
+    An Einstein solid is a model of a solid as a collection of $N$ identical, independent quantum harmonic oscillators, three per atom (one for each direction of vibration).
+\end{definition}
+\begin{example}
+    Examples of quantum oscillators include the vibrational motions of diatomic and polyatomic gas molecules, and the oscillation of atoms in a solid.
+\end{example}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../images/einsteinsolid.jpg}
+    \caption{3d unrealistic view of an einstein solid with springs between atoms}
+    \label{fig:einstein-solid}
+\end{figure}
+\begin{remark}
+    In a 3-dimensional solid, each atom can oscillate in 3 independent directions, so if there are N oscillators, there are only N/3 atoms.
+\end{remark}
 \subsubsection{Interacting Systems}
 \subsubsection{Large Systems and the Thermodynamic Limit}
 \subsubsection{Entropy as Multiplicity}
