@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  9 NOV 2026 23:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  9 NOV 2026 23:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -762,27 +762,27 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has
                                                   \__shipout_drop_firstpage_...
 l.731     A
            lthough $Q = 0$ in the actual free expansion, $\Delta S > 0$, as ... <../images/tsdiagram.png>] [20] [21] [22]
-<../images/einsteinsolid.jpg, id=883, 440.64626pt x 456.70625pt>
+<../images/einsteinsolid.jpg, id=882, 440.64626pt x 456.70625pt>
 File: ../images/einsteinsolid.jpg Graphic file (type jpg)
 <use ../images/einsteinsolid.jpg>
-Package pdftex.def Info: ../images/einsteinsolid.jpg  used on input line 873.
+Package pdftex.def Info: ../images/einsteinsolid.jpg  used on input line 867.
 (pdftex.def)             Requested size: 103.50105pt x 107.27022pt.
- [23] [24
+ [23
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.923 \end{example}
-                    <../images/einsteinsolid.jpg>] [25
+l.873     \begin{equation}
+                           <../images/einsteinsolid.jpg>] [24
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.946 \end{remark}
-                  ]
+l.920 \end{principle}
+                     ] [25]
 Overfull \hbox (19.4312pt too wide) in paragraph at lines 971--971
 []\OT1/cmr/bx/n/14.4 The Ther-mo-dy-namic Po-ten-tials and the Maxwell
  []
 
-[26] [27] [28] (Phys253.aux)
+[26] [27] (Phys253.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -791,17 +791,17 @@ Package rerunfilecheck Info: File `Phys253.out' has not changed.
 (rerunfilecheck)             Checksum: ED4755EEE7390106DDFAF8DEE723FA68;19136.
  ) 
 Here is how much of TeX's memory you used:
- 53498 strings out of 467871
- 1411521 string characters out of 5418377
+ 53497 strings out of 467871
+ 1411514 string characters out of 5418377
  2121753 words of memory out of 5000000
  81491 multiletter control sequences out of 15000+600000
  636323 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,14n,118p,837b,1275s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,14n,118p,837b,1281s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\erenr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb>
-Output written on Phys253.pdf (32 pages, 801340 bytes).
+Output written on Phys253.pdf (31 pages, 800621 bytes).
 PDF statistics:
- 1110 PDF objects out of 1200 (max. 8388607)
- 330 named destinations out of 1000 (max. 500000)
+ 1106 PDF objects out of 1200 (max. 8388607)
+ 329 named destinations out of 1000 (max. 500000)
  909 words of extra memory for PDF output out of 10000 (max. 10000000)
 
