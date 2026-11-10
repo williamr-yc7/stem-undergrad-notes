@@ -1089,9 +1089,47 @@ In three dimensions, lengths become volumes:
     \label{eq:one-atom-multiplicity}
     \Omega_1 = \frac{V V_p}{h^3}.
 \end{equation}
+For $N$ molecules, the total kinetic energy is the sum over all $3N$ momentum components:
+\[\sum_{i=1}^{N}\left(p_{ix}^2 + p_{iy}^2 + p_{iz}^2\right) = 2mU,\]
+the surface of a $3N$-dimensional ``hypersphere'' of radius $\sqrt{2mU}$ in momentum space. Since interchanging two identical molecules does not give a distinct state, counting them as distinguishable overcounts by $N!$, so
+\begin{equation}
+    \label{eq:ideal-gas-multiplicity-area}
+    \Omega_N = \frac{1}{N!}\,\frac{V^N}{h^{3N}} \times (\text{area of momentum hypersphere}).
+\end{equation}
+\begin{remark}[Area of a Hypersphere]
+    The surface area of a $d$-dimensional hypersphere of radius $r$ is
+    \[A = \frac{2\pi^{d/2}}{\left(\frac{d}{2} - 1\right)!}\,r^{d-1}.\]
+\end{remark}
+\begin{proposition}[Multiplicity of a Monatomic Ideal Gas]
+    For $N \gg 1$ indistinguishable molecules of mass $m$ with total energy $U$ in volume $V$,
+    \begin{equation}
+        \label{eq:ideal-gas-multiplicity}
+        \Omega_N \approx \frac{1}{N!}\,\frac{V^N}{h^{3N}}\,\frac{\pi^{3N/2}}{\left(\frac{3N}{2}\right)!}\left(\sqrt{2mU}\right)^{3N},
+    \end{equation}
+    so that
+    \begin{equation}
+        \label{eq:ideal-gas-multiplicity-scaling}
+        \Omega(U, V, N) = f(N)\,V^N U^{3N/2}.
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    Substitute the hypersphere area with $d = 3N$ and $r = \sqrt{2mU}$ into Equation~\eqref{eq:ideal-gas-multiplicity-area}, dropping factors that are negligible next to $\Omega$ for large $N$.
+\end{proof}
 
-\subsubsection{Interacting Ideal Gases}
 \subsubsection{Entropy of an Ideal Gas}
+\begin{proposition}[Sackur--Tetrode Equation]
+    The entropy of a monatomic ideal gas of $N$ molecules of mass $m$, with energy $U$ in volume $V$, is
+    \begin{equation}
+        \label{eq:sackur-tetrode}
+        S = Nk\left[\ln\left(\frac{V}{N}\left(\frac{4\pi mU}{3Nh^2}\right)^{3/2}\right) + \frac{5}{2}\right].
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    Take the logarithm of Equation~\eqref{eq:ideal-gas-multiplicity}, apply Stirling's approximation (Equation~\eqref{eq:stirling-approx}) to $N!$ and $\left(\frac{3N}{2}\right)!$, and drop factors that are merely large.
+\end{proof}
+\begin{remark}
+    At fixed $U$ and $N$, $\Delta S = Nk\ln\frac{V_f}{V_i}$, the same result as the classical free expansion calculation.
+\end{remark}
 \subsubsection{Entropy of Mixing}
 
 \section{The Thermodynamic Potentials and the Maxwell Relations}
