@@ -949,15 +949,79 @@ Since the two solids are independent, for each of the $\Omega_A$ microstates of 
     Principle~\ref{law:increase-multiplicity} is a version of the second law of thermodynamics. It is not a fundamental law, just a very strong statement about probabilities.
 \end{remark}
 
-\subsubsection{Large Systems and the Thermodynamic Limit}
+\subsubsection{Large Systems}
 \begin{remark}[Stirling's Approximation]
     For $N \gg 1$, factorials are evaluated with Stirling's approximation:
     \begin{equation}
+        \label{eq:stirling-approx}
         N! \approx N^N e^{-N}\sqrt{2\pi N}, \qquad \ln N! \approx N\ln N - N.
     \end{equation}
 \end{remark}
+\begin{proposition}[Multiplicity of a Large Einstein Solid]
+    For an Einstein solid with $N \gg 1$ and $q \gg N$ (many more energy units than oscillators, the ``high-temperature'' limit),
+    \begin{equation}
+        \label{eq:einstein-high-T}
+        \Omega(N, q) \approx \left(\frac{eq}{N}\right)^N.
+    \end{equation}
+\end{proposition}
+The proof of this proposition can be seen in Appendix~\ref{subsection:mult-large-einstein}.
+\begin{remark}
+    For two large interacting Einstein solids with $N_A = N_B = N$, the multiplicity of any macrostate is
+    \begin{equation}
+        \label{eq:two-large-solids}
+        \Omega = \Omega_A\Omega_B = \left(\frac{eq_A}{N}\right)^N\left(\frac{eq_B}{N}\right)^N = \left(\frac{e}{N}\right)^{2N}(q_A q_B)^N.
+    \end{equation}
+\end{remark}
+\begin{remark}
+    Graphing Equation~\eqref{eq:two-large-solids} shows a very sharp peak at $q_A = \frac{q}{2}$, where $q = q_A + q_B$, i.e.\ the energy shared equally. The height of this peak is
+    \[\Omega_{\max} = \left(\frac{e}{N}\right)^{2N}\left(\frac{q}{2}\right)^{2N}.\]
+\end{remark}
+To see the shape near the peak, set
+\[q_A = \frac{q}{2} + x, \qquad q_B = \frac{q}{2} - x,\]
+with $|x| \ll q$. Plugging into Equation~\eqref{eq:two-large-solids},
+\[\Omega = \left(\frac{e}{N}\right)^{2N}\left[\left(\frac{q}{2}\right)^2 - x^2\right]^N.\]
+Taking the logarithm and using $\ln(1 - \epsilon) \approx -\epsilon$ for $\epsilon = \left(\frac{2x}{q}\right)^2 \ll 1$,
+\[\ln\left[\left(\frac{q}{2}\right)^2 - x^2\right] = \ln\left(\frac{q}{2}\right)^2 + \ln\left[1 - \left(\frac{2x}{q}\right)^2\right] \approx \ln\left(\frac{q}{2}\right)^2 - \left(\frac{2x}{q}\right)^2,\]
+so, exponentiating,
+\begin{remark}
+    The multiplicity's peak becomes a Gaussian:
+    \[\Omega \approx \Omega_{\max}\,e^{-N(2x/q)^2}.\]
+\end{remark}
+\begin{remark}
+     The peak falls to $\frac{1}{e}$ of its maximum when $N\left(\frac{2x}{q}\right)^2 = 1$, i.e.\ at
+    \[x = \frac{q}{2\sqrt{N}}, \qquad \frac{x}{q} = \frac{1}{2\sqrt{N}}.\]
+\end{remark}
+
+\subsubsection{Thermodynamic Limit}
+\begin{remark}
+    Typical fluctuations in the energy are only about $\frac{1}{\sqrt{N}}$ times the most likely value, $\frac{q}{2}$. For $N \sim 10^{20}$, seeing a one-standard-deviation fluctuation would require measuring a solid's energy to ten significant figures, so fluctuations away from the most likely macrostate are unmeasurable.
+\end{remark}
+Once a large system reaches thermal equilibrium, we can therefore assume it is in its most likely macrostate.
+\begin{definition}[Thermodynamic Limit]
+    The thermodynamic limit is reached when a system is large enough that measurable fluctuations away from the most likely macrostate never occur.
+\end{definition}
 
 \subsubsection{Entropy as Multiplicity}
+From the discussion of large systems above:
+\begin{proposition}[Equilibrium Macrostate]
+    Any large system in equilibrium will be found in the macrostate with the greatest multiplicity, aside from fluctuations normally too small to measure.
+\end{proposition}
+Multiplicities are huge numbers, so it is easier to work with their logarithm, which also turns the product $\Omega_A\Omega_B$ of a combined system into a sum.
+\begin{definition}[Entropy]
+    In statistical thermodynamics, entropy is defined as
+    \begin{equation}
+        \label{eq:boltzmann-entropy}
+        S \equiv k\ln\Omega,
+    \end{equation}
+    where $k = 1.381 \times 10^{-23}~\text{J/K}$ is Boltzmann's constant, which gives $S$ its units since $\Omega$ is dimensionless.
+\end{definition}
+Thus entropy is a measure of multiplicity, and the Law of Increase of Multiplicity becomes: entropy tends to increase.
+\begin{example}[Entropy of a Large Einstein Solid]
+    For an Einstein solid with $q \gg N$, Equation~\eqref{eq:einstein-high-T} gives
+    \[S = k\ln\left(\frac{eq}{N}\right)^N = Nk\left[\ln\frac{q}{N} + 1\right].\]
+    For $N = 10^{22}$ and $q = 10^{24}$, $S \approx 0.77~\text{J/K}$.
+\end{example}
+
 \subsubsection{Maxwell's Demon}
 \subsubsection{Temperature from Entropy}
 \subsubsection{Pressure from Entropy}
@@ -996,6 +1060,19 @@ Since the two solids are independent, for each of the $\Omega_A$ microstates of 
     Same end states, but $W_A \neq W_B$. In general, for an ideal gas write $\delta W = M\,dV + N\,dT$ with $M = -\frac{nRT}{V}$ and $N = 0$. Exactness would require $\left(\frac{\partial M}{\partial T}\right)_V = \left(\frac{\partial N}{\partial V}\right)_T$, but
     \[\left(\frac{\partial M}{\partial T}\right)_V = -\frac{nR}{V} \neq 0 = \left(\frac{\partial N}{\partial V}\right)_T,\]
     so no function $W(V, T)$ satisfies $dW = \delta W$. Since $dU$ is exact, $\delta Q = dU - \delta W$ is then inexact too.
+\end{proof}
+\subsection{Multiplicity of a Large Einstein Solid}
+\label{subsection:mult-large-einstein}
+\begin{proof}
+    Start from the exact formula, Equation~\eqref{eq:einstein-multiplicity}:
+    \[\Omega(N,q) = \frac{(q+N-1)!}{q!\,(N-1)!} \approx \frac{(q+N)!}{q!\,N!},\]
+    since replacing $N-1$ by $N$ changes $\Omega$ only by a factor of order $N$, negligible compared to the huge number $\Omega$. Taking the logarithm and using Stirling's approximation, Equation~\eqref{eq:stirling-approx},
+    \[\ln\Omega \approx (q+N)\ln(q+N) - q\ln q - N\ln N,\]
+    since the linear terms cancel. As $N/q \ll 1$, the Taylor expansion $\ln(1+x) \approx x$ for $|x| \ll 1$ gives
+    \[\ln(q+N) = \ln q + \ln\left(1 + \frac{N}{q}\right) \approx \ln q + \frac{N}{q}.\]
+    Substituting,
+    \[\ln\Omega \approx N\ln\frac{q}{N} + N + \frac{N^2}{q} \approx N\ln\frac{q}{N} + N,\]
+    since $\frac{N^2}{q} \ll N$. Exponentiating, $\Omega \approx e^{N\ln(q/N)}\,e^N = \left(\frac{eq}{N}\right)^N$.
 \end{proof}
 
 % ============================================================
