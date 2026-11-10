@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1794292377.09047 "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys253.tex" "Phys253.pdf" "Phys253" 1794292385.84747 0
+["pdflatex"] 1794293767.76373 "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys253.tex" "Phys253.pdf" "Phys253" 1794293775.14021 0
   "../images/Entropy-1.png" 1794109328 51223 00825c14e22ca0a48fdfbcf3b8e9833c ""
   "../images/clausius-inequality.png" 1793991114 69517 c5e79d2e6cc347e7e5503c1c220c270c ""
   "../images/clausius-inequality2.png" 1794023865 26709 1ea66cee3d84078e34b20191f976db38 ""
@@ -240,11 +240,11 @@
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/translations/translations.sty" 1644048522 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "Phys253.aux" 1794292384 20902 205c9099dda7933b03d18bbd27efe2e8 "pdflatex"
-  "Phys253.out" 1794292384 19417 32a4320588d16d312f6d50fd56132ded "pdflatex"
-  "Phys253.tex" 1794292362 64849 4b10d98979ee365f23d18157c0ca0db9 ""
-  "Phys253.toc" 1794292384 10167 49c46ee256d41b256cbfc274c515f3d4 "pdflatex"
-  "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys253.tex" 1794292362 64849 4b10d98979ee365f23d18157c0ca0db9 ""
+  "Phys253.aux" 1794293774 20989 e179b1141cd7e22d193bf359cff69a4e "pdflatex"
+  "Phys253.out" 1794293774 19417 32a4320588d16d312f6d50fd56132ded "pdflatex"
+  "Phys253.tex" 1794293763 66865 2f63f0f4795290c1489ffca68e303438 ""
+  "Phys253.toc" 1794293774 10167 b951dee6e77aab52353f9b7c0c89dd17 "pdflatex"
+  "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys253.tex" 1794293763 66865 2f63f0f4795290c1489ffca68e303438 ""
   (generated)
   "Phys253.aux"
   "Phys253.log"

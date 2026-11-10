@@ -1021,6 +1021,27 @@ Thus entropy is a measure of multiplicity, and the Law of Increase of Multiplici
     \[S = k\ln\left(\frac{eq}{N}\right)^N = Nk\left[\ln\frac{q}{N} + 1\right].\]
     For $N = 10^{22}$ and $q = 10^{24}$, $S \approx 0.77~\text{J/K}$.
 \end{example}
+\begin{remark}[Entropy as Disorder]
+    Entropy is often described as disorder. This works for a deck of cards: shuffling increases entropy, since the ``sorted'' macrostate has multiplicity $1$ while a ``random shuffle'' macrostate has a much higher one. But it fails elsewhere: crushed ice looks more disorderly than the same amount of water, yet water has much higher entropy, since its molecules can move freely and have far more microstates. Entropy is best thought of as multiplicity, not disorder.
+\end{remark}
+\begin{proposition}[Entropy of a Composite System]
+    If the macrostates of systems $A$ and $B$ are specified separately, the total entropy of the composite system is the sum of their entropies:
+    \begin{equation}
+        \label{eq:entropy-additive}
+        S_{\text{total}} = S_A + S_B.
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    By Equations~\eqref{eq:combined-multiplicity} and~\eqref{eq:boltzmann-entropy},
+    \[S_{\text{total}} = k\ln\Omega_{\text{total}} = k\ln(\Omega_A\Omega_B) = k\ln\Omega_A + k\ln\Omega_B = S_A + S_B.\]
+\end{proof}
+\begin{remark}
+    For small $N$, the energy split between $A$ and $B$ fluctuates, so $\Omega_{\text{total}}$ must be summed over all possible splits, $\Omega_{\text{total}} = \sum \Omega_A\Omega_B$. In the thermodynamic limit, the most likely split dominates this sum, $\Omega_{\text{total}} \approx \Omega_{A,\max}\,\Omega_{B,\max}$, so each subsystem has a well-defined entropy and $S_{\text{total}} = S_A + S_B$ holds.
+\end{remark}
+Since the natural logarithm is a monotonically\footnote{Meaning it always increases.} increasing function of its argument, a macrostate with higher multiplicity also has higher entropy. Any large system in equilibrium is therefore in its macrostate of greatest entropy, and by extension:
+\begin{law}[Second Law of Thermodynamics (Statistical Form)]
+    Spontaneous, irreversible processes increase the total entropy, i.e.\ the total multiplicity, of the universe.
+\end{law}
 
 \subsubsection{Maxwell's Demon}
 \subsubsection{Temperature from Entropy}
