@@ -82,7 +82,7 @@
 \contentsline {subsubsection}{\numberline {7.2.4}Large Systems}{26}{subsubsection.7.2.4}%
 \contentsline {subsubsection}{\numberline {7.2.5}Thermodynamic Limit}{27}{subsubsection.7.2.5}%
 \contentsline {subsubsection}{\numberline {7.2.6}Entropy as Multiplicity}{27}{subsubsection.7.2.6}%
-\contentsline {subsubsection}{\numberline {7.2.7}Maxwell's Demon}{29}{subsubsection.7.2.7}%
+\contentsline {subsubsection}{\numberline {7.2.7}Maxwell's Demon}{28}{subsubsection.7.2.7}%
 \contentsline {subsubsection}{\numberline {7.2.8}Temperature from Entropy}{29}{subsubsection.7.2.8}%
 \contentsline {subsubsection}{\numberline {7.2.9}Pressure from Entropy}{29}{subsubsection.7.2.9}%
 \contentsline {subsubsection}{\numberline {7.2.10}Heat Capacities from Multiplicity}{29}{subsubsection.7.2.10}%

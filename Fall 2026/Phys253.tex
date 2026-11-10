@@ -1044,6 +1044,19 @@ Since the natural logarithm is a monotonically\footnote{Meaning it always increa
 \end{law}
 
 \subsubsection{Maxwell's Demon}
+In 1867, Maxwell noted that the speed distribution of gas molecules might provide a way to defeat the second law: could an agent intervening at the microscopic level reduce entropy?
+\begin{remark}[Maxwell's Demon]
+    A vessel of gas is divided into two parts, $A$ and $B$, by a wall with a small hole. A being (Maxwell's demon) who can see individual molecules opens and closes the hole so that only fast molecules pass from $A$ to $B$, and only slow ones from $B$ to $A$. Without doing work, it would raise the temperature of $B$ and lower that of $A$, contradicting the second law.
+\end{remark}
+\begin{remark}
+    The second law survives once the demon itself is included. To sort molecules, it must remember their speeds; with a finite memory, it must keep erasing old data, and erasing information always releases entropy (at least $k\ln 2$ per bit, Landauer's principle). This outweighs the entropy it removes from the gas, linking entropy to information.
+\end{remark}
+\begin{remark}[Entropy and Information]
+    Knowing only the macrostate, we don't know which of its $\Omega$ microstates the system is in. Finding out would take $\log_2\Omega$ yes/no answers (bits), so
+    \[S = k\ln\Omega = (k\ln 2)\log_2\Omega:\]
+    entropy measures this missing information about the microstate.\footnote{Not covered in this course; this connection is developed in information theory (Shannon entropy).}
+\end{remark}
+
 \subsubsection{Temperature from Entropy}
 \subsubsection{Pressure from Entropy}
 \subsubsection{Heat Capacities from Multiplicity}
