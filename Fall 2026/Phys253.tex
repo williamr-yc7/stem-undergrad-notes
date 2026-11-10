@@ -1057,11 +1057,39 @@ In 1867, Maxwell noted that the speed distribution of gas molecules might provid
     entropy measures this missing information about the microstate.\footnote{Not covered in this course; this connection is developed in information theory (Shannon entropy).}
 \end{remark}
 
-\subsubsection{Temperature from Entropy}
-\subsubsection{Pressure from Entropy}
-\subsubsection{Heat Capacities from Multiplicity}
 \subsection{Ideal Gases}
+\begin{remark}
+    An ideal gas has its multiplicity depend on its volume as well as its totl energy and number of particles. When the gases interact, they can often expand and contract and even exchange molecules in addtion to exchanging energy.
+\end{remark}
+
 \subsubsection{Multiplicity of an Ideal Gas}
+Consider a single gas atom with kinetic energy $U$ in a container of volume $V$.
+\begin{definition}[Momentum Space]
+    Momentum space is an imaginary space whose axes are $p_x$, $p_y$, $p_z$; each point corresponds to a momentum vector of the particle.
+\end{definition}
+The multiplicity should be proportional to $V$, since twice the volume offers twice as many positions, and to the number of allowed momentum vectors:
+\[\Omega_1 \propto V \cdot V_p,\]
+where $V_p$ is the ``volume'' of accessible momentum space and the subscript $1$ is for a single molecule. Since the kinetic energy is
+\[U = \frac{1}{2}m\left(v_x^2 + v_y^2 + v_z^2\right) = \frac{1}{2m}\left(p_x^2 + p_y^2 + p_z^2\right),\]
+the allowed momenta satisfy $p_x^2 + p_y^2 + p_z^2 = 2mU$: a sphere in momentum space of radius $\sqrt{2mU}$, so $V_p$ is the surface area of this sphere.
+
+To count microstates we need quantum mechanics.
+\begin{principle}[Heisenberg Uncertainty Principle]
+    A particle's wavefunction is spread out in both position and momentum space; the narrower it is in one, the wider it must be in the other:
+    \begin{equation}
+        \label{eq:heisenberg-principle}
+        (\Delta x)(\Delta p_x) \approx h,
+    \end{equation}
+    where $h$ is Planck's constant.
+\end{principle}
+The number of independent wavefunctions is therefore finite when the available position and momentum space are limited. In one dimension, there are $\frac{L}{\Delta x}$ distinct position states and $\frac{L_p}{\Delta p_x}$ distinct momentum states, so
+\[\Omega_1 = \frac{L}{\Delta x}\cdot\frac{L_p}{\Delta p_x} = \frac{L L_p}{h}.\]
+In three dimensions, lengths become volumes:
+\begin{equation}
+    \label{eq:one-atom-multiplicity}
+    \Omega_1 = \frac{V V_p}{h^3}.
+\end{equation}
+
 \subsubsection{Interacting Ideal Gases}
 \subsubsection{Entropy of an Ideal Gas}
 \subsubsection{Entropy of Mixing}
