@@ -900,7 +900,8 @@ Since the two solids are independent, for each of the $\Omega_A$ microstates of 
     \Omega_{\text{total}} = \Omega_A\,\Omega_B.
 \end{equation}
 \begin{example}[Two Solids of Three Oscillators]
-    For $N_A = N_B = 3$ and $q_A + q_B = 6$, there are seven macrostates, $q_A = 0, 1, \dots, 6$ (Table~\ref{tab:einstein-solids}). The most likely is $q_A = q_B = 3$, the energy shared equally.
+    \label{ex:two-einstein-solids}
+    For $N_A = N_B = 3$ and $q_A + q_B = 6$, there are seven macrostates, $q_A = 0, 1, \dots, 6$\footnote{$q_A$ can be anything from 0 to 6, as long as $q_B$ makes up the rest: $q_B = 6 - q_A$. So $q_A = 6$ just means solid $A$ has all the energy and $q_B = 0$.} (Table~\ref{tab:einstein-solids}). The most likely is $q_A = q_B = 3$, the energy shared equally.
     \begin{table}[H]
         \centering
         \begin{tabular}{cc|cc|c}
@@ -920,6 +921,26 @@ Since the two solids are independent, for each of the $\Omega_A$ microstates of 
         \label{tab:einstein-solids}
     \end{table}
 \end{example}
+\begin{principle}[Fundamental Assumption of Statistical Mechanics]
+    In an isolated system in thermal equilibrium, all accessible microstates are equally probable.\footnote{Assume that the interactions among oscillators are strong enough to allow the exchange of energy, but too weak to have much effect on the energy levels themselves.}
+\end{principle}
+\begin{principle}[Principle of Detailed Balance]
+    At the microscopic level, we expect that any process that would take the system from state X to state Y is reversible, so that the system can just as easily go from state Y to state X.
+\end{principle}
+\begin{remark}
+    If we invoke the fundamental assumption for our system of two small Einstein solids (Example~\ref{ex:two-einstein-solids}), we can immediately conclude that, while all 462 microstates are equally probable, some macrostates are more probable than others.
+\end{remark}
+\begin{example}
+    The chance of finding the system in the fourth macrostate (with three energy units in each solid) is 100/462, while the chance of finding it in the first macrostate (with all the energy in solid B) is only 28/462.
+\end{example}
+\begin{remark}
+    If all the energy is in solid B initially, and we wait a
+    while, chances are we'll find the energy distributed more evenly later on because the macrostates associated with a more even sharing of the total energy between A and B are more probable (they are associated with a larger number of the equally probable microstates; their multiplicity is larger)
+\end{remark}
+\begin{example}
+    Take two Einstein solids with $N_A = 300$, $N_B = 200$ and $q_{\text{total}} = 100$, giving $101$ macrostates. What matters is not that the multiplicities are large, but that their ratios are: the most likely macrostate, $q_A = 60$, is more than $10^{33}$ times more probable than the least likely, $q_A = 0$. With $\Omega_{\text{total}}(\text{all}) = 9.3 \times 10^{115}$, the probability of $q_A = 60$ is about $7\%$, of $q_A < 30$ or $q_A > 90$ less than one in a million, and of $q_A < 10$ less than $10^{-20}$. Since the universe is about $4 \times 10^{17}$~s old, you would need to check the system a hundred times per second for the age of the universe to have a decent chance of ever seeing $q_A < 10$.
+\end{example}
+
 
 \subsubsection{Large Systems and the Thermodynamic Limit}
 \subsubsection{Entropy as Multiplicity}
