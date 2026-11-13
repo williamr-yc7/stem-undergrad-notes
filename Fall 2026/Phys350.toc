@@ -32,6 +32,8 @@
 \contentsline {subsubsection}{\numberline {3.5.2}Surface Charge}{19}{subsubsection.3.5.2}%
 \contentsline {subsubsection}{\numberline {3.5.3}Capacitors}{19}{subsubsection.3.5.3}%
 \contentsline {section}{\numberline {4}Potentials}{20}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Laplace's Equation}{20}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Laplace's Equation in 1-D}{20}{subsubsection.4.1.1}%
 \contentsline {section}{\numberline {5}Magnetic Fields in Matter}{20}{section.5}%
 \contentsline {section}{\numberline {6}Electrodynamics}{20}{section.6}%
 \contentsline {section}{\numberline {A}Extra Material}{21}{appendix.A}%
