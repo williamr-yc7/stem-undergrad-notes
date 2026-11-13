@@ -32,16 +32,10 @@
 \contentsline {subsubsection}{\numberline {3.5.2}Surface Charge}{18}{subsubsection.3.5.2}%
 \contentsline {subsubsection}{\numberline {3.5.3}Capacitors}{18}{subsubsection.3.5.3}%
 \contentsline {section}{\numberline {4}Potentials}{19}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Laplace's Equation}{19}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The Method of Images}{20}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Separation of Variables: Cartesian}{21}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Separation of Variables: Spherical}{22}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Multipole Expansion}{23}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Electric Fields in Matter}{27}{section.5}%
-\contentsline {section}{\numberline {6}Magnetostatics}{27}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Current Density}{27}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Magnetic Fields in Matter}{27}{section.7}%
-\contentsline {section}{\numberline {8}Electrodynamics}{27}{section.8}%
-\contentsline {section}{\numberline {A}Extra Material}{28}{appendix.A}%
-\contentsline {section}{\numberline {B}Proofs}{28}{appendix.B}%
-\contentsline {section}{\numberline {C}Useful Links}{30}{appendix.C}%
+\contentsline {section}{\numberline {5}Magnetic Fields in Matter}{19}{section.5}%
+\contentsline {section}{\numberline {6}Electrodynamics}{19}{section.6}%
+\contentsline {section}{\numberline {A}Extra Material}{20}{appendix.A}%
+\contentsline {section}{\numberline {B}Proofs}{20}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Second Derivatives Identities Proofs}{20}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Energy Stored in the Field}{21}{subsection.B.2}%
+\contentsline {section}{\numberline {C}Useful Links}{21}{appendix.C}%

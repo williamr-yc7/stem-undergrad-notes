@@ -288,7 +288,7 @@ The full list of second derivative identities:
     \end{tabular}
     \caption{Second derivative identities.}
 \end{table}
-The curl of a curl identity and the divergence of a gradient identity are proved in Appendix \ref{app:identities}.
+The curl of a curl identity and the divergence of a gradient identity are proved in Appendix \ref{app:proofs}.
 
 \subsection{The Dirac Delta Function}
 \begin{definition}[Dirac delta]
@@ -814,309 +814,7 @@ A surface charge $\sigma$ makes $\vec{E}$ jump as you cross it. To fix this we u
 \section{Potentials}%Correct
 \marginpar{September 18-25, 2026}
 
-\subsection{Laplace's Equation}
-We want $V$ because $\vec{E} = -\vec{\nabla}V$. The integral $V = \frac{1}{4\pi\epsilon_0}\int\frac{\rho}{\mathfrak{r}}\,d\tau'$ is exact but often impossible to do, and the multipole expansion is only an approximation. Often we do not even know $\rho$ everywhere: we know the potentials of some conductors instead, and the charge on them is whatever it has to be. In the empty space between the charges, Poisson's equation simplifies.
-\begin{law}[Laplace's equation]
-    In a region with no charge,
-    \begin{equation}
-        \nabla^2 V = \frac{\partial^2 V}{\partial x^2} + \frac{\partial^2 V}{\partial y^2} + \frac{\partial^2 V}{\partial z^2} = 0.
-    \end{equation}
-\end{law}
-\begin{remark}
-    Point charges, charged objects and conductors are where $\nabla^2 V = -\rho/\epsilon_0$ holds with $\rho \neq 0$. Everywhere else $\nabla^2 V = 0$, and the charges only enter as boundary conditions on that empty region.
-\end{remark}
-\begin{remark}[The Laplacian compares a point with its surroundings]
-    In one dimension, $V'' = 0$ gives a straight line, $V = mx + b$, and then $V(x) = \frac{1}{2}\left[V(x+a) + V(x-a)\right]$: every point is the average of its neighbours. In general $\nabla^2 V$ measures how far a point sits from the average of its surroundings, and since $\nabla^2 V = -\rho/\epsilon_0$, that tells you the sign of the charge there.
-    \begin{figure}[H]
-        \centering
-        \begin{tikzpicture}[scale=1.1, >=stealth]
-            \begin{scope}
-                \draw[dashed, gray] (0,1) -- (2,1);
-                \draw[thick, blue] (0,1) parabola bend (1,0.3) (2,1);
-                \draw[red, thick] (1,1) -- (1,0.3);
-                \draw[red, thick] (1,1) circle (2.5pt);
-                \foreach \p in {(0,1),(2,1),(1,0.3)} \fill[blue] \p circle (2pt);
-                \node[align=center] at (1,-0.5) {below the average\\$\nabla^2 V > 0$, so $\rho < 0$};
-            \end{scope}
-            \begin{scope}[xshift=3.5cm]
-                \draw[thick, blue] (0,0.3) -- (2,1.3);
-                \draw[green!50!black, thick] (1,0.8) circle (3.5pt);
-                \foreach \p in {(0,0.3),(2,1.3),(1,0.8)} \fill[blue] \p circle (2pt);
-                \node[align=center] at (1,-0.5) {equal to the average\\$\nabla^2 V = 0$, no charge};
-            \end{scope}
-            \begin{scope}[xshift=7cm]
-                \draw[dashed, gray] (0,0.3) -- (2,0.3);
-                \draw[thick, blue] (0,0.3) parabola bend (1,1) (2,0.3);
-                \draw[red, thick] (1,1) -- (1,0.3);
-                \draw[red, thick] (1,0.3) circle (2.5pt);
-                \foreach \p in {(0,0.3),(2,0.3),(1,1)} \fill[blue] \p circle (2pt);
-                \node[align=center] at (1,-0.5) {above the average\\$\nabla^2 V < 0$, so $\rho > 0$};
-            \end{scope}
-        \end{tikzpicture}
-        \caption{The middle point compared with the average of its two neighbours (open circle).}
-    \end{figure}
-\end{remark}
-\begin{theorem}[Mean value property]
-    If $\nabla^2 V = 0$, the value of $V$ at any point equals its average over any sphere of radius $R$ centred on that point (containing no charge):
-    \begin{equation}
-        V(\vec{r}_0) = \frac{1}{4\pi R^2}\oint_{\text{sphere}} V\,da.
-    \end{equation}
-\end{theorem}
-\begin{corollary}[No local maxima or minima]
-    A solution of Laplace's equation has no local maxima or minima inside the region; extreme values occur only on the boundary. A maximum would be larger than every point around it, so it could not equal their average.
-\end{corollary}
-\begin{theorem}[Earnshaw's theorem]
-    A charged particle cannot be held in stable equilibrium by electrostatic forces alone.
-\end{theorem}
-\begin{proof}
-    Stable equilibrium for a charge $q$ needs its potential energy $qV$ to have a local minimum at that point. But the other charges' $V$ obeys Laplace's equation there, so it has no local minimum. Concretely, if $\frac{\partial^2 V}{\partial x^2} > 0$ (stable along $x$), then $\frac{\partial^2 V}{\partial y^2} + \frac{\partial^2 V}{\partial z^2} < 0$, so the charge escapes sideways. For example, a charge between two equal charges is stable along the line joining them but slips out perpendicular to it.
-\end{proof}
-\begin{theorem}[Uniqueness theorem]
-    The solution of Laplace's equation in a volume is uniquely determined if $V$ is specified on the whole boundary of that volume. Similarly, if the region contains conductors, $\vec{E}$ is uniquely determined once the charge density $\rho$ and the total charge on each conductor are given.
-\end{theorem}
-\begin{remark}
-    The significance: any function that satisfies Laplace's equation and the boundary conditions is \emph{the} answer, no matter how it was found. Guessing is allowed, which is what the method of images and separation of variables exploit.
-\end{remark}
-\begin{proposition}[Method of relaxation]
-    On a grid, the mean value property says each cell equals the average of its neighbours. In two dimensions,
-    \[V_{i,j} = \frac{1}{4}\left(V_{i+1,j} + V_{i-1,j} + V_{i,j+1} + V_{i,j-1}\right).\]
-    This gives a numerical method:
-    \begin{enumerate}
-        \item Initialize the grid with a guess for $V$.
-        \item Sweep through the grid, replacing each value by the average of its nearest neighbours, keeping the boundary values fixed.
-        \item Repeat until the values stop changing.
-    \end{enumerate}
-\end{proposition}
 
-\subsection{The Method of Images}
-\begin{remark}[A solution in search of a problem]
-    Maxwell pointed out that the inverse problem is easier: given a potential, finding conductors that fit it is simpler than finding the potential for given conductors. Any equipotential surface of a known potential can be replaced by a conductor held at that potential, and by uniqueness the field outside it does not change.
-\end{remark}
-\begin{example}[Point charge above a grounded plane]
-    A charge $q$ sits at height $d$ above an infinite grounded conducting plane at $z = 0$. For $z > 0$ we need $\nabla^2 V = 0$ (apart from at $q$), $V = 0$ on the plane, and $V \to 0$ far away. Forget the plane and put an image charge $-q$ at $z = -d$ instead. Every point of the plane is equidistant from the two charges, so this pair gives $V = 0$ there, and it has the same charge in the region $z > 0$. By uniqueness it is the answer for $z \geq 0$:
-    \[V(x,y,z) = \frac{1}{4\pi\epsilon_0}\left[\frac{q}{\sqrt{x^2 + y^2 + (z-d)^2}} - \frac{q}{\sqrt{x^2 + y^2 + (z+d)^2}}\right].\]
-    \begin{figure}[H]
-        \centering
-        \begin{tikzpicture}[>=stealth]
-            \fill[gray!20] (-2,-1.6) rectangle (2,0);
-            \draw[thick] (-2,0) -- (2,0);
-            \node at (0,-0.8) {grounded conductor};
-            \fill (0,1.2) circle (2pt) node[right] {$+q$};
-            \draw[<->] (-0.4,0) -- (-0.4,1.2) node[midway, left] {$d$};
-            \draw[<->, thick] (2.3,0.3) -- (3.2,0.3);
-            \node[align=center] at (2.75,0.85) {\small same $V$\\\small for $z>0$};
-            \begin{scope}[xshift=5.5cm]
-                \draw[dashed] (-2,0) -- (2,0) node[right] {$V = 0$};
-                \fill (0,1.2) circle (2pt) node[right] {$+q$};
-                \fill[red] (0,-1.2) circle (2pt) node[right] {$-q$ (image)};
-                \draw[<->] (-0.4,0) -- (-0.4,1.2) node[midway, left] {$d$};
-                \draw[<->] (-0.4,-1.2) -- (-0.4,0) node[midway, left] {$d$};
-            \end{scope}
-        \end{tikzpicture}
-        \caption{The real problem (left) and the image problem (right) have the same charge and the same boundary values in $z > 0$, so they have the same potential there.}
-    \end{figure}
-\end{example}
-\begin{remark}
-    The image charge is not real; it is bookkeeping. Physically, the field comes from the negative surface charge induced on the plane, and the image reproduces its effect in the region we care about. The formula says nothing about $z < 0$, where $V = 0$ inside the conductor. The image must sit outside the region being solved, otherwise it would change $\rho$ there.
-\end{remark}
-\begin{remark}
-    The induced charge on the plane totals $-q$, and $q$ is attracted to the plane with the force of its image, but the energy is only half of the image pair's, since there is no field in $z < 0$.
-\end{remark}
-\begin{example}[Two charges above a grounded plane]
-    Charges $+Q$ at height $d$ and $+3Q$ at height $2d$ sit above a grounded plane. Each charge on its own is handled by one image, so by superposition we need two: $-Q$ at $-d$ and $-3Q$ at $-2d$. The method works whenever the problem is linear (superposition) and the boundary values come out right (uniqueness).
-\end{example}
-
-\subsection{Separation of Variables: Cartesian}
-\begin{proposition}[Separation]
-    Look for solutions $V(x,y,z) = X(x)Y(y)Z(z)$. Substituting into $\nabla^2 V = 0$ and dividing by $V$,
-    \[\frac{X''}{X} + \frac{Y''}{Y} + \frac{Z''}{Z} = 0.\]
-    Each term depends on a different variable, which can be varied alone, so each must be a constant: $X'' = c_xX$, $Y'' = c_yY$, $Z'' = c_zZ$ with $c_x + c_y + c_z = 0$. One PDE becomes three ODEs.
-\end{proposition}
-\begin{remark}
-    Most solutions are not separable (e.g.\ $1/r$), but Laplace's equation is linear, so sums of separable solutions can build general ones.
-\end{remark}
-\begin{proposition}[Three kinds of solution]
-    For each direction,
-    \[c = +k^2:\ X = Ae^{kx} + Be^{-kx}, \qquad c = -k^2:\ X = A\sin kx + B\cos kx, \qquad c = 0:\ X = A + Bx.\]
-    Since the constants sum to zero, they cannot all have the same sign unless all vanish.
-\end{proposition}
-\begin{remark}[Which direction gets which sign]
-    A sinusoid crosses zero infinitely often; an exponential (or $\cosh$, $\sinh$) at most once. So a direction in which $V$ must vanish at two places gets the sinusoid, and the other gets the exponential. Symmetry picks the parity: even $\Rightarrow$ $\cos$, $\cosh$; odd $\Rightarrow$ $\sin$, $\sinh$. $\cosh$ never vanishes; $\sinh$ vanishes only at $0$.
-\end{remark}
-\begin{example}[Square pipe]
-    A long pipe along $z$ with square cross section: sides $x = \pm a/2$ grounded, top and bottom $y = \pm a/2$ held at $V_0$. Nothing depends on $z$, so $c_z = 0$ and $c_x = -c_y$. $V$ vanishes at two values of $x$, so $X$ is sinusoidal and $Y$ hyperbolic; the problem is even in both $x$ and $y$, so
-    \[V = C\cos kx\,\cosh ky.\]
-    $V(\pm a/2, y) = 0$ quantises $k$: $\cos(ka/2) = 0 \Rightarrow k = (2n+1)\pi/a$. Superposing,
-    \[V(x,y) = \sum_{n=0}^\infty C_n\cos\frac{(2n+1)\pi x}{a}\cosh\frac{(2n+1)\pi y}{a}.\]
-    Setting $y = a/2$, multiplying by $\cos\frac{(2m+1)\pi x}{a}$ and integrating over $x$ (Fourier's trick, using orthogonality $\int_{-a/2}^{a/2}\cos\cos\,dx = \frac{a}{2}\delta_{mn}$) picks out one term:
-    \[V(x,y) = \frac{4V_0}{\pi}\sum_{n=0}^{\infty}\frac{(-1)^n}{2n+1}\cos\frac{(2n+1)\pi x}{a}\,\frac{\cosh\left[(2n+1)\pi y/a\right]}{\cosh\left[(2n+1)\pi/2\right]}.\]
-    Check: rotating by $90^\circ$ swaps hot and grounded faces, so $V(0,0) = V_0/2$ exactly; the series gives $0.5074\,V_0$ with one term. The centre is a saddle, as $\nabla^2 V = 0$ requires. Near the corners the series overshoots (Gibbs phenomenon), because the boundary data jumps there.
-\end{example}
-\begin{remark}[Summary]
-    \begin{enumerate}
-        \item Separate: one PDE becomes ODEs with constants summing to zero.
-        \item Choose signs: two or more zeros in a direction $\Rightarrow$ sinusoid; otherwise exponential/hyperbolic.
-        \item Use symmetry to keep only even or odd functions.
-        \item Impose the $V = 0$ boundaries: these quantise $k$.
-        \item Superpose and use Fourier's trick for the coefficients.
-        \item Uniqueness guarantees the result is the answer.
-    \end{enumerate}
-\end{remark}
-
-\subsection{Separation of Variables: Spherical}
-\begin{proposition}[Axially symmetric solutions]
-    If nothing depends on $\phi$, separating $V(r,\theta) = R(r)\Theta(\theta)$ in the spherical Laplacian gives radial solutions $r^l$ and $r^{-(l+1)}$ and angular solutions the Legendre polynomials $P_l(\cos\theta)$, so
-    \begin{equation}
-        V(r,\theta) = \sum_{l=0}^{\infty}\left(A_lr^l + \frac{B_l}{r^{l+1}}\right)P_l(\cos\theta),
-    \end{equation}
-    with $P_0 = 1$, $P_1 = x$, $P_2 = (3x^2-1)/2$, and orthogonality $\int_0^\pi P_mP_n\sin\theta\,d\theta = \frac{2}{2m+1}\delta_{mn}$.
-\end{proposition}
-\begin{proposition}[Sphere with given surface potential $V_0(\theta)$]
-    \begin{itemize}
-        \item Inside, $V$ must be finite at $r = 0$, so $B_l = 0$.
-        \item Outside, $V \to 0$ at infinity, so $A_l = 0$.
-        \item Write $V_0(\theta) = \sum_l C_lP_l(\cos\theta)$ (by inspection if it is a simple polynomial in $\cos\theta$, else by orthogonality). Continuity at $R$ then gives
-        \[V_{\text{in}} = \sum_l C_l\left(\frac{r}{R}\right)^lP_l(\cos\theta), \qquad V_{\text{out}} = \sum_l C_l\left(\frac{R}{r}\right)^{l+1}P_l(\cos\theta).\]
-        \item The surface charge comes from the jump in slope, $\sigma = -\epsilon_0\left(\frac{\partial V_{\text{out}}}{\partial r} - \frac{\partial V_{\text{in}}}{\partial r}\right)_{r=R}$, giving
-        \[\sigma(\theta) = \frac{\epsilon_0}{R}\sum_l(2l+1)C_lP_l(\cos\theta).\]
-    \end{itemize}
-\end{proposition}
-\begin{remark}
-    Rewrite powers of $\cos\theta$ in Legendre polynomials, e.g.\ $\cos^2\theta = \frac{2}{3}P_2 + \frac{1}{3}P_0$. Each $l$ outside is a multipole: $l = 0$ gives $V \propto 1/r$ with total charge $Q = 4\pi\epsilon_0 RC_0$.
-\end{remark}
-\begin{problem}[Midterm 2025, Q5]
-    A spherical shell of radius $R$ has $V(R,\theta) = V_0(1 + \cos\theta)$, no charge elsewhere, and $V(\infty) = 0$. Find $V$ outside, $V$ inside, and $\sigma(\theta)$.
-\end{problem}
-\begin{solution}
-    $V_0(1+\cos\theta) = V_0P_0 + V_0P_1$, so $C_0 = C_1 = V_0$ and all others vanish:
-    \[V_{\text{out}} = V_0\left(\frac{R}{r} + \frac{R^2}{r^2}\cos\theta\right), \qquad V_{\text{in}} = V_0\left(1 + \frac{r}{R}\cos\theta\right),\]
-    \[\sigma(\theta) = \frac{\epsilon_0V_0}{R}\left(1 + 3\cos\theta\right).\]
-    Check: $V_{\text{in}} = V_0 + V_0z/R$ is a uniform field inside, and $V_{\text{out}}$ is a monopole plus a dipole.
-\end{solution}
-
-\subsection{Multipole Expansion}
-\begin{example}[Two charges on the $z$ axis]
-    Place $q_1$ at $z = d/2$ and $q_2$ at $z = -d/2$, and measure $\theta$ from the $z$ axis.
-    \begin{figure}[H]
-        \centering
-        \begin{tikzpicture}[scale=1.2, >=stealth]
-            \draw[->] (0,-1.8) -- (0,3.2) node[above] {$z$};
-            \fill[red] (0,1) circle (2.5pt) node[right=3pt] {$q_1$};
-            \fill[blue] (0,-1) circle (2.5pt) node[right=3pt] {$q_2$};
-            \fill (2.4,2.4) circle (2pt) node[above right] {$P$};
-            \draw[->, thick] (0,0) -- (2.4,2.4);
-            \node at (1.75,1.35) {$\vec{r}$};
-            \draw[->, thick, red] (0,1) -- (2.4,2.4);
-            \node[red] at (1.0,2.0) {$\vec{\mathfrak{r}}_1$};
-            \draw[->, thick, blue] (0,-1) -- (2.4,2.4);
-            \node[blue] at (1.55,0.45) {$\vec{\mathfrak{r}}_2$};
-            \draw (0,0.55) arc[start angle=90, end angle=45, radius=0.55];
-            \node at (67.5:0.8) {$\theta$};
-            \draw[decorate, decoration={brace, amplitude=4pt}] (-0.4,0) -- (-0.4,1)
-                node[midway, left=6pt] {$d/2$};
-            \draw[decorate, decoration={brace, amplitude=4pt}] (-0.4,-1) -- (-0.4,0)
-                node[midway, left=6pt] {$d/2$};
-        \end{tikzpicture}
-        \caption{Two charges on the $z$ axis and a far field point $P$ at distance $r$ and angle $\theta$.}
-    \end{figure}
-    Then
-    \[V(\vec{r}) = \frac{1}{4\pi\epsilon_0}\left(\frac{q_1}{\mathfrak{r}_1} + \frac{q_2}{\mathfrak{r}_2}\right).\]
-    To get $\mathfrak{r}_1$, write $\vec{\mathfrak{r}}_1 = \vec{r} - \frac{d}{2}\hat{z}$ and square it, using $\vec{r}\cdot\hat{z} = r\cos\theta$ (this is just the law of cosines):
-    \[\mathfrak{r}_1^2 = r^2 + \left(\frac{d}{2}\right)^2 - 2r\frac{d}{2}\cos\theta = r^2 + \left(\frac{d}{2}\right)^2 - rd\cos\theta.\]
-    For $q_2$ the source sits at $-\frac{d}{2}\hat{z}$, so the cross term flips sign. Both cases in one line, top sign for $q_1$ and bottom sign for $q_2$:
-    \[\mathfrak{r}_{1,2}^2 = r^2 + \left(\frac{d}{2}\right)^2 \mp rd\cos\theta.\]
-    Writing $1/\mathfrak{r}_{1,2} = \frac{1}{r}(1+\epsilon_\mp)^{-1/2}$ with $\epsilon_\mp = \frac{d}{2r}\left(\frac{d}{2r} \mp 2\cos\theta\right)$ and expanding for $d \ll r$, $(1+\epsilon)^{-1/2} = 1 - \frac{1}{2}\epsilon + \frac{3}{8}\epsilon^2 - \dots$, gives
-    \[V(\vec{r}) = \frac{1}{4\pi\epsilon_0}\left[\underbrace{\frac{q_1+q_2}{r}}_{\text{monopole}} + \underbrace{\frac{(q_1-q_2)d\cos\theta}{2r^2}}_{\text{dipole}} + \underbrace{\frac{(q_1+q_2)d^2}{4}\frac{3\cos^2\theta - 1}{2r^3}}_{\text{quadrupole}} + \dots\right].\]
-    Each term gains a power of $1/r$, so $E \sim 1/r^2,\ 1/r^3,\ 1/r^4, \dots$
-\end{example}
-\begin{remark}
-    Setting $q_1 = -q_2$ kills the monopole term, leaving $V \sim 1/r^2$ and $E \sim 1/r^3$ at leading order.
-\end{remark}
-\begin{definition}[Dipole Moment]
-    For charges $+q$ and $-q$ separated by $\vec{d}$ (pointing from $-q$ to $+q$), the dipole moment is
-    \begin{equation}
-        \vec{p} = q\vec{d}, \qquad [\vec{p}] = \mathrm{C\cdot m}.
-    \end{equation}
-    For any distribution,
-    \begin{equation}
-        \vec{p} = \sum_i q_i\vec{r}_i = \int\vec{r}'\rho(\vec{r}')\,d\tau',
-    \end{equation}
-    which reduces to $q\vec{d}$ for the pair. It measures how far apart the positive and negative charge sit, and sets the dipole term of the potential,
-    \begin{equation}
-        V_{\text{dip}} = \frac{1}{4\pi\epsilon_0}\frac{\vec{p}\cdot\hat{r}}{r^2}.
-    \end{equation}
-\end{definition}
-\begin{proposition}[Dipole field]
-    For $\vec{p} = p\hat{z}$, $V_{\text{dip}} = \frac{p\cos\theta}{4\pi\epsilon_0r^2}$, and $\vec{E} = -\vec{\nabla}V$ in spherical coordinates gives
-    \begin{equation}
-        \vec{E}_{\text{dip}}(r,\theta) = \frac{p}{4\pi\epsilon_0r^3}\left(2\cos\theta\,\hat{r} + \sin\theta\,\hat{\theta}\right).
-    \end{equation}
-\end{proposition}
-\begin{definition}[Ideal dipole]
-    Take $q_1 = q$ and $q_2 = -q$. The monopole and quadrupole terms vanish, and the dipole term is $\frac{1}{4\pi\epsilon_0}\frac{qd\cos\theta}{r^2}$. Every term in the expansion carries a factor $q\,d^{\,n}$, which we can write as $(qd)\,d^{\,n-1}$. Now shrink $d \to 0$ while raising $q \to \infty$ so that the product $qd$ stays fixed:
-    \begin{itemize}
-        \item The dipole term ($n=1$) contains only $qd$, so it is unchanged.
-        \item Every later term carries at least one extra factor of $d$, so it goes to zero.
-    \end{itemize}
-    ($q$ must grow, otherwise the dipole term would vanish too.) What is left is a point object with dipole moment $\vec{p} = q\vec{d}$ and exactly $V = \frac{1}{4\pi\epsilon_0}\frac{\vec{p}\cdot\hat{r}}{r^2}$.
-\end{definition}
-\begin{remark}
-    The names count charges in powers of 2: monopole (1), dipole (2), quadrupole (4), octupole (8), and so on. Each is built from two opposite copies of the previous one, placed close together so the previous order cancels. For example, two opposite dipoles give a quadrupole with $V \sim 1/r^3$.
-\end{remark}
-\begin{theorem}[Multipole expansion]
-    For $r$ large compared with the size of the distribution,
-    \begin{equation}
-        V(\vec{r}) = \frac{1}{4\pi\epsilon_0}\left(\frac{Q}{r} + \frac{\vec{p}\cdot\hat{r}}{r^2} + \frac{\sum_{i,j}\hat{r}_iQ_{ij}\hat{r}_j}{r^3} + \dots\right),
-    \end{equation}
-    with
-    \[Q = \int\rho(\vec{r}')\,d\tau', \qquad
-    \vec{p} = \int\vec{r}'\rho(\vec{r}')\,d\tau', \qquad
-    Q_{ij} = \int\frac{1}{2}\left(3r'_ir'_j - r'^2\delta_{ij}\right)\rho(\vec{r}')\,d\tau'.\]
-    Griffiths writes the same series with Legendre polynomials; see Appendix~\ref{app:legendre}.
-\end{theorem}
-\begin{remark}
-    Each term is smaller than the previous one by a factor of roughly $d/r$, where $d$ is the size of the charge distribution. Far away ($r \gg d$) the first nonzero term dominates and the rest are small corrections. Close up ($r \sim d$) the terms no longer shrink and the expansion is useless. So to find the leading behaviour: compute $Q$; if it vanishes, compute $\vec{p}$; if that vanishes too, the leading term is the quadrupole.
-\end{remark}
-\begin{remark}[Origin dependence]
-    Shifting the origin by $\vec{a}$ changes $\vec{p} \to \vec{p} - Q\vec{a}$, so $\vec{p}$ is well defined only when $Q = 0$ (a neutral molecule, not an ion). In general only the first non-vanishing moment is origin-independent.
-\end{remark}
-\begin{problem}[Midterm drill]
-    Charges $3q$ at $a\hat{z}$, $q$ at $-a\hat{z}$, and $-2q$ at $\pm a\hat{y}$. (i) Sketch how to find the energy. (ii) Find $V$ to dipole order.
-\end{problem}
-\begin{solution}
-    (i) Sum $\frac{q_iq_j}{4\pi\epsilon_0\mathfrak{r}_{ij}}$ over the $6$ pairs: the two $z$ charges are $2a$ apart, as are the two $y$ charges, and each $z$ charge is $\sqrt{2}a$ from each $y$ charge:
-    \[U = \frac{1}{4\pi\epsilon_0 a}\left[\frac{3q^2}{2} + \frac{4q^2}{2} + \frac{2(3q)(-2q) + 2(q)(-2q)}{\sqrt{2}}\right] = \frac{q^2}{4\pi\epsilon_0 a}\left(\frac{7}{2} - 8\sqrt{2}\right).\]
-    (ii) $Q = 3q + q - 4q = 0$, and $\vec{p} = 3qa\hat{z} - qa\hat{z} - 2qa\hat{y} + 2qa\hat{y} = 2qa\hat{z}$, so
-    \[V \approx \frac{1}{4\pi\epsilon_0}\frac{2qa\cos\theta}{r^2}.\]
-\end{solution}
-\begin{problem}[Midterm 2025, Q4]
-    Charges $+q$ and $-q$, a distance $a$ apart, sit a height $d$ above a conductor filling $z < 0$. (a) Find $\vec{E}$ and $V$ for $z < 0$. (b) Describe how to find the exact $V$ for $z > 0$. (c) Find how $V$ and $|\vec{E}|$ fall off for $r \gg d$.
-\end{problem}
-\begin{solution}
-    \begin{enumerate}[label=(\alph*)]
-        \item $\vec{E} = 0$ inside the conductor, so $V$ is constant, independent of $z$ ($V = 0$, matching the plane at infinity).
-        \item Method of images: place $-q$ at depth $d$ directly below $+q$, and $+q$ directly below $-q$. The four charges give $V = 0$ on $z = 0$, and the images lie outside $z > 0$, so by uniqueness
-        \[V = \frac{1}{4\pi\epsilon_0}\sum_{i=1}^{4}\frac{q_i}{|\vec{r} - \vec{r}_i|}\quad\text{for } z > 0.\]
-        \item Total charge is $0$. The real pair has $\vec{p} = qa\hat{x}$ and the image pair $-qa\hat{x}$, so the dipole moment also cancels. The leading term is the quadrupole: $V \sim 1/r^3$ and $|\vec{E}| \sim 1/r^4$.
-    \end{enumerate}
-\end{solution}
-
-
-\section{Electric Fields in Matter}
-
-
-\section{Magnetostatics}
-
-\subsection{Current Density}
-\begin{definition}[Current density]
-    The current $I$ through a wire is not a local quantity, since a wire has finite thickness. The local version is the current density
-    \[\vec{J} = \frac{d\vec{I}}{da_\perp},\]
-    where $da_\perp$ is the differential cross section perpendicular to the flow.
-\end{definition}
-\begin{remark}
-    Applying the divergence theorem (Theorem~\ref{FTD}) to $\vec{J}$ is how conservation of charge gets written down: the charge inside $V$ can only decrease by flowing out through $S$,
-    \[\frac{d}{dt}\iiint_V\rho\, dV = - \oiint_S\vec{J}\cdot d\vec{A} = -\iiint_V \vec{\nabla}\cdot\vec{J}\,dV \quad\Longrightarrow\quad \frac{\partial\rho}{\partial t} = -\vec{\nabla}\cdot\vec{J}.\]
-\end{remark}
 
 
 \section{Magnetic Fields in Matter}
@@ -1131,22 +829,12 @@ We want $V$ because $\vec{E} = -\vec{\nabla}V$. The integral $V = \frac{1}{4\pi\
     Suppose an extra dimension exists but is curled up, the way a flat sheet with coordinates $(x,y)$ can be rolled into a cylinder whose second coordinate $w$ is periodic with a small radius. At distances much smaller than that radius, field lines spread out into all the dimensions and the field falls off faster than $1/r^2$. At distances much larger than it, there is only room to spread out in the large dimensions and the usual $1/r^2$ is recovered. So a measured deviation from the inverse square law at short range would be evidence for extra dimensions.\par
     This has been tested for gravity by the E\"ot-Wash torsion balance experiments (2004, 2007, 2020), which checked the $1/r^2$ law down to separations of $52\,\mu$m. Newtonian gravity fit the data, ruling out gravitational strength Yukawa interactions with ranges above $38.6\,\mu$m at 95\% confidence.
 \end{remark}
-\begin{remark}
-    \label{app:legendre}
-    Griffiths' form of the multipole expansion, with $\alpha$ the angle between $\vec{r}$ and $\vec{r}'$ and $P_n$ the Legendre polynomials:
-    \[V(\vec{r}) = \frac{1}{4\pi\epsilon_0}\sum_{n=0}^{\infty}\frac{1}{r^{n+1}}\int(r')^nP_n(\cos\alpha)\rho(\vec{r}')\,d\tau'.\]
-    $P_0 = 1$ gives the monopole, $P_1 = \cos\alpha$ the dipole (since $r'\cos\alpha = \vec{r}'\cdot\hat{r}$), and $P_2 = \frac{1}{2}(3\cos^2\alpha - 1)$ the quadrupole.
-\end{remark}
-\begin{remark}[Self-energy]
-    \label{rem:self-energy}
-    The energy of a charge configuration can be written as a pair sum or as a field integral,
-    \[W_{\text{pair}} = \frac{1}{2}\frac{1}{4\pi\epsilon_0}\sum_{i \neq j}\frac{q_i q_j}{\mathfrak{r}_{ij}},\qquad W_{\text{field}} = \frac{\epsilon_0}{2}\int E^2\,d\tau,\]
-    but the two do not always agree. The pair sum only counts the work of bringing different charges together ($i \neq j$); it ignores the work needed to build each point charge itself. The field integral counts everything, including that self-energy. So $W_{\text{field}}$ is always positive (since $E^2 \geq 0$), while $W_{\text{pair}}$ can be negative, e.g.\ $+q$ and $-q$ at distance $d$ give $W_{\text{pair}} = -\frac{q^2}{4\pi\epsilon_0 d}$. For a true point charge the self-energy is infinite: near it $E^2 \sim 1/r^4$, and $\int \frac{1}{r^4}\,r^2\,dr$ blows up at $r = 0$. So use the pair sum for point charges and the field integral for continuous distributions.
-\end{remark}
 
 
 \section{Proofs}
 \label{app:proofs}
+
+\subsection{Second Derivatives Identities Proofs}
 \begin{proof}
     The curl of a curl. Set $\vec{G} \equiv \vec{\nabla}\times(\vec{\nabla}\times\vec{F})$. Then,
     \[G_i = \sum_{j,k}\varepsilon_{ijk}\partial_j\sum_{m,n} \varepsilon_{kmn}\partial_m F_n=\sum_{j,k,m,n}\varepsilon_{ijk}\varepsilon_{kmn}\partial_j\partial_mF_n.\]
@@ -1168,16 +856,12 @@ We want $V$ because $\vec{E} = -\vec{\nabla}V$. The integral $V = \frac{1}{4\pi\
     \[\left(\vec{\nabla}\times(\vec{\nabla}f)\right)_i = -\sum_{j,k}\varepsilon_{ijk}\partial_j\partial_k f = -\left(\vec{\nabla}\times(\vec{\nabla}f)\right)_i.\]
     A number equal to its own negative is zero, so every component vanishes and $\vec{\nabla}\times(\vec{\nabla}f) = \vec{0}$.
 \end{proof}
+
+\subsection{Energy Stored in the Field}
 \begin{proof}
-    Using the energy of $N$ point charges, $U = \frac{1}{2}\sum_i q_i V(\vec{r}_i)$. For a continuous distribution this becomes $U = \frac{1}{2}\int\rho V\,d\tau$. Substituting $\rho = -\epsilon_0\nabla^2 V$ from Poisson's equation,
-    \[U = -\frac{\epsilon_0}{2}\int V\nabla^2 V\,d\tau.\]
-    To rewrite $V\nabla^2V$, use the product rule $\partial_i(fg) = (\partial_i f)g + f(\partial_i g)$ with $f = V$ and $g = \partial_i V$, summed over $i$:
-    \[\underbrace{\sum_i\partial_i(V\partial_i V)}_{\vec{\nabla}\cdot(V\vec{\nabla}V)} = \underbrace{\sum_i(\partial_i V)^2}_{|\vec{\nabla}V|^2} + \underbrace{V\sum_i\partial_i\partial_i V}_{V\nabla^2 V}
-    \quad\Longrightarrow\quad
-    V\nabla^2 V = \vec{\nabla}\cdot(V\vec{\nabla}V) - |\vec{\nabla}V|^2.\]
-    Substituting, the overall minus sign flips both terms:
-    \[U = -\frac{\epsilon_0}{2}\int\left[\vec{\nabla}\cdot(V\vec{\nabla}V) - |\vec{\nabla}V|^2\right]d\tau = \frac{\epsilon_0}{2}\int|\vec{\nabla}V|^2\,d\tau - \frac{\epsilon_0}{2}\int\vec{\nabla}\cdot(V\vec{\nabla}V)\,d\tau.\]
-    The second integral vanishes. To see this, integrate over a huge sphere of radius $R$ instead of all space, and let $R\to\infty$ at the end. The divergence theorem turns the integral into a flux through the sphere's surface, $\oint V\vec{\nabla}V\cdot d\vec{a}$. If the charge sits in a finite region, then far away $V \sim 1/R$ and $|\vec{\nabla}V| \sim 1/R^2$, so the integrand is $\sim 1/R^3$, while the area is $4\pi R^2$. The flux is therefore $\sim 1/R$, which goes to zero. With $\vec{E} = -\vec{\nabla}V$, $U = \frac{\epsilon_0}{2}\int E^2\,d\tau$.
+    Start from $W = \frac{1}{2}\int\rho V\,d\tau$, the continuous form of $\frac{1}{2}\sum_i q_iV(\vec{r}_i)$, and substitute Poisson's equation, $\rho = -\epsilon_0\nabla^2 V$. The product rule $\vec{\nabla}\cdot(V\vec{\nabla}V) = |\vec{\nabla}V|^2 + V\nabla^2 V$ and the divergence theorem then give
+    \[W = \frac{\epsilon_0}{2}\int|\vec{\nabla}V|^2\,d\tau - \frac{\epsilon_0}{2}\oint V\vec{\nabla}V\cdot d\vec{a}.\]
+    Take the surface to be a sphere of radius $R \to \infty$. For a localized charge, $V \sim 1/R$ and $|\vec{\nabla}V| \sim 1/R^2$, while the area grows as $R^2$, so the surface term goes as $1/R \to 0$. With $\vec{E} = -\vec{\nabla}V$, $W = \frac{\epsilon_0}{2}\int E^2\,d\tau$.
 \end{proof}
 
 
