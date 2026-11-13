@@ -163,17 +163,17 @@ Textbook used is David J. Griffiths - Introduction to Electrodynamics Fifth Edit
 \end{example}
 \begin{definition}[Flux]
     Flux measures how much of the field pokes through a surface:
-    \[\int_S \vec{F}\cdot d\vec{a} = \int_S \vec{F}\cdot\hat{n}\,da.\]
+    \[\iint_S \vec{F}\cdot d\vec{a} = \iint_S \vec{F}\cdot\hat{n}\,da.\]
 \end{definition}
 \begin{remark}
     Flux is the total amount of a vector field flowing through a surface. Divergence is the flux per unit volume at a specific point.
 \end{remark}
 \begin{definition}[Volume Integral]
     A volume integral sums a scalar over a region:
-    \[\int_V f\,d^3\vec{r} = \iiint_V f\,dx\,dy\,dz.\]
+    \[\iiint_V f\,d\tau = \iiint_V f\,dx\,dy\,dz.\]
 \end{definition}
 \begin{remark}
-    We write $\oint$ when the curve is a closed loop or the surface is closed.
+    We write $\oint$ for a closed loop and $\oiint$ for a closed surface.
 \end{remark}
 
 \subsubsection{The Fundamental Theorems}
@@ -189,14 +189,14 @@ Textbook used is David J. Griffiths - Introduction to Electrodynamics Fifth Edit
     Another name for this theorem is Stokes' theorem.
     \begin{equation}
         \label{Stokes}
-        \iint_S (\vec{\nabla}\times\vec{F})\cdot d\vec{S} = \oint_C \vec{F}\cdot d\vec{l}.
+        \iint_S (\vec{\nabla}\times\vec{F})\cdot d\vec{a} = \oint_C \vec{F}\cdot d\vec{l}.
     \end{equation}
     Geometric meaning: to get the total swirl, I can work out the rotation at the boundary, or add up all the little whirlpools inside. Neighbouring whirlpools cancel along their shared edges, leaving only the boundary.
 \end{theorem}
 \begin{theorem}[The Fundamental Theorem for Divergence]
     \label{FTD}
     It has 2 important names: Gauss's theorem (or the divergence theorem) and Green's theorem. Respectively:
-    \[\oiint_S (\vec{F}\cdot\hat{n})dS = \iiint_V(\vec{\nabla}\cdot\vec{F})dV,\]
+    \[\oiint_S \vec{F}\cdot d\vec{a} = \iiint_V(\vec{\nabla}\cdot\vec{F})\,d\tau,\]
     \[\oint_C Pdx + Qdy = \iint_R (\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}) dxdy.\]
 \end{theorem}
 
@@ -288,7 +288,7 @@ The full list of second derivative identities:
     \end{tabular}
     \caption{Second derivative identities.}
 \end{table}
-The curl of a curl identity and the divergence of a gradient identity are proved in Appendix \ref{app:proofs}.
+The curl of a curl identity and the divergence of a gradient identity are proved in Appendix \ref{proof:sdip}.
 
 \subsection{The Dirac Delta Function}
 \begin{definition}[Dirac delta]
@@ -299,7 +299,7 @@ The curl of a curl identity and the divergence of a gradient identity are proved
     \begin{enumerate}[label=(\roman*)]
         \item Sifting: $\int_a^b f(x)\,\delta(x - x_0)\,dx = f(x_0)$ if $a < x_0 < b$, and $0$ if $x_0$ is outside $[a,b]$.
         \item Scaling: $\delta(kx) = \frac{1}{|k|}\delta(x)$.
-        \item In 3D: $\int_V f(\vec{r})\,\delta^3(\vec{r} - \vec{r}_0)\,d\tau = f(\vec{r}_0)$ if $\vec{r}_0 \in V$.
+        \item In 3D: $\iiint_V f(\vec{r})\,\delta^3(\vec{r} - \vec{r}_0)\,d\tau = f(\vec{r}_0)$ if $\vec{r}_0 \in V$.
     \end{enumerate}
 \end{proposition}
 \begin{example}
@@ -308,7 +308,7 @@ The curl of a curl identity and the divergence of a gradient identity are proved
 \end{example}
 \begin{theorem}[Divergence of $\hat{r}/r^2$]
     \label{div-r2}
-    By the spherical divergence, $\vec{\nabla}\cdot\left(\hat{r}/r^2\right) = \frac{1}{r^2}\partial_r(1) = 0$ for $r \neq 0$, yet its flux through any sphere is $\oint\frac{1}{R^2}R^2\sin\theta\,d\theta\,d\phi = 4\pi$. By the divergence theorem, everything sits at the origin:
+    By the spherical divergence, $\vec{\nabla}\cdot\left(\hat{r}/r^2\right) = \frac{1}{r^2}\partial_r(1) = 0$ for $r \neq 0$, yet its flux through any sphere is $\oiint\frac{1}{R^2}R^2\sin\theta\,d\theta\,d\phi = 4\pi$. By the divergence theorem, everything sits at the origin:
     \[\vec{\nabla}\cdot\left(\frac{\hat{r}}{r^2}\right) = 4\pi\,\delta^3(\vec{r}).\]
     So for a point charge, $\vec{\nabla}\cdot\vec{E} = \frac{q}{\epsilon_0}\delta^3(\vec{r}) = \rho/\epsilon_0$, as Gauss' law requires.
 \end{theorem}
@@ -331,8 +331,8 @@ The curl of a curl identity and the divergence of a gradient identity are proved
     Let $\vec{F}$ be a $C^1$ vector field on a domain with no enclosed voids (e.g.\ all of $\mathbb{R}^3$). The following are equivalent:
     \begin{enumerate}[label=(\roman*)]
         \item $\vec{\nabla}\cdot\vec{F} = 0$ everywhere.
-        \item $\int_S \vec{F}\cdot d\vec{a}$  is independent of surface, for any given boundary line.
-        \item $\oint_S \vec{F}\cdot d\vec{a} = 0$ for any closed surface $S$.
+        \item $\iint_S \vec{F}\cdot d\vec{a}$  is independent of surface, for any given boundary line.
+        \item $\oiint_S \vec{F}\cdot d\vec{a} = 0$ for any closed surface $S$.
         \item $\vec{F} = \vec{\nabla}\times\vec{A}$ for some vector field $\vec{A}$.
     \end{enumerate}
 \end{theorem}
@@ -472,8 +472,8 @@ Gauss's law always holds but is only useful with symmetry: we need $\vec{E}$ par
 \begin{example}[Uniform solid sphere]
     \label{ex:solid-sphere}
     Let a uniform solid sphere of radius $R$ and total charge $q$. Imagine a gaussian sphere of radius $r$, so
-    \[\vec{E}\oiint d\vec{a} = \frac{Q_{enc}}{\epsilon_0},\]
-    let $Q_{enc} = q\,(r^3/R^3)$ for $r < R$ and $Q_{enc} = q$ for $r > R$. The flux is $\oiint d\vec{a} = 4\pi r^2$, so
+    \[E\oiint da = \frac{Q_{enc}}{\epsilon_0},\]
+    let $Q_{enc} = q\,(r^3/R^3)$ for $r < R$ and $Q_{enc} = q$ for $r > R$. The area is $\oiint da = 4\pi r^2$, so
     \[\vec{E} = \begin{cases} \dfrac{q\,r}{4\pi\epsilon_0 R^3}\hat{r} & r < R \\[8pt] \frac{q}{4\pi\epsilon_0 R^2}\hat{r} & r = R \\[8pt] \dfrac{q}{4\pi\epsilon_0 r^2}\hat{r} & r > R \end{cases}.\]
 \end{example}
 \begin{example}
@@ -582,6 +582,7 @@ Gauss's law always holds but is only useful with symmetry: we need $\vec{E}$ par
 \begin{proposition}[Poisson's equation]
     Combining $\vec{\nabla}\cdot\vec{E} = \rho/\epsilon_0$ with $\vec{E} = -\vec{\nabla}V$,
     \begin{equation}
+        \label{eq:poisson}
         \nabla^2 V = -\frac{\rho}{\epsilon_0}.
     \end{equation}
 \end{proposition}
@@ -596,10 +597,31 @@ Gauss's law always holds but is only useful with symmetry: we need $\vec{E}$ par
 \begin{proposition}[Potential of a distribution]
     By superposition \eqref{Superposition},
     \begin{equation}
-        V(\vec{r}) = \frac{1}{4\pi\epsilon_0}\int\frac{\rho(\vec{r}')}{\mathfrak{r}}\,d\tau',
+        V(\vec{r}) = \frac{1}{4\pi\epsilon_0}\iiint\frac{\rho(\vec{r}')}{\mathfrak{r}}\,d\tau',
     \end{equation}
     where $\rho(\vec{r}')d\tau'=dq$. Unlike the integral for $\vec{E}$, there is no $\hat{\mathfrak{r}}$, so computing $V$ first and then $\vec{E} = -\vec{\nabla}V$ is often easier.
 \end{proposition}
+\begin{remark}[The six relations between $\rho$, $\vec{E}$ and $V$]
+    Any one of the three determines the other two:
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}[>=stealth, scale=1, shorten >=12pt, shorten <=12pt]
+            \node at (0,3.2) {\large$\rho$};
+            \node at (-5,0) {\large$\vec{E}$};
+            \node at (5,0) {\large$V$};
+            % E <-> rho
+            \draw[->, thick] (-5.06,0.09) -- node[sloped, above] {$\rho = \epsilon_0\vec{\nabla}\cdot\vec{E}$} (-0.06,3.29);
+            \draw[<-, thick] (-4.94,-0.09) -- node[sloped, below] {$\vec{E} = \frac{1}{4\pi\epsilon_0}\iiint\frac{\rho}{\mathfrak{r}^2}\hat{\mathfrak{r}}\,d\tau'$} (0.06,3.11);
+            % rho <-> V
+            \draw[<-, thick] (0.06,3.29) -- node[sloped, above] {$\rho = -\epsilon_0\nabla^2 V$} (5.06,0.09);
+            \draw[->, thick] (-0.06,3.11) -- node[sloped, below] {$V = \frac{1}{4\pi\epsilon_0}\iiint\frac{\rho}{\mathfrak{r}}\,d\tau'$} (4.94,-0.09);
+            % E <-> V
+            \draw[->, thick] (-5,0.1) -- node[above] {$V = -\int_{\text{ref}}^{\vec{r}}\vec{E}\cdot d\vec{l}$} (5,0.1);
+            \draw[<-, thick] (-5,-0.1) -- node[below] {$\vec{E} = -\vec{\nabla}V$} (5,-0.1);
+        \end{tikzpicture}
+        \caption{The six relations of electrostatics. In practice $\rho$ is the source, $\vec{E}$ is what we measure, and $V$ is the easiest to compute.}
+    \end{figure}
+\end{remark}
 
 \subsubsection{Boundary Conditions}
 A surface charge $\sigma$ makes $\vec{E}$ jump as you cross it. To fix this we use Gauss's law.
@@ -657,6 +679,9 @@ A surface charge $\sigma$ makes $\vec{E}$ jump as you cross it. To fix this we u
 \end{theorem}
 
 \subsection{Work and Energy in Electrostatics}
+\begin{remark}
+    The energy of a charge configuration is the work needed to assemble it, bringing each charge in from infinity. Since $\vec{\nabla}\times\vec{E} = 0$, this work is path-independent, so it depends only on the final arrangement and is stored as potential energy. This is why $W$ denotes both.
+\end{remark}
 \begin{proposition}[Potential of a test charge]
     Bringing $Q$ in from infinity against the field takes
     \begin{equation}
@@ -677,7 +702,7 @@ A surface charge $\sigma$ makes $\vec{E}$ jump as you cross it. To fix this we u
     \label{E-stored-in-field}
     For a volume charge distribution, the energy is
     \begin{equation}
-        W = \frac{1}{2}\int\rho V\,d\tau = \frac{\epsilon_0}{2}\int_{\text{all space}} E^2\,d\tau.
+        W = \frac{1}{2}\iiint\rho V\,d\tau = \frac{\epsilon_0}{2}\iiint_{\text{all space}} E^2\,d\tau.
     \end{equation}
 \end{theorem}
 
@@ -687,8 +712,20 @@ A surface charge $\sigma$ makes $\vec{E}$ jump as you cross it. To fix this we u
     \begin{equation}
         u = \frac{\epsilon_0}{2}E^2.
     \end{equation}
-    The proof is in Appendix~\ref{app:proofs}.
+    The proof is in Appendix~\ref{proof:esintf}.
 \end{definition}
+\begin{proposition}[Energy does not obey superposition]
+    The energy is quadratic in the field, so for $\vec{E} = \vec{E}_1 + \vec{E}_2$,
+    \begin{equation}
+        W = W_1 + W_2 + \epsilon_0\iiint\vec{E}_1\cdot\vec{E}_2\,d\tau.
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    $E^2 = (\vec{E}_1 + \vec{E}_2)\cdot(\vec{E}_1 + \vec{E}_2) = E_1^2 + E_2^2 + 2\vec{E}_1\cdot\vec{E}_2$. Multiply by $\frac{\epsilon_0}{2}$ and integrate over all space.
+\end{proof}
+\begin{remark}
+    The cross term is the interaction energy of the two distributions, and it is negative when they attract. For example, doubling every charge doubles $\vec{E}$ but quadruples $W$.
+\end{remark}
 \begin{problem}[Midterm drill]
     Two plates of area $A$, a distance $d$ apart, carry $+\sigma$ and $-\sigma$ ($A \gg d^2$). Find the energy.
 \end{problem}
@@ -786,6 +823,25 @@ A surface charge $\sigma$ makes $\vec{E}$ jump as you cross it. To fix this we u
 \begin{remark}
     In general, charge on a conductor concentrates where the surface is most sharply curved (edges, corners, points). Since $E = \sigma/\epsilon_0$ there, the field is strongest at sharp points, which is how lightning rods work.
 \end{remark}
+\begin{proposition}[Force on a surface charge]
+    \label{prop:surface-force}
+    The force per unit area on a surface charge $\sigma$ is
+    \begin{equation}
+        \vec{f} = \sigma\vec{E}_{\text{avg}} = \frac{\sigma}{2}\left(\vec{E}_{\text{above}} + \vec{E}_{\text{below}}\right).
+    \end{equation}
+    For a conductor, $\vec{E}_{\text{below}} = 0$ and $\vec{E}_{\text{above}} = \frac{\sigma}{\epsilon_0}\hat{n}$, so $\vec{f} = \frac{\sigma^2}{2\epsilon_0}\hat{n}$: an outward electrostatic pressure which, in terms of the field just outside, is
+    \begin{equation}
+        P = \frac{\epsilon_0}{2}E^2.
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    Split the field at a small patch of the surface into the patch's own field and $\vec{E}_{\text{other}}$, due to everything else. The patch cannot push on itself, so only $\vec{E}_{\text{other}}$ acts on it. Up close the patch looks like an infinite plane, giving $\pm\frac{\sigma}{2\epsilon_0}\hat{n}$ on either side, so
+    \[\vec{E}_{\text{above}} = \vec{E}_{\text{other}} + \frac{\sigma}{2\epsilon_0}\hat{n}, \qquad \vec{E}_{\text{below}} = \vec{E}_{\text{other}} - \frac{\sigma}{2\epsilon_0}\hat{n}.\]
+    $\vec{E}_{\text{other}}$ is continuous across the patch, so adding the two gives $\vec{E}_{\text{other}} = \frac{1}{2}\left(\vec{E}_{\text{above}} + \vec{E}_{\text{below}}\right)$, and $\vec{f} = \sigma\vec{E}_{\text{other}}$.
+\end{proof}
+\begin{remark}
+    Since $\sigma$ enters squared, the pressure points outward whatever the sign of the charge: a charged conductor is pulled into the field. Note also that $P$ equals the energy density $u$ just outside.
+\end{remark}
 
 \subsubsection{Capacitors}
 \begin{definition}[Capacitor]
@@ -832,9 +888,9 @@ A surface charge $\sigma$ makes $\vec{E}$ jump as you cross it. To fix this we u
 
 
 \section{Proofs}
-\label{app:proofs}
 
 \subsection{Second Derivatives Identities Proofs}
+\label{proof:sdip}
 \begin{proof}
     The curl of a curl. Set $\vec{G} \equiv \vec{\nabla}\times(\vec{\nabla}\times\vec{F})$. Then,
     \[G_i = \sum_{j,k}\varepsilon_{ijk}\partial_j\sum_{m,n} \varepsilon_{kmn}\partial_m F_n=\sum_{j,k,m,n}\varepsilon_{ijk}\varepsilon_{kmn}\partial_j\partial_mF_n.\]
@@ -858,10 +914,22 @@ A surface charge $\sigma$ makes $\vec{E}$ jump as you cross it. To fix this we u
 \end{proof}
 
 \subsection{Energy Stored in the Field}
+\label{proof:esintf}
 \begin{proof}
-    Start from $W = \frac{1}{2}\int\rho V\,d\tau$, the continuous form of $\frac{1}{2}\sum_i q_iV(\vec{r}_i)$, and substitute Poisson's equation, $\rho = -\epsilon_0\nabla^2 V$. The product rule $\vec{\nabla}\cdot(V\vec{\nabla}V) = |\vec{\nabla}V|^2 + V\nabla^2 V$ and the divergence theorem then give
-    \[W = \frac{\epsilon_0}{2}\int|\vec{\nabla}V|^2\,d\tau - \frac{\epsilon_0}{2}\oint V\vec{\nabla}V\cdot d\vec{a}.\]
-    Take the surface to be a sphere of radius $R \to \infty$. For a localized charge, $V \sim 1/R$ and $|\vec{\nabla}V| \sim 1/R^2$, while the area grows as $R^2$, so the surface term goes as $1/R \to 0$. With $\vec{E} = -\vec{\nabla}V$, $W = \frac{\epsilon_0}{2}\int E^2\,d\tau$.
+    Start from the energy of a continuous distribution $W = \frac{1}{2}\iiint\rho V\,d\tau$ and replace $\rho$ with Poisson's equation~\eqref{eq:poisson}:
+    \[W = -\frac{\epsilon_0}{2}\iiint V\nabla^2 V\,d\tau.\]
+    Rewrite $V\nabla^2 V$ with the product rule $\vec{\nabla}\cdot(f\vec{A}) = \vec{\nabla}f\cdot\vec{A} + f\,\vec{\nabla}\cdot\vec{A}$, taking $f = V$ and $\vec{A} = \vec{\nabla}V$:
+    \[\vec{\nabla}\cdot(V\vec{\nabla}V) = |\vec{\nabla}V|^2 + V\nabla^2 V \quad\Longrightarrow\quad V\nabla^2 V = \vec{\nabla}\cdot(V\vec{\nabla}V) - |\vec{\nabla}V|^2.\]
+    Substituting, the minus sign in front flips both terms:
+    \[W = \frac{\epsilon_0}{2}\iiint|\vec{\nabla}V|^2\,d\tau - \frac{\epsilon_0}{2}\iiint\vec{\nabla}\cdot(V\vec{\nabla}V)\,d\tau.\]
+    The second term is the volume integral of a divergence, so the divergence theorem turns it into a flux through the boundary surface:
+    \[W = \frac{\epsilon_0}{2}\iiint|\vec{\nabla}V|^2\,d\tau - \frac{\epsilon_0}{2}\oiint V\vec{\nabla}V\cdot d\vec{a}.\]
+    Take the surface to be a sphere of radius $R \to \infty$. For a localized charge, $V \sim 1/R$ and $|\vec{\nabla}V| \sim 1/R^2$, while the area grows as $R^2$, so the surface term goes as $1/R \to 0$. With $\vec{E} = -\vec{\nabla}V$,
+    \[W = \frac{\epsilon_0}{2}\iiint_{\text{all space}} E^2\,d\tau.\]
+    This gives the total, not where it sits. For that, pull one plate of a capacitor ($\pm\sigma$, area $A$, $E = \sigma/\epsilon_0$ between) a distance $dx$ against the pressure (Proposition~\ref{prop:surface-force}):
+    \[dW = PA\,dx = \frac{\epsilon_0}{2}E^2\,(A\,dx).\]
+    $E$ is unchanged, so this work only fills a new volume $A\,dx$ with field:
+    \[u = \frac{\epsilon_0}{2}E^2.\]
 \end{proof}
 
 

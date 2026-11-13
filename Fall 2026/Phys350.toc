@@ -22,20 +22,20 @@
 \contentsline {subsection}{\numberline {3.3}Electric Potential}{13}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Poisson's Equation and Laplace's Equation}{14}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}The Potential of a Localized Charge Distribution}{14}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Boundary Conditions}{14}{subsubsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.4}Work and Energy in Electrostatics}{15}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}The Energy of a Point Charge Distribution}{15}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.3.3}Boundary Conditions}{15}{subsubsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.4}Work and Energy in Electrostatics}{16}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}The Energy of a Point Charge Distribution}{16}{subsubsection.3.4.1}%
 \contentsline {subsubsection}{\numberline {3.4.2}The Energy of a Continuous Charge Distribution}{16}{subsubsection.3.4.2}%
 \contentsline {subsubsection}{\numberline {3.4.3}Comments on Electrostatic Energy}{16}{subsubsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.5}Conductors}{16}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Induced Charges}{17}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Surface Charge}{18}{subsubsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.3}Capacitors}{18}{subsubsection.3.5.3}%
-\contentsline {section}{\numberline {4}Potentials}{19}{section.4}%
-\contentsline {section}{\numberline {5}Magnetic Fields in Matter}{19}{section.5}%
-\contentsline {section}{\numberline {6}Electrodynamics}{19}{section.6}%
-\contentsline {section}{\numberline {A}Extra Material}{20}{appendix.A}%
-\contentsline {section}{\numberline {B}Proofs}{20}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Second Derivatives Identities Proofs}{20}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Energy Stored in the Field}{21}{subsection.B.2}%
-\contentsline {section}{\numberline {C}Useful Links}{21}{appendix.C}%
+\contentsline {subsection}{\numberline {3.5}Conductors}{17}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Induced Charges}{18}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Surface Charge}{19}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Capacitors}{19}{subsubsection.3.5.3}%
+\contentsline {section}{\numberline {4}Potentials}{20}{section.4}%
+\contentsline {section}{\numberline {5}Magnetic Fields in Matter}{20}{section.5}%
+\contentsline {section}{\numberline {6}Electrodynamics}{20}{section.6}%
+\contentsline {section}{\numberline {A}Extra Material}{21}{appendix.A}%
+\contentsline {section}{\numberline {B}Proofs}{21}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Second Derivatives Identities Proofs}{21}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Energy Stored in the Field}{22}{subsection.B.2}%
+\contentsline {section}{\numberline {C}Useful Links}{23}{appendix.C}%
