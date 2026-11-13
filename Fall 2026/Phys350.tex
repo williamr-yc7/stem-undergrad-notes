@@ -877,7 +877,7 @@ A surface charge $\sigma$ makes $\vec{E}$ jump as you cross it. To fix this we u
 \begin{remark}
     The primary task of electrostatics is to find the electric field of a given stationary charge distribution.
 \end{remark}
-There are many ways to do this, but some are harder than others. Coulomb's law in integral form, Equation~\eqref{eq:E-continuous}, always works, but it is very hard to calculate for any but the simplest charge configurations. Gauss's law, Equation~\eqref{eq:gauss}, gets around this, but only for spherical, cylindrical or planar symmetry. A better strategy is to find the potential first, Equation~\eqref{eq:V-distribution}, but this integral is often still too tough to handle analytically. The best approach is to solve Poisson's equation, Equation~\eqref{eq:poisson}, which, together with appropriate boundary conditions, is equivalent to Coulomb's law. Often we want the potential in a region where $\rho = 0$, where Poisson's equation reduces to Laplace's equation, Equation~\eqref{eq:laplace}.
+There are several ways to find $\vec{E}$. Coulomb's law, Equation~\eqref{eq:E-continuous}, always works but is hard to compute for all but the simplest configurations, and Gauss's law, Equation~\eqref{eq:gauss}, only helps with symmetry. Finding the potential first, Equation~\eqref{eq:V-distribution}, is easier, but the integral is often still too hard. The best approach is Poisson's equation, Equation~\eqref{eq:poisson}, which with boundary conditions is equivalent to Coulomb's law. In a region where $\rho = 0$, it reduces to Laplace's equation, Equation~\eqref{eq:laplace}.
 \begin{remark}
     Laplace's equation is so fundamental to the subject that one might almost say electrostatics is the study of Laplace's equation.
 \end{remark}
