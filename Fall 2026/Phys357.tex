@@ -68,6 +68,7 @@ Textbook used is JS Townsend, \emph{A Modern Approach to Quantum Mechanics}, 2nd
 
 \section{Mathematical Background}
 \begin{definition}[Kronecker delta]
+    The Kronecker delta is a function of two indices that equals $1$ when they are equal and $0$ otherwise:
     \begin{equation}
         \delta_{ij} = \begin{cases} 1 & i = j, \\ 0 & i \neq j. \end{cases}
     \end{equation}
@@ -990,6 +991,12 @@ Taylor expanding one small step about the identity and naming the first-order op
 \label{sec:angmom}
 \chapterstart{3}
 \subsection{Commutation of Rotations \& Generators}
+Lay a cuboid on its largest face, so that its top face points along $+\hat{z}$, its smallest side face along $+\hat{x}$, and a shaded side face along $+\hat{y}$. Rotate it twice by $90^\circ$ counterclockwise:
+\begin{itemize}
+    \item About $\hat{x}$ then $\hat{y}$: the shaded face goes $+\hat{y} \to +\hat{z} \to +\hat{x}$.
+    \item About $\hat{y}$ then $\hat{x}$: the shaded face goes $+\hat{y} \to +\hat{y} \to +\hat{z}$.
+\end{itemize}
+Thus we can denote that $R_{\hat{x}}(\frac{\pi}{2})R_{\hat{y}}(\frac{\pi}{2}) \neq R_{\hat{y}}(\frac{\pi}{2})R_{\hat{x}}(\frac{\pi}{2})$.
 \begin{proposition}
     Finite rotations about noncollinear\footnote{Noncollinear means not lying along the same line, i.e. the axes are not parallel.} axes do not commute in general, thus the order of rotations is important.
 \end{proposition}
@@ -1008,14 +1015,16 @@ Taylor expanding one small step about the identity and naming the first-order op
     \end{equation*}
     Since $\hat{n}\times\hat{m} \neq \vec{0}$ for noncollinear axes, this is nonzero, so the rotations do not commute.
 \end{proof}
-\begin{example}
-    Lay a cuboid on its largest face, so that its top face points along $+\hat{z}$, its smallest side face along $+\hat{x}$, and a shaded side face along $+\hat{y}$. Rotate it twice by $90^\circ$ counterclockwise:
-    \begin{itemize}
-        \item About $\hat{x}$ then $\hat{y}$: the shaded face goes $+\hat{y} \to +\hat{z} \to +\hat{x}$.
-        \item About $\hat{y}$ then $\hat{x}$: the shaded face goes $+\hat{y} \to +\hat{y} \to +\hat{z}$.
-    \end{itemize}
-    Thus, $R(\frac{\pi}{2}\hat{x})R(\frac{\pi}{2}\hat{y}) \neq R(\frac{\pi}{2}\hat{y})R(\frac{\pi}{2}\hat{x})$.
+\begin{example}[Spin-$\frac{1}{2}$ generators]
+    For spin-$\frac{1}{2}$, the generators are $J_i = \frac{\hbar}{2}\sigma_i$, where $\sigma_i$ are the Pauli matrices. Multiplying $\sigma_x$ and $\sigma_y$ in both orders,
+    \[\sigma_x\sigma_y = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} = \begin{pmatrix} i & 0 \\ 0 & -i \end{pmatrix} = i\sigma_z,\]
+    \[\sigma_y\sigma_x = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} -i & 0 \\ 0 & i \end{pmatrix} = -i\sigma_z,\]
+    so $[\sigma_x, \sigma_y] = 2i\sigma_z$. Thus the generators are non commutative:
+    \[[J_x, J_y] = \frac{\hbar^2}{4}[\sigma_x, \sigma_y] = i\hbar\,\frac{\hbar}{2}\sigma_z = i\hbar J_z.\]
 \end{example}
+\begin{remark}
+    The same holds for the cyclic permutations of $x$, $y$, $z$, in agreement with $[J_i, J_j] = i\hbar\,\epsilon_{ijk}J_k$.
+\end{remark}
 
 \section{Time Evolution}
 \label{sec:time}
