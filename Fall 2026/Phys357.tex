@@ -5,7 +5,7 @@
 \usepackage{amssymb} % For mathematical symbols
 \usepackage{amsthm} % For theorem environments
 \usepackage{amsmath} % For advanced math typesetting
-\usepackage{hyperref}
+\usepackage{hyperref}   
 \usepackage{enumitem}
 \usepackage{pgfplots} % For plots
 \usepackage{tikz} % For drawing shapes
@@ -89,9 +89,6 @@ Textbook used is JS Townsend, \emph{A Modern Approach to Quantum Mechanics}, 2nd
         \ln(1+u) = \sum_{n=1}^{\infty}\frac{(-1)^{n+1}u^n}{n} = u - \frac{u^2}{2} + \frac{u^3}{3} - \cdots \quad (|u|<1).
     \end{equation}
 \end{result}
-\begin{problem}[The exponential as a limit (PS2 Q9)]
-    Prove the identity $\lim_{N\to\infty}\left(1+x/N\right)^N = e^x$ by comparing the Taylor-series expansions of both sides.
-\end{problem}
 \begin{remark}
     This limit is what lets a rotation be written as an exponential (Section~\ref{sec:generators}).
 \end{remark}
@@ -245,9 +242,6 @@ and a gradient $\partial B_{z}/\partial z < 0$,
 \begin{result}
     $F_{z} \propto S_{z}$: the deflection measures the $z$ component of spin directly.
 \end{result}
-\begin{problem}[Force proportional to spin (PS1 Q1)]
-    In a Stern-Gerlach apparatus, the vertical force on a silver atom is given by $F_z = \mu_z\frac{\partial B_z}{\partial z}$. Show how this force is directly proportional to the spin component $S_z$.
-\end{problem}
 
 \subsubsection{Classical prediction versus observation}
 Atoms leave the oven with spins pointing in random directions, so $S_z = |\vec{S}|\cos\theta$ takes every value in $[-|\vec{S}|,|\vec{S}|]$.
@@ -385,9 +379,6 @@ Filter the $+\hat{z}$ beam and send it into a second SG$z$. Every atom comes out
 
 \subsubsection{\texorpdfstring{Experiment 2: SG$z$ then SG$x$}{Experiment 2: SGz then SGx}}
 Filter $+\hat{z}$ and send it into an SG$x$. Half come out $+\hat{x}$, half $-\hat{x}$: knowing $S_z$ tells us nothing about $S_x$. We end with $N_0/4$ in each of $\ket{\pm\hat{x}}$.
-\begin{problem}[SG$z$ then SG$x$ (PS1 Q2)]
-    A beam of silver atoms is prepared in the $\ket{+\hat{z}}$ state and subsequently passes through an SG$x$ apparatus. What are the possible measurement outcomes and their respective probabilities?
-\end{problem}
 
 \subsubsection{\texorpdfstring{Experiment 3: SG$z$, SG$x$, then SG$z$}{Experiment 3: SGz, SGx, then SGz}}
 Filter $+\hat{z}$, filter $+\hat{x}$, then measure $S_z$ again. The beam splits 50/50 even though every atom was $+\hat{z}$ at the start. Blocking $+\hat{x}$ instead gives the same result. We end with $N_0/8$ in each of $\ket{\pm\hat{z}}$.
@@ -491,17 +482,12 @@ Throughout, an \emph{$n$-level system} is one whose measurements have $n$ possib
 \begin{remark}
     The Born rule has no deeper derivation: it is a postulate that agrees with every experiment. As David Mermin put it, "shut up and calculate."
 \end{remark}
-\begin{problem}[Probability of $S_z$ (PS1 Q4)]
-    Consider the quantum state $\ket{\psi} = \sqrt{\tfrac{1}{5}}\ket{+\hat{z}} + i\sqrt{\tfrac{4}{5}}\ket{-\hat{z}}$. Calculate the probability of measuring the spin $z$-component to be $S_z = +\hbar/2$.
-\end{problem}
 
 \subsubsection{Bras}
 \label{sec:bras}
-\begin{proof}
-    Write the bra with unknown coefficients, $\bra{\psi} = c_{+}'\bra{+\hat{z}} + c_{-}'\bra{-\hat{z}}$. By orthonormality,
-    \[\braket{\psi|\psi} = c_{+}'c_{+} + c_{-}'c_{-}.\]
-    A system in $\ket{\psi}$ is found in $\ket{\psi}$ with certainty, and it is always found in one of the two beams, so this must equal $|c_+|^2 + |c_-|^2 = 1$. That forces $c_{\pm}' = c_{\pm}^{*}$.
-\end{proof}
+To find which values a bra gets compared to its ket, we firstly define it with unknown coefficients, $\bra{\psi} = c_{+}'\bra{+\hat{z}} + c_{-}'\bra{-\hat{z}}$. By orthonormality,
+\[\braket{\psi|\psi} = c_{+}'c_{+} + c_{-}'c_{-}.\]
+A system in $\ket{\psi}$ is found in $\ket{\psi}$ with certainty, and it is always found in one of the two beams, so this must equal $|c_+|^2 + |c_-|^2 = 1$. That forces $c_{\pm}' = c_{\pm}^{*}$.
 \begin{result}
     Going from a ket to its bra:
     \begin{equation}
@@ -519,9 +505,6 @@ Throughout, an \emph{$n$-level system} is one whose measurements have $n$ possib
 \begin{example}
     For $\ket{\psi} = \frac{1}{\sqrt{3}}\ket{+\hat{z}} + i\sqrt{\frac{2}{3}}\ket{-\hat{z}}$, $c_+ = 1/\sqrt{3}$ and $c_- = i\sqrt{2/3}$, so $P(S_z = +\hbar/2) = 1/3$ and $P(S_z = -\hbar/2) = |i|^2\cdot 2/3 = 2/3$. They add to 1, so the state is normalized.
 \end{example}
-\begin{problem}[Normalization condition (PS1 Q3)]
-    A general quantum state is expressed as the linear combination $\ket{\psi} = c_+\ket{+\hat{z}} + c_-\ket{-\hat{z}}$. State the mathematical normalization condition required for the probability amplitudes $c_+$ and $c_-$.
-\end{problem}
 
 \subsubsection{Global and relative phase}
 \begin{definition}[Global and relative phase]
@@ -566,17 +549,6 @@ Throughout, an \emph{$n$-level system} is one whose measurements have $n$ possib
     For $\ket{\psi} = \sqrt{\tfrac{1}{3}}\ket{+\hat{z}} + i\sqrt{\tfrac{2}{3}}\ket{-\hat{z}}$,
     \[\braket{S_z} = \frac{\hbar}{2}\cdot\frac{1}{3} - \frac{\hbar}{2}\cdot\frac{2}{3} = -\frac{\hbar}{6}, \qquad (\Delta S_z)^2 = \frac{\hbar^2}{4} - \frac{\hbar^2}{36} = \frac{2}{9}\hbar^2, \qquad \Delta S_z = \frac{\sqrt{2}}{3}\hbar.\]
 \end{example}
-\begin{problem}[Expectation value of $S_z$ (PS1 Q6)]
-    Calculate the exact expectation value $\braket{S_z}$ for the state $\ket{\psi} = \sqrt{\tfrac{1}{5}}\ket{+\hat{z}} + i\sqrt{\tfrac{4}{5}}\ket{-\hat{z}}$.
-\end{problem}
-\begin{problem}[Uncertainty in $S_z$ (PS1 Q7)]
-    Determine the standard deviation (uncertainty) $\Delta S_z$ for the state $\ket{\psi} = \sqrt{\tfrac{1}{5}}\ket{+\hat{z}} + i\sqrt{\tfrac{4}{5}}\ket{-\hat{z}}$ using the variance formula $(\Delta S_z)^2 = \braket{S_z^2} - \braket{S_z}^2$.
-\end{problem}
-\begin{problem}[$\braket{S_z}$ for $\ket{+\hat{x}}$ (PS1 Q8)]
-    The state $\ket{+\hat{x}}$ can be written as
-    \[\ket{+\hat{x}} = \frac{1}{\sqrt{2}}\left(\ket{+\hat{z}} + \ket{-\hat{z}}\right).\]
-    Show mathematically that the expectation value $\braket{S_z} = 0$ for this specific state.
-\end{problem}
 
 \subsubsection{Measured averages and shot noise}
 \begin{remark}
@@ -630,16 +602,6 @@ Setting this to $\tfrac12$ forces $\gamma - \delta = \pm\pi/2$. The rest is conv
 \begin{remark}
     Complex coefficients are required: with real ones the relative phases could only be $0$ or $\pi$, and $\gamma - \delta = \pm\pi/2$ would be impossible.
 \end{remark}
-\begin{problem}[Probability of $S_x$ (PS1 Q5)]
-    For the state $\ket{\psi} = \sqrt{\tfrac{1}{5}}\ket{+\hat{z}} + i\sqrt{\tfrac{4}{5}}\ket{-\hat{z}}$, calculate the probability of measuring $S_x = +\hbar/2$.
-\end{problem}
-\begin{problem}[The overlap $\braket{+\hat{y}|+\hat{x}}$ (PS1 Q9)]
-    \label{prob:yx-overlap}
-    Given the state vectors $\ket{\pm\hat{y}} = \frac{1}{\sqrt{2}}\left(\ket{+\hat{z}} \pm i\ket{-\hat{z}}\right)$, calculate the inner product $\braket{+\hat{y}|+\hat{x}}$.
-\end{problem}
-\begin{problem}[Probability of $S_y$ from $\ket{+\hat{x}}$ (PS1 Q10)]
-    Using the inner product from Problem~\ref{prob:yx-overlap}, determine the probability of measuring $S_y = +\hbar/2$ when a system is initially prepared in the $\ket{+\hat{x}}$ state.
-\end{problem}
 \begin{example}
     For $\ket{\psi} = \sqrt{\tfrac{1}{3}}\ket{+\hat{z}} + i\sqrt{\tfrac{2}{3}}\ket{-\hat{z}}$, compute $\braket{S_y}$. Using $\braket{\pm\hat{y}|+\hat{z}} = \tfrac{1}{\sqrt{2}}$ and $\braket{\pm\hat{y}|-\hat{z}} = \mp\tfrac{i}{\sqrt{2}}$,
     \[\braket{\pm\hat{y}|\psi} = \frac{1}{\sqrt{2}}\left(\sqrt{\tfrac{1}{3}} \pm \sqrt{\tfrac{2}{3}}\right), \qquad P\!\left(S_y = \pm\tfrac{\hbar}{2}\right) = \frac{1}{2} \pm \frac{\sqrt{2}}{3},\]
@@ -668,9 +630,6 @@ Setting this to $\tfrac12$ forces $\gamma - \delta = \pm\pi/2$. The rest is conv
     \[\ket{+\hat{z}} \xrightarrow{S_z} \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \qquad \ket{-\hat{z}} \xrightarrow{S_z} \begin{pmatrix} 0 \\ 1 \end{pmatrix},\]
     \[\ket{\pm\hat{x}} \xrightarrow{S_z} \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ \pm 1 \end{pmatrix}, \qquad \ket{\pm\hat{y}} \xrightarrow{S_z} \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ \pm i \end{pmatrix}.\]
 \end{example}
-\begin{problem}[Other bases]
-    In the $S_x$ basis, $\ket{\psi} \xrightarrow{S_x} \begin{pmatrix} \braket{+\hat{x}|\psi} \\ \braket{-\hat{x}|\psi} \end{pmatrix}$, and similarly for $S_y$. Write the column representing $\ket{+\hat{z}}$ in the $S_z$, $S_x$ and $S_y$ bases.
-\end{problem}
 \begin{proposition}[Inner product as a matrix product]
     If $\ket{\phi} \xrightarrow{S_z} \phi$ and $\ket{\psi} \xrightarrow{S_z} \psi$, then $\braket{\phi|\psi} = \phi^\dagger\psi$ (row times column), so $P(\phi\,|\,\psi) = \left|\phi^\dagger\psi\right|^2$ and $\braket{\psi|\psi} = \psi^\dagger\psi$.
 \end{proposition}
@@ -679,12 +638,6 @@ Setting this to $\tfrac12$ forces $\gamma - \delta = \pm\pi/2$. The rest is conv
     \[\psi \xrightarrow{S_z} \frac{a}{\sqrt{2}}\begin{pmatrix} 1 \\ i \end{pmatrix} + \frac{b}{\sqrt{2}}\begin{pmatrix} 1 \\ -i \end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix} a+b \\ i(a-b) \end{pmatrix}.\]
     Checking $\psi^\dagger\psi = 1$ before going further catches most mistakes. A cleaner systematic method is in Section~\ref{sec:change-basis}.
 \end{remark}
-\begin{problem}[A probability by matrix mechanics (PS2 Q1)]
-    Using matrix mechanics, find $P(S_x = +\hbar/2)$ for the state $\ket{\psi} = \sqrt{\tfrac{1}{5}}\ket{+\hat{z}} + i\sqrt{\tfrac{4}{5}}\ket{-\hat{z}}$.
-\end{problem}
-\begin{problem}[Probability of $S_x$ from a $\ket{\pm\hat{y}}$ state (PS2 Q2)]
-    For the state $\ket{\psi} = \frac{1}{\sqrt{6}}\ket{+\hat{y}} - i\frac{\sqrt{5}}{\sqrt{6}}\ket{-\hat{y}}$, use the fact that $\ket{\pm\hat{y}} = \frac{1}{\sqrt{2}}\left(\ket{+\hat{z}} \pm i\ket{-\hat{z}}\right)$ and $\ket{\pm\hat{x}} = \frac{1}{\sqrt{2}}\left(\ket{+\hat{z}} \pm \ket{-\hat{z}}\right)$ to find the probability that a measurement of $S_x$ gives $+\hbar/2$ using matrix mechanics.
-\end{problem}
 
 \subsection{Operators as matrices}
 \begin{definition}[Linear operator]
@@ -728,10 +681,6 @@ Setting this to $\tfrac12$ forces $\gamma - \delta = \pm\pi/2$. The rest is conv
     \end{equation}
     The order reverses; $A^\dagger B^\dagger$ is a different matrix in general.
 \end{proposition}
-\begin{problem}[Adjoint of a product, explicitly (PS2 Q10)]
-    Show that $(\hat{A}\hat{B})^\dagger = \hat{B}^\dagger\hat{A}^\dagger$ for two operators $\hat{A}$ and $\hat{B}$ having matrix representations
-    \[\hat{A} \to \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}, \qquad \hat{B} \to \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}.\]
-\end{problem}
 
 \subsection{Observables as operators}
 \begin{definition}[Eigenstate and eigenvalue]
@@ -781,15 +730,6 @@ Setting this to $\tfrac12$ forces $\gamma - \delta = \pm\pi/2$. The rest is conv
 \end{example}
 In the $S_z$ basis the matrix elements of $\hat{S}_n$ are
 \[\bra{i}\hat{S}_n\ket{j} = \frac{\hbar}{2}\Big(\braket{i|+\hat{n}}\braket{+\hat{n}|j} - \braket{i|-\hat{n}}\braket{-\hat{n}|j}\Big), \qquad i,j \in \{+\hat{z},-\hat{z}\}.\]
-\begin{problem}[The matrix of $\hat{S}_z$ (PS2 Q3)]
-    Find the matrix representation of $\hat{S}_z$ in the $S_z$ basis.
-\end{problem}
-\begin{problem}[The matrix of $\hat{S}_x$ (PS2 Q4)]
-    Find the matrix representation of $\hat{S}_x$ in the $S_z$ basis.
-\end{problem}
-\begin{problem}[The matrix of $\hat{S}_y$ (PS2 Q5)]
-    Find the matrix representation of $\hat{S}_y$ in the $S_z$ basis.
-\end{problem}
 \begin{remark}[Shortcut]
     Write each projector as a column times its conjugate row, e.g.
     \[\ket{\pm\hat{x}}\bra{\pm\hat{x}} \xrightarrow{S_z} \frac{1}{2}\begin{pmatrix} 1 \\ \pm1 \end{pmatrix}\begin{pmatrix} 1 & \pm1 \end{pmatrix} = \frac{1}{2}\begin{pmatrix} 1 & \pm1 \\ \pm1 & 1 \end{pmatrix},\]
@@ -805,9 +745,6 @@ In the $S_z$ basis the matrix elements of $\hat{S}_n$ are
     \end{equation}
     Each equals its own adjoint and squares to $\id$, so $\hat{S}_j^2 = \tfrac{\hbar^2}{4}\id$. Collected into the vector of Pauli matrices $\vec{\sigma} = \sigma_x\hat{x} + \sigma_y\hat{y} + \sigma_z\hat{z}$, this reads $\vec{S} \xrightarrow{S_z} \frac{\hbar}{2}\vec{\sigma}$.
 \end{definition}
-\begin{problem}[Expectation value and uncertainty by matrix mechanics (PS2 Q6)]
-    For $\ket{\psi} = \sqrt{\tfrac{1}{5}}\ket{+\hat{y}} + i\sqrt{\tfrac{4}{5}}\ket{-\hat{y}}$, find $\braket{S_z}$ and $\Delta S_z$ using matrix mechanics.
-\end{problem}
 
 \subsubsection{Hermitian operators}
 \begin{definition}[Hermitian operator]
@@ -870,9 +807,6 @@ Inserting $\id = \sum_\alpha\ket{\alpha}\bra{\alpha}$ into each $\ket{j}$ amplit
     \[U_y = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ i & -i \end{pmatrix}, \qquad \psi^z = U_y\psi^y, \qquad \psi^y = U_y^\dagger\psi^z,\]
     and here $U_y^\dagger \neq U_y$, so the reverse direction needs the actual adjoint.
 \end{remark}
-\begin{problem}[Expectation value from the $S_x$ basis]
-    For $\ket{\psi} = \frac{1}{\sqrt{3}}\ket{+\hat{x}} + i\sqrt{\frac{2}{3}}\ket{-\hat{x}}$, find $\braket{S_z} = \psi^{z\dagger}\hat{S}_z\psi^z$ using matrix mechanics.
-\end{problem}
 
 \subsubsection{Operators in another basis}
 Let $\{\ket{j}\} = \{\ket{a_j}\}$ be the eigenbasis of $\hat{A}$, so $\hat{A} \xrightarrow{\ket{a_j}} D$ (diagonal), and $U_{j\alpha} = \braket{a_j|\alpha}$.
@@ -892,9 +826,6 @@ Let $\{\ket{j}\} = \{\ket{a_j}\}$ be the eigenbasis of $\hat{A}$, so $\hat{A} \x
     \end{equation}
     Either move the state to the eigenbasis, or move the operator to the state's basis. Both give the same number.
 \end{result}
-\begin{problem}[$\hat{S}_z$ in the $S_x$ basis]
-    Using $U$ from Eq.~\eqref{eq:Uzx}, find the matrix of $\hat{S}_z$ in the $S_x$ basis, and use it to redo the problem ``Expectation value from the $S_x$ basis'' without changing the state's basis.
-\end{problem}
 
 
 \section{Rotations}
@@ -985,13 +916,6 @@ Taylor expanding one small step about the identity and naming the first-order op
     \label{rem:2pi}
     A full turn, $\phi = 2\pi$, gives $R = -\id$: a spin-$\tfrac12$ state needs $4\pi$ to return to itself. The sign is a global phase, so it is invisible on its own. Its consequences for many particles are in Section~\ref{sec:fermions}.
 \end{remark}
-\begin{problem}[$R(\phi\hat{z})$ in the $S_x$ basis (PS2 Q7)]
-    Find the matrix representation of $R(\phi\hat{z})$ in the $S_x$ basis.
-\end{problem}
-\begin{problem}[$R(\phi\hat{z})$ in the $S_y$ basis (PS2 Q8)]
-    \label{prob:Rz-y}
-    Find the matrix representation of $R(\phi\hat{z})$ in the $S_y$ basis.
-\end{problem}
 
 \subsection{Rotations about any axis}
 \label{sec:any-axis}
@@ -1041,658 +965,29 @@ Taylor expanding one small step about the identity and naming the first-order op
     \[R\left(\tfrac{\pi}{2}\hat{y}\right) \xrightarrow{S_z} \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix} \neq U = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}.\]
     The true rotation sends $\ket{-\hat{z}}$ to $-\ket{-\hat{x}}$, not $\ket{-\hat{x}}$, so its second column is $-\ket{-\hat{x}}$ while $U$ in Eq.~\eqref{eq:Uzx} has $+\ket{-\hat{x}}$. They differ only by the phase of one basis ket, which is a free choice, so both are valid. For a change of basis with our convention for $\ket{\pm\hat{x}}$, always use $U$ from Eq.~\eqref{eq:Uzx}.
 \end{remark}
-\begin{problem}[Rotation operator from Pauli matrices (PS3 Q1)]
-    \label{prob:R-pauli}
-    Consider the rotation operator $R(\theta\hat{n}) = e^{-i\theta\vec{S}\cdot\hat{n}/\hbar}$, where $\theta$ is a general angle, $\hat{n}$ is a unit vector pointing in an arbitrary direction, and $\vec{S} = S_x\hat{x} + S_y\hat{y} + S_z\hat{z}$. In the $S_z$ basis, $\vec{S} \to \frac{\hbar}{2}\vec{\sigma}$, with $\vec{\sigma} = \sigma_x\hat{x} + \sigma_y\hat{y} + \sigma_z\hat{z}$ and the Pauli matrices
-    \[\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \qquad \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \qquad \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.\]
-    By considering the explicit Taylor series $e^x = \sum_j x^j/j!$, show that $R(\theta\hat{n})$ has the matrix representation (in the $S_z$ basis)
-    \[R(\theta\hat{n}) \xrightarrow{S_z} \cos\frac{\theta}{2}\,\id - i\,\hat{n}\cdot\vec{\sigma}\,\sin\frac{\theta}{2}.\]
-\end{problem}
 
 
 \section{Angular Momentum}
 \label{sec:angmom}
-\marginpar{September 28, 2026}
 \chapterstart{3}
-
-\subsection{Non-commuting rotations and commutation relations}
-\begin{definition}[Commutator]
-    \begin{equation}
-        [A,B] = AB - BA.
-    \end{equation}
-    $A$ and $B$ commute if $[A,B] = 0$, i.e.\ the order in which they act does not matter. Directly from the definition, $[B,A] = -[A,B]$ and $[A,BC] = B[A,C] + [A,B]C$.
-\end{definition}
-\begin{problem}[Commutator with a product on the right (PS3 Q5)]
-    Show that $[A,BC] = B[A,C] + [A,B]C$ for arbitrary operators $A$, $B$, $C$.
-\end{problem}
-\begin{problem}[Commutator with a product on the left (PS3 Q6)]
-    Show that $[AB,C] = A[B,C] + [A,C]B$ for arbitrary operators $A$, $B$, $C$.
-\end{problem}
-Rotations about different axes do not commute: $R(\theta\hat{x})R(\theta\hat{y}) \neq R(\theta\hat{y})R(\theta\hat{x})$.
-\begin{remark}
-    Rotate a textbook by $90^\circ$ about $\hat{x}$ then about $\hat{y}$ (right-hand rule). Repeat from the same start with $\hat{y}$ first. The spine ends up pointing in different directions.
-\end{remark}
-\begin{remark}[Why the generators cannot commute]
-    With $R_x = R(\theta\hat{x}) = e^{-i\theta J_x/\hbar}$ and $R_y = R(\theta\hat{y}) = e^{-i\theta J_y/\hbar}$, one might guess $R_xR_y = e^{-i\theta(J_x+J_y)/\hbar}$. That would force $R_xR_y = R_yR_x$, since $J_x + J_y = J_y + J_x$, which the textbook shows is false. The guess fails because
-    \begin{equation}
-        e^{A}e^{B} = e^{A+B} \quad \text{if } [A,B] = 0,
-    \end{equation}
-    but not in general otherwise. So the non-commutativity of rotations tells us $[J_x,J_y] = J_xJ_y - J_yJ_x \neq 0$.
-\end{remark}
-\begin{problem}[$e^{A+B}$ versus $e^Ae^B$ (PS3 Q9)]
-    Show that $e^{A+B} \neq e^Ae^B$ for two operators $A$ and $B$, unless $[A,B] = 0$.
-\end{problem}
-\begin{problem}[{$[S_x,S_y]$ from Pauli matrices (PS3 Q2)}]
-    \label{prob:SxSy}
-    Using the matrix representations of Problem~\ref{prob:R-pauli}, show that $[S_x,S_y] = i\hbar S_z$.
-\end{problem}
-\begin{example}[{$[S_x,S_y]$ for spin-$\tfrac12$}]
-    With $\hat{S}_j \xrightarrow{S_z} \frac{\hbar}{2}\sigma_j$,
-    \[[S_x,S_y] \xrightarrow{S_z} \left(\frac{\hbar}{2}\right)^2\left(\sigma_x\sigma_y - \sigma_y\sigma_x\right) = \left(\frac{\hbar}{2}\right)^2\left[\begin{pmatrix} i & 0 \\ 0 & -i \end{pmatrix} - \begin{pmatrix} -i & 0 \\ 0 & i \end{pmatrix}\right] = i\hbar\,\frac{\hbar}{2}\sigma_z \xleftarrow{S_z} i\hbar S_z,\]
-    so $[S_x,S_y] = i\hbar S_z$.
-\end{example}
-\begin{result}[Angular momentum commutation relations]
-    The same relation holds for any angular momentum, and cyclic permutations ($x \to y \to z \to x$) give the other two:
-    \begin{equation}
-        [J_x,J_y] = i\hbar J_z, \qquad [J_y,J_z] = i\hbar J_x, \qquad [J_z,J_x] = i\hbar J_y,
-    \end{equation}
-    or compactly $\vec{J}\times\vec{J} = i\hbar\vec{J}$, with $\vec{J} = J_x\hat{x} + J_y\hat{y} + J_z\hat{z}$ and $\times$ the vector cross product (e.g.\ $\hat{x}\times\hat{y} = \hat{z}$).
-\end{result}
-\begin{problem}[Rotation about a tilted axis (PS3 Q3)]
-    \label{prob:R-tilt}
-    Use the construction of Problem~\ref{prob:R-pauli} and the commutation relation of Problem~\ref{prob:SxSy} to prove the identity
-    \[R^\dagger(\phi\hat{y})\,R(\theta\hat{n})\,R(\phi\hat{y}) = R(\theta\hat{z}),\]
-    where the unit vector lies in the $x$-$z$ plane: $\hat{n} = \sin\phi\,\hat{x} + \cos\phi\,\hat{z}$. Give a geometrical argument that explains why this identity should be valid.
-    % Sheet had n = cos(phi) x + sin(phi) z; Bill's correction (Sept 26): n = sin(phi) x + cos(phi) z.
-\end{problem}
-\begin{problem}[Eigenstates of $R(\theta\hat{n})$ (PS3 Q4)]
-    Use the result of Problem~\ref{prob:R-tilt} to find the eigenstates of $R(\theta\hat{n})$, written in terms of the $\{\ket{\pm\hat{z}}\}$ basis.
-\end{problem}
-
-\subsection{Compatible observables}
-\begin{definition}[Degenerate eigenvalue]
-    An eigenvalue is degenerate if more than one independent eigenstate has it. Those eigenstates span a \emph{subspace}: a smaller vector space inside the full one, closed under linear combinations.
-\end{definition}
-\begin{theorem}
-    If $[A,B] = 0$, then $A$ and $B$ have a common eigenbasis.
-\end{theorem}
-\begin{proof}
-    Let $A\ket{a} = a\ket{a}$. Since $AB = BA$,
-    \[A\big(B\ket{a}\big) = BA\ket{a} = a\big(B\ket{a}\big),\]
-    so $B\ket{a}$ is also an eigenstate of $A$ with eigenvalue $a$.\par
-    \emph{Nondegenerate case.} If $\ket{a}$ is the only state with eigenvalue $a$, then $B\ket{a} = b\ket{a}$, so $\ket{a}$ is an eigenstate of both.\par
-    \emph{Degenerate case.} If $n$ states $\ket{a,i}$ share eigenvalue $a$, then $B$ maps their subspace into itself, so there it is an $n\times n$ matrix $B_{ij} = \bra{a,i}B\ket{a,j}$. Diagonalizing it (finding the basis in which it is diagonal) gives eigenstates
-    \[\ket{a,b_j} = \sum_{i}\ket{a,i}\braket{a,i|a,b_j}, \qquad A\ket{a,b_j} = a\ket{a,b_j}, \qquad B\ket{a,b_j} = b_j\ket{a,b_j},\]
-    which are still eigenstates of $A$ because they are combinations of states with the same eigenvalue $a$.
-\end{proof}
-\begin{remark}[Block-diagonal picture]
-    Why $B$ cannot mix different eigenvalues of $A$: if $B\ket{a,i} = \sum_{a',j}\braket{a',j|B|a,i}\ket{a',j}$ contained states with $a' \neq a$, then
-    \[A\big(B\ket{a,i}\big) = \sum_{a',j}\braket{a',j|B|a,i}\,a'\ket{a',j},\]
-    which equals $a\big(B\ket{a,i}\big)$ only if $\braket{a',j|B|a,i} \propto \delta_{aa'}$. So in the basis $\{\ket{a_i,j}\}$, $B$ is block diagonal, with one block per eigenvalue of $A$:
-    \[B \xrightarrow{\{\ket{a_i,j}\}} \begin{pmatrix} B(a_1) & 0 & \cdots \\ 0 & B(a_2) & \\ \vdots & & \ddots \end{pmatrix}, \qquad B_{kl}(a_i) = \braket{a_i,k|B|a_i,l}.\]
-    Diagonalizing each block separately gives the simultaneous eigenstates, $\ket{a,b_j} = \sum_i\braket{a,i|a,b_j}\ket{a,i}$.
-\end{remark}
-\begin{definition}[Compatible observables]
-    Observables that commute, and so can have definite values at the same time. Otherwise they are incompatible.
-\end{definition}
-\begin{remark}
-    $[J_x,J_y] = i\hbar J_z \neq 0$, so the components of angular momentum are incompatible: they have no common eigenbasis (for spin-$\tfrac12$, no common eigenstate at all). This is the operator version of Experiment 3: putting $\ket{+\hat{z}}$ into an SG$x$ gives a 50/50 mix of $\ket{\pm\hat{x}}$, so no state gives $S_z = +\hbar/2$ and $S_x = +\hbar/2$ with certainty. Preparing an eigenstate of one observable leaves the outcomes of an incompatible one uncertain; for $\ket{+\hat{z}}$ and $S_x$ the uncertainty is maximal, $\Delta S_x = \hbar/2$.
-\end{remark}
-
-\subsection{Uncertainty relations}
-\begin{result}[Generalized uncertainty relation]
-    For observables $A$ and $B$, in any state,
-    \begin{equation}
-        \Delta A\,\Delta B \geq \frac{1}{2}\left|\braket{[A,B]}\right|.
-    \end{equation}
-    The derivation is in Townsend, Eq.~(3.74). The bound only says something when $[A,B] \neq 0$.
-\end{result}
-\begin{problem}[Uncertainty relation for a constant commutator (PS3 Q8)]
-    For two Hermitian operators $A$ and $B$ having commutation relation $[A,B] = i$, show that the following uncertainty relation holds:
-    \[\Delta A\,\Delta B \geq \frac{1}{2},\]
-    where $(\Delta A)^2 = \braket{A^2} - \braket{A}^2$ and $(\Delta B)^2 = \braket{B^2} - \braket{B}^2$.
-    % Sheet says [A,B] = 1; Bill's correction: take [A,B] = i with A and B Hermitian.
-\end{problem}
-\begin{result}
-    For angular momentum, $[J_x,J_y] = i\hbar J_z$ gives
-    \begin{equation}
-        \Delta J_x\,\Delta J_y \geq \frac{\hbar}{2}\left|\braket{J_z}\right|.
-    \end{equation}
-\end{result}
-\begin{example}
-    For $\ket{+\hat{z}}$, $\braket{S_z} = \hbar/2$, and both $S_x$ and $S_y$ give $\pm\hbar/2$ with probability $\tfrac12$, so $\Delta S_x = \Delta S_y = \hbar/2$. Then $\Delta S_x\,\Delta S_y = \hbar^2/4 = \frac{\hbar}{2}\braket{S_z}$: the bound is saturated.
-\end{example}
-\begin{remark}
-    Position and momentum will also turn out not to commute, $[x,p_x] = i\hbar$, which gives the Heisenberg uncertainty relation
-    \begin{equation}
-        \Delta x\,\Delta p_x \geq \frac{\hbar}{2}.
-    \end{equation}
-\end{remark}
-
-\subsection{Total angular momentum}
-\begin{definition}[Total angular momentum]
-    The generator $\vec{J}$ of Section~\ref{sec:generators} is the total angular momentum, the sum of the orbital and spin angular momenta:
-    \begin{equation}
-        \vec{J} = \vec{L} + \vec{S}.
-    \end{equation}
-\end{definition}
-\begin{definition}[Square of the angular momentum]
-    \begin{equation}
-        \vec{J}^2 = J_x^2 + J_y^2 + J_z^2.
-    \end{equation}
-\end{definition}
-\begin{proposition}
-    $\vec{J}^2$ commutes with every component of $\vec{J}$; in particular $[\vec{J}^2, J_z] = 0$.
-\end{proposition}
-\begin{proof}
-    Using $[A,BC] = B[A,C] + [A,B]C$:
-    \begin{align*}
-        [J_z, J_x^2] &= J_x[J_z,J_x] + [J_z,J_x]J_x = i\hbar\left(J_xJ_y + J_yJ_x\right), \\
-        [J_z, J_y^2] &= J_y[J_z,J_y] + [J_z,J_y]J_y = -i\hbar\left(J_yJ_x + J_xJ_y\right), \\
-        [J_z, J_z^2] &= 0,
-    \end{align*}
-    using $[J_z,J_y] = -i\hbar J_x$. The first two cancel, so $[J_z,\vec{J}^2] = 0$. The same steps work for $x$ and $y$.
-\end{proof}
-\begin{remark}
-    $\vec{J}^2$ and $J_z$ are compatible, so they share an eigenbasis.
-\end{remark}
-\begin{definition}[Angular momentum eigenstates]
-    The simultaneous eigenstates of $\vec{J}^2$ and $J_z$ are labelled $\ket{j,m}$, with $\braket{j,m|j,m'} = \delta_{mm'}$. By convention their eigenvalues are written
-    \begin{equation}
-        \label{eq:jm}
-        \vec{J}^2\ket{j,m} = \hbar^2 j(j+1)\ket{j,m}, \qquad J_z\ket{j,m} = \hbar m\ket{j,m}.
-    \end{equation}
-    For spin, $j = s$, matching the labels $\ket{s,m}$ and the magnitude $|\vec{S}| = \hbar\sqrt{s(s+1)}$ used earlier. The allowed values of $j$ and $m$ are derived in Section~\ref{sec:ladder}.
-\end{definition}
-
-\subsection{Ladder operators}
-\label{sec:ladder}
-\begin{definition}[Ladder operators]
-    \begin{equation}
-        J_\pm = J_x \pm iJ_y, \qquad J_x = \frac{1}{2}\left(J_+ + J_-\right), \qquad J_y = \frac{1}{2i}\left(J_+ - J_-\right).
-    \end{equation}
-    They are not Hermitian: $J_+^\dagger = J_x - iJ_y = J_-$.
-\end{definition}
-\begin{proposition}
-    \begin{equation}
-        [J_z,J_\pm] = \pm\hbar J_\pm.
-    \end{equation}
-\end{proposition}
-\begin{proof}
-    $[J_z,J_\pm] = [J_z,J_x] \pm i[J_z,J_y] = i\hbar J_y \pm i(-i\hbar J_x) = \pm\hbar\left(J_x \pm iJ_y\right)$.
-\end{proof}
-\begin{proposition}
-    $J_\pm\ket{j,m}$ is an eigenstate of $J_z$ with eigenvalue $\hbar(m\pm1)$, so $J_\pm\ket{j,m} \propto \ket{j,m\pm1}$.
-\end{proposition}
-\begin{proof}
-    From $[J_z,J_-] = -\hbar J_-$, $J_zJ_- = J_-J_z - \hbar J_- = J_-(J_z - \hbar)$, so
-    \[J_z\big(J_-\ket{j,m}\big) = J_-(J_z - \hbar)\ket{j,m} = \hbar(m-1)\big(J_-\ket{j,m}\big).\]
-    The same steps with $J_zJ_+ = J_+(J_z + \hbar)$ give $\hbar(m+1)$. Since $\vec{J}^2$ commutes with $J_x$ and $J_y$, it commutes with $J_\pm$, so $j$ is unchanged.
-\end{proof}
-\begin{proposition}[Action of the ladder operators]
-    \begin{equation}
-        J_\pm\ket{j,m} = \hbar\sqrt{j(j+1) - m(m\pm1)}\,\ket{j,m\pm1}.
-    \end{equation}
-    $J_-$ is the \emph{lowering operator} and $J_+$ the \emph{raising operator}.
-\end{proposition}
-\begin{proof}
-    Since $J_+ = J_-^\dagger$, the squared norm of $J_-\ket{j,m}$ is $\braket{j,m|J_+J_-|j,m}$. Expanding,
-    \[J_+J_- = (J_x + iJ_y)(J_x - iJ_y) = J_x^2 + J_y^2 - i[J_x,J_y] = \vec{J}^2 - J_z^2 + \hbar J_z,\]
-    so with Eq.~\eqref{eq:jm},
-    \[\braket{j,m|J_+J_-|j,m} = \hbar^2\left[j(j+1) - m^2 + m\right] = \hbar^2\left[j(j+1) - m(m-1)\right].\]
-    Taking the coefficient real and positive (a phase convention) gives the $J_-$ result. The same steps with $J_-J_+ = \vec{J}^2 - J_z^2 - \hbar J_z$ give the $J_+$ result.
-\end{proof}
-\begin{result}[Allowed values of $j$ and $m$]
-    The ladder stops at both ends:
-    \[J_+\ket{j,j} = \hbar\sqrt{j(j+1) - j(j+1)}\,\ket{j,j+1} = 0, \qquad J_-\ket{j,-j} = \hbar\sqrt{j(j+1) - j(j+1)}\,\ket{j,-j-1} = 0.\]
-    Starting from $m = j$ and lowering, $J_-\ket{j,j} \propto \ket{j,j-1}$, $J_-^2\ket{j,j} \propto \ket{j,j-2}$, \dots, $J_-^{2j}\ket{j,j} \propto \ket{j,-j}$. Reaching $-j$ in whole steps requires $2j$ to be a whole number, so
-    \begin{equation}
-        j = 0, \tfrac12, 1, \tfrac32, \dots, \qquad m = -j, -j+1, \dots, j-1, j,
-    \end{equation}
-    giving $2j+1$ states for each $j$, as in Eq.~\eqref{eq:n-levels}.
-\end{result}
-\begin{remark}
-    The ladder cannot run past these ends because squared norms are non-negative: $j(j+1) - m(m\pm1) \geq 0$ keeps $-j \leq m \leq j$.
-\end{remark}
-
-\subsection{Matrix elements}
-\begin{result}
-    In the $\{\ket{j,m}\}$ basis,
-    \begin{equation}
-        \braket{j,m'|J_\pm|j,m} = \hbar\sqrt{j(j+1) - m(m\pm1)}\,\delta_{m',m\pm1}, \qquad \braket{j,m'|J_z|j,m} = \hbar m\,\delta_{m'm}.
-    \end{equation}
-\end{result}
-\begin{example}[Spin 1]
-    For $j = 1$ there are three states, $m = 1, 0, -1$ (e.g.\ the deuteron). Ordering the basis as $\{\ket{1,1}, \ket{1,0}, \ket{1,-1}\}$,
-    \[J_z \longrightarrow \hbar\begin{pmatrix} 1&0&0\\0&0&0\\0&0&-1 \end{pmatrix}, \qquad J_+ \longrightarrow \hbar\begin{pmatrix} 0&\sqrt{2}&0\\0&0&\sqrt{2}\\0&0&0 \end{pmatrix}, \qquad J_- \longrightarrow \hbar\begin{pmatrix} 0&0&0\\\sqrt{2}&0&0\\0&\sqrt{2}&0 \end{pmatrix}.\]
-    With $J_x = \frac{1}{2}(J_+ + J_-)$ and $J_y = \frac{1}{2i}(J_+ - J_-)$,
-    \[J_x \longrightarrow \frac{\hbar}{\sqrt{2}}\begin{pmatrix} 0&1&0\\1&0&1\\0&1&0 \end{pmatrix}, \qquad J_y \longrightarrow \frac{i\hbar}{\sqrt{2}}\begin{pmatrix} 0&-1&0\\1&0&-1\\0&1&0 \end{pmatrix}.\]
-    Check $[J_x,J_y] = i\hbar J_z$:
-    \[[J_x,J_y] \longrightarrow \frac{i\hbar^2}{2}\left[\begin{pmatrix} 1&0&-1\\0&0&0\\1&0&-1 \end{pmatrix} - \begin{pmatrix} -1&0&-1\\0&0&0\\1&0&1 \end{pmatrix}\right] = i\hbar\cdot\hbar\begin{pmatrix} 1&0&0\\0&0&0\\0&0&-1 \end{pmatrix} \longleftarrow i\hbar J_z.\]
-\end{example}
-\begin{problem}[Spin-1 matrices in ascending order (PS3 Q7)]
-    Construct matrix representations for each of the three spin-1 operators $J_x$, $J_y$, $J_z$ in the basis of states $\{\ket{1,-1}, \ket{1,0}, \ket{1,+1}\}$, where the state $\ket{j,m}$ is a simultaneous eigenstate of $\vec{J}^2 = \vec{J}\cdot\vec{J} = J_x^2 + J_y^2 + J_z^2$ with eigenvalue $\hbar^2j(j+1) = 2\hbar^2$ and of $J_z$, with associated eigenvalue $\hbar m$.
-\end{problem}
-\begin{problem}[Anisotropy operator for $j = \tfrac32$ (PS3 Q10)]
-    Find the matrix representation of the operator $A = J_+^2 - J_-^2$, where $J_\pm = J_x \pm iJ_y$, in the $J_z$ eigenbasis for $j = \tfrac32$. This operator arises in the energy of certain magnetic materials due to anisotropy (broken rotational symmetry about the $z$-axis).
-\end{problem}
-
-\subsection{\texorpdfstring{Rotations by $2\pi$: fermions and bosons}{Rotations by 2pi: fermions and bosons}}
-\label{sec:fermions}
-Using the spectral form (Section~\ref{sec:any-axis}) with $j$ fixed,
-\[R(2\pi\hat{z}) = e^{-2\pi iJ_z/\hbar}\sum_m\ket{j,m}\bra{j,m} = \sum_m e^{-2\pi im}\ket{j,m}\bra{j,m}.\]
-\begin{result}
-    $R(2\pi\hat{z}) = \id$ only if every $m$ is an integer, i.e.\ $j = 0, 1, 2, \dots$. For half-integer $j$, every $m$ is a half-integer and $R(2\pi\hat{z}) = -\id$.
-\end{result}
-\begin{remark}
-    If we demanded that a $2\pi$ rotation leave every state unchanged, $j$ would have to be an integer. But electrons have $j = \tfrac12$, with $m = \pm\tfrac12$ and $S_z = \pm\hbar/2$, so $R(2\pi\hat{z}) = e^{\mp i\pi} = -\id$ (Remark~\ref{rem:2pi}). For a single spin-$\tfrac12$ particle this is a global phase, $R(2\pi\hat{z})\ket{\psi} = -\ket{\psi} = e^{i\pi}\ket{\psi}$, with no effect on observables. For several particles, this sign for half-integer spin results in the Pauli exclusion principle.
-\end{remark}
-\begin{definition}[Fermions and bosons]
-    Particles with half-integer spin $j = \tfrac12, \tfrac32, \tfrac52, \dots$ are \emph{fermions} and obey Pauli exclusion. Particles with integer spin $j = 0, 1, 2, \dots$ are \emph{bosons}.
-\end{definition}
-\begin{remark}
-    Loosely, this connection to rotations is related to the \emph{exchange} of two identical particles: swapping them is like rotating one around the other.
-\end{remark}
-
-\subsection{Atomic quantum numbers}
-\label{sec:atomic}
-\begin{definition}[Atomic quantum numbers]
-    An electron in an atom is labelled $\ket{n,l,m_l,s,m_s}$, where
-    \begin{itemize}
-        \item $n = 1,2,3,\dots$ is the \emph{principal} quantum number: the size and energy of the electron cloud.
-        \item $l = 0,1,\dots,n-1$ is the \emph{azimuthal} quantum number: the shape of the electron cloud, with $|\vec{L}| = \hbar\sqrt{l(l+1)}$. The values $l = 0,1,2,3$ are called s, p, d, f.
-        \item $m_l = -l, -l+1, \dots, +l$ is the \emph{magnetic} quantum number: the spatial orientation of the electron cloud, with $L_z = m_l\hbar$.
-        \item $s = \tfrac12$ is the \emph{spin} quantum number: the intrinsic angular momentum of the electron, with $m_s = \pm\tfrac12$ giving $S_z = m_s\hbar$.
-    \end{itemize}
-    The total angular momentum $\vec{J} = \vec{L} + \vec{S}$ has its own quantum number $j$, running from $|l-s|$ to $l+s$ in steps of 1. For an electron, $j = l \pm \tfrac12$ (only $j = \tfrac12$ when $l = 0$).
-\end{definition}
-\begin{remark}
-    No two electrons in an atom share all of $n$, $l$, $m_l$, $m_s$ (Pauli exclusion principle). A subshell $l$ has $2l+1$ values of $m_l$, each with two values of $m_s$, so it holds $2(2l+1)$ electrons: 2 for s, 6 for p, 10 for d, 14 for f.
-\end{remark}
-\begin{remark}
-    Two notation clashes: the subshell name s ($l = 0$) is not the spin quantum number $s$, and the quantum number $j$ is not the outcome label $j$ in $\ket{j}$.
-\end{remark}
 
 
 \section{Time Evolution}
 \label{sec:time}
-\marginpar{September 30 - October 16, 2026}
 \chapterstart{4}
 
-\subsection{The time-evolution operator and the Hamiltonian}
-A small rotation is generated by total angular momentum (Section~\ref{sec:generators}),
-\[R(d\phi\,\hat{n}) = \id - \frac{i}{\hbar}\left(\vec{J}\cdot\hat{n}\right)d\phi, \qquad R(\phi\hat{n})\ket{\psi_0} = \ket{\psi_\phi},\]
-where $\phi$ is the parameter that labels how far the state has been rotated. Time evolution works the same way, with $t$ as the parameter.
-Now it's time to move in time, since so far we are measuring states in the current moment, but in reality, particles change through time! So for that we need to introduce a new operator.
-\begin{definition}[Time-evolution operator]
-    The linear operator $U(t)$ that takes a state from time $0$ to time $t$:
-    \begin{equation}
-        \ket{\psi(t)} = U(t)\ket{\psi(0)}.
-    \end{equation}
-\end{definition}
-\begin{remark}
-    Not to be confused with the change-of-basis matrix $U$ of Section~\ref{sec:change-basis}. Both are unitary, which is where the shared letter comes from.
-\end{remark}
-\begin{proposition}
-    $U(t)$ is unitary: $U^\dagger(t)U(t) = \id$.
-\end{proposition}
-\begin{proof}
-    Probabilities must still add to 1 at every time,
-    \[\braket{\psi(t)|\psi(t)} = \bra{\psi(0)}U^\dagger(t)U(t)\ket{\psi(0)} = \braket{\psi(0)|\psi(0)} = 1\]
-    for every $\ket{\psi(0)}$, which forces $U^\dagger U = \id$.
-\end{proof}
-\begin{remark}
-    $U(t)$ is not derived from anything: it is assumed to be linear, to conserve probability (so unitary, as shown above), to satisfy $U(0) = \id$, and to compose as $U(t_1 + t_2) = U(t_1)U(t_2)$. These conditions lead us to its Taylor expansion, and from that its actual formula.
-\end{remark}
-By composition, evolving for $t$ is $N$ small steps of $t/N$:
-\[U(t) = \underbrace{U\!\left(\tfrac{t}{N}\right)U\!\left(\tfrac{t}{N}\right)\cdots U\!\left(\tfrac{t}{N}\right)}_{N \text{ factors}} = \left[U\!\left(\tfrac{t}{N}\right)\right]^N, \qquad U\!\left(\tfrac{t}{N}\right) = \id + U'(0)\,\frac{t}{N} + \mathcal{O}\!\left(\frac{1}{N^2}\right).\]
-\begin{definition}[Hamiltonian]
-    The Hamiltonian\footnote{Also referred to as the generator of time evolution.},
-    \begin{equation}
-        H \equiv i\hbar\,U'(0).
-    \end{equation}
-    The $i$ makes $H$ Hermitian (Problem~\ref{prob:H-herm}), and the $\hbar$ gives it units $[H] = [\hbar/t]$ = energy, so $H$ is identified as the energy operator.
-\end{definition}
-Substituting $U'(0) = -\frac{i}{\hbar}H$,
-\begin{equation}
-    \label{eq:UN-taylor}
-    U\!\left(\tfrac{t}{N}\right) = \id - \frac{i}{\hbar}H\,\frac{t}{N} + \mathcal{O}\!\left(\frac{1}{N^2}\right).
-\end{equation}
-\begin{problem}[Generator of translations (PS4 Q1)]
-    \label{prob:translation}
-    Show that, if a state $\ket{x}$ is labelled by a parameter $x$, then the operator describing translations in $x$, satisfying $U(\Delta x)\ket{x} = \ket{x + \Delta x}$, is given by $U(\Delta x) = e^{-i\Delta x\,p/\hbar}$, where $p$ is the generator of translations in $x$.
-\end{problem}
-\begin{problem}[Units of the generator of translations (PS4 Q2)]
-    Show that if $x$ in Problem~\ref{prob:translation} has dimensions of length, then $p$ has dimensions of momentum.
-\end{problem}
-\begin{remark}
-    The same argument as for $J_z$ (Section~\ref{sec:generators}) shows that unitarity of $U$ forces $H = H^\dagger$, so energy is an observable (Principle~\ref{prin:hermitian}).
-\end{remark}
-\begin{problem}[Hermiticity of $H$ (PS4 Q3)]
-    \label{prob:H-herm}
-    Show that $H = H^\dagger$ follows from the unitarity of the time-evolution operator $U(t) = e^{-iHt/\hbar}$.
-\end{problem}
-\begin{problem}[Eigenvalues of $H$ (PS4 Q4)]
-    Based on the result of Problem~\ref{prob:H-herm} and the definition of $U(t)$, show that the eigenvalues of $H$ must be real numbers and that they have units of energy.
-\end{problem}
-\begin{proposition}[Schr\"odinger equation]
-    \begin{equation}
-        \frac{d}{dt}\ket{\psi(t)} = -\frac{i}{\hbar}H\ket{\psi(t)}.
-    \end{equation}
-\end{proposition}
-\begin{proof}
-    By composition, $U(t+\Delta t) = U(\Delta t)\,U(t)$. The small step $U(\Delta t)$ is Eq.~\eqref{eq:UN-taylor} with $t/N \to \Delta t$, so
-    \[U(t+\Delta t) = \left(\id - \frac{i}{\hbar}H\Delta t + \mathcal{O}(\Delta t^2)\right)U(t) = U(t) - \frac{i}{\hbar}H\Delta t\,U(t) + \mathcal{O}(\Delta t^2).\]
-    Using the limit definition of a derivative\footnote{The $\mathcal{O}(\Delta t^2)$ term goes to zero faster than $\Delta t$ so it vanishes.},
-    \[\frac{dU}{dt} = \lim_{\Delta t\to 0}\frac{U(t+\Delta t) - U(t)}{\Delta t} = -\frac{i}{\hbar}HU(t).\]
-    Acting on $\ket{\psi(0)}$, which does not depend on $t$, and using $\ket{\psi(t)} = U(t)\ket{\psi(0)}$,
-    \[\frac{d}{dt}\ket{\psi(t)} = \frac{dU}{dt}\ket{\psi(0)} = -\frac{i}{\hbar}H\,U(t)\ket{\psi(0)} = -\frac{i}{\hbar}H\ket{\psi(t)}.\]
-\end{proof}
+\section{A System of Two Spin-1/2 Particles}
+\label{sec:time}
+\marginpar{}
+\chapterstart{5}
 
-\subsubsection{\texorpdfstring{When $H$ is constant}{When H is constant}}
-For constant $H$, from \eqref{eq:UN-taylor},
-\[U(t) = \lim_{N\to\infty}\left(\id - \frac{i}{\hbar}H\,\frac{t}{N}\right)^N = e^{-iHt/\hbar}.\]
-\begin{result}[Time-independent Hamiltonian]
-    If $H$ does not depend on time,
-    \begin{equation}
-        U(t) = e^{-iHt/\hbar}.
-    \end{equation}
-\end{result}
-
-\subsubsection{\texorpdfstring{When $H$ depends on time}{When H depends on time}}
-If $H = H(t)$, then $e^{-iH(t)t/\hbar}$ does not solve the Schr\"odinger equation in general.
-\begin{problem}[Time-dependent Hamiltonian (PS4 Q6)]
-    Show that, for an explicitly time-dependent Hamiltonian $H(t)$, and provided $[H(t),H(t')] = 0$, the time-evolution operator can be written as
-    \begin{equation}
-        \label{eq:U-time-dependent}
-        U(t) = \exp\left\{-\frac{i}{\hbar}\int_0^t dt'\,H(t')\right\}.
-    \end{equation}
-\end{problem}
-\begin{remark}
-    Physically, $[H(t),H(t')] = 0$ means the eigenstates of $H$ never change, only the energies.
-\end{remark}
-\begin{example}
-    Let a particle be placed in $\vec{B} = B_0(t)\hat{z}$: its spin always rotates about $\hat{z}$, so the small rotations add into one rotation by $\int_0^t\omega_0(t')\,dt'$. If for example the field changes direction after some time, the eigenstates of $H$ change $\therefore [H(t),H(t')] \neq 0$, so the spin of the particle rotates about a different axis. Then the order matters, and no single exponential works.
-\end{example}
-
-\subsection{Stationary states}
-\begin{definition}[Stationary state]
-    A state that does not evolve into a physically different state in time. These are the eigenstates of time-independent $H$, the energy eigenstates $H\ket{E} = E\ket{E}$.
-\end{definition}
-\begin{proposition}
-    \begin{equation}
-        U(t)\ket{E} = e^{-iEt/\hbar}\ket{E}.
-    \end{equation}
-    This is a global phase, so $\ket{E}$ and $U(t)\ket{E}$ are the same physical state for all $t$.
-\end{proposition}
-\begin{proof}
-    Proposition~\ref{prop:function-eigenstate} with $f(x) = e^{-ixt/\hbar}$.
-\end{proof}
-\begin{result}[Evolution of a general state]
-    $H$ is Hermitian, so its eigenstates $\ket{E_n}$, where $n$ labels the different energies (e.g.\ for $H = \omega_0S_z$, $\ket{E_\pm} = \ket{\pm\hat{z}}$), form an orthonormal basis, and the completeness relation (Section~\ref{sec:states}) reads $\id = \sum_n\ket{E_n}\bra{E_n}$. Inserting it,
-    \[\ket{\psi(0)} = \id\ket{\psi(0)} = \sum_n\ket{E_n}\braket{E_n|\psi(0)} = \sum_n\braket{E_n|\psi(0)}\ket{E_n}.\]
-    $U(t)$ is linear, so it acts on each term separately, and each $\ket{E_n}$ only picks up its phase:
-    \begin{equation}
-        \label{eq:energy-expansion}
-        \ket{\psi(t)} = U(t)\ket{\psi(0)} = \sum_n\braket{E_n|\psi(0)}\,U(t)\ket{E_n} = \sum_n\braket{E_n|\psi(0)}\,e^{-iE_nt/\hbar}\ket{E_n}.
-    \end{equation}
-\end{result}
-
-\subsection{Time-dependent expectation values}
-\begin{proposition}[Time derivative of an expectation value]
-    \label{prop:eom}
-    \begin{equation}
-        \frac{d}{dt}\braket{A} = \frac{i}{\hbar}\braket{[H,A]} + \braket{\frac{\partial A}{\partial t}}.
-    \end{equation}
-    This tells us how the average of any observable changes in time.\footnote{Also called the \emph{equation of motion} for $\braket{A}$, since it plays the role Newton's second law plays classically.}
-\end{proposition}
-\begin{proof}
-    $\braket{A} = \bra{\psi(t)}A\ket{\psi(t)}$ is a product of three things that can depend on $t$: the bra, $A$ and the ket. The product rule gives one term for each:
-    \[\frac{d}{dt}\braket{A} = \left(\frac{d}{dt}\bra{\psi(t)}\right)A\ket{\psi(t)} + \bra{\psi(t)}A\left(\frac{d}{dt}\ket{\psi(t)}\right) + \bra{\psi(t)}\frac{\partial A}{\partial t}\ket{\psi(t)}.\]
-    The Schr\"odinger equation and its bra (using $H^\dagger = H$) give $\frac{d}{dt}\ket{\psi} = -\frac{i}{\hbar}H\ket{\psi}$ and $\frac{d}{dt}\bra{\psi} = \frac{i}{\hbar}\bra{\psi}H$, so the first two terms are $\frac{i}{\hbar}\bra{\psi}(HA - AH)\ket{\psi}$.
-\end{proof}
-\begin{remark}
-    The $\partial A/\partial t$ term is only there if the operator itself has explicit time dependence, e.g.\ a time-dependent field.
-\end{remark}
-\begin{definition}[Constant of the motion]
-    An observable $A$ with $\partial A/\partial t = 0$ and $[H,A] = 0$. Then $\frac{d}{dt}\braket{A} = 0$, so $A$ is a conserved quantity.
-\end{definition}
-\begin{example}
-    Take $A = H$. Then $[H,A] = [H,H] = 0$ always, so whenever $\partial H/\partial t = 0$, energy is a constant of the motion.
-\end{example}
-\begin{problem}[Conservation of energy (PS4 Q5)]
-    Show that $[H,U(t)] = 0$, and hence that the average energy (expectation value of $H$) is conserved, by proving that $E = \braket{H} = \bra{\psi(t)}H\ket{\psi(t)} = \bra{\psi(0)}H\ket{\psi(0)}$ for any time $t$.
-\end{problem}
-
-\subsection{Spin in a static field: precession}
-\label{sec:precession}
-\begin{definition}[Precession]
-    The phenomenon where the axis of a spinning object rotates about another axis due to external torques.
-\end{definition}
-
-\subsubsection{Time evolution as a rotation}
-Put an electron ($q = -|e|$) in a uniform field $\vec{B} = B_0\hat{n}$ along any axis $\hat{n}$. With $\vec{\mu} = -g\mu_B\vec{S}/\hbar$ and $S_n = \vec{S}\cdot\hat{n}$,
-\begin{equation}
-    H_0 = -\vec{\mu}\cdot\vec{B} = \omega_0S_n, \qquad \omega_0 = \frac{g\mu_BB_0}{\hbar}, \qquad [\omega_0] = \frac{[\text{energy}]}{[\hbar]} = [\text{frequency}].
-\end{equation}
-Since $[H_0,S_n] = 0$, $S_n$ is a constant of the motion. The energy eigenstates are
-\[H_0\ket{\pm\hat{n}} = \pm\frac{\hbar\omega_0}{2}\ket{\pm\hat{n}}.\]
-\begin{result}[Time evolution is a rotation]
-    \begin{equation}
-        U(t) = e^{-i\omega_0tS_n/\hbar} = R(\phi\hat{n})\Big|_{\phi = \omega_0t}, \qquad U(t)\ket{\pm\hat{n}} = e^{\mp i\omega_0t/2}\ket{\pm\hat{n}}.
-    \end{equation}
-    Evolving in a field along $\hat{n}$ is the same as rotating about $\hat{n}$ by $\phi = \omega_0t$. The states $\ket{\pm\hat{n}}$ are stationary, equivalently invariant under rotations about $\hat{n}$. The examples below take $\hat{n} = \hat{z}$.
-\end{result}
-
-\subsubsection{Probabilities}
-\begin{example}[Starting in $\ket{+\hat{x}}$]
-    The spin starts along $+\hat{x}$ in a field along $\hat{z}$. Find the probability that it still points along $+\hat{x}$ at time $t$.\par
-    \emph{Expand in energy eigenstates.} The energy eigenstates are $\ket{\pm\hat{z}}$, with $E_\pm = \pm\hbar\omega_0/2$, and
-    \[\ket{\psi(0)} = \ket{+\hat{x}} = \frac{1}{\sqrt{2}}\ket{+\hat{z}} + \frac{1}{\sqrt{2}}\ket{-\hat{z}}.\]
-    \emph{Attach the phases} $e^{-iE_\pm t/\hbar} = e^{\mp i\omega_0t/2}$, as in Eq.~\eqref{eq:energy-expansion}:
-    \[\ket{\psi(t)} = \frac{1}{\sqrt{2}}\left(e^{-i\omega_0t/2}\ket{+\hat{z}} + e^{i\omega_0t/2}\ket{-\hat{z}}\right).\]
-    \emph{Born rule}, with $\braket{+\hat{x}|\pm\hat{z}} = \tfrac{1}{\sqrt{2}}$:
-    \begin{equation}
-        P_{+\hat{x}}(t) = \left|\braket{+\hat{x}|\psi(t)}\right|^2 = \left|\frac{1}{2}e^{-i\omega_0t/2} + \frac{1}{2}e^{i\omega_0t/2}\right|^2 = \cos^2\frac{\omega_0t}{2} = \frac{1}{2}\left(1 + \cos\omega_0t\right).
-    \end{equation}
-\end{example}
-\begin{problem}[Precession about $\hat{y}$ (PS4 Q7)]
-    \label{prob:prec-y}
-    For a spin-$\tfrac12$ placed in a magnetic field $\vec{B} = B_0\hat{y}$, and initially oriented along the $\hat{x}$ direction, find the probability to measure the spin oriented along $+\hat{z}$ at a later time $t$.
-\end{problem}
-
-\subsubsection{Average spin}
-Two ways to get $\braket{S_x(t)}$ and $\braket{S_y(t)}$ for the spin starting in $\ket{+\hat{x}}$ (field along $\hat{z}$): from the state, or from Proposition~\ref{prop:eom} without ever computing the state.
-\begin{example}[Method 1: from the state]
-    Use $\braket{A} = \psi^\dagger A\,\psi$ (row times matrix times column, from Matrix Mechanics), with $S_x \xrightarrow{S_z} \frac{\hbar}{2}\sigma_x$ and the state from the previous example, $\psi(t) \xrightarrow{S_z} \frac{1}{\sqrt{2}}\left(e^{-i\omega_0t/2}, e^{i\omega_0t/2}\right)^T$:
-    \[\braket{S_x(t)} = \frac{1}{\sqrt{2}}\begin{pmatrix} e^{i\omega_0t/2} & e^{-i\omega_0t/2} \end{pmatrix}\frac{\hbar}{2}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix} e^{-i\omega_0t/2} \\ e^{i\omega_0t/2} \end{pmatrix}\]
-    \[= \frac{\hbar}{4}\left(e^{i\omega_0t} + e^{-i\omega_0t}\right) = \frac{\hbar}{2}\cos\omega_0t.\]
-    Alternatively, from the probabilities,
-    \[\braket{S_x(t)} = \frac{\hbar}{2}\left(P_{+\hat{x}} - P_{-\hat{x}}\right) = \frac{\hbar}{2}\left(2P_{+\hat{x}} - 1\right) = \frac{\hbar}{2}\cos\omega_0t.\]
-    The same matrix product with $S_y \xrightarrow{S_z} \frac{\hbar}{2}\sigma_y$ gives $\braket{S_y(t)} = \frac{\hbar}{2}\sin\omega_0t$.
-\end{example}
-\begin{example}[Method 2: from $d\braket{A}/dt$]
-With $H_0 = \omega_0S_z$, $[S_z,S_x] = i\hbar S_y$ and $[S_z,S_y] = -i\hbar S_x$:
-\begin{align}
-    \frac{d}{dt}\braket{S_x} &= \frac{i}{\hbar}\braket{[\omega_0S_z,S_x]} = -\omega_0\braket{S_y}, \label{eq:eom-x}\\
-    \frac{d}{dt}\braket{S_y} &= \frac{i}{\hbar}\braket{[\omega_0S_z,S_y]} = \omega_0\braket{S_x}. \label{eq:eom-y}
-\end{align}
-Differentiating Eq.~\eqref{eq:eom-x} and using Eq.~\eqref{eq:eom-y},
-\[\frac{d^2}{dt^2}\braket{S_x} = -\omega_0\frac{d}{dt}\braket{S_y} = -\omega_0^2\braket{S_x},\]
-with general solution $\braket{S_x} = A\cos\omega_0t + B\sin\omega_0t$. The initial conditions are $\braket{S_x(0)} = \hbar/2$ and, from Eq.~\eqref{eq:eom-x}, $\frac{d}{dt}\braket{S_x}\big|_{t=0} = -\omega_0\braket{S_y(0)} = 0$, so $A = \hbar/2$, $B = 0$. Then $\braket{S_y} = -\frac{1}{\omega_0}\frac{d}{dt}\braket{S_x}$ gives
-\[\braket{S_x(t)} = \frac{\hbar}{2}\cos\omega_0t, \qquad \braket{S_y(t)} = \frac{\hbar}{2}\sin\omega_0t.\]
-\end{example}
-\begin{result}[Precession]
-    \begin{equation}
-        \braket{\vec{S}(t)} = \frac{\hbar}{2}\left(\cos\omega_0t\,\hat{x} + \sin\omega_0t\,\hat{y}\right), \qquad \braket{S_z} = 0.
-    \end{equation}
-    The average spin rotates counterclockwise about $\hat{z}$ at angular frequency $\omega_0$ (Larmor precession), while $\braket{S_z}$ stays constant as a constant of the motion should. Physically, the field exerts a torque $\vec{\mu}\times\vec{B}$ perpendicular to the spin, so instead of lining up with $\vec{B}$ the spin circles around it, like a tilted spinning top circling around gravity. It completes one turn every $2\pi/\omega_0$.
-\end{result}
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[scale=1.4]
-\draw[-latex] (-0.4,0) -- (2.2,0) node[right] {$\braket{S_x}$};
-\draw[-latex] (0,-0.4) -- (0,2.0) node[above] {$\braket{S_y}$};
-\draw[dashed, gray] (1.6,0) arc (0:90:1.6);
-\draw[-latex, thick] (0,0) -- (1.6,0);
-\node[below] at (1.6,0) {$\frac{\hbar}{2}\hat{x}$};
-\draw[-latex, thick] (0,0) -- ({1.6*cos(40)},{1.6*sin(40)}) node[above right] {$\braket{\vec{S}(t)}$};
-\draw[-latex] (0.6,0) arc (0:40:0.6);
-\node at (0.8,0.25) {$\omega_0t$};
-\end{tikzpicture}
-\caption{Precession of $\braket{\vec{S}}$ in the $x$-$y$ plane, starting from $\ket{+\hat{x}}$.}
-\end{figure}
-\begin{problem}[$\braket{S_x(t)}$ for precession about $\hat{y}$ (PS4 Q8)]
-    For the same initial conditions and magnetic field considered in Problem~\ref{prob:prec-y}, find the expectation value $\braket{S_x(t)}$.
-\end{problem}
-\begin{problem}[Bloch vector (PS4 Q9)]
-    Consider a spin-$\tfrac12$ precessing in a magnetic field oriented along the $z$-direction. Define Pauli operators $X$, $Y$, $Z$ in terms of the spin-$\tfrac12$ operators by $S_x = \frac{\hbar}{2}X$, $S_y = \frac{\hbar}{2}Y$, $S_z = \frac{\hbar}{2}Z$. Find the time dependence of the components of the Bloch vector $\vec{s}(t) = \left(\braket{X(t)}, \braket{Y(t)}, \braket{Z(t)}\right)^T$ with the initial condition $\vec{s}(0) = (\cos\theta, 0, \sin\theta)^T$ by deriving and then solving the coupled equations of motion for the components.
-\end{problem}
-
-\subsection{Magnetic resonance}
-\label{sec:resonance}
-\begin{definition}[Magnetic resonance]
-    Driving transitions between spin states with an oscillating field tuned to the precession frequency. Applications:
-    \begin{itemize}
-        \item \emph{Nuclear magnetic resonance} (NMR), on nuclear spin $\vec{I}$: e.g.\ medical imaging (MRI), which maps local water content through resonant absorption of radio-frequency ($\sim$MHz) radiation.\footnote{MRI is NMR used for imaging. It was renamed MRI because patients were scared of the word ``nuclear''.}
-        \item \emph{Electron spin resonance} (ESR), on electron spin $\vec{S}$: e.g.\ characterizing materials with microwave ($\sim$GHz) radiation.
-        \item \emph{Qubit control}: single-qubit gates (unitary operations) on qubits made from electron spins, nuclear spins, ions, neutral atoms or superconducting circuits.
-    \end{itemize}
-\end{definition}
-The field is a strong longitudinal part plus a weaker oscillating transverse part,
-\begin{equation}
-    \vec{B}(t) = B_0\hat{z} + B_1\cos\omega t\,\hat{x}, \qquad B_0 \gg B_1,
-\end{equation}
-so the Hamiltonian now has explicit time dependence:
-\begin{equation}
-    H(t) = -\vec{\mu}\cdot\vec{B}(t) = \omega_0S_z + \Omega\cos(\omega t)\,S_x,
-\end{equation}
-with, using the magnetons defined with the Stern-Gerlach experiment,
-\begin{align*}
-    \text{ESR } (q = -|e|)&: \quad \omega_0 = \frac{g\mu_BB_0}{\hbar}, \qquad \Omega = \frac{g\mu_BB_1}{\hbar}, \\
-    \text{NMR } (q = +|e|)&: \quad \omega_0 = -\frac{g_I\mu_NB_0}{\hbar}, \qquad \Omega = -\frac{g_I\mu_NB_1}{\hbar}.
-\end{align*}
-\begin{remark}
-    For $B_0 \sim 1$ T, $\omega_0/2\pi$ is in the GHz range for ESR ($g \approx 2$) and the MHz range for NMR, since $\mu_N \approx \mu_B/1836$.
-\end{remark}
-\begin{remark}[Angular vs linear frequency]
-    $\omega_0$ is an angular frequency, in rad/s. $\omega_0/2\pi$ is the linear frequency, in Hz = cycles/s, with 1 cycle = $2\pi$ rad.
-\end{remark}
-\begin{remark}
-    With $H$ time-dependent, $U(t) = e^{-iHt/\hbar}$ no longer holds, and we must work with the Schr\"odinger equation directly, $\partial_t\ket{\psi(t)} = -\frac{i}{\hbar}H(t)\ket{\psi(t)}$.
-\end{remark}
-
-\subsubsection{Going into the rotating frame}
-Split the Hamiltonian into a large static part and a small driving part,
-\[H(t) = H_0 + V(t), \qquad H_0 = \omega_0S_z, \qquad V(t) = \Omega\cos(\omega t)\,S_x.\]
-Since $\omega_0 \gg \Omega$, most of the evolution is the fast precession from $H_0$. Factor it out:
-\begin{equation}
-    \ket{\psi(t)} = U_0(t)\ket{\tilde{\psi}(t)}, \qquad U_0(t) = e^{-iH_0t/\hbar},
-\end{equation}
-where $U_0$ is the ``fast'' part and $\ket{\tilde{\psi}(t)}$ the ``slow'' part.
-\begin{proposition}[Schr\"odinger equation in the rotating frame]
-    \begin{equation}
-        \partial_t\ket{\tilde{\psi}(t)} = -\frac{i}{\hbar}\tilde{V}(t)\ket{\tilde{\psi}(t)}, \qquad \tilde{V}(t) = U_0^\dagger(t)V(t)U_0(t).
-    \end{equation}
-\end{proposition}
-\begin{proof}
-    Substituting into the Schr\"odinger equation with $\dot{U}_0 = -\frac{i}{\hbar}H_0U_0$,
-    \[-\frac{i}{\hbar}H_0U_0\ket{\tilde{\psi}} + U_0\,\partial_t\ket{\tilde{\psi}} = -\frac{i}{\hbar}\left(H_0 + V\right)U_0\ket{\tilde{\psi}}.\]
-    The $H_0$ terms cancel. Multiplying on the left by $U_0^\dagger$ gives the result.
-\end{proof}
-\begin{definition}[Rotating frame]
-    Since $U_0(t) = e^{-i\omega_0tS_z/\hbar} = R(\omega_0t\,\hat{z})$ is a rotation about $\hat{z}$ by the time-dependent angle $\omega_0t$, describing the system by $\ket{\tilde{\psi}(t)}$ is called going into the rotating frame.
-\end{definition}
-To compute $\tilde{V}$, write $S_x = \frac{1}{2}(S_+ + S_-)$ with the spin-$\tfrac12$ ladder operators (Section~\ref{sec:ladder}),
-\[S_+ = \hbar\ket{+\hat{z}}\bra{-\hat{z}}, \qquad S_- = \hbar\ket{-\hat{z}}\bra{+\hat{z}}.\]
-\begin{lemma}
-    \begin{equation}
-        e^{i\omega_0tS_z/\hbar}\,S_\pm\,e^{-i\omega_0tS_z/\hbar} = e^{\pm i\omega_0t}S_\pm.
-    \end{equation}
-\end{lemma}
-\begin{proof}
-    For $S_+$: $e^{-i\omega_0tS_z/\hbar}$ acting right on $\ket{-\hat{z}}$ gives $e^{i\omega_0t/2}$, and $e^{i\omega_0tS_z/\hbar}$ acting left on $\ket{+\hat{z}}$ gives $e^{i\omega_0t/2}$, a total of $e^{i\omega_0t}$. Swapping the roles gives $e^{-i\omega_0t}$ for $S_-$.
-\end{proof}
-With $\cos\omega t = \frac{1}{2}\left(e^{i\omega t} + e^{-i\omega t}\right)$,
-\begin{equation}
-    \begin{split}
-        \tilde{V}(t) &= \frac{\Omega}{4}\left(e^{i\omega t} + e^{-i\omega t}\right)\left(e^{i\omega_0t}S_+ + e^{-i\omega_0t}S_-\right) \\
-        &= \frac{\Omega}{4}\Big(\underbrace{e^{-i(\omega-\omega_0)t}S_+ + e^{i(\omega-\omega_0)t}S_-}_{\text{slow for } \omega\approx\omega_0} + \underbrace{e^{i(\omega+\omega_0)t}S_+ + e^{-i(\omega+\omega_0)t}S_-}_{\text{fast}}\Big).
-    \end{split}
-\end{equation}
-
-\subsubsection{Rotating-wave approximation}
-Integrating the rotating-frame equation,
-\[\ket{\tilde{\psi}(t)} - \ket{\tilde{\psi}(0)} = -\frac{i}{\hbar}\int_0^t dt'\,\tilde{V}(t')\ket{\tilde{\psi}(t')}.\]
-The fast terms $\sim e^{\pm i(\omega+\omega_0)t}$ oscillate many times while $\ket{\tilde{\psi}}$ barely changes, so they average to zero on a time scale $t \gtrsim 1/(\omega+\omega_0)$. Near resonance ($\omega \approx \omega_0$) the slow terms $\sim e^{\pm i(\omega-\omega_0)t}$ dominate.
-\begin{definition}[Rotating-wave approximation (RWA)]
-    Dropping the terms $\sim e^{\pm i(\omega+\omega_0)t}$. The corrections are small when $\Omega/\omega_0 \ll 1$, i.e.\ $B_0 \gg B_1$. Then
-    \begin{equation}
-        \tilde{V}(t) \simeq \frac{\Omega}{4}\left(e^{-i\delta t}S_+ + e^{i\delta t}S_-\right).
-    \end{equation}
-\end{definition}
-\begin{definition}[Detuning]
-    $\delta = \omega - \omega_0$, how far the drive is from resonance.
-\end{definition}
-\begin{result}[On resonance]
-    For $\omega = \omega_0$, $\delta = 0$ and $\tilde{V}$ is time-independent:
-    \begin{equation}
-        \tilde{V} \simeq \frac{\Omega}{4}\left(S_+ + S_-\right) = \frac{\Omega}{2}S_x, \qquad \ket{\tilde{\psi}(t)} \simeq e^{-i\Omega tS_x/2\hbar}\ket{\psi(0)} = R\left(\tfrac{\Omega t}{2}\hat{x}\right)\ket{\psi(0)},
-    \end{equation}
-    using $\ket{\tilde{\psi}(0)} = \ket{\psi(0)}$ since $U_0(0) = \id$. In the rotating frame the spin simply rotates about $\hat{x}$ at angular frequency $\Omega/2$.
-\end{result}
-\begin{problem}[Three-level atom in a $\Lambda$ configuration (PS5 Q1)]
-    A three-level atom has one high-energy state $\ket{1}$ and two lower-energy states $\ket{0}$, $\ket{2}$. It is driven on resonance by external time-dependent fields, giving
-    \[H(t) = H_0 + V(t), \qquad H_0 = \sum_{j\in\{0,1,2\}}\hbar\omega_j\ket{j}\bra{j},\]
-    \[V(t) = \hbar\Omega\cos(\omega_{10}t)\left(\ket{1}\bra{0} + \ket{0}\bra{1}\right) + \hbar\Omega\cos(\omega_{21}t + \phi)\left(\ket{1}\bra{2} + \ket{2}\bra{1}\right),\]
-    with $\omega_{ij} = \omega_i - \omega_j$, $\Omega$ the drive amplitude and $\phi$ a phase shift. Assume $|\omega_{01}| \gg |\Omega|$ and $|\omega_{21}| \gg |\Omega|$, so oscillations at frequencies $\sim 2\omega_{01}$, $\sim 2\omega_{12}$ can be averaged over.
-    \begin{enumerate}[label=(\alph*)]
-        \item Starting from $\partial_t\ket{\psi(t)} = -\frac{i}{\hbar}H(t)\ket{\psi(t)}$, derive $\partial_t\ket{\tilde{\psi}(t)} = -\frac{i}{\hbar}\tilde{V}(t)\ket{\tilde{\psi}(t)}$, where $\ket{\psi(t)} = U_0(t)\ket{\tilde{\psi}(t)}$ and $U_0(t) = e^{-iH_0t/\hbar}$. Give $\tilde{V}(t)$ in terms of $V(t)$ and $U_0(t)$.
-        \item Show that within the rotating-wave approximation,
-        \[\tilde{V}(t) \simeq V_{\mathrm{RWA}} = \frac{\hbar\Omega}{2}\left(\ket{1}\bra{0} + \ket{0}\bra{1} + e^{i\phi}\ket{1}\bra{2} + e^{-i\phi}\ket{2}\bra{1}\right).\]
-        \item Show that the dark state $\ket{D} = \frac{1}{\sqrt{2}}\left(\ket{0} - e^{-i\phi}\ket{2}\right)$ is an eigenstate of $V_{\mathrm{RWA}}$.
-        \item With $\ket{+} = \frac{1}{\sqrt{2}}\left(\ket{0} + e^{-i\phi}\ket{2}\right)$, show that $V_{\mathrm{RWA}} = \frac{\hbar\Omega}{\sqrt{2}}\left(\ket{1}\bra{+} + \ket{+}\bra{1}\right)$.
-        \item Show that $V_{\mathrm{RWA}}\ket{B_\pm} = \pm\frac{\hbar\Omega}{\sqrt{2}}\ket{B_\pm}$ for the bright states $\ket{B_\pm} = \frac{1}{\sqrt{2}}\ket{1} \pm \frac{1}{2}\left(\ket{0} + e^{-i\phi}\ket{2}\right)$.
-        % Sheet has |1> instead of |2> in B_pm and drops the hbar in the eigenvalue: both typos.
-    \end{enumerate}
-\end{problem}
-
-\subsubsection{Rabi oscillations}
-Start in $\ket{\psi(0)} = \ket{+\hat{z}} = \frac{1}{\sqrt{2}}\left(\ket{+\hat{x}} + \ket{-\hat{x}}\right)$, i.e.\ expand in the eigenstates of $\tilde{V} \propto S_x$ as in Eq.~\eqref{eq:energy-expansion}. With $S_x\ket{\pm\hat{x}} = \pm\frac{\hbar}{2}\ket{\pm\hat{x}}$,
-\[\ket{\tilde{\psi}(t)} \simeq \frac{1}{\sqrt{2}}\left(e^{-i\Omega t/4}\ket{+\hat{x}} + e^{i\Omega t/4}\ket{-\hat{x}}\right)\]
-\[\ket{\tilde{\psi}(t)} \xrightarrow{S_x} \frac{1}{\sqrt{2}}\begin{pmatrix} e^{-i\Omega t/4} \\ e^{i\Omega t/4} \end{pmatrix}.\]
-Since $U_0$ is a function of $S_z$, $[U_0,S_z] = 0$, so
-\[\braket{S_z} = \bra{\psi(t)}S_z\ket{\psi(t)} = \bra{\tilde{\psi}(t)}S_z\ket{\tilde{\psi}(t)}.\]
-With $S_z \xrightarrow{S_x} \frac{\hbar}{2}\sigma_x$ (problem ``$\hat{S}_z$ in the $S_x$ basis''),
-\[\braket{S_z} = \frac{1}{2}\begin{pmatrix} e^{i\Omega t/4} & e^{-i\Omega t/4} \end{pmatrix}\frac{\hbar}{2}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} e^{-i\Omega t/4} \\ e^{i\Omega t/4} \end{pmatrix} = \frac{\hbar}{4}\left(e^{i\Omega t/2} + e^{-i\Omega t/2}\right).\]
-\begin{result}[Rabi oscillations]
-    \begin{equation}
-        \braket{S_z(t)} = \frac{\hbar}{2}\cos\frac{\Omega t}{2}, \qquad P_{+\hat{z}}(t) = \cos^2\frac{\Omega t}{4}.
-    \end{equation}
-    The spin flips back and forth between $\ket{+\hat{z}}$ and $\ket{-\hat{z}}$. A drive left on for $\Omega t/2 = \pi$ (a ``$\pi$-pulse'') takes $\ket{+\hat{z}}$ to $\ket{-\hat{z}}$: this is how a spin qubit is flipped.
-\end{result}
-\begin{remark}[WARNING: factor of 2]
-    Bill's notes write the phases as $e^{\mp i\Omega t/2}$ and get $\braket{S_z} = \frac{\hbar}{2}\cos\Omega t$. The eigenvalues of $S_x$ are $\pm\hbar/2$, not $\pm\hbar$, so the phases are $e^{\mp i\Omega t/4}$ and the Rabi frequency is $\Omega/2$. A numerical solution of the full $H(t)$ confirms $\cos(\Omega t/2)$. The half comes from the RWA: $\cos\omega t$ splits into two counter-rotating pieces and only one of them is kept.
-\end{remark}
-\begin{problem}[Rabi formula (PS4 Q10)]
-    Derive the Rabi formula [Townsend, Eq.~(4.45)].
-\end{problem}
+\section{Wave Mechanics in One Dimension}
+\label{sec:time}
+\marginpar{}
+\chapterstart{6}
 
 
-\section{Misc}
-Energy-Time uncertainty:
-$\Delta E \Delta t \geq \hbar/2$. Recall $\Delta A \Delta B \geq \frac{1}{2}|\braket{[A,B]}|$ for any two operators $A$ and $B$. Take $A = J_x, B = J_y$ and $[J_x,J_y] = i\hbar J_z$. Then $\Delta J_x \Delta J_y \ge \frac{\hbar}{2}|\braket{J_z}|$. $\braket{H} = E$. Let observable $A$ (not a constant of the motion), such that $[H,A] \neq 0$.
-%Draw a "A" over time graph with a wiggly line looking like -arctanx but from t=0 and shifted up and some dotted lines above and below the function with difference between them Delta A, and the fct is <A(t)>
-$\frac{\Delta A}{\Delta t} \approx |\braket{\frac{dA(t)}{dt}}|\braket{A(t)} = \bra{\psi(t)}A\ket{\psi(t)} = \bra{\psi(0)}\dagger{U(t)}AU(t)\ket{\psi(0)} = \bra{\psi(0)}A\ket{\psi(0)}$. $\implies \Delta A = |\braket{\frac{dA(t)}{dt}}|\Delta t$, then $\Delta E \Delta A \geq 1/2 |\braket{[A,H]}| = \frac{\hbar}{2}|\braket{\frac{dA(t)}{dt}}|$. $\implies \Delta E \Delta t \geq \hbar/2$.
 
-Chapter 5: two spins 1/2.
-complete set $\{\ket{+\hat{z},+\hat{z}}, \ket{+\hat{z},-\hat{z}}, \ket{-\hat{z},+\hat{z}}, \ket{-\hat{z},-\hat{z}}\}$, $S_{z1}$ and $S_{z2}$ are just the first and second item in the kets, and $[S_{z1}, S_{z2}] = 0$. Or: $\{\ket{+\hat{z},+\hat{x}}, \ket{+\hat{z},-\hat{x}}, \ket{-\hat{z},+\hat{x}}, \ket{-\hat{z},-\hat{x}}\}$.
-$\ket{+\hat{z},+\hat{z}} = \ket{+\hat{z}} \otimes \ket{+\hat{z}}= \ket{+\hat{z}}_1\ket{+\hat{z}}_2$. $S_{z2}\ket{+\hat{z}} \otimes \ket{+\hat{z}} = \ket{+\hat{z}} \otimes S_{z2}\ket{+\hat{z}} = \frac{\hbar}{2}(\ket{+\hat{z}} \otimes \ket{+\hat{z}})$. $\{\ket{1},\ket{2},\ket{3},\ket{4}\}$, where $\ket{1} = \ket{+\hat{z},+\hat{z}}$, $\ket{2} = \ket{+\hat{z},-\hat{z}}$, $\ket{3} = \ket{-\hat{z},+\hat{z}}$, $\ket{4} = \ket{-\hat{z},-\hat{z}}$. $\vec{S_2}\cdot\vec{S_2} = S_{1z}S_{2z} - 1/2 (S_{1+}S_{2-} + S_{1-}S_{2+})$. $S_{i\pm} = S_{ix} \pm iS_{iy}$, $H = \frac{A}{\hbar^2}\vec{S_i}\vec{S_2} \overset{\ket{1_j}-basis}{\to}\begin{pmatrix}
-    \bra{1}H\ket{1} & \bra{1}H\ket{2} & \bra{1}H\ket{3} & \bra{1}H\ket{4}\\
-    \bra{2}H\ket{1} & \bra{2}H\ket{2} & \bra{2}H\ket{3} & \bra{2}H\ket{4}\\
-    \bra{3}H\ket{1} & \bra{3}H\ket{2} & \bra{3}H\ket{3} & \bra{3}H\ket{4}\\
-    \bra{4}H\ket{1} & \bra{4}H\ket{2} & \bra{4}H\ket{3} & \bra{4}H\ket{4}
-\end{pmatrix}$.
 \newpage
 \appendix
 \section{Solutions}
