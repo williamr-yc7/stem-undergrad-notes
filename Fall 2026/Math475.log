@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  21 OCT 2026 15:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  16 NOV 2026 15:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -559,13 +559,13 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/erenr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Math475.toc [2
-
-] [3])
+{C:/Users/erenr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Math475.toc)
 \tf@toc=\write5
 \openout5 = `Math475.toc'.
 
- [4]
+ [2
+
+]
 Underfull \hbox (badness 6708) in paragraph at lines 76--76
 []\OT1/cmr/m/n/10 August 31 -
  []
@@ -583,6 +583,10 @@ l.107         \item t
                      heir coefficients depend only on the independent variab... [1
 
 ]
+
+LaTeX Warning: Reference `sol:a1-11' on page 2 undefined on input line 136.
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -592,302 +596,41 @@ Overfull \hbox (4.47276pt too wide) detected at line 160
 [][][]\OML/cmm/m/it/10 u[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]k[]u;  u[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 k e[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 kx\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;  u[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 k[]e[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 kx\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 k[]u;
  []
 
+[3]
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.205 \end{example}
-                    [3]
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.253 \end{remark}
-                   [4] [5]
-Overfull \hbox (7.8193pt too wide) in paragraph at lines 350--351
-[][]\OT1/cmr/m/it/10 For $\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ([]) = \OMS/cmsy/m/n/10 k[]k[]$ \OT1/cmr/m/it/10 on $\U/msb/m/n/10 R[]$\OT1/cmr/m/it/10 , com-
- []
+LaTeX Warning: Reference `sol:a1-12' on page 4 undefined on input line 226.
 
-[6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 419--419
-[]\OT1/cmr/m/n/10 September 9,
- []
+[4]
 
-[8] [9] [10]
-Overfull \hbox (13.99463pt too wide) in paragraph at lines 595--595
-[]\OT1/cmr/bx/n/14.4 Variable Co-ef-fi-cients and In-ho-mo-ge-neous Trans-
- []
+LaTeX Warning: Reference `sol:a1-110' on page 5 undefined on input line 257.
 
-[11] [12] [13] [14]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 797.
+LaTeX Warning: Reference `sol:a1-16' on page 5 undefined on input line 285.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\delta' on input line 797.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 797.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 797.
-
-[15] [16]
-Overfull \hbox (15.84299pt too wide) in paragraph at lines 846--846
-[]\OT1/cmr/bx/n/14.4 Distributions B: Dis-tri-bu-tions and Their Deriva-
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 850.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 850.
-
-[17] [18] [19] [20]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1048.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 1048.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1048.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\endgroup' on input line 1048.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@over' on input line 1048.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1048.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1048.
-
-[21] [22] [23]
-Overfull \hbox (22.45728pt too wide) in paragraph at lines 1151--1152
-[]\OT1/cmr/bx/n/10 Example. []\OT1/cmr/m/it/10 Unit mass for the arc-t-an-gent se-quence: $[] [] \OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] [](\OML/cmm/m/it/10 x=^^[\OT1/cmr/m/n/10 )[][] =
- []
-
-[24]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1198.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sin' on input line 1198.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\to' on input line 1198.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1198.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1230.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\delta' on input line 1230.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1230.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1230.
-
-[25] [26]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1282.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1282.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1282.
-
-[27]
-Overfull \hbox (17.99757pt too wide) in paragraph at lines 1351--1352
-[][]\OT1/cmr/bx/n/10 Proposition 13 \OT1/cmr/m/n/10 (The co-ef-fi-cients are forced)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 Sup-pose $\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 b[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m^^Yx=l\OT1/cmr/m/n/10 )$
- []
-
-[28] [29]
-Overfull \hbox (0.58542pt too wide) in paragraph at lines 1390--1397
- [] 
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1418.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1418.
-
-[30] [31]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1477.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 1477.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1477.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\endgroup' on input line 1477.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@over' on input line 1477.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1477.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1477.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1478--1478
-[]\OT1/cmr/m/n/10 October 7,
- []
-
-[32]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1498.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 1498.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1498.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\endgroup' on input line 1498.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@over' on input line 1498.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1498.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1498.
-
-[33] [34]
-Overfull \hbox (19.7646pt too wide) in paragraph at lines 1585--1593
- [] 
- []
-
-
-Overfull \hbox (19.08969pt too wide) in paragraph at lines 1616--1618
-[][]\OT1/cmr/bx/n/10 Remark 40 \OT1/cmr/m/n/10 (Why this ba-sis)\OT1/cmr/bx/n/10 . []$\OMS/cmsy/m/n/10 A$ \OT1/cmr/m/it/10 is di-ag-o-nal: for-mally, $\OMS/cmsy/m/n/10 A[] [] \OML/cmm/m/it/10 A[]X[][] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ^^U[]A[]X[]$\OT1/cmr/m/it/10 .
- []
-
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 1625--1625
-[]\OT1/cmr/m/n/10 October 19,
- []
-
-[36] [37] [38] [39] [40]
-Overfull \hbox (4.68962pt too wide) in paragraph at lines 1808--1808
-[]\OT1/cmr/bx/n/14.4 The Dif-fu-sion Equa-tion A: Sep-a-ra-tion of Vari-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1809--1809
-[]\OT1/cmr/m/n/10 October 21,
- []
-
-[41]
-Overfull \hbox (0.21759pt too wide) in paragraph at lines 1862--1863
-[][]\OT1/cmr/m/it/10 Find sep-a-rated so-lu-
- []
-
-[42]
-Overfull \hbox (1.5412pt too wide) detected at line 1911
-[][][]\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; t\OT1/cmr/m/n/10 ) = []\OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 + [] \OML/cmm/m/it/10 a[] [] [] e[];  a[] \OT1/cmr/m/n/10 = [] [][] \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) [] [] \OML/cmm/m/it/10 dx:
- []
-
-[43]
-Overfull \hbox (22.4577pt too wide) in paragraph at lines 1954--1955
-\OT1/cmr/bx/n/10 Steady states \OT1/cmr/m/n/10 (Choksi (7.30) to (7.32), 12.3.1). A steady state $\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; t\OT1/cmr/m/n/10 )$
- []
-
-[44]
-Overfull \hbox (32.47559pt too wide) detected at line 1996
-[][][]\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; t\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 K\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; t\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 dy;  K\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; t\OT1/cmr/m/n/10 ) = [] [] [] [] [] [] \OML/cmm/m/it/10 e[]:
- []
-
-[45] [46] [47] [48] [49] [50]
-Overfull \hbox (10.15704pt too wide) in paragraph at lines 2157--2158
-[]\OT1/cmr/bx/n/10 Step 1: $\OML/cmm/m/it/10 f[]$\OT1/cmr/bx/n/10 . \OT1/cmr/m/n/10 Since $\OML/cmm/m/it/10 f \OT1/cmr/m/n/10 = 0$ on $(\OMS/cmsy/m/n/10 ^^@1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$, $\OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 f[]; ^^^\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@ [][] \OML/cmm/m/it/10 f^^^[] dx \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@ [][] \OML/cmm/m/it/10 x^^^[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 dx$\OT1/cmr/m/n/10 .
- []
-
-
-Overfull \hbox (14.01938pt too wide) in paragraph at lines 2170--2171
-\OT1/cmr/m/n/10 The bound-ary terms tele-scope: $[][] []\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 + 1)\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 + 1) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )[] = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
- []
-
-[51] [52]
-Overfull \hbox (16.48102pt too wide) in paragraph at lines 2219--2221
-\OT1/cmr/m/n/10 Reindexing the first sum: $\OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 f[]; ^^^\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 n^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
- []
-
-[53] [54] [55] [56] [57] (Math475.aux)
+[5] [6] [7] [8] (Math475.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Math475.out' has not changed.
-(rerunfilecheck)             Checksum: 50C6F6D30439D915DF952C454D668E87;18674.
+(rerunfilecheck)             Checksum: 9A01D85EB12005A3DB8120CD6DD87377;4130.
  ) 
 Here is how much of TeX's memory you used:
- 31846 strings out of 467871
- 744067 string characters out of 5418377
- 1273211 words of memory out of 5000000
- 59637 multiletter control sequences out of 15000+600000
- 641041 words of font info for 90 fonts, out of 8000000 for 9000
+ 31163 strings out of 467871
+ 736059 string characters out of 5418377
+ 1266211 words of memory out of 5000000
+ 59469 multiletter control sequences out of 15000+600000
+ 637929 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,118p,776b,731s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\erenr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Math475.pdf (61 pages, 785268 bytes).
+ 99i,15n,118p,776b,698s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\erenr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Math475.pdf (10 pages, 292611 bytes).
 PDF statistics:
- 1613 PDF objects out of 1728 (max. 8388607)
- 603 named destinations out of 1000 (max. 500000)
- 789 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 371 PDF objects out of 1000 (max. 8388607)
+ 93 named destinations out of 1000 (max. 500000)
+ 245 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -13,85 +13,17 @@
 \contentsline {subsection}{\numberline {4.2}Auxiliary Conditions}{4}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Operator Viewpoint}{5}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}How We Will Solve PDEs}{5}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Potential Theory}{6}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Newton's Problem}{6}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Toolkit}{6}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Radial Chain Rule}{6}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}The Laplacian}{7}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Harmonic Radial Functions}{8}{subsection.5.5}%
-\contentsline {section}{\numberline {6}First Order PDEs and the Solution Operator}{8}{section.6}%
-\contentsline {subsection}{\numberline {6.1}The Underlying ODE}{8}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}The Solution Operator}{8}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Transporting Labels: Where the PDE Comes From}{9}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Examples of Trajectories}{9}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Constant Coefficient Transport}{10}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Adding Data}{11}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Which Data Curves Work?}{11}{subsection.6.7}%
-\contentsline {section}{\numberline {7}Variable Coefficients and Inhomogeneous Transport}{12}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Warm-up: Curved Characteristics}{12}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Problem Setup}{12}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Method of Characteristics}{12}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Inhomogeneous Case}{13}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Worked Example}{13}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Time as the Parameter}{14}{subsection.7.6}%
-\contentsline {section}{\numberline {8}Distributions A: The Delta ``Function'' Is Not a Function}{15}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Integrable Functions}{15}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}What We Want from $\delta _0$}{15}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}First Appearance: the Derivative of Heaviside}{16}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Second Appearance: Spikes}{16}{subsection.8.4}%
-\contentsline {section}{\numberline {9}Distributions B: Distributions and Their Derivatives}{17}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Motivation: Weak Solutions of $u'' = f$}{17}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Test Functions}{17}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Definition of a Distribution}{18}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Functions as Distributions}{18}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}The Delta Function}{19}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}Derivative of a Distribution}{19}{subsection.9.6}%
-\contentsline {subsection}{\numberline {9.7}Derivatives of Piecewise Smooth Functions}{20}{subsection.9.7}%
-\contentsline {subsection}{\numberline {9.8}Fundamental Solution of $\frac {d^2}{dx^2}$}{21}{subsection.9.8}%
-\contentsline {section}{\numberline {10}Distributions C: Convergence in the Sense of Distributions}{22}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Definition}{22}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Distributional versus Pointwise Convergence}{23}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Approximations to the Identity}{23}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Oscillation: $\sin (nx) \to 0$}{25}{subsection.10.4}%
-\contentsline {subsection}{\numberline {10.5}Limits That Produce $\delta _0'$}{25}{subsection.10.5}%
-\contentsline {subsection}{\numberline {10.6}Preview: Sinc and Dirichlet Kernels}{26}{subsection.10.6}%
-\contentsline {subsection}{\numberline {10.7}Summary}{26}{subsection.10.7}%
-\contentsline {section}{\numberline {11}Fourier Series A: Orthogonality Gives the Formulas}{26}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Coefficients in an Orthogonal Basis of $\mathbb {R}^N$}{27}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Functions as Vectors}{27}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Orthogonality of the Sines}{28}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}The Coefficient Formula}{29}{subsection.11.4}%
-\contentsline {subsection}{\numberline {11.5}Cosine and Full Fourier Series}{29}{subsection.11.5}%
-\contentsline {subsection}{\numberline {11.6}Examples}{30}{subsection.11.6}%
-\contentsline {subsection}{\numberline {11.7}What the Series Converges To on $\mathbb {R}$}{30}{subsection.11.7}%
-\contentsline {subsection}{\numberline {11.8}Orthogonal Is Not Yet a Basis}{32}{subsection.11.8}%
-\contentsline {section}{\numberline {12}Fourier Series B: Eigenfunctions of $-\frac {d^2}{dx^2}$}{32}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Template: Symmetric Matrices}{32}{subsection.12.1}%
-\contentsline {subsection}{\numberline {12.2}The Operator $\mathcal {A} = -\frac {d^2}{dx^2}$}{33}{subsection.12.2}%
-\contentsline {subsection}{\numberline {12.3}Green's Second Identity and Symmetric Boundary Conditions}{33}{subsection.12.3}%
-\contentsline {subsection}{\numberline {12.4}Consequences of Symmetry}{34}{subsection.12.4}%
-\contentsline {subsection}{\numberline {12.5}Dirichlet Eigenfunctions}{34}{subsection.12.5}%
-\contentsline {subsection}{\numberline {12.6}The Four Standard Boundary Conditions}{35}{subsection.12.6}%
-\contentsline {subsection}{\numberline {12.7}General Fourier Series}{35}{subsection.12.7}%
-\contentsline {section}{\numberline {13}Fourier Series C: Convergence}{36}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Modes of Convergence}{36}{subsection.13.1}%
-\contentsline {subsection}{\numberline {13.2}Best Approximation and Bessel's Inequality}{36}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Parseval's Equality and Completeness}{37}{subsection.13.3}%
-\contentsline {subsection}{\numberline {13.4}The Dirichlet Kernel}{38}{subsection.13.4}%
-\contentsline {subsection}{\numberline {13.5}Pointwise Convergence}{39}{subsection.13.5}%
-\contentsline {subsection}{\numberline {13.6}Uniform Convergence and the Gibbs Phenomenon}{40}{subsection.13.6}%
-\contentsline {subsection}{\numberline {13.7}Summary: The Three Questions}{40}{subsection.13.7}%
-\contentsline {section}{\numberline {14}The Diffusion Equation A: Separation of Variables}{41}{section.14}%
-\contentsline {subsection}{\numberline {14.1}The Dirichlet Problem on an Interval}{41}{subsection.14.1}%
-\contentsline {subsection}{\numberline {14.2}Separated Solutions}{41}{subsection.14.2}%
-\contentsline {subsection}{\numberline {14.3}Superposition and the Initial Condition}{42}{subsection.14.3}%
-\contentsline {subsection}{\numberline {14.4}Neumann Boundary Conditions}{43}{subsection.14.4}%
-\contentsline {subsection}{\numberline {14.5}Where the Equation Comes From}{44}{subsection.14.5}%
-\contentsline {subsection}{\numberline {14.6}Boundary Conditions and Heat Flow}{44}{subsection.14.6}%
-\contentsline {subsection}{\numberline {14.7}The Solution Operator and the Kernel (Optional)}{45}{subsection.14.7}%
-\contentsline {subsection}{\numberline {14.8}Summary}{46}{subsection.14.8}%
-\contentsline {section}{\numberline {A}Appendix}{47}{appendix.A}%
-\contentsline {section}{\numberline {B}Solutions}{47}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Assignment 1}{47}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Assignment 2}{51}{subsection.B.2}%
-\contentsline {section}{\numberline {C}Useful Links}{57}{appendix.C}%
+\contentsline {section}{\numberline {5}Distributions}{6}{section.5}%
+\contentsline {section}{\numberline {6}Fourier}{6}{section.6}%
+\contentsline {section}{\numberline {7}Diffusion}{6}{section.7}%
+\contentsline {section}{\numberline {8}Laplace}{6}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Harmonic Functions}{6}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Boundary Value Problems}{6}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}The Mean Value Property}{6}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}The Maximum Principle}{6}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Uniqueness \& Stability}{6}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Rotational Invariance}{6}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Polar Coordinates in the Plane}{7}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}Laplacian of a Radial Function}{7}{subsection.8.8}%
+\contentsline {section}{\numberline {A}Solutions}{8}{appendix.A}%
+\contentsline {section}{\numberline {B}Useful Links}{8}{appendix.B}%
