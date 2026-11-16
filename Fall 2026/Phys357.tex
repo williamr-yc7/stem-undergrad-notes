@@ -67,6 +67,43 @@ Textbook used is JS Townsend, \emph{A Modern Approach to Quantum Mechanics}, 2nd
 
 
 \section{Mathematical Background}
+\begin{definition}[Kronecker delta]
+    \begin{equation}
+        \delta_{ij} = \begin{cases} 1 & i = j, \\ 0 & i \neq j. \end{cases}
+    \end{equation}
+\end{definition}
+
+\subsection{Series}
+\begin{definition}
+    The geometric series is
+    \begin{equation}
+        \frac{1}{1-x} = \sum_{n=0}^{\infty}x^n \quad (|x|<1).
+    \end{equation}
+\end{definition}
+\begin{definition}
+    The exponential series converges for all $x$:
+    \begin{equation}
+        e^{x} = \sum_{n=0}^{\infty}\frac{x^n}{n!}.
+    \end{equation}
+\end{definition}
+\begin{definition}
+    The cosine and sine series contain only the even and odd powers of $x$ respectively, with alternating signs:
+    \begin{equation}
+        \cos x = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n}}{(2n)!}, \quad \sin x = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n+1}}{(2n+1)!}.
+    \end{equation}
+\end{definition}
+\begin{definition}
+    The binomial series is a finite sum when the exponent is a natural number:
+    \begin{equation}
+        (1+u)^N = \sum_{n=0}^{N}\binom{N}{n}u^n \quad (N \in \mathbb{N}).
+    \end{equation}
+\end{definition}
+\begin{definition}
+    The logarithm series has no constant term, so $\ln(1+u) \approx u$ for small $u$:
+    \begin{equation}
+        \ln(1+u) = \sum_{n=1}^{\infty}\frac{(-1)^{n+1}u^n}{n} \quad (|u|<1).
+    \end{equation}
+\end{definition}
 
 \subsection{Taylor series}
 \begin{definition}[Taylor series]
@@ -76,47 +113,29 @@ Textbook used is JS Townsend, \emph{A Modern Approach to Quantum Mechanics}, 2nd
     \end{equation}
     where $f^{(n)}$ is the $n$th derivative. The special case $a = 0$ is called the Maclaurin series.
 \end{definition}
-\begin{result}[Series used in this course]
-    \begin{equation}
-        e^{x} = \sum_{n=0}^{\infty}\frac{x^n}{n!}, \qquad
-        \cos x = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n}}{(2n)!}, \qquad
-        \sin x = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n+1}}{(2n+1)!},
-    \end{equation}
-    \begin{equation}
-        \frac{1}{1-x} = \sum_{n=0}^{\infty}x^n \quad (|x|<1), \qquad (1+u)^N = \sum_{n=0}^{N}\binom{N}{n}u^n \quad (N \in \mathbb{N}),
-    \end{equation}
-    \begin{equation}
-        \ln(1+u) = \sum_{n=1}^{\infty}\frac{(-1)^{n+1}u^n}{n} = u - \frac{u^2}{2} + \frac{u^3}{3} - \cdots \quad (|u|<1).
-    \end{equation}
-\end{result}
-\begin{remark}
-    This limit is what lets a rotation be written as an exponential (Section~\ref{sec:generators}).
-\end{remark}
 
 \subsection{Euler's formula and trigonometric identities}
-\begin{result}[Euler's formula]
-    Comparing the series for $e^{i\theta}$, $\cos\theta$ and $\sin\theta$ gives $e^{i\theta} = \cos\theta + i\sin\theta$, hence
+\begin{definition}[Euler's formula]
+    Comparing the series for $e^{i\theta}$, $\cos\theta$ and $\sin\theta$ gives Euler's formula,
     \begin{equation}
+        \label{eq:euler-formula}
+        e^{i\theta} = \cos\theta + i\sin\theta,
+    \end{equation}
+    which can also be rewritten as
+    \begin{equation*}
         \cos\theta = \frac{e^{i\theta}+e^{-i\theta}}{2}, \qquad \sin\theta = \frac{e^{i\theta}-e^{-i\theta}}{2i}.
-    \end{equation}
-    These are used constantly when rotation matrices are written out.
-\end{result}
-\begin{result}[Double-angle identities]
-    Squaring $e^{ix} = \cos x + i\sin x$ and comparing with $e^{2ix} = \cos 2x + i\sin 2x$,
+    \end{equation*}
+\end{definition}
+\begin{definition}[Double-angle identities]
+    Squaring both sides of Euler's formula (Equation~\eqref{eq:euler-formula}) and comparing with just taking $\theta \to 2\theta$ in Euler's formula, then matching real and imaginary parts, gives
     \begin{equation}
-        \cos^2 x - \sin^2 x = \cos 2x, \qquad 2\sin x\cos x = \sin 2x.
+        \cos^2\theta - \sin^2\theta = \cos 2\theta, \qquad 2\sin\theta\cos\theta = \sin 2\theta.
     \end{equation}
-    These turn the half angles $\phi/2$ in spin rotation matrices back into full angles $\phi$.
-\end{result}
+\end{definition}
 
 \subsection{Bases}
 \begin{definition}[Basis]
-    A set of vectors is \emph{linearly independent} if none of them can be written as a combination of the others, and it \emph{spans} a space if every vector in the space is some combination of them. A \emph{basis} is a set that does both, so every vector is a unique combination of the basis vectors. The number of basis vectors is the dimension of the space.
-\end{definition}
-\begin{definition}[Kronecker delta]
-    \begin{equation}
-        \delta_{ij} = \begin{cases} 1 & i = j, \\ 0 & i \neq j. \end{cases}
-    \end{equation}
+    A basis is a set of vectors that are linearly independent and span the space.\footnote{A more rigorous definition is treated in detail in my \href{https://github.com/williamr-yc7/stem-undergrad-notes/blob/1479320110013b60a8c4eddb42c7916cda1b2e6e/Winter\%202026/Math223.pdf}{Math 223 notes}, in the section ``Basis and Dimension''.}
 \end{definition}
 
 
@@ -970,7 +989,33 @@ Taylor expanding one small step about the identity and naming the first-order op
 \section{Angular Momentum}
 \label{sec:angmom}
 \chapterstart{3}
-
+\subsection{Commutation of Rotations \& Generators}
+\begin{proposition}
+    Finite rotations about noncollinear\footnote{Noncollinear means not lying along the same line, i.e. the axes are not parallel.} axes do not commute in general, thus the order of rotations is important.
+\end{proposition}
+\begin{proof}
+    Recall that a rotation by $\theta$ about $\hat{n}$ is $R_{\hat{n}}(\theta) = e^{-i\theta\frac{\hat{n}\cdot\vec{J}}{\hbar}}$. The generators are non commutative: $[J_i, J_j] = i\hbar\,\epsilon_{ijk}J_k$. Thus, for two axes $\hat{n}$ and $\hat{m}$,
+    \begin{equation*}
+        [\hat{n}\cdot\vec{J},\, \hat{m}\cdot\vec{J}] = n_i m_j [J_i, J_j] = i\hbar\,\epsilon_{ijk}\,n_i m_j J_k = i\hbar\,(\hat{n}\times\hat{m})\cdot\vec{J}.
+    \end{equation*}
+    Expand each rotation to second order in a small angle $\varepsilon$:
+    \begin{equation*}
+        R_{\hat{n}}(\varepsilon) = 1 - \frac{i\varepsilon}{\hbar}\,\hat{n}\cdot\vec{J} - \frac{\varepsilon^2}{2\hbar^2}\,(\hat{n}\cdot\vec{J})^2 + O(\varepsilon^3).
+    \end{equation*}
+    In the commutator of two rotations, every term cancels except the cross terms:
+    \begin{equation*}
+        [R_{\hat{n}}(\varepsilon),\, R_{\hat{m}}(\varepsilon)] = -\frac{\varepsilon^2}{\hbar^2}\,[\hat{n}\cdot\vec{J},\, \hat{m}\cdot\vec{J}] + O(\varepsilon^3) = -\frac{i\varepsilon^2}{\hbar}\,(\hat{n}\times\hat{m})\cdot\vec{J} + O(\varepsilon^3).
+    \end{equation*}
+    Since $\hat{n}\times\hat{m} \neq \vec{0}$ for noncollinear axes, this is nonzero, so the rotations do not commute.
+\end{proof}
+\begin{example}
+    Lay a cuboid on its largest face, so that its top face points along $+\hat{z}$, its smallest side face along $+\hat{x}$, and a shaded side face along $+\hat{y}$. Rotate it twice by $90^\circ$ counterclockwise:
+    \begin{itemize}
+        \item About $\hat{x}$ then $\hat{y}$: the shaded face goes $+\hat{y} \to +\hat{z} \to +\hat{x}$.
+        \item About $\hat{y}$ then $\hat{x}$: the shaded face goes $+\hat{y} \to +\hat{y} \to +\hat{z}$.
+    \end{itemize}
+    Thus, $R(\frac{\pi}{2}\hat{x})R(\frac{\pi}{2}\hat{y}) \neq R(\frac{\pi}{2}\hat{y})R(\frac{\pi}{2}\hat{x})$.
+\end{example}
 
 \section{Time Evolution}
 \label{sec:time}
