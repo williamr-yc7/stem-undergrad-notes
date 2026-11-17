@@ -1026,6 +1026,53 @@ Thus we can denote that $R_{\hat{x}}(\frac{\pi}{2})R_{\hat{y}}(\frac{\pi}{2}) \n
     The same holds for the cyclic permutations of $x$, $y$, $z$, in agreement with $[J_i, J_j] = i\hbar\,\epsilon_{ijk}J_k$.
 \end{remark}
 
+\subsection{Compatible Observables and Simultaneous Eigenstates}
+\begin{definition}[$N$-level system]
+    An $N$-level system is a quantum system whose state space is $N$-dimensional, with $N$ linearly independent eigenstates.
+\end{definition}
+\begin{definition}[Degeneracy]
+    An eigenvalue $a$ is degenerate if several linearly independent states share it. These states are then labelled $\ket{a,j}$, where $j$ distinguishes them. If only one state has the eigenvalue $a$, it is nondegenerate.
+\end{definition}
+\begin{proposition}
+    \label{prop:simultaneous-eigenstates}
+    Observables which commute have simultaneous eigenstates: if $[A,B] = 0$, there is a basis of states that are eigenstates of both $A$ and $B$.
+\end{proposition}
+\begin{proof}
+    Let $A$ and $B$ be observables which commute, $[A,B] = 0$, with eigenvalues $a$ and $b$ respectively.
+
+    \textbf{Nondegenerate case.} Let $A\ket{a} = a\ket{a}$.
+    \begin{equation*}
+        A(B\ket{a}) = BA\ket{a} = a(B\ket{a}),
+    \end{equation*}
+    thus $B\ket{a}$ is also an eigenstate of $A$ with the same eigenvalue $a$, or $B\ket{a} = 0$. Since $a$ is nondegenerate, $B\ket{a}$ must be proportional to $\ket{a}$, so $B\ket{a} = b\ket{a}$ and $\ket{a}$ is also an eigenstate of $B$.
+
+    \textbf{Degenerate case.} Let $A\ket{a,i} = a\ket{a,i}$.
+    \begin{equation}
+        \label{eq:degenerate-eigenstate}
+        A(B\ket{a,i}) = BA\ket{a,i} = a(B\ket{a,i}),
+    \end{equation}
+    thus $B\ket{a,i}$ is also an eigenstate of $A$ with the same eigenvalue $a$, or $B\ket{a,i} = 0$. Then $B$ maps the states $\ket{a,j}$ among themselves (Proposition~\ref{prop:degenerate-mapping}).
+\end{proof}
+\begin{proposition}
+    \label{prop:degenerate-mapping}
+    If $[A,B] = 0$ and $a$ is degenerate, then $B\ket{a,i}$ cannot involve any states $\ket{a',j}$ with $a' \neq a$, and $B$ maps the states $\ket{a,j}$ among themselves:
+    \begin{equation*}
+        B\ket{a,i} = \sum_j\bra{a,j}B\ket{a,i}\ket{a,j}.
+    \end{equation*}
+\end{proposition}
+\begin{proof}
+    Expanding $B\ket{a,i}$ in the eigenstates of $A$,
+    \begin{equation*}
+        B\ket{a,i} = \sum_{a',j} c_{a'j}\ket{a',j}, \qquad c_{a'j} = \bra{a',j}B\ket{a,i},
+    \end{equation*}
+    where $a'$ runs over all eigenvalues of $A$, including $a$. Applying $A$ multiplies each term by its own eigenvalue $a'$, while Equation~\eqref{eq:degenerate-eigenstate} says it multiplies all of $B\ket{a,i}$ by $a$:
+    \begin{equation*}
+        \sum_{a',j} c_{a'j}\,a'\ket{a',j} = \sum_{a',j} c_{a'j}\,a\ket{a',j} \implies \sum_{a',j} (a'-a)\,c_{a'j}\ket{a',j} = 0.
+    \end{equation*}
+    Since the $\ket{a',j}$ are linearly independent, $(a'-a)\,c_{a'j} = 0$, so $c_{a'j} = 0$ whenever $a' \neq a$.
+\end{proof}
+
+
 \section{Time Evolution}
 \label{sec:time}
 \chapterstart{4}
