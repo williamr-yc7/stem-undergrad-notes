@@ -286,7 +286,10 @@ Now if we generalize the SG experiment for any random particles (electron, deutr
     \[s = \frac{n-1}{2}.\]
 \end{definition}
 The number $s$, fixed by the particle type, taking values $s = 0, \tfrac12, 1, \tfrac32, \dots$ A measurement of $S_z$ gives
-\[S_z = m\hbar.\]
+\begin{equation}
+    \label{eq:Sz-quantized}
+    S_z = m\hbar.
+\end{equation}
 \begin{definition}[Magnetic quantum number]
     The number $m$ is called the magnetic quantum number, it defines the orientation of the spin, and it takes values
     \[m = -s, -s+1, \dots, +s.\]
@@ -934,7 +937,7 @@ Taylor expanding one small step about the identity and naming the first-order op
 \end{result}
 \begin{remark}
     \label{rem:2pi}
-    A full turn, $\phi = 2\pi$, gives $R = -\id$: a spin-$\tfrac12$ state needs $4\pi$ to return to itself. The sign is a global phase, so it is invisible on its own. Its consequences for many particles are in Section~\ref{sec:fermions}.
+    A full turn, $\phi = 2\pi$, gives $R = -\id$: a spin-$\tfrac12$ state needs $4\pi$ to return to itself. The sign is a global phase, so it is invisible on its own.
 \end{remark}
 
 \subsection{Rotations about any axis}
@@ -990,7 +993,7 @@ Taylor expanding one small step about the identity and naming the first-order op
 \section{Angular Momentum}
 \label{sec:angmom}
 \chapterstart{3}
-\subsection{Commutation of Rotations \& Generators}
+\subsection{Commutation}
 Lay a cuboid on its largest face, so that its top face points along $+\hat{z}$, its smallest side face along $+\hat{x}$, and a shaded side face along $+\hat{y}$. Rotate it twice by $90^\circ$ counterclockwise:
 \begin{itemize}
     \item About $\hat{x}$ then $\hat{y}$: the shaded face goes $+\hat{y} \to +\hat{z} \to +\hat{x}$.
@@ -1031,7 +1034,7 @@ Thus $R_{\hat{x}}(\frac{\pi}{2})R_{\hat{y}}(\frac{\pi}{2}) \neq R_{\hat{y}}(\fra
     The same holds for the cyclic permutations of $x$, $y$, $z$, in agreement with $[J_i, J_j] = i\hbar\,\epsilon_{ijk}J_k$.
 \end{example}
 
-\subsection{Commuting Operators}
+\subsubsection{Commuting Operators}
 \begin{proposition}
     \label{prop:simultaneous-eigenstates}
     Observables which commute have simultaneous eigenstates: if $[A,B] = 0$, there is a basis of states that are eigenstates of both $A$ and $B$.
@@ -1076,12 +1079,139 @@ Thus $R_{\hat{x}}(\frac{\pi}{2})R_{\hat{y}}(\frac{\pi}{2}) \neq R_{\hat{y}}(\fra
         \end{pmatrix}, \qquad B^{(a)}_{jk} = \bra{a,j}B\ket{a,k}.
     \end{equation}
 \end{definition}
-
-\subsection{Eigenvalues \& Eigenstates of Angular Momentum}
-
-\subsection{Raising and Lowering Operators}
+\begin{example}
+    Let $A$ have eigenvalues $a_1$ with two states $\ket{a_1,1}, \ket{a_1,2}$, and $a_2$ with one state $\ket{a_2}$. In the basis $\{\ket{a_1,1}, \ket{a_1,2}, \ket{a_2}\}$,
+    \begin{equation*}
+        \underline{\underline{B}} = \begin{pmatrix}
+            \bra{a_1,1}B\ket{a_1,1} & \bra{a_1,1}B\ket{a_1,2} & 0 \\
+            \bra{a_1,2}B\ket{a_1,1} & \bra{a_1,2}B\ket{a_1,2} & 0 \\
+            0 & 0 & \bra{a_2}B\ket{a_2}
+        \end{pmatrix},
+    \end{equation*}
+    where the $2\times2$ block is $B^{(a_1)}$ and the $1\times1$ block is $B^{(a_2)}$. The zeros come from $\bra{a',j}B\ket{a,i} = 0$ for $a' \neq a$ (Proposition~\ref{prop:degenerate-mapping}).
+\end{example}
 
 \subsection{Uncertainty Relations}
+\begin{definition}[Incompatible observables]
+    Two observables $A$ and $B$ are incompatible if they do not commute.
+\end{definition}
+\begin{example}
+    $J_x$ and $J_y$ are incompatible observables, since $[J_x, J_y] = i\hbar J_z \neq 0$. For spin-$\frac{1}{2}$ particles, send a beam through three Stern--Gerlach devices in a row:
+    \begin{enumerate}
+        \item SG$\hat{x}$: keep the particles in $\ket{+x}$, which have a definite $J_x = \frac{\hbar}{2}$.
+        \item SG$\hat{y}$: half come out in $\ket{+y}$ and half in $\ket{-y}$. Keep $\ket{+y}$.
+        \item SG$\hat{x}$ again: half come out in $\ket{+x}$ and half in $\ket{-x}$.
+    \end{enumerate}
+    Measuring $J_y$ destroyed the definite value of $J_x$, so no state has definite values of both. In step 2, knowing $J_x$ exactly made $J_y$ a 50/50 coin flip: the outcome of an incompatible observable is maximally uncertain.
+\end{example}
+\begin{proposition}[Generalized Uncertainty Relation]
+    For any observables $A$ and $B$,
+    \begin{equation}
+        \Delta A\,\Delta B \geq \frac{1}{2}\left|\langle[A,B]\rangle\right|.
+    \end{equation}
+\end{proposition}
+\begin{example}[Heisenberg's uncertainty relation]
+    Position $x$ and momentum $p_x$ are non-commuting observables, $[x,p_x] = i\hbar$, which gives Heisenberg's uncertainty relation
+    \begin{equation}
+        \label{eq:heisenberg}
+        \Delta x\,\Delta p_x \geq \frac{\hbar}{2}.
+    \end{equation}
+\end{example}
+
+\subsection{Eigenstates of Angular Momentum}
+Since the components of $\vec{J}$ are incompatible with each other, we cannot label states by $J_x$, $J_y$ and $J_z$ together. However, $\vec{J}^2 = \vec{J}\cdot\vec{J} = J_x^2 + J_y^2 + J_z^2$ is compatible with each component.
+\begin{proposition}
+    \label{prop:J2-Jz}
+    $[J_z, \vec{J}^2] = 0$, and similarly for $J_x$ and $J_y$.
+\end{proposition}
+\begin{proof}
+    Using $[A,BC] = B[A,C] + [A,B]C$,
+    \begin{align*}
+        [J_z, J_x^2] &= J_x[J_z,J_x] + [J_z,J_x]J_x = i\hbar(J_xJ_y + J_yJ_x),\\
+        [J_z, J_y^2] &= J_y[J_z,J_y] + [J_z,J_y]J_y = -i\hbar(J_yJ_x + J_xJ_y),\\
+        [J_z, J_z^2] &= 0,
+    \end{align*}
+    which sum to $[J_z, \vec{J}^2] = 0$.
+\end{proof}
+Thus by Proposition~\ref{prop:simultaneous-eigenstates}, there is a basis of simultaneous eigenstates of $\vec{J}^2$ and $J_z$, labelled $\ket{j,m}$.
+\begin{remark}
+    $\vec{J}^2$ commutes with every component, but the components do not commute with each other. Thus $\vec{J}^2$ can be paired with only one component at a time, and choosing $J_z$ is a convention.
+\end{remark}
+\begin{definition}[Angular momentum eigenstates]
+    The angular momentum eigenstates $\ket{j,m}$ are the simultaneous eigenstates of $\vec{J}^2$ and $J_z$. Conventionally, their eigenvalues are written as
+    \begin{equation}
+        \vec{J}^2\ket{j,m} = \hbar^2 j(j+1)\ket{j,m}, \qquad J_z\ket{j,m} = \hbar m\ket{j,m}.
+    \end{equation}
+\end{definition}
+
+\subsubsection{Allowed Values of $j$ and $m$}
+To find the allowed values of $j$ and $m$, we use the ladder operators.
+\begin{definition}[Ladder Operators]
+    The raising and lowering operators are
+    \begin{equation}
+        J_\pm = J_x \pm iJ_y.
+    \end{equation}
+    They are not Hermitian, since $J_\pm^\dagger = J_\mp$, so they are not observables.
+\end{definition}
+\begin{remark}
+    The commutation relation is
+    \[[J_z, J_\pm] = [J_z,J_x] \pm i[J_z,J_y] = \pm\hbar(J_x\pm i J_y) = \pm\hbar J_\pm.\]
+\end{remark}
+\begin{proposition}[Action of the ladder operators]
+    \label{prop:ladder}
+    The lowering operator acts as
+    \begin{equation}
+        J_-\ket{j,m} = \hbar[j(j+1)-m(m-1)]^{1/2}\ket{j,m-1},
+    \end{equation}
+    and the raising operator as
+    \begin{equation}
+        J_+\ket{j,m} = \hbar[j(j+1)-m(m+1)]^{1/2}\ket{j,m+1}.
+    \end{equation}
+\end{proposition}
+The proof is given in Appendix~\ref{app:ladder-proof}.
+\begin{proposition}[Allowed values of $j$ and $m$]
+    $j = 0, \frac{1}{2}, 1, \frac{3}{2}, \ldots$, and for each $j$, $m \in \{-j, -j+1, \ldots, j-1, j\}$.
+\end{proposition}
+\begin{proof}
+    In the state $\ket{j,m}$, $J_x^2 + J_y^2$ has a nonnegative expectation value, so
+    \begin{equation*}
+        \bra{j,m}(\vec{J}^2 - J_z^2)\ket{j,m} = (\hbar^2 j(j+1) - \hbar^2 m^2)\bra{j,m}\ket{j,m} \geq 0 \implies m^2 \leq j(j+1).
+    \end{equation*}
+    Thus $m$ is bounded, and the ladder must stop at some $m_{\max}$ and $m_{\min}$:
+    \begin{equation*}
+        J_+\ket{j,m_{\max}} = 0, \qquad J_-\ket{j,m_{\min}} = 0.
+    \end{equation*}
+    By Proposition~\ref{prop:ladder}, this gives $m_{\max} = j$ and $m_{\min} = -j$. Since $J_-$ lowers $m$ by exactly 1, going from $j$ to $-j$ takes a whole number $n$ of steps:
+    \begin{equation*}
+        j - (-j) = 2j = n \implies j = \frac{n}{2} = 0, \frac{1}{2}, 1, \frac{3}{2}, \ldots
+    \end{equation*}
+\end{proof}
+
+\subsubsection{Integer and Half-Integer $j$}
+\begin{proposition}
+    If a $2\pi$ rotation leaves every state unchanged, $R(2\pi\hat{z}) = \id$, then $j$ must be an integer.
+\end{proposition}
+\begin{proof}
+    Inserting $\id = \sum_m \ket{j,m}\bra{j,m}$,
+    \begin{equation*}
+        R(2\pi\hat{z}) = e^{-i2\pi J_z/\hbar}\sum_m \ket{j,m}\bra{j,m} = \sum_m e^{-i2\pi m}\ket{j,m}\bra{j,m},
+    \end{equation*}
+    which equals $1$ only if $e^{-i2\pi m} = 1$ for every $m\in\mathbb{Z}$, by Euler's formula Equation.\eqref{eq:euler-formula}. Since $m$ goes up to $j$, $j = 0, 1, 2, \ldots$
+\end{proof}
+\begin{example}
+    Electrons have $j = \frac{1}{2}$, since they give two SG beams (Equation~\eqref{eq:spin-quantization}), so $m = \pm\frac{1}{2}$ and
+    \begin{equation*}
+        R(2\pi\hat{z})\ket{j,m} = e^{-i2\pi J_z/\hbar}\ket{j,m} = e^{-i2\pi m}\ket{j,m} = e^{\mp i\pi}\ket{j,m} = -\ket{j,m}.
+    \end{equation*}
+    This minus sign doesn't mean anything for the electron, since physically it is a global phase, which changes no probability.
+\end{example}
+\begin{definition}[Fermion]
+    Any particle with half-integer $j$ is called a fermion, i.e an electron is a fermion.
+\end{definition}
+\begin{definition}[Boson]
+    Any particle with full-integer $j$ is called a boson, i.e a photon $j=1$ is a boson.
+\end{definition}
+
 
 \section{Time Evolution}
 \label{sec:time}
@@ -1102,6 +1232,25 @@ Thus $R_{\hat{x}}(\frac{\pi}{2})R_{\hat{y}}(\frac{\pi}{2}) \neq R_{\hat{y}}(\fra
 \newpage
 \appendix
 \section{Solutions}
+
+\section{Proofs}
+\subsection{Action of the ladder operators}
+\label{app:ladder-proof}
+\begin{proof}
+    From the remark, $[J_z, J_-] = -\hbar J_-$, so $J_zJ_- = J_-(J_z - \hbar)$. Then
+    \begin{equation*}
+        J_z(J_-\ket{j,m}) = J_-(J_z - \hbar)\ket{j,m} = \hbar(m-1)(J_-\ket{j,m}),
+    \end{equation*}
+    so $J_-\ket{j,m}$ is an eigenstate of $J_z$ with eigenvalue $\hbar(m-1)$, thus $J_-\ket{j,m} = c_-\ket{j,m-1}$ for some constant $c_-$. To normalize, since $J_-^\dagger = J_+$ and the $\ket{j,m}$ are normalized,
+    \begin{equation*}
+        |c_-|^2 = \bra{j,m}J_+J_-\ket{j,m}.
+    \end{equation*}
+    Expanding, $J_+J_- = J_x^2 + J_y^2 - i[J_x,J_y] = \vec{J}^2 - J_z^2 + \hbar J_z$, so
+    \begin{equation*}
+        |c_-|^2 = \hbar^2[j(j+1) - m^2 + m] = \hbar^2[j(j+1) - m(m-1)].
+    \end{equation*}
+    Choosing $c_-$ real and positive gives the result. Similarly, $[J_z, J_+] = \hbar J_+$ gives $J_+\ket{j,m} = c_+\ket{j,m+1}$, and $J_-J_+ = \vec{J}^2 - J_z^2 - \hbar J_z$ gives $|c_+|^2 = \hbar^2[j(j+1) - m(m+1)]$.
+\end{proof}
 
 
 \section{Useful Links}
