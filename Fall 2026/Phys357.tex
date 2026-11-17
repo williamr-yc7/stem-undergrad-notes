@@ -991,7 +991,6 @@ Taylor expanding one small step about the identity and naming the first-order op
 
 
 \section{Angular Momentum}
-\label{sec:angmom}
 \chapterstart{3}
 \subsection{Commutation}
 Lay a cuboid on its largest face, so that its top face points along $+\hat{z}$, its smallest side face along $+\hat{x}$, and a shaded side face along $+\hat{y}$. Rotate it twice by $90^\circ$ counterclockwise:
@@ -1212,18 +1211,56 @@ The proof is given in Appendix~\ref{app:ladder-proof}.
     Any particle with full-integer $j$ is called a boson, i.e a photon $j=1$ is a boson.
 \end{definition}
 
+\subsection{Matrix Elements}
+Applying $\bra{j,m'}$ to Proposition~\ref{prop:ladder} and to $J_z\ket{j,m} = \hbar m\ket{j,m}$ gives the matrix elements
+\begin{equation}
+    \bra{j,m'}J_\pm\ket{j,m} = \hbar\sqrt{j(j+1)-m(m\pm1)}\,\delta_{m',m\pm1}, \qquad \bra{j,m'}J_z\ket{j,m} = \hbar m\,\delta_{m'm}.
+\end{equation}
+Inverting $J_\pm = J_x \pm iJ_y$,
+\begin{equation}
+    J_x = \frac{1}{2}(J_+ + J_-), \qquad J_y = \frac{1}{2i}(J_+ - J_-),
+\end{equation}
+so the matrices of $J_x$ and $J_y$ follow from those of $J_\pm$.
+\begin{example}[Spin-1]
+    For $j = 1$, $m \in \{1, 0, -1\}$, giving three states. The entry in row $m'$, column $m$ is $\bra{1,m'}J\ket{1,m}$, with rows and columns ordered $m = 1, 0, -1$. For $J_z$, $\bra{1,m'}J_z\ket{1,m} = \hbar m\,\delta_{m'm}$, so only the diagonal is nonzero, with entries $\hbar m = \hbar, 0, -\hbar$:
+    \begin{equation*}
+        J_z \xrightarrow{\ket{1,m}} \hbar\begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -1 \end{pmatrix}.
+    \end{equation*}
+    The same steps with $\bra{1,m'}J_\pm\ket{1,m}$ give
+    \begin{equation*}
+        J_+ \xrightarrow{\ket{1,m}} \hbar\begin{pmatrix} 0 & \sqrt{2} & 0 \\ 0 & 0 & \sqrt{2} \\ 0 & 0 & 0 \end{pmatrix}, \qquad
+        J_- \xrightarrow{\ket{1,m}} \hbar\begin{pmatrix} 0 & 0 & 0 \\ \sqrt{2} & 0 & 0 \\ 0 & \sqrt{2} & 0 \end{pmatrix},
+    \end{equation*}
+    and $J_x = \frac{1}{2}(J_+ + J_-)$, $J_y = \frac{1}{2i}(J_+ - J_-)$ give
+    \begin{equation*}
+        J_x \xrightarrow{\ket{1,m}} \frac{\hbar}{\sqrt{2}}\begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 0 \end{pmatrix}, \qquad
+        J_y \xrightarrow{\ket{1,m}} \frac{i\hbar}{\sqrt{2}}\begin{pmatrix} 0 & -1 & 0 \\ 1 & 0 & -1 \\ 0 & 1 & 0 \end{pmatrix}.
+    \end{equation*}
+\end{example}
+
 
 \section{Time Evolution}
-\label{sec:time}
 \chapterstart{4}
 
 \section{A System of Two Spin-1/2 Particles}
-\label{sec:time}
 \marginpar{}
 \chapterstart{5}
+\subsection{Direct Product States}
+
+\subsection{Hyperfine Splitting}
+
+\subsection{Density Operator}
+
+\subsection{EPR paradox \& Bell Inequalities}
+
+\subsection{Entanglement}
+
+\subsection{Quantum Teleportation}
+
+\subsection{Quantum Circuits}
+
 
 \section{Wave Mechanics in One Dimension}
-\label{sec:time}
 \marginpar{}
 \chapterstart{6}
 
