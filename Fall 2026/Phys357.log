@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  17 NOV 2026 15:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  17 NOV 2026 16:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -654,7 +654,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has 
                                                   \__shipout_drop_firstpage_...
 l.229 \end{remark}
                   ]
-<../Images/Stern-Gerlach_apparatus.png, id=384, 587.19376pt x 257.96375pt>
+<../Images/Stern-Gerlach_apparatus.png, id=399, 587.19376pt x 257.96375pt>
 File: ../Images/Stern-Gerlach_apparatus.png Graphic file (type png)
 <use ../Images/Stern-Gerlach_apparatus.png>
 Package pdftex.def Info: ../Images/Stern-Gerlach_apparatus.png  used on input line 240.
@@ -701,8 +701,8 @@ Overfull \hbox (45.23611pt too wide) detected at line 961
 LaTeX Warning: Reference `prob:Rz-y' on page 21 undefined on input line 965.
 
 [21] [22]
-Overfull \hbox (3.15973pt too wide) in paragraph at lines 1029--1029
-[]\OT1/cmr/bx/n/12 Compatible Ob-serv-ables and Si-mul-ta-ne-ous Eigen-states 
+Overfull \hbox (1.81723pt too wide) in paragraph at lines 1030--1032
+\OT1/cmr/m/it/10 The same holds for the cyclic per-mu-ta-tions of $\OML/cmm/m/it/10 x$\OT1/cmr/m/it/10 , $\OML/cmm/m/it/10 y$\OT1/cmr/m/it/10 , $\OML/cmm/m/it/10 z$\OT1/cmr/m/it/10 , in agree-ment with $\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 J[]; J[]\OT1/cmr/m/n/10 ] =
  []
 
 [23] [24] [25] [26] (Phys357.aux)
@@ -718,20 +718,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Phys357.out' has not changed.
-(rerunfilecheck)             Checksum: 3DD0253DBA2B6A9141B3484E2DCBBC12;10318.
+(rerunfilecheck)             Checksum: 87EB8425B949925B696DAF70574329C7;10833.
  ) 
 Here is how much of TeX's memory you used:
- 49597 strings out of 467871
- 1289637 string characters out of 5418377
- 2038245 words of memory out of 5000000
- 77652 multiletter control sequences out of 15000+600000
+ 49608 strings out of 467871
+ 1289836 string characters out of 5418377
+ 2037252 words of memory out of 5000000
+ 77658 multiletter control sequences out of 15000+600000
  639861 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,118p,797b,859s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\erenr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/doublestroke/dsrom10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Phys357.pdf (29 pages, 541860 bytes).
+Output written on Phys357.pdf (29 pages, 545221 bytes).
 PDF statistics:
- 825 PDF objects out of 1000 (max. 8388607)
- 263 named destinations out of 1000 (max. 500000)
- 482 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 841 PDF objects out of 1000 (max. 8388607)
+ 268 named destinations out of 1000 (max. 500000)
+ 506 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -50,7 +50,10 @@
 \contentsline {subsection}{\numberline {6.4}Rotations about any axis}{21}{subsection.6.4}%
 \contentsline {section}{\numberline {7}Angular Momentum}{22}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Commutation of Rotations \& Generators}{22}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Compatible Observables and Simultaneous Eigenstates}{24}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.2}Commuting Operators}{24}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Eigenvalues \& Eigenstates of Angular Momentum}{25}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Raising and Lowering Operators}{25}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Uncertainty Relations}{25}{subsection.7.5}%
 \contentsline {section}{\numberline {8}Time Evolution}{25}{section.8}%
 \contentsline {section}{\numberline {9}A System of Two Spin-1/2 Particles}{25}{section.9}%
 \contentsline {section}{\numberline {10}Wave Mechanics in One Dimension}{25}{section.10}%

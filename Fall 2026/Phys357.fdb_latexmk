@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1794947719.83479 "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys357.tex" "Phys357.pdf" "Phys357" 1794947726.06215 0
+["pdflatex"] 1794951532.58071 "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys357.tex" "Phys357.pdf" "Phys357" 1794951538.57665 0
   "../Images/Stern-Gerlach_apparatus.png" 1788906536 26824 57c4d3ea9550f8354c3e416ebc680541 ""
   "C:/Users/erenr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1790466715 82666 6ae954049cbd801ff08c004e318ae5a8 ""
   "C:/Users/erenr/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1767801684 11548 9ea6db1ff0b947846d8751dabcdcf90a ""
@@ -250,11 +250,11 @@
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/tools/indentfirst.sty" 1761901070 1618 30b01152766afcef2ed8f904cfdd3cc6 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "Phys357.aux" 1794947724 10332 55a24e12c9b9265347b83298f026ae41 "pdflatex"
-  "Phys357.out" 1794947724 10318 3dd0253dba2b6a9141b3484e2dcbbc12 "pdflatex"
-  "Phys357.tex" 1794947711 64135 18f13eee0bdf302dac8b110a30748750 ""
-  "Phys357.toc" 1794947724 5343 493ac966c733e18849f22820b57bd4dd "pdflatex"
-  "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys357.tex" 1794947711 64135 18f13eee0bdf302dac8b110a30748750 ""
+  "Phys357.aux" 1794951537 10757 010d6398a8882f83584208e069d2a23b "pdflatex"
+  "Phys357.out" 1794951537 10833 87eb8425b949925b696daf70574329c7 "pdflatex"
+  "Phys357.tex" 1794951531 64611 d18ef2ba5625e216d4e3d38892db0137 ""
+  "Phys357.toc" 1794951537 5609 fabe8ba2394ac63e8c5e2b1c15419dc8 "pdflatex"
+  "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys357.tex" 1794951531 64611 d18ef2ba5625e216d4e3d38892db0137 ""
   (generated)
   "Phys357.aux"
   "Phys357.log"

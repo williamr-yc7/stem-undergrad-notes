@@ -996,63 +996,60 @@ Lay a cuboid on its largest face, so that its top face points along $+\hat{z}$, 
     \item About $\hat{x}$ then $\hat{y}$: the shaded face goes $+\hat{y} \to +\hat{z} \to +\hat{x}$.
     \item About $\hat{y}$ then $\hat{x}$: the shaded face goes $+\hat{y} \to +\hat{y} \to +\hat{z}$.
 \end{itemize}
-Thus we can denote that $R_{\hat{x}}(\frac{\pi}{2})R_{\hat{y}}(\frac{\pi}{2}) \neq R_{\hat{y}}(\frac{\pi}{2})R_{\hat{x}}(\frac{\pi}{2})$.
+Thus $R_{\hat{x}}(\frac{\pi}{2})R_{\hat{y}}(\frac{\pi}{2}) \neq R_{\hat{y}}(\frac{\pi}{2})R_{\hat{x}}(\frac{\pi}{2})$. Since $R(\theta\hat{n}) = e^{-i\theta\frac{\hat{J}_n}{\hbar}}$, if the generators were numbers we could add the exponents, $R(\theta\hat{m})R(\theta\hat{n}) = e^{-i\theta\frac{\hat{J}_m + \hat{J}_n}{\hbar}}$, and the order would not matter. Since it does, the order of the generators must matter too.
 \begin{proposition}
-    Finite rotations about noncollinear\footnote{Noncollinear means not lying along the same line, i.e. the axes are not parallel.} axes do not commute in general, thus the order of rotations is important.
+    The order of the generators matters:
+    \begin{equation*}
+        \hat{J}_m\hat{J}_n - \hat{J}_n\hat{J}_m = i\hbar\,\hat{J}_{m\times n},
+    \end{equation*}
+    where $\hat{J}_m = \hat{m}\cdot\vec{J}$ and $\hat{J}_{m\times n} = (\hat{m}\times\hat{n})\cdot\vec{J}$.
 \end{proposition}
 \begin{proof}
-    Recall that a rotation by $\theta$ about $\hat{n}$ is $R_{\hat{n}}(\theta) = e^{-i\theta\frac{\hat{n}\cdot\vec{J}}{\hbar}}$. The generators are non commutative: $[J_i, J_j] = i\hbar\,\epsilon_{ijk}J_k$. Thus, for two axes $\hat{n}$ and $\hat{m}$,
-    \begin{equation*}
-        [\hat{n}\cdot\vec{J},\, \hat{m}\cdot\vec{J}] = n_i m_j [J_i, J_j] = i\hbar\,\epsilon_{ijk}\,n_i m_j J_k = i\hbar\,(\hat{n}\times\hat{m})\cdot\vec{J}.
-    \end{equation*}
-    Expand each rotation to second order in a small angle $\varepsilon$:
-    \begin{equation*}
-        R_{\hat{n}}(\varepsilon) = 1 - \frac{i\varepsilon}{\hbar}\,\hat{n}\cdot\vec{J} - \frac{\varepsilon^2}{2\hbar^2}\,(\hat{n}\cdot\vec{J})^2 + O(\varepsilon^3).
-    \end{equation*}
-    In the commutator of two rotations, every term cancels except the cross terms:
-    \begin{equation*}
-        [R_{\hat{n}}(\varepsilon),\, R_{\hat{m}}(\varepsilon)] = -\frac{\varepsilon^2}{\hbar^2}\,[\hat{n}\cdot\vec{J},\, \hat{m}\cdot\vec{J}] + O(\varepsilon^3) = -\frac{i\varepsilon^2}{\hbar}\,(\hat{n}\times\hat{m})\cdot\vec{J} + O(\varepsilon^3).
-    \end{equation*}
-    Since $\hat{n}\times\hat{m} \neq \vec{0}$ for noncollinear axes, this is nonzero, so the rotations do not commute.
+    Geometrically, two small rotations by $\Delta\theta$ about $\hat{m}$ and $\hat{n}$ performed in opposite orders differ, to second order, by a rotation by $\Delta\theta^2$ about $\hat{m}\times\hat{n}$:
+    \[R(\Delta\theta\hat{m})R(\Delta\theta\hat{n}) - R(\Delta\theta\hat{n})R(\Delta\theta\hat{m}) = R(\Delta\theta^2\,\hat{m}\times\hat{n}) - 1.\]
+    By Taylor expanding both sides using small angles,
+    \begin{multline*}
+        \left\{1-\frac{i\hat{J}_m\Delta\theta}{\hbar}-\frac{1}{2}\left(\frac{\hat{J}_m\Delta\theta}{\hbar}\right)^2\right\}\left\{1-\frac{i\hat{J}_n\Delta\theta}{\hbar}-\frac{1}{2}\left(\frac{\hat{J}_n\Delta\theta}{\hbar}\right)^2\right\} \\
+        -\left\{1-\frac{i\hat{J}_n\Delta\theta}{\hbar}-\frac{1}{2}\left(\frac{\hat{J}_n\Delta\theta}{\hbar}\right)^2\right\}\left\{1-\frac{i\hat{J}_m\Delta\theta}{\hbar}-\frac{1}{2}\left(\frac{\hat{J}_m\Delta\theta}{\hbar}\right)^2\right\} \\
+        = \left(1-\frac{i\hat{J}_{m\times n}\Delta\theta^2}{\hbar}\right)-1,
+    \end{multline*}
+    the lowest order nonvanishing terms involve $\Delta\theta^2$. Equating these terms we get
+    \[-\frac{\Delta\theta^2}{\hbar^2}\left(\hat{J}_m\hat{J}_n - \hat{J}_n\hat{J}_m\right) = -\frac{i\Delta\theta^2}{\hbar}\hat{J}_{m\times n} \implies \hat{J}_m\hat{J}_n - \hat{J}_n\hat{J}_m = i\hbar\,\hat{J}_{m\times n},\]
+    which is nonzero for noncollinear axes since $\hat{m}\times\hat{n} \neq \vec{0}$, therefore order matters.
 \end{proof}
-\begin{example}[Spin-$\frac{1}{2}$ generators]
-    For spin-$\frac{1}{2}$, the generators are $J_i = \frac{\hbar}{2}\sigma_i$, where $\sigma_i$ are the Pauli matrices. Multiplying $\sigma_x$ and $\sigma_y$ in both orders,
-    \[\sigma_x\sigma_y = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} = \begin{pmatrix} i & 0 \\ 0 & -i \end{pmatrix} = i\sigma_z,\]
-    \[\sigma_y\sigma_x = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} -i & 0 \\ 0 & i \end{pmatrix} = -i\sigma_z,\]
-    so $[\sigma_x, \sigma_y] = 2i\sigma_z$. Thus the generators are non commutative:
-    \[[J_x, J_y] = \frac{\hbar^2}{4}[\sigma_x, \sigma_y] = i\hbar\,\frac{\hbar}{2}\sigma_z = i\hbar J_z.\]
-\end{example}
-\begin{remark}
+\begin{definition}[Commutator]
+    \label{def:commutator}
+    The commutator of two operators $A$ and $B$ is
+    \begin{equation}
+        [A,B] = AB - BA.
+    \end{equation}
+    $A$ and $B$ commute if $[A,B] = 0$, which means the order in which they act does not matter.
+\end{definition}
+\begin{example}[Commutation of Generators]
+    The generators are non commutative:
+    \[[J_x, J_y] = i\hbar J_z.\]
     The same holds for the cyclic permutations of $x$, $y$, $z$, in agreement with $[J_i, J_j] = i\hbar\,\epsilon_{ijk}J_k$.
-\end{remark}
+\end{example}
 
-\subsection{Compatible Observables and Simultaneous Eigenstates}
-\begin{definition}[$N$-level system]
-    An $N$-level system is a quantum system whose state space is $N$-dimensional, with $N$ linearly independent eigenstates.
-\end{definition}
-\begin{definition}[Degeneracy]
-    An eigenvalue $a$ is degenerate if several linearly independent states share it. These states are then labelled $\ket{a,j}$, where $j$ distinguishes them. If only one state has the eigenvalue $a$, it is nondegenerate.
-\end{definition}
+\subsection{Commuting Operators}
 \begin{proposition}
     \label{prop:simultaneous-eigenstates}
     Observables which commute have simultaneous eigenstates: if $[A,B] = 0$, there is a basis of states that are eigenstates of both $A$ and $B$.
 \end{proposition}
 \begin{proof}
-    Let $A$ and $B$ be observables which commute, $[A,B] = 0$, with eigenvalues $a$ and $b$ respectively.
-
-    \textbf{Nondegenerate case.} Let $A\ket{a} = a\ket{a}$.
-    \begin{equation*}
-        A(B\ket{a}) = BA\ket{a} = a(B\ket{a}),
-    \end{equation*}
-    thus $B\ket{a}$ is also an eigenstate of $A$ with the same eigenvalue $a$, or $B\ket{a} = 0$. Since $a$ is nondegenerate, $B\ket{a}$ must be proportional to $\ket{a}$, so $B\ket{a} = b\ket{a}$ and $\ket{a}$ is also an eigenstate of $B$.
-
-    \textbf{Degenerate case.} Let $A\ket{a,i} = a\ket{a,i}$.
+    Let $A$ and $B$ be observables which commute, $[A,B] = 0$, with eigenvalues $a$ and $b$ respectively, and $A\ket{a} = a\ket{a}$.
     \begin{equation}
-        \label{eq:degenerate-eigenstate}
-        A(B\ket{a,i}) = BA\ket{a,i} = a(B\ket{a,i}),
+        \label{eq:nondegenerate-eigenstate}
+        A(B\ket{a}) = BA\ket{a} = a(B\ket{a}),
     \end{equation}
-    thus $B\ket{a,i}$ is also an eigenstate of $A$ with the same eigenvalue $a$, or $B\ket{a,i} = 0$. Then $B$ maps the states $\ket{a,j}$ among themselves (Proposition~\ref{prop:degenerate-mapping}).
+    thus $B\ket{a}$ is also an eigenstate of $A$ with the same eigenvalue $a$, or $B\ket{a} = 0$. Since $a$ is nondegenerate, $B\ket{a}$ must be proportional to $\ket{a}$, so $B\ket{a} = b\ket{a}$ and $\ket{a}$ is also an eigenstate of $B$.
 \end{proof}
+\begin{definition}[$N$-level system]
+    An $N$-level system is a quantum system whose state space is $N$-dimensional, with $N$ linearly independent eigenstates.
+\end{definition}
+\begin{definition}[Degeneracy]
+    An eigenvalue $a$ is degenerate if several linearly independent eigenstates share it. These eigenstates are then labelled $\ket{a,j}$, where $j$ distinguishes them.
+\end{definition}
 \begin{proposition}
     \label{prop:degenerate-mapping}
     If $[A,B] = 0$ and $a$ is degenerate, then $B\ket{a,i}$ cannot involve any states $\ket{a',j}$ with $a' \neq a$, and $B$ maps the states $\ket{a,j}$ among themselves:
@@ -1061,17 +1058,30 @@ Thus we can denote that $R_{\hat{x}}(\frac{\pi}{2})R_{\hat{y}}(\frac{\pi}{2}) \n
     \end{equation*}
 \end{proposition}
 \begin{proof}
-    Expanding $B\ket{a,i}$ in the eigenstates of $A$,
-    \begin{equation*}
-        B\ket{a,i} = \sum_{a',j} c_{a'j}\ket{a',j}, \qquad c_{a'j} = \bra{a',j}B\ket{a,i},
-    \end{equation*}
-    where $a'$ runs over all eigenvalues of $A$, including $a$. Applying $A$ multiplies each term by its own eigenvalue $a'$, while Equation~\eqref{eq:degenerate-eigenstate} says it multiplies all of $B\ket{a,i}$ by $a$:
-    \begin{equation*}
-        \sum_{a',j} c_{a'j}\,a'\ket{a',j} = \sum_{a',j} c_{a'j}\,a\ket{a',j} \implies \sum_{a',j} (a'-a)\,c_{a'j}\ket{a',j} = 0.
-    \end{equation*}
-    Since the $\ket{a',j}$ are linearly independent, $(a'-a)\,c_{a'j} = 0$, so $c_{a'j} = 0$ whenever $a' \neq a$.
+    By Equation~\eqref{eq:nondegenerate-eigenstate}, $A(B\ket{a,i}) = a(B\ket{a,i})$. Write $B\ket{a,i}$ in the eigenstates of $A$,
+    \[B\ket{a,i} = \sum_{a',j} c_{a'j}\ket{a',j}, \qquad c_{a'j} = \bra{a',j}B\ket{a,i},\]
+    where $a'$ runs over all eigenvalues of $A$. Applying $A$ term by term multiplies each $\ket{a',j}$ by its own $a'$, but by the first equation it must multiply everything by $a$:
+    \[\sum_{a',j} a'\,c_{a'j}\ket{a',j} = \sum_{a',j} a\,c_{a'j}\ket{a',j} \implies \sum_{a',j}(a'-a)\,c_{a'j}\ket{a',j} = 0.\]
+    Since the $\ket{a',j}$ are linearly independent, each $(a'-a)\,c_{a'j} = 0$, so $c_{a'j} = 0$ whenever $a' \neq a$. Only the $a' = a$ terms remain:
+    \[B\ket{a,i} = \sum_j \bra{a,j}B\ket{a,i}\ket{a,j}.\]
 \end{proof}
+\begin{definition}[Block Diagonal]
+    The matrix representation of $B$ in the eigenbasis $\{\ket{a,j}\}$ of $A$ looks block diagonal, where each block is associated with a different eigenvalue of $A$:
+    \begin{equation}
+        B \overset{\{\ket{a,j}\}}{\to} \underline{\underline{B}} = \begin{pmatrix}
+            B^{(a_1)} & 0 & \cdots & 0 \\
+            0 & B^{(a_2)} & \cdots & 0 \\
+            \vdots & \vdots & \ddots & \vdots \\
+            0 & 0 & \cdots & B^{(a_n)}
+        \end{pmatrix}, \qquad B^{(a)}_{jk} = \bra{a,j}B\ket{a,k}.
+    \end{equation}
+\end{definition}
 
+\subsection{Eigenvalues \& Eigenstates of Angular Momentum}
+
+\subsection{Raising and Lowering Operators}
+
+\subsection{Uncertainty Relations}
 
 \section{Time Evolution}
 \label{sec:time}
