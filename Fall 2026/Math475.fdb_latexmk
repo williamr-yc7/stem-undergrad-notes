@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1795034679.4524 "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Math475.tex" "Math475.pdf" "Math475" 1795034685.50215 0
+["pdflatex"] 1795034830.11302 "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Math475.tex" "Math475.pdf" "Math475" 1795034836.51063 0
   "C:/Users/erenr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1790466715 82666 6ae954049cbd801ff08c004e318ae5a8 ""
   "C:/Users/erenr/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1767801684 11548 9ea6db1ff0b947846d8751dabcdcf90a ""
   "C:/Users/erenr/AppData/Local/MiKTeX/fonts/pk/ljfour/public/esint/dpi600/esint10.pk" 1790466735 10544 df5cbf0dc8496785d2050852a0278f76 ""
@@ -234,11 +234,11 @@
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/tools/indentfirst.sty" 1761901070 1618 30b01152766afcef2ed8f904cfdd3cc6 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "Math475.aux" 1795034684 5543 ecdb53e85272e36fa06818b9e1ea1a8b "pdflatex"
-  "Math475.out" 1795034684 5404 093d73d0e3dd98a84cff99bc56e7bcd3 "pdflatex"
-  "Math475.tex" 1795034679 20364 f203dc2e541757d0e309592d39990b05 ""
-  "Math475.toc" 1795034684 3080 ea4e4e5b9e0619dcdf38c756cf92c6b6 "pdflatex"
-  "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Math475.tex" 1795034679 20364 f203dc2e541757d0e309592d39990b05 ""
+  "Math475.aux" 1795034835 5646 8a25542863937e182e6cf75d6121a678 "pdflatex"
+  "Math475.out" 1795034835 5438 aaf760d50c10f6e14ff8abcdd5f317ac "pdflatex"
+  "Math475.tex" 1795034827 20054 3d95670e3f5f86ba08482adfbca6f451 ""
+  "Math475.toc" 1795034835 3142 e769ef8eab845ae5c85f4ae375ff8c3b "pdflatex"
+  "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Math475.tex" 1795034827 20054 3d95670e3f5f86ba08482adfbca6f451 ""
   (generated)
   "Math475.aux"
   "Math475.log"

@@ -20,18 +20,19 @@
 \contentsline {subsection}{\numberline {4.1}Solving by Direct Integration}{6}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Auxiliary Conditions}{6}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Operator Viewpoint}{7}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}How We Will Solve PDEs}{7}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Distributions}{8}{section.5}%
-\contentsline {section}{\numberline {6}Fourier}{8}{section.6}%
-\contentsline {section}{\numberline {7}Diffusion}{8}{section.7}%
-\contentsline {section}{\numberline {8}Laplace}{8}{section.8}%
+\contentsline {section}{\numberline {5}Distributions}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Classes of functions}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}}{7}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Fourier}{7}{section.6}%
+\contentsline {section}{\numberline {7}Diffusion}{7}{section.7}%
+\contentsline {section}{\numberline {8}Laplace}{7}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Harmonic Functions}{8}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Boundary Value Problems}{8}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}The Mean Value Property}{8}{subsection.8.3}%
 \contentsline {subsection}{\numberline {8.4}The Maximum Principle}{8}{subsection.8.4}%
 \contentsline {subsection}{\numberline {8.5}Uniqueness \& Stability}{8}{subsection.8.5}%
 \contentsline {subsection}{\numberline {8.6}Rotational Invariance}{8}{subsection.8.6}%
-\contentsline {subsection}{\numberline {8.7}Polar Coordinates in the Plane}{9}{subsection.8.7}%
-\contentsline {subsection}{\numberline {8.8}Laplacian of a Radial Function}{9}{subsection.8.8}%
-\contentsline {section}{\numberline {A}Solutions}{10}{appendix.A}%
-\contentsline {section}{\numberline {B}Useful Links}{10}{appendix.B}%
+\contentsline {subsection}{\numberline {8.7}Polar Coordinates in the Plane}{8}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}Laplacian of a Radial Function}{8}{subsection.8.8}%
+\contentsline {section}{\numberline {A}Solutions}{9}{appendix.A}%
+\contentsline {section}{\numberline {B}Useful Links}{9}{appendix.B}%
