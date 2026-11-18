@@ -90,11 +90,11 @@ Vector calculus is treated more rigorously and in more detail in my \href{https:
     The gradient collects the partial derivatives into a vector
     \begin{equation}
         \label{eq:gradient}
-        \nabla f(\vec{x}) = \left(\partial_1 f,\partial_2 f,\dots,\partial_n f\right)(\vec{x}).
+        \vec{\nabla} f(\vec{x}) = \left(\partial_1 f,\partial_2 f,\dots,\partial_n f\right)(\vec{x}).
     \end{equation}
 \end{definition}
 The gradient is the vector that converts a small step $\vec{h}$ into the resulting small change in $f$, by a dot product
-\[f(\vec{x}+\vec{h}) = f(\vec{x}) + \nabla f(\vec{x})\cdot \vec{h} + o(\|\vec{h}\|).\]
+\[f(\vec{x}+\vec{h}) = f(\vec{x}) + \vec{\nabla} f(\vec{x})\cdot \vec{h} + o(\|\vec{h}\|).\]
 \begin{definition}[Directional Derivative]
     The directional derivative of $f$ along a unit vector $\hat{v}$ is
     \begin{equation}
@@ -105,9 +105,9 @@ The gradient is the vector that converts a small step $\vec{h}$ into the resulti
 \begin{proposition}[Directional Derivative via the Gradient]
     \begin{equation}
         \label{eq:directional-gradient}
-        D_{\hat{v}}f(\vec{x}) = \nabla f(\vec{x})\cdot \hat{v} = \|\nabla f(\vec{x})\|\cos\theta,
+        D_{\hat{v}}f(\vec{x}) = \vec{\nabla} f(\vec{x})\cdot \hat{v} = \|\vec{\nabla} f(\vec{x})\|\cos\theta,
     \end{equation}
-    where $\theta$ is the angle between $\hat{v}$ and $\nabla f(\vec{x})$.
+    where $\theta$ is the angle between $\hat{v}$ and $\vec{\nabla} f(\vec{x})$.
 \end{proposition}
 
 \subsubsection{Level Sets}
@@ -189,88 +189,17 @@ The gradient is the vector that converts a small step $\vec{h}$ into the resulti
     The Laplacian composes the two first-order operators, the divergence of the gradient
     \begin{equation}
         \label{eq:laplacian}
-        \nabla^2 f = \vec{\nabla}\cdot(\vec{\nabla} f) = \partial_1^2 f + \partial_2^2 f + \partial_3^2 f.
+        \Delta f = \nabla^2 f = \vec{\nabla}\cdot(\vec{\nabla} f) = \partial_1^2 f + \partial_2^2 f + \partial_3^2 f = \operatorname{tr} H,
     \end{equation}
+    where $\operatorname{tr} H$ is the trace of the Hessian.
 \end{definition}
 \begin{definition}[Harmonic Function]
-    A function $f$ is harmonic if it satisfies Laplace's equation
+    A function $f\in C^2(\Omega)$ on an open set $\Omega$ is harmonic in $\Omega$ if
     \begin{equation}
         \label{eq:harmonic}
-        \nabla^2 f = 0.
+        \Delta f = 0
     \end{equation}
-\end{definition}\subsubsection{Critical Points}
-\begin{definition}[Critical Point]
-    A critical point is a point where $\vec{\nabla} f(\vec{x}) = \vec{0}$: no direction of increase, the linear approximation is flat.
-\end{definition}
-\begin{remark}
-    Local maxima and minima of a differentiable function occur only at critical points, but the converse fails, and the failure has a name: a critical point that is neither a maximum nor a minimum is a saddle point.
-\end{remark}
-\begin{definition}[Hessian]
-    The Hessian is the symmetric matrix of second partials
-    \begin{equation}
-        \label{eq:hessian}
-        H_{ij} = \partial_i\partial_j f.
-    \end{equation}
-\end{definition}
-\begin{proposition}[Second Derivative Test]
-    Near a critical point $\vec{x}$, the behavior is governed by the signs of the eigenvalues of $H$:
-    \begin{itemize}
-        \item all eigenvalues $>0$: local minimum (a bowl);
-        \item all eigenvalues $<0$: local maximum (a dome);
-        \item eigenvalues of both signs: a saddle, increasing in some directions and decreasing in others, like the point at the center of a mountain pass.
-    \end{itemize}
-    If some eigenvalue is $0$ and the others share a sign, the test is inconclusive.
-\end{proposition}
-
-\subsubsection{Line Integrals, Work \& Conservative Fields}
-\begin{definition}[Line Integral]
-    The line integral of a vector field $\vec{F}$ along a curve $C$ parametrized by $\vec{\gamma}(t)$, $a\le t\le b$, is
-    \begin{equation}
-        \label{eq:line-integral}
-        \int_C \vec{F}\cdot d\vec{l} = \int_a^b \vec{F}(\vec{\gamma}(t))\cdot\vec{\gamma}'(t)\,dt.
-    \end{equation}
-\end{definition}
-\begin{definition}[Work]
-    The work done by a force $\vec{F}$ along a path $C$ is
-    \begin{equation}
-        \label{eq:work}
-        W = \int_C \vec{F}\cdot d\vec{l}.
-    \end{equation}
-\end{definition}
-\begin{definition}[Conservative Field]
-    A vector field is conservative if its line integral between two points depends only on the endpoints, not on the path. Equivalently, $\oint_C \vec{F}\cdot d\vec{l} = 0$ for every closed curve $C$.
-\end{definition}
-
-\subsubsection{Divergence}
-\begin{definition}[Divergence]
-    The divergence of a vector field is the scalar field
-    \begin{equation}
-        \label{eq:divergence}
-        \vec{\nabla}\cdot\vec{F} = \partial_1 F_1 + \partial_2 F_2 + \partial_3 F_3.
-    \end{equation}
-\end{definition}
-\begin{theorem}[Divergence Theorem]
-    For a volume $V$ bounded by a closed surface $S$ with outward normal,
-    \begin{equation}
-        \label{eq:divergence-theorem}
-        \oiint_S \vec{F}\cdot d\vec{a} = \iiint_V(\vec{\nabla}\cdot\vec{F})\,d\tau.
-    \end{equation}
-\end{theorem}
-
-\subsubsection{The Laplacian}
-\begin{definition}[Laplacian]
-    The Laplacian composes the two first-order operators, the divergence of the gradient
-    \begin{equation}
-        \label{eq:laplacian}
-        \nabla^2 f = \vec{\nabla}\cdot(\vec{\nabla} f) = \partial_1^2 f + \partial_2^2 f + \partial_3^2 f.
-    \end{equation}
-\end{definition}
-\begin{definition}[Harmonic Function]
-    A function $f$ is harmonic if it satisfies Laplace's equation
-    \begin{equation}
-        \label{eq:harmonic}
-        \nabla^2 f = 0.
-    \end{equation}
+    at every point of $\Omega$.
 \end{definition}
 
 
@@ -332,11 +261,6 @@ The gradient is the vector that converts a small step $\vec{h}$ into the resulti
 \begin{example}
     $u_t + u u_x = f(x)$ is nonlinear, because the term $u u_x$ is not linear in $u$.
 \end{example}
-
-\begin{problem}[A1 Q2, Choksi 1.1]\label{prob:a1-11}
-    Classify the PDEs of Choksi 1.1 parts (b), (d), (e), (i), (j), (o) by order and as linear, semilinear, quasilinear or fully nonlinear. Then research the context of each: what it models, what $u$ and the parameters mean, and the natural domain and auxiliary conditions.
-    \hfill \emph{Solution: p.~\pageref{sol:a1-11}.}
-\end{problem}
 
 \subsection{Solutions}
 \begin{definition}[Classical solution]
@@ -423,11 +347,6 @@ The gradient is the vector that converts a small step $\vec{h}$ into the resulti
     In each case the general solution carries arbitrary \emph{functions} rather than arbitrary constants. An ODE of order $k$ has $k$ free constants; a PDE has free functions of the remaining variables. Second order in one variable, or first order in each of two, gives two free functions.
 \end{remark}
 
-\begin{problem}[A1 Q2, Choksi 1.2]\label{prob:a1-12}
-    Find the general solutions of $u_x = 0$, $u_{xy} = 0$ and $u_{xyz} = 0$ for $u = u(x,y,z)$.
-    \hfill \emph{Solution: p.~\pageref{sol:a1-12}.}
-\end{problem}
-
 \subsection{Auxiliary Conditions}
 Auxiliary conditions (initial or boundary conditions) prescribe $u$, and possibly its derivatives, on a lower dimensional set. They cut the family of general solutions down to one. A typical problem on a domain $\Omega \subset \mathbb{R}^d$ reads
 \begin{equation}
@@ -454,11 +373,6 @@ The big three problems of the course:
     For ODEs, number of conditions $=$ order. For PDEs this fails: all three problems above are second order, but the wave IVP needs two conditions while heat and Laplace need one.
 \end{remark}
 
-\begin{problem}[A1 Q2, Choksi 1.10]\label{prob:a1-110}
-    Show that the initial value problem for $u_t = u_{xxxx}$ is not well-posed.
-    \hfill \emph{Solution: p.~\pageref{sol:a1-110}.}
-\end{problem}
-
 \subsection{Operator Viewpoint}
 Write a linear PDE as
 \begin{equation}
@@ -477,15 +391,6 @@ so solving a linear PDE is the infinite-dimensional version of inverting $M$. We
 \begin{example}
     $M = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}$. For $b = (2,2)$ every $x = (2-t, t)$ works: existence without uniqueness. For $b = (1,2)$ there is no solution: the data is incompatible with the equation.
 \end{example}
-
-\begin{problem}[A1 Q2, Choksi 1.6]\label{prob:a1-16}
-    Well-posedness for $A\vec{x} = \vec{b}$, with $A$ an $N\times N$ matrix.
-    \begin{enumerate}[label=(\alph*)]
-        \item What do existence and uniqueness mean, and when do they hold?
-        \item What does stability mean? Assuming $A$ is symmetric positive definite, relate it to the smallest eigenvalue of $A$.
-    \end{enumerate}
-    \hfill \emph{Solution: p.~\pageref{sol:a1-16}.}
-\end{problem}
 
 \subsection{How We Will Solve PDEs}
 \begin{enumerate}[label=(\arabic*)]
@@ -514,9 +419,6 @@ so solving a linear PDE is the infinite-dimensional version of inverting $M$. We
 \end{definition}
 
 \subsection{Harmonic Functions}
-\begin{definition}[Harmonic Function]
-    A function $u\in C^2(\Omega)$ is harmonic in $\Omega$ if $\Delta u = 0$ at every point of $\Omega$.
-\end{definition}
 
 \subsection{Boundary Value Problems}
 

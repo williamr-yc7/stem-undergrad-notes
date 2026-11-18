@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  18 NOV 2026 15:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  18 NOV 2026 15:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -570,29 +570,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 41.
  (C:\Users\erenr\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count358
-) (Math475.aux
-
-LaTeX Warning: Label `eq:hessian' multiply defined.
-
-
-LaTeX Warning: Label `eq:line-integral' multiply defined.
-
-
-LaTeX Warning: Label `eq:work' multiply defined.
-
-
-LaTeX Warning: Label `eq:divergence' multiply defined.
-
-
-LaTeX Warning: Label `eq:divergence-theorem' multiply defined.
-
-
-LaTeX Warning: Label `eq:laplacian' multiply defined.
-
-
-LaTeX Warning: Label `eq:harmonic' multiply defined.
-
-)
+) (Math475.aux)
 \openout1 = `Math475.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
@@ -653,13 +631,13 @@ LaTeX Font Info:    Trying to load font information for U+esint on input line 49
 File: uesint.fd 
 ) [1
 
-{C:/Users/erenr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Math475.toc [2
-
-])
+{C:/Users/erenr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Math475.toc)
 \tf@toc=\write5
 \openout5 = `Math475.toc'.
 
- [3]
+ [2
+
+] [3]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -672,68 +650,45 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has b
                    \relax 
 l.177     \end{equation}
                          [2]
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.238     \end{equation}
-                         [3]
-Underfull \hbox (badness 6708) in paragraph at lines 278--278
+Underfull \hbox (badness 6708) in paragraph at lines 207--207
 []\OT1/cmr/m/n/10 August 31 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--278
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 Septem-ber 2,
  []
 
-[4]
 
-LaTeX Warning: Reference `sol:a1-11' on page 5 undefined on input line 338.
-
-[5]
-Overfull \hbox (4.47276pt too wide) detected at line 362
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.230     \end{equation}
+                         [3] [4]
+Overfull \hbox (4.47276pt too wide) detected at line 286
 [][][]\OML/cmm/m/it/10 u[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]k[]u;  u[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 k e[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 kx\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;  u[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 k[]e[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 kx\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 k[]u;
  []
 
-[6]
-
-LaTeX Warning: Reference `sol:a1-12' on page 7 undefined on input line 428.
-
-[7]
-
-LaTeX Warning: Reference `sol:a1-110' on page 8 undefined on input line 459.
-
-[8]
-
-LaTeX Warning: Reference `sol:a1-16' on page 9 undefined on input line 487.
-
-[9] [10] [11] (Math475.aux)
+[5] [6] [7] [8] [9] [10] (Math475.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `Math475.out' has not changed.
-(rerunfilecheck)             Checksum: D23B99A65F43FDE26B409851FD2186E8;6102.
+(rerunfilecheck)             Checksum: 093D73D0E3DD98A84CFF99BC56E7BCD3;5404.
  ) 
 Here is how much of TeX's memory you used:
- 49432 strings out of 467871
- 1286504 string characters out of 5418377
- 2029292 words of memory out of 5000000
- 77600 multiletter control sequences out of 15000+600000
+ 49388 strings out of 467871
+ 1285907 string characters out of 5418377
+ 2028081 words of memory out of 5000000
+ 77586 multiletter control sequences out of 15000+600000
  638331 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,15n,118p,797b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\erenr\AppData\Local\MiKTeX\fonts/pk/ljfour/public/esint/dpi600\esint10.pk> <C:\Users\erenr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Math475.pdf (14 pages, 327590 bytes).
+Output written on Math475.pdf (13 pages, 315163 bytes).
 PDF statistics:
- 517 PDF objects out of 1000 (max. 8388607)
- 156 named destinations out of 1000 (max. 500000)
- 341 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 462 PDF objects out of 1000 (max. 8388607)
+ 126 named destinations out of 1000 (max. 500000)
+ 309 words of extra memory for PDF output out of 10000 (max. 10000000)
 

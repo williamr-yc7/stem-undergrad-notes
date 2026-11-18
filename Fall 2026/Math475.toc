@@ -8,34 +8,30 @@
 \contentsline {subsubsection}{\numberline {2.1.5}Line Integrals, Work \& Conservative Fields}{2}{subsubsection.2.1.5}%
 \contentsline {subsubsection}{\numberline {2.1.6}Divergence}{3}{subsubsection.2.1.6}%
 \contentsline {subsubsection}{\numberline {2.1.7}The Laplacian}{3}{subsubsection.2.1.7}%
-\contentsline {subsubsection}{\numberline {2.1.8}Critical Points}{3}{subsubsection.2.1.8}%
-\contentsline {subsubsection}{\numberline {2.1.9}Line Integrals, Work \& Conservative Fields}{4}{subsubsection.2.1.9}%
-\contentsline {subsubsection}{\numberline {2.1.10}Divergence}{4}{subsubsection.2.1.10}%
-\contentsline {subsubsection}{\numberline {2.1.11}The Laplacian}{4}{subsubsection.2.1.11}%
-\contentsline {section}{\numberline {3}Characteristics}{4}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Partial Differential Equations}{4}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Classification}{5}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Order}{5}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Linearity}{5}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Homogeneity}{5}{subsubsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.3}Solutions}{6}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Principle of Superposition}{6}{subsection.3.4}%
-\contentsline {section}{\numberline {4}General Solutions}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Solving by Direct Integration}{7}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Auxiliary Conditions}{8}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Operator Viewpoint}{8}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}How We Will Solve PDEs}{9}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Distributions}{9}{section.5}%
-\contentsline {section}{\numberline {6}Fourier}{9}{section.6}%
-\contentsline {section}{\numberline {7}Diffusion}{9}{section.7}%
-\contentsline {section}{\numberline {8}Laplace}{9}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Harmonic Functions}{9}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Boundary Value Problems}{10}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}The Mean Value Property}{10}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}The Maximum Principle}{10}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Uniqueness \& Stability}{10}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}Rotational Invariance}{10}{subsection.8.6}%
-\contentsline {subsection}{\numberline {8.7}Polar Coordinates in the Plane}{10}{subsection.8.7}%
-\contentsline {subsection}{\numberline {8.8}Laplacian of a Radial Function}{10}{subsection.8.8}%
-\contentsline {section}{\numberline {A}Solutions}{11}{appendix.A}%
-\contentsline {section}{\numberline {B}Useful Links}{11}{appendix.B}%
+\contentsline {section}{\numberline {3}Characteristics}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Partial Differential Equations}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Classification}{3}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Order}{3}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Linearity}{4}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Homogeneity}{4}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}Solutions}{5}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Principle of Superposition}{5}{subsection.3.4}%
+\contentsline {section}{\numberline {4}General Solutions}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Solving by Direct Integration}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Auxiliary Conditions}{6}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Operator Viewpoint}{7}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}How We Will Solve PDEs}{7}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Distributions}{8}{section.5}%
+\contentsline {section}{\numberline {6}Fourier}{8}{section.6}%
+\contentsline {section}{\numberline {7}Diffusion}{8}{section.7}%
+\contentsline {section}{\numberline {8}Laplace}{8}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Harmonic Functions}{8}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Boundary Value Problems}{8}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}The Mean Value Property}{8}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}The Maximum Principle}{8}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Uniqueness \& Stability}{8}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Rotational Invariance}{8}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Polar Coordinates in the Plane}{9}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}Laplacian of a Radial Function}{9}{subsection.8.8}%
+\contentsline {section}{\numberline {A}Solutions}{10}{appendix.A}%
+\contentsline {section}{\numberline {B}Useful Links}{10}{appendix.B}%
