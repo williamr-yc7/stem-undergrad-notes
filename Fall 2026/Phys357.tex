@@ -1406,6 +1406,13 @@ A pure state can still give random outcomes, e.g.\ measuring $S_x$ on $\ket{+\ha
 \begin{proposition}[Probability]
     The probability to measure $\ket{\phi}$ is $\text{Tr}\{P_\phi\,\rho\}$, where $P_\phi = \ket{\phi}\bra{\phi}$. For a pure state, this is $|\braket{\phi|\psi}|^2$.
 \end{proposition}
+\begin{example}
+    For the mixed state $\rho = \frac{1}{2}\ket{+\hat{z}}\bra{+\hat{z}} + \frac{1}{2}\ket{-\hat{z}}\bra{-\hat{z}}$, the probability to measure $\ket{+\hat{x}}$ is
+    \begin{equation*}
+        \text{Tr}\{P_{+\hat{x}}\,\rho\} = \bra{+\hat{x}}\rho\ket{+\hat{x}} = \frac{1}{2}|\braket{+\hat{x}|+\hat{z}}|^2 + \frac{1}{2}|\braket{+\hat{x}|-\hat{z}}|^2 = \frac{1}{2}\cdot\frac{1}{2} + \frac{1}{2}\cdot\frac{1}{2} = \frac{1}{2},
+    \end{equation*}
+    while for the pure state $\rho = \ket{+\hat{x}}\bra{+\hat{x}}$ it is $|\braket{+\hat{x}|+\hat{x}}|^2 = 1$.
+\end{example}
 \begin{proposition}[Expectation Value]
     \begin{equation}
         \langle A\rangle = \text{Tr}\{\rho A\}.
@@ -1414,11 +1421,12 @@ A pure state can still give random outcomes, e.g.\ measuring $S_x$ on $\ket{+\ha
 \begin{proof}
     For a pure state, inserting the identity twice, $\langle A\rangle = \sum_{ij}\braket{\psi|i}\bra{i}A\ket{j}\braket{j|\psi} = \sum_{ij}\rho_{ji}A_{ij} = \text{Tr}\{\rho A\}$. For a mixed state, $\langle A\rangle = \sum_k p_k\bra{\psi^{(k)}}A\ket{\psi^{(k)}} = \text{Tr}\{\rho A\}$ the same way.
 \end{proof}
-\begin{proposition}[von Neumann equation]
+\begin{definition}[Von Neumann Equation]
+    The time evolution of the density operator, the analogue of the Schrödinger equation for $\rho$:
     \begin{equation}
         \frac{d\rho}{dt} = -\frac{i}{\hbar}[H, \rho].
     \end{equation}
-\end{proposition}
+\end{definition}
 \begin{proof}
     With $\rho(t) = \ket{\psi(t)}\bra{\psi(t)}$ and the Schrödinger equation, $\frac{d}{dt}\ket{\psi} = -\frac{i}{\hbar}H\ket{\psi}$ and $\frac{d}{dt}\bra{\psi} = \frac{i}{\hbar}\bra{\psi}H$,
     \begin{equation*}
@@ -1427,10 +1435,47 @@ A pure state can still give random outcomes, e.g.\ measuring $S_x$ on $\ket{+\ha
 \end{proof}
 
 \subsection{EPR paradox \& Bell Inequalities}
+In 1935, Einstein, Podolsky and Rosen argued that quantum mechanics is incomplete.
+\begin{definition}[EPR paradox]
+    Imagine a pair of particles in the singlet state $\ket{0,0}$\footnote{Such that the pair has total spin $0$.}, whose spins are correlated no matter how far apart they are:
+    \begin{itemize}
+        \item Particle 1 and particle 2 are sent to opposite sides of the universe.
+        \item According to quantum mechanics, before either is measured, neither has a definite spin.
+        \item The moment particle 1 is measured to be up, particle 2 is found to be down, even if it is light-years away.
+    \end{itemize}
+    EPR concluded that either faster-than-light communication is happening between the particles or the outcomes must have been predetermined by hidden information that quantum mechanics does not include.
+\end{definition}
+For the singlet, common sense and quantum mechanics agree on $S_z$: if particle 1 is measured to be $+\hat{z}$, particle 2 is automatically $-\hat{z}$. However, the singlet looks the same in any basis,
+\begin{equation*}
+    \ket{0,0} = \frac{1}{\sqrt{2}}\left(\ket{+\hat{n},-\hat{n}} - \ket{-\hat{n},+\hat{n}}\right),
+\end{equation*}
+so its spins are opposite along every axis $\hat{n}$, while the classical pair gives random, unrelated results along $\hat{x}$\footnote{Measured along $\hat{x}$, particle 1 in $\ket{+\hat{z}}$ and particle 2 in $\ket{-\hat{z}}$ each give $\pm\hat{x}$ with $50\%$ probability, independently of each other.}.
+\begin{definition}[Local hidden variables]
+    Information assigned to each particle when the pair is created, before any measurement, which fixes the outcome of every possible measurement.
+\end{definition}
+\begin{example}
+    Let Alice measure particle 1 and Bob particle 2, each along $\hat{x}$ and $\hat{z}$. Write $\{+\hat{x},-\hat{z}\}$ for a particle that gives $+\frac{\hbar}{2}$ if measured along $\hat{x}$ and $-\frac{\hbar}{2}$ along $\hat{z}$. To keep the total spin $0$, particle 2 must be opposite on each axis:
+    \begin{center}
+        \begin{tabular}{ccc}
+            Probability & Particle 1 & Particle 2 \\
+            \hline
+            $25\%$ & $\{+\hat{x},+\hat{z}\}$ & $\{-\hat{x},-\hat{z}\}$ \\
+            $25\%$ & $\{+\hat{x},-\hat{z}\}$ & $\{-\hat{x},+\hat{z}\}$ \\
+            $25\%$ & $\{-\hat{x},+\hat{z}\}$ & $\{+\hat{x},-\hat{z}\}$ \\
+            $25\%$ & $\{-\hat{x},-\hat{z}\}$ & $\{+\hat{x},+\hat{z}\}$
+        \end{tabular}
+    \end{center}
+    This reproduces every quantum prediction for these two axes, but it fails for three non-orthogonal axes.
+\end{example}
 
 \subsection{Entanglement}
 
-
+\begin{definition}
+    \begin{equation}
+        \label{}
+        S(\rho_1) = - Tr\{\rho_1\log_2\rho_1\}
+    \end{equation}
+\end{definition}
 \subsection{Quantum Teleportation}
 
 \subsection{Quantum Circuits}

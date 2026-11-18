@@ -64,12 +64,12 @@
 \contentsline {subsubsection}{\numberline {9.2.2}The 21-cm Line}{30}{subsubsection.9.2.2}%
 \contentsline {subsubsection}{\numberline {9.2.3}Total Spin}{31}{subsubsection.9.2.3}%
 \contentsline {subsection}{\numberline {9.3}Density Operator}{31}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}EPR paradox \& Bell Inequalities}{32}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Entanglement}{32}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}Quantum Teleportation}{32}{subsection.9.6}%
-\contentsline {subsection}{\numberline {9.7}Quantum Circuits}{32}{subsection.9.7}%
-\contentsline {section}{\numberline {10}Wave Mechanics in One Dimension}{32}{section.10}%
-\contentsline {section}{\numberline {A}Solutions}{33}{appendix.A}%
-\contentsline {section}{\numberline {B}Proofs}{33}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Action of the ladder operators}{33}{subsection.B.1}%
-\contentsline {section}{\numberline {C}Useful Links}{33}{appendix.C}%
+\contentsline {subsection}{\numberline {9.4}EPR paradox \& Bell Inequalities}{33}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Entanglement}{34}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Quantum Teleportation}{34}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}Quantum Circuits}{34}{subsection.9.7}%
+\contentsline {section}{\numberline {10}Wave Mechanics in One Dimension}{34}{section.10}%
+\contentsline {section}{\numberline {A}Solutions}{35}{appendix.A}%
+\contentsline {section}{\numberline {B}Proofs}{35}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Action of the ladder operators}{35}{subsection.B.1}%
+\contentsline {section}{\numberline {C}Useful Links}{35}{appendix.C}%
