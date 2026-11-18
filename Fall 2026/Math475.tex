@@ -1,14 +1,18 @@
 \documentclass{article}
-\usepackage{graphicx}
-\usepackage{authblk}
-\usepackage{indentfirst}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{amsmath}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{authblk} % Required for author affiliations
+\usepackage{indentfirst} % Indent first paragraph of sections
+\usepackage{amssymb} % For mathematical symbols
+\usepackage{amsthm} % For theorem environments
+\usepackage{amsmath} % For advanced math typesetting
 \usepackage{hyperref}
 \usepackage{enumitem}
-\usepackage{pgfplots}
-\usepackage{tikz}
+\usepackage{pgfplots} % For plots
+\usepackage{tikz} % For drawing shapes
+\usepackage{circuitikz}
+\usepackage{float} % For [H] float option
+\usepackage{booktabs}
+\usepackage{esint}
 \usetikzlibrary{arrows.meta,calc}
 \pgfplotsset{compat=1.18}
 \newtheorem{theorem}{Theorem}
@@ -63,13 +67,211 @@ Textbook used is Rustum Choksi, \emph{Partial Differential Equations, A First Co
 \begin{itemize}
     \item 10\% 5-6 assignments.
     \item 10\% attendance and participation.
-    \item 10\% 3-5 quizzes.
+    \item 10\% 2 quizzes.
     \item 20\% midterm.
     \item 50\% final exam.
 \end{itemize}
 
 
 \section{Background}
+\subsection{Vector Calculus}
+Vector calculus is treated more rigorously and in more detail in my \href{https://github.com/williamr-yc7/stem-undergrad-notes/blob/011a574fff71c42c7f6da991d86a32781389d554/Fall%202025/Math248.pdf}{Math 248 notes}.
+
+\subsubsection{Scalar \& Vector Fields}
+\begin{definition}[Scalar Field]
+    A scalar field assigns a number to each point of space.
+\end{definition}
+\begin{definition}[Vector Field]
+    A vector field assigns a vector (magnitude and direction) to each point of space.
+\end{definition}
+
+\subsubsection{The Gradient}
+\begin{definition}[Gradient]
+    The gradient collects the partial derivatives into a vector
+    \begin{equation}
+        \label{eq:gradient}
+        \nabla f(\vec{x}) = \left(\partial_1 f,\partial_2 f,\dots,\partial_n f\right)(\vec{x}).
+    \end{equation}
+\end{definition}
+The gradient is the vector that converts a small step $\vec{h}$ into the resulting small change in $f$, by a dot product
+\[f(\vec{x}+\vec{h}) = f(\vec{x}) + \nabla f(\vec{x})\cdot \vec{h} + o(\|\vec{h}\|).\]
+\begin{definition}[Directional Derivative]
+    The directional derivative of $f$ along a unit vector $\hat{v}$ is
+    \begin{equation}
+        \label{eq:directional-derivative}
+        D_{\hat{v}}f(\vec{x}) = \lim_{t\to0}\frac{f(\vec{x}+t\hat{v})-f(\vec{x})}{t}.
+    \end{equation}
+\end{definition}
+\begin{proposition}[Directional Derivative via the Gradient]
+    \begin{equation}
+        \label{eq:directional-gradient}
+        D_{\hat{v}}f(\vec{x}) = \nabla f(\vec{x})\cdot \hat{v} = \|\nabla f(\vec{x})\|\cos\theta,
+    \end{equation}
+    where $\theta$ is the angle between $\hat{v}$ and $\nabla f(\vec{x})$.
+\end{proposition}
+
+\subsubsection{Level Sets}
+\begin{definition}[Level Set]
+    The level set of $f$ at height $c$ is
+    \begin{equation}
+        \label{eq:level-set}
+        \{\vec{x}:f(\vec{x})=c\}.
+    \end{equation}
+\end{definition}
+\begin{definition}[Equipotential]
+    Level sets of the potential are called equipotentials.
+\end{definition}
+\begin{proposition}[Gradient Is Normal to Level Sets]
+    The gradient is perpendicular to the level set.
+\end{proposition}
+
+\subsubsection{Critical Points}
+\begin{definition}[Critical Point]
+    A critical point is a point where $\vec{\nabla} f(\vec{x}) = \vec{0}$: no direction of increase, the linear approximation is flat.
+\end{definition}
+\begin{remark}
+    Local maxima and minima of a differentiable function occur only at critical points, but the converse fails, and the failure has a name: a critical point that is neither a maximum nor a minimum is a saddle point.
+\end{remark}
+\begin{definition}[Hessian]
+    The Hessian is the symmetric matrix of second partials
+    \begin{equation}
+        \label{eq:hessian}
+        H_{ij} = \partial_i\partial_j f.
+    \end{equation}
+\end{definition}
+\begin{proposition}[Second Derivative Test]
+    Near a critical point $\vec{x}$, the behavior is governed by the signs of the eigenvalues of $H$:
+    \begin{itemize}
+        \item all eigenvalues $>0$: local minimum (a bowl);
+        \item all eigenvalues $<0$: local maximum (a dome);
+        \item eigenvalues of both signs: a saddle, increasing in some directions and decreasing in others, like the point at the center of a mountain pass.
+    \end{itemize}
+    If some eigenvalue is $0$ and the others share a sign, the test is inconclusive.
+\end{proposition}
+
+\subsubsection{Line Integrals, Work \& Conservative Fields}
+\begin{definition}[Line Integral]
+    The line integral of a vector field $\vec{F}$ along a curve $C$ parametrized by $\vec{\gamma}(t)$, $a\le t\le b$, is
+    \begin{equation}
+        \label{eq:line-integral}
+        \int_C \vec{F}\cdot d\vec{l} = \int_a^b \vec{F}(\vec{\gamma}(t))\cdot\vec{\gamma}'(t)\,dt.
+    \end{equation}
+\end{definition}
+\begin{definition}[Work]
+    The work done by a force $\vec{F}$ along a path $C$ is
+    \begin{equation}
+        \label{eq:work}
+        W = \int_C \vec{F}\cdot d\vec{l}.
+    \end{equation}
+\end{definition}
+\begin{definition}[Conservative Field]
+    A vector field is conservative if its line integral between two points depends only on the endpoints, not on the path. Equivalently, $\oint_C \vec{F}\cdot d\vec{l} = 0$ for every closed curve $C$.
+\end{definition}
+
+\subsubsection{Divergence}
+\begin{definition}[Divergence]
+    The divergence of a vector field is the scalar field
+    \begin{equation}
+        \label{eq:divergence}
+        \vec{\nabla}\cdot\vec{F} = \partial_1 F_1 + \partial_2 F_2 + \partial_3 F_3.
+    \end{equation}
+\end{definition}
+\begin{theorem}[Divergence Theorem]
+    For a volume $V$ bounded by a closed surface $S$ with outward normal,
+    \begin{equation}
+        \label{eq:divergence-theorem}
+        \oiint_S \vec{F}\cdot d\vec{a} = \iiint_V(\vec{\nabla}\cdot\vec{F})\,d\tau.
+    \end{equation}
+\end{theorem}
+
+\subsubsection{The Laplacian}
+\begin{definition}[Laplacian]
+    The Laplacian composes the two first-order operators, the divergence of the gradient
+    \begin{equation}
+        \label{eq:laplacian}
+        \nabla^2 f = \vec{\nabla}\cdot(\vec{\nabla} f) = \partial_1^2 f + \partial_2^2 f + \partial_3^2 f.
+    \end{equation}
+\end{definition}
+\begin{definition}[Harmonic Function]
+    A function $f$ is harmonic if it satisfies Laplace's equation
+    \begin{equation}
+        \label{eq:harmonic}
+        \nabla^2 f = 0.
+    \end{equation}
+\end{definition}\subsubsection{Critical Points}
+\begin{definition}[Critical Point]
+    A critical point is a point where $\vec{\nabla} f(\vec{x}) = \vec{0}$: no direction of increase, the linear approximation is flat.
+\end{definition}
+\begin{remark}
+    Local maxima and minima of a differentiable function occur only at critical points, but the converse fails, and the failure has a name: a critical point that is neither a maximum nor a minimum is a saddle point.
+\end{remark}
+\begin{definition}[Hessian]
+    The Hessian is the symmetric matrix of second partials
+    \begin{equation}
+        \label{eq:hessian}
+        H_{ij} = \partial_i\partial_j f.
+    \end{equation}
+\end{definition}
+\begin{proposition}[Second Derivative Test]
+    Near a critical point $\vec{x}$, the behavior is governed by the signs of the eigenvalues of $H$:
+    \begin{itemize}
+        \item all eigenvalues $>0$: local minimum (a bowl);
+        \item all eigenvalues $<0$: local maximum (a dome);
+        \item eigenvalues of both signs: a saddle, increasing in some directions and decreasing in others, like the point at the center of a mountain pass.
+    \end{itemize}
+    If some eigenvalue is $0$ and the others share a sign, the test is inconclusive.
+\end{proposition}
+
+\subsubsection{Line Integrals, Work \& Conservative Fields}
+\begin{definition}[Line Integral]
+    The line integral of a vector field $\vec{F}$ along a curve $C$ parametrized by $\vec{\gamma}(t)$, $a\le t\le b$, is
+    \begin{equation}
+        \label{eq:line-integral}
+        \int_C \vec{F}\cdot d\vec{l} = \int_a^b \vec{F}(\vec{\gamma}(t))\cdot\vec{\gamma}'(t)\,dt.
+    \end{equation}
+\end{definition}
+\begin{definition}[Work]
+    The work done by a force $\vec{F}$ along a path $C$ is
+    \begin{equation}
+        \label{eq:work}
+        W = \int_C \vec{F}\cdot d\vec{l}.
+    \end{equation}
+\end{definition}
+\begin{definition}[Conservative Field]
+    A vector field is conservative if its line integral between two points depends only on the endpoints, not on the path. Equivalently, $\oint_C \vec{F}\cdot d\vec{l} = 0$ for every closed curve $C$.
+\end{definition}
+
+\subsubsection{Divergence}
+\begin{definition}[Divergence]
+    The divergence of a vector field is the scalar field
+    \begin{equation}
+        \label{eq:divergence}
+        \vec{\nabla}\cdot\vec{F} = \partial_1 F_1 + \partial_2 F_2 + \partial_3 F_3.
+    \end{equation}
+\end{definition}
+\begin{theorem}[Divergence Theorem]
+    For a volume $V$ bounded by a closed surface $S$ with outward normal,
+    \begin{equation}
+        \label{eq:divergence-theorem}
+        \oiint_S \vec{F}\cdot d\vec{a} = \iiint_V(\vec{\nabla}\cdot\vec{F})\,d\tau.
+    \end{equation}
+\end{theorem}
+
+\subsubsection{The Laplacian}
+\begin{definition}[Laplacian]
+    The Laplacian composes the two first-order operators, the divergence of the gradient
+    \begin{equation}
+        \label{eq:laplacian}
+        \nabla^2 f = \vec{\nabla}\cdot(\vec{\nabla} f) = \partial_1^2 f + \partial_2^2 f + \partial_3^2 f.
+    \end{equation}
+\end{definition}
+\begin{definition}[Harmonic Function]
+    A function $f$ is harmonic if it satisfies Laplace's equation
+    \begin{equation}
+        \label{eq:harmonic}
+        \nabla^2 f = 0.
+    \end{equation}
+\end{definition}
 
 
 \section{Characteristics}
