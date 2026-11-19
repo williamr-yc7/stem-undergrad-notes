@@ -291,7 +291,44 @@ Recall from the \href{https://github.com/williamr-yc7/stem-undergrad-notes/blob/
 \end{example}
 
 \subsection{Auxiliary Conditions}
+\begin{definition}[Auxiliary Conditions]
+    Extra conditions imposed on a PDE to pick out a single solution from the general solution.
+\end{definition}
+Two types of auxiliary conditions will be studied in this course.
+\begin{definition}[Initial Value Problems]
+    A PDE together with conditions on $u$ at a starting time $t = t_0$, such as $u(x,t_0) = \phi(x)$. A PDE of order $n$ in $t$ needs $n$ initial conditions, on $u, u_t, \dots, \partial_t^{\,n-1}u$.
+\end{definition}
+\begin{definition}[Boundary Value Problems]
+    A PDE on a domain $D$ together with conditions on $u$ or its derivatives on the boundary $\partial D$.
+\end{definition}
 
+\subsection{Well-Posedness}
+\begin{definition}[Well-Posedness]
+    A PDE with auxiliary conditions is well-posed when:
+    \begin{itemize}
+        \item \textbf{Existence:} a solution exists for the given data.
+        \item \textbf{Uniqueness:} there is only one solution.
+        \item \textbf{Stability:} small changes in the data produce small changes in the solution.
+    \end{itemize}
+\end{definition}
+
+
+\section{First-Order PDEs}
+\marginpar{September 9 - 16, 2026}
+\subsection{}
+\begin{definition}[Solution Operator (ODE)]
+    For times $t_0,t_1$, the solution operator is the map
+    \[S_{t_0\to t_1}(x_0):=x(t_1),\]
+    where $x(\cdot)$ solves the ODE with $x(t_0)=x_0$.
+\end{definition}
+\begin{proposition}[Properties of the Solution Operator]
+    For $x'(s) = v(x(s),s)$ with $v$ smooth, uniqueness of trajectories gives
+    \[S_{t\to t} = \text{id}, \qquad S_{t_1\to t_2}\circ S_{t_0\to t_1} = S_{t_0\to t_2}, \qquad S_{t_1\to t_0} = \left(S_{t_0\to t_1}\right)^{-1}.\]
+\end{proposition}
+\begin{example}
+    If $v = c$, then $S_{0\to t}(x_0) = x_0 + ct$ and $S_{t\to 0}(x) = x - ct$.\\
+    If $v = -x$, then $S_{0\to t}(x_0) = x_0 e^{-t}$ and $S_{t\to 0}(x) = x e^{t}$.
+\end{example}
 
 \section{Distributions}
 \subsection{Classes of functions}
