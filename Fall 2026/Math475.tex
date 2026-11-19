@@ -202,15 +202,32 @@ The gradient is the vector that converts a small step $\vec{h}$ into the resulti
     at every point of $\Omega$.
 \end{definition}
 
+\subsection{Linear Algebra}
+\subsubsection{Linearity}
+\begin{definition}[Linearity]
+    \label{def:linearity}
+    An operator $L$ is \emph{linear} if for all functions $u, v$ and constants $c$,
+    \[L(u+cv) = L(u)+cL(v)\]
+\end{definition}
 
-\section{Characteristics}
+
+\section{Introduction}
 \marginpar{August 31 - September 2, 2026}
 \subsection{Partial Differential Equations}
 \begin{definition}[Partial Differential Equation]
-    A partial differential equation (PDE) is a differential equation whose unknown function depends on more than one independent variable.
+    A partial differential equation (PDE) is a differential equation relating an unknown function $u$ of several variables, its partial derivatives, and the independent variables.
+    \[F(\text{independent variables}, u, \text{partial derivatives of }u) = 0.\]
 \end{definition}
 \begin{remark}
     Physics rarely hands us a function $u$ directly. It gives a law for how $u$ changes. Example: heat flows from hot to cold, so the temperature $u(x,t)$ in a room changes in time wherever it varies in space. Recovering $u$ from such a relation is the whole subject.
+\end{remark}
+
+\subsubsection{Notation}
+\begin{remark}
+    For the rest of this notes, we will use these terms for a general function $u(x,y,t)$
+    \[\nabla u = (u_x,u_y,u_z) = \left(\frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial u}{\partial t}\right),\]
+    and
+    \[\Delta u = u_{xx}+u_{yy}+u_{tt} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial t^2}.\]
 \end{remark}
 
 \subsection{Classification}
@@ -219,178 +236,62 @@ The gradient is the vector that converts a small step $\vec{h}$ into the resulti
     The order of a PDE is the order of the highest derivative appearing in it.
 \end{definition}
 \begin{example}
-    $u_{xx} = 0$ is second order, and $u_t + u u_x = 0$ is first order.
+    $u_{xx}+u_{t} = 0$ is second order, and $u_t + u u_x = 0$ is first order.
 \end{example}
 
 \subsubsection{Linearity}
 \begin{definition}[Linear PDE]
-    A PDE is linear if it can be written as $L(u) = f(x)$, where $f$ does not involve $u$ and $L$ satisfies
-    \begin{equation}
-        L(u_1 + c\,u_2) = L(u_1) + c\,L(u_2).
-    \end{equation}
+    A PDE is linear if it can be written as $L(u) = f(x)$, where $f$ does not involve $u$ and $L$ satisfies linearity (Def.\ref{def:linearity}).
 \end{definition}
 \begin{remark}[Practical test]
-    Every term containing $u$ or a derivative of $u$ must satisfy:
+    Best way to determine if a PDE is linear is to check the following rules:
     \begin{itemize}
         \item $u$ and its derivatives appear only to the first power (no $u^2$, $(u_x)^2$),
         \item they are never multiplied together (no $u\,u_x$, $u_x u_y$),
-        \item they never sit inside a function (no $\sin u$, $e^u$, $\ln u$),
-        \item their coefficients depend only on the independent variables, never on $u$.
+        \item they never sit inside a function (no $\sin u$, $e^u$, $\ln u$).
     \end{itemize}
-    Each violation creates cross terms, so the superposition identity above fails.
 \end{remark}
 \begin{example}
     $u_{xx} + xy\,u_y + e^x u = \cos x$ is linear. Nonlinear: $u\,u_x + u_y = 0$ (product), $u_{xx} + (u_y)^2 = 0$ (power), $u_{xx} + \sin u = 0$ (inside a function).
 \end{example}
-\begin{definition}[Degrees of nonlinearity]
-    Let $k$ be the order of the PDE.
+\begin{definition}[Degrees of nonlinearity]\leavevmode
     \begin{itemize}
-        \item \textbf{Semilinear:} linear in the order-$k$ derivatives, with coefficients depending only on $x$; nonlinearity only in lower-order terms. Example: $u_{xx} + \sin u = 0$.
-        \item \textbf{Quasilinear:} linear in the order-$k$ derivatives, but their coefficients may depend on $u$ and its lower-order derivatives. Example: Burgers, $u_t + u\,u_x = 0$.
-        \item \textbf{Fully nonlinear:} the order-$k$ derivatives themselves appear nonlinearly. Example: $(u_x)^2 + (u_y)^2 = 1$.
+        \item \textbf{Semilinear:} highest derivatives appear linearly, with coefficients depending only on the independent variables.\\Example: $u_{xx} + \sin u = 0$.
+        \item \textbf{Quasilinear:} highest derivatives appear linearly, but coefficients may depend on $u$ and its lower derivatives.\\Example: $u_t + u\,u_x = 0$.
+        \item \textbf{Fully nonlinear:} highest derivatives appear nonlinearly.\\Example: $(u_x)^2 + (u_y)^2 = 1$.
     \end{itemize}
 \end{definition}
 
 \subsubsection{Homogeneity}
 \begin{definition}[Homogeneous]
-    A linear PDE $L(u) = f(x)$ is homogeneous if $f \equiv 0$, and inhomogeneous otherwise.
+    A linear PDE $L(u) = f(x)$ is homogeneous if $f \equiv 0$.
 \end{definition}
 \begin{example}
     $u_t + a u_x = x^3$ is linear with $L(u) = u_t + a u_x$ and $f(x) = x^3$, so it is inhomogeneous.
 \end{example}
-\begin{example}
-    $u_t + u u_x = f(x)$ is nonlinear, because the term $u u_x$ is not linear in $u$.
-\end{example}
 
-\subsection{Solutions}
+\subsection{Classical Solutions to a PDE}
 \begin{definition}[Classical solution]
-    Let the PDE be written as $F(u) = 0$ and let $k$ be its order. A function $u$ is a (classical) solution if
-    \begin{enumerate}[label=(\arabic*)]
-        \item $u \in C^k$, and
-        \item $F(u) = 0$ at every point of the domain.
-    \end{enumerate}
+    A classical solution to a PDE, with order $k$ on a domain $\Omega \subset\R^N$, is a function $u \in C^k(\Omega)$ satisfying the PDE at every point of $\Omega$.
 \end{definition}
-\begin{example}[Transport equation]
-    Let $u = u(x,t)$ and $F(u_t, u_x) = u_t + c u_x = 0$ with $c \in \mathbb{R}$. Let $\Phi$ be any differentiable function and set $u(x,t) = \Phi(x - ct)$. Then
-    \begin{equation}
-        u_x = \Phi'(x-ct), \qquad u_t = -c\,\Phi'(x-ct),
-    \end{equation}
-    so $u_t + c u_x = 0$. The whole family $\Phi$ solves the equation. Meaning: the initial profile $\Phi$ slides rigidly to the right at speed $c$.
-\end{example}
-\begin{example}[Heat equation]
-    Let $u_t = c^2 u_{xx}$ and take the ansatz $u(x,t) = e^{-c^2k^2 t}\sin(kx)$ for an arbitrary constant $k$. Then
-    \begin{equation}
-        u_t = -c^2k^2 u, \qquad
-        u_x = k\,e^{-c^2k^2t}\cos(kx), \qquad
-        u_{xx} = -k^2 e^{-c^2k^2t}\sin(kx) = -k^2 u,
-    \end{equation}
-    so $u_t = c^2 u_{xx}$. Meaning: the sine keeps its shape and decays, and high frequencies (large $k$) decay faster, at rate $c^2k^2$. Diffusion smooths.
-\end{example}
-\begin{example}[Wave equation]
-    Let $u_{tt} = c^2 u_{xx}$ and take $u(x,t) = \cos(kct)\sin(kx)$. Then
-    \begin{equation}
-        u_{xx} = -k^2 u, \qquad u_{tt} = -c^2k^2 u,
-    \end{equation}
-    so $u_{tt} = c^2 u_{xx}$. Meaning: a standing wave that oscillates forever without decaying. Same spatial profile as the heat example, completely different time behaviour.
-\end{example}
-
-
-\subsection{Principle of Superposition}
-\begin{principle}[Superposition]
-    Let $L$ be linear.
-    \begin{enumerate}[label=(\arabic*)]
-        \item If $L(u_1) = L(u_2) = 0$, then $L(u_1 + c\,u_2) = 0$ for every $c \in \mathbb{R}$. Solutions of a homogeneous linear PDE form a vector space.
-        \item If $L(u_p) = f$ and $L(u_h) = 0$, then $L(u_p + u_h) = f$: one particular solution plus any homogeneous solution solves the inhomogeneous equation.
-    \end{enumerate}
-\end{principle}
-\begin{proof}
-    By linearity of $L$,
-    \begin{equation}
-        L(u_1 + c u_2) = L(u_1) + c\,L(u_2) = 0 + c \cdot 0 = 0,
-        \qquad
-        L(u_p + u_h) = f + 0 = f. \qedhere
-    \end{equation}
-\end{proof}
 \begin{example}
-    For $u_t = c^2 u_{xx}$, both
-    \begin{equation}
-        u_1(x,t) = e^{-c^2k^2t}\sin(kx)
-        \qquad \text{and} \qquad
-        u_2(x,t) = e^{-c^2 t}\sin(x)
-    \end{equation}
-    are solutions, so $u(x,t) = a_1 u_1(x,t) + a_2 u_2(x,t)$ is a solution for any $a_1, a_2 \in \mathbb{R}$. This is how we will later build series solutions.
+    For any function $\phi \in C^1$ of one variable, $u(x,t) = \phi(x-ct)$ solves $u_t+cu_x=0$, we can check this by the chain rule, $u_t = -c\phi'(x-ct)$, $u_x = \phi'(x-ct)$, then $u_t+cu_x = -c\phi'+c\phi' = 0$.
 \end{example}
-\footnote{80\% chance that what we have written so far is not on the final.}
 
-
-\section{General Solutions}
-
-\subsection{Solving by Direct Integration}
+\subsection{General Solutions to a PDE}
+Recall from the \href{https://github.com/williamr-yc7/stem-undergrad-notes/blob/86199275ed081fd521621a48faec61bef0cb1069/Winter\%202026/Math325.pdf}{Math 325 notes} that the general solution of an ODE contains arbitrary constants.
 \begin{example}
-    Solve $u_x = 0$ for $u(x,y)$ on $\mathbb{R}^2$. The solution is $u(x,y) = f(y)$ for an arbitrary $f$.
-\end{example}
-\begin{example}
-    Solve $u_{xx} = 0$. Set $v(x,y) = u_x$. Then $v_x = 0$, so by the previous example $v(x,y) = f(y)$, hence $u_x = f(y)$. Fixing $y$ and integrating in $x$ (the ``constant'' of integration only has to be constant in $x$) gives
-    \begin{equation}
-        u(x,y) = f(y)\,x + g(y).
-    \end{equation}
-    Check: $u_x = f(y)$ and $u_{xx} = 0$.
-\end{example}
-\begin{example}
-    Solve $u_{xy} = 0$. Set $v(x,y) = u_x$. Then $v_y = 0$, so $v(x,y) = f(x)$, hence $u_x = f(x)$. Fixing $y$ and integrating in $x$ gives
-    \begin{equation}
-        u(x,y) = F(x) + g(y), \qquad F' = f.
-    \end{equation}
-    Check: $u_x = F'(x)$ depends on $x$ only, so $u_{xy} = 0$.
+    The general solution of $y' = y$ is $y(t) = Ce^t$, where $C$ is an arbitrary constant.
 \end{example}
 \begin{remark}
-    In each case the general solution carries arbitrary \emph{functions} rather than arbitrary constants. An ODE of order $k$ has $k$ free constants; a PDE has free functions of the remaining variables. Second order in one variable, or first order in each of two, gives two free functions.
+    The general solution of a PDE contains arbitrary functions.
 \end{remark}
+\begin{example}
+    Find all $u : \R^2 \to \R$ with $u_{xx} = 0$. Since $(u_x)_x = 0$, $u_x$ does not change with $x$, so it can only depend on $y$. Then $u_x = f(y)$. Integrating in $x$, the general solution is $u(x,y) = f(y)\,x + g(y)$, where $f, g$ are arbitrary functions.
+\end{example}
 
 \subsection{Auxiliary Conditions}
-Auxiliary conditions (initial or boundary conditions) prescribe $u$, and possibly its derivatives, on a lower dimensional set. They cut the family of general solutions down to one. A typical problem on a domain $\Omega \subset \mathbb{R}^d$ reads
-\begin{equation}
-    \Delta u = f(x) \quad \text{in } \Omega,
-    \qquad
-    u(x) = g(x) \quad \text{on } \partial\Omega .
-\end{equation}
-The big three problems of the course:
-\begin{align}
-    &\text{Heat IVP:} && u_t = \alpha u_{xx},\ u(x,0) = g(x), \\
-    &\text{Wave IVP:} && u_{tt} = c^2 u_{xx},\ u(x,0) = g(x),\ u_t(x,0) = h(x), \\
-    &\text{Dirichlet problem:} && \Delta u = 0 \text{ in the unit disk } D,\ u = g \text{ on } \partial D.
-\end{align}
-\begin{definition}[Well-posed, Hadamard]
-    A PDE with auxiliary conditions is well-posed if
-    \begin{enumerate}[label=(\arabic*)]
-        \item \textbf{Existence:} a solution exists,
-        \item \textbf{Uniqueness:} there is only one,
-        \item \textbf{Stability:} small changes in the data give small changes in the solution.
-    \end{enumerate}
-    Stability matters because data comes from measurements (with errors) and computers discretize.
-\end{definition}
-\begin{remark}[Counting conditions]
-    For ODEs, number of conditions $=$ order. For PDEs this fails: all three problems above are second order, but the wave IVP needs two conditions while heat and Laplace need one.
-\end{remark}
 
-\subsection{Operator Viewpoint}
-Write a linear PDE as
-\begin{equation}
-    Lu = f,
-\end{equation}
-where $L$ is the operator, $u$ is the unknown and $f$ is the input. The linear algebra analogue is
-\begin{equation}
-    Mx = b, \qquad x, b \in \mathbb{R}^d, \qquad x = M^{-1}b,
-\end{equation}
-so solving a linear PDE is the infinite-dimensional version of inverting $M$. Well-posedness already shows up here:
-\begin{itemize}
-    \item $M$ invertible: exactly one solution for every $b$.
-    \item $M$ not invertible, $b$ in the range of $M$: solutions exist but are not unique (add anything in the null space).
-    \item $M$ not invertible, $b$ not in the range: no solution.
-\end{itemize}
-\begin{example}
-    $M = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}$. For $b = (2,2)$ every $x = (2-t, t)$ works: existence without uniqueness. For $b = (1,2)$ there is no solution: the data is incompatible with the equation.
-\end{example}
 
 \section{Distributions}
 \subsection{Classes of functions}
