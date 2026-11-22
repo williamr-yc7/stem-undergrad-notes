@@ -885,12 +885,220 @@ There are several ways to find $\vec{E}$. Coulomb's law, Equation~\eqref{eq:E-co
     The solutions of Laplace's equation are called harmonic functions.
 \end{definition}
 
-\subsubsection{Laplace's Equation in 1-D}
+\subsubsection{Laplace's Equation in 1-D, 2-D and 3-D}
+\begin{definition}[Laplace's Equation]
+    Laplace's equation~\eqref{eq:laplace} in one, two and three dimensions reads
+    \begin{align*}
+        \frac{d^2 V}{dx^2} &= 0, \\
+        \frac{\partial^2 V}{\partial x^2}+\frac{\partial^2 V}{\partial y^2} &= 0, \\
+        \frac{\partial^2 V}{\partial x^2}+\frac{\partial^2 V}{\partial y^2}+\frac{\partial^2 V}{\partial z^2} &= 0.
+    \end{align*}
+\end{definition}
+\begin{proposition}
+    In one dimension, Laplace's equation comes with a general solution in the form of
+    \[V(x) = mx+b.\]
+\end{proposition}
+\begin{remark}
+    Harmonic functions have the same two features in 1-d, 2-d and 3-d:
+    \begin{itemize}
+        \item $V$ is the average of its values around the point: of $V(x+a)$ and $V(x-a)$ for any $a$ in 1-d, on any circle of radius $R$ centred at the point in 2-d, and on any sphere of radius $R$ centred at the point in 3-d:
+        \begin{align*}
+            V(x) &= \frac{1}{2}[V(x+a)+V(x-a)], \\
+            V(x,y) &= \frac{1}{2\pi R}\oint_{\text{circle}}V\,dl, \\
+            V(\vec{r}) &= \frac{1}{4\pi R^2}\oiint_{\text{sphere}}V\,da.
+        \end{align*}
+        \item Laplace's equation tolerates no local maxima or minima; extreme values of $V$ occur at the boundary (the end points in 1-d).
+    \end{itemize}
+\end{remark}
+
+\subsubsection{Uniqueness Theorem}
+\begin{theorem}[First Uniqueness Theorem]
+    \label{thm:uniqueness1}
+    The solution to Laplace's equation in some volume $\mathcal{V}$ is uniquely determined if $V$ is specified on the boundary surface $S$.
+\end{theorem}
+\noindent The proof is given in Appendix~\ref{app:uniqueness}.
+\begin{corollary}[Uniqueness with Charge Present]
+    \label{cor:uniqueness}
+    The potential in a volume $\mathcal{V}$ is uniquely determined if the charge density $\rho$ throughout $\mathcal{V}$ and the value of $V$ on all boundaries are specified. The outer boundary may be at infinity, where usually $V \to 0$.
+\end{corollary}
+\noindent The proof is given in Appendix~\ref{app:uniqueness}.
+
+\subsubsection{Conductors and the Second Uniqueness Theorem}
+\begin{theorem}[Second Uniqueness Theorem]
+    \label{thm:uniqueness2}
+    In a volume $\mathcal{V}$ surrounded by conductors and containing a specified charge density $\rho$, the electric field is uniquely determined if the total charge on each conductor is given. (The region as a whole can be bounded by another conductor, or else unbounded.)
+\end{theorem}
+\noindent The proof is given in Appendix~\ref{app:uniqueness}.
+\begin{example}[Connecting Charged Conductors]
+    Conductors with charges $+Q$ and $-Q$ are joined in pairs by wires, each pair having total charge $0$. Zero charge everywhere with $\vec{E} = 0$ satisfies this, so by Theorem~\ref{thm:uniqueness2} it is the solution: the charge flows through the wires and cancels. Conventional current flows from the $+Q$ conductor through the wire to the $-Q$ conductor (electrons flow the other way).
+\end{example}
+
+\subsection{Method of Images}
+\begin{definition}[Method of Images]
+    The method of images replaces a conductor by fictitious image charges, placed outside the region of interest, so that the boundary conditions on the conductor are satisfied.
+\end{definition}
+\begin{remark}
+    By Corollary~\ref{cor:uniqueness}, the resulting potential is the solution in the region of interest. It is only valid there: the image charges do not exist physically.
+\end{remark}
+\begin{example}[Point Charge above a Grounded Plane]
+    A charge $q$ sits at height $d$ above an infinite grounded conducting plane at $z=0$. Replacing the plane by an image charge $-q$ at $z=-d$ gives
+    \[V(x,y,z) = \frac{1}{4\pi\epsilon_0}\left[\frac{q}{\sqrt{x^2+y^2+(z-d)^2}} - \frac{q}{\sqrt{x^2+y^2+(z+d)^2}}\right],\]
+    which satisfies $V=0$ at $z=0$ and $V\to 0$ far away, so it is the solution for $z\geq 0$.
+\end{example}
+
+\subsubsection{Induced Charge Surface}
+\begin{proposition}[Induced Surface Charge]
+    The surface charge induced on the grounded plane is
+    \[\sigma = -\epsilon_0\left.\frac{\partial V}{\partial z}\right|_{z=0} = \frac{-qd}{2\pi\left(x^2+y^2+d^2\right)^{3/2}},\]
+    and the total induced charge is
+    \[Q = \iint \sigma\,da = \int_0^{2\pi}\!\!\int_0^\infty \frac{-qd}{2\pi\left(r^2+d^2\right)^{3/2}}\,r\,dr\,d\phi = -q.\]
+\end{proposition}
+
+\subsubsection{Force and Energy}
+\begin{proposition}[Force and Energy]
+    The charge $q$ is attracted to the plane with the same force as from the image charge:
+    \[\vec{F} = -\frac{1}{4\pi\epsilon_0}\frac{q^2}{(2d)^2}\,\hat{z}.\]
+    The energy is the work needed to bring $q$ in from infinity:
+    \[W = \int_\infty^d \frac{1}{4\pi\epsilon_0}\frac{q^2}{4z^2}\,dz = -\frac{1}{4\pi\epsilon_0}\frac{q^2}{4d}.\]
+\end{proposition}
+\begin{remark}
+    The energy is half that of the two-charge system $q$, $-q$, which would be $-\frac{1}{4\pi\epsilon_0}\frac{q^2}{2d}$. The field only exists for $z>0$, so $\frac{\epsilon_0}{2}\iiint E^2\,d\tau$ covers half the space. Equivalently, only $q$ is moved; the induced charge rearranges itself for free.
+\end{remark}
+
+\subsection{Separation of Variables}
+\begin{definition}[Separation of Variables]
+    Separation of variables looks for product solutions, e.g.\ $V = X(x)Y(y)Z(z)$, and superposes them to match the boundary conditions. By Theorem~\ref{thm:uniqueness1}, the result is the solution.
+\end{definition}
+
+\subsubsection{Cartesian Coordinates}
+\begin{proposition}
+    Substituting $V = XYZ$ and dividing by $V$, each term depends on one variable only, so
+    \[\frac{d^2X}{dx^2} = c_xX, \qquad \frac{d^2Y}{dy^2} = c_yY, \qquad \frac{d^2Z}{dz^2} = c_zZ, \qquad c_x + c_y + c_z = 0,\]
+    with solutions $Ae^{kx} + Be^{-kx}$ ($c_x = k^2$), $A\sin kx + B\cos kx$ ($c_x = -k^2$), or $A + Bx$ ($c_x = 0$).
+\end{proposition}
+\begin{remark}
+    A direction where $V$ vanishes twice gets the sinusoid. The $V = 0$ boundaries quantise $k$; the remaining boundary is matched by superposing modes and using orthogonality (Fourier's trick).
+\end{remark}
+
+\subsubsection{Spherical Coordinates}
+\begin{proposition}
+    With azimuthal symmetry,
+    \[V(r,\theta) = \sum_{l=0}^\infty \left(A_l r^l + \frac{B_l}{r^{l+1}}\right)P_l(\cos\theta),\]
+    where $P_0 = 1$, $P_1 = \cos\theta$, $P_2 = \frac{1}{2}(3\cos^2\theta - 1)$.
+\end{proposition}
+\begin{remark}
+    Inside a sphere $B_l = 0$; outside $A_l = 0$. Find the remaining coefficients by matching Legendre polynomials term by term, or by orthogonality.
+\end{remark}
+
+\subsection{Multipole Expansion}
+\subsubsection{Approximate Potentials at Large Distances}
+\begin{proposition}[Multipole Expansion]
+    For a charge distribution $\rho(\vec{r}\,')$, the potential far away ($r \gg r'$) is
+    \[V(\vec{r}) = \frac{1}{4\pi\epsilon_0}\sum_{n=0}^\infty \frac{1}{r^{n+1}}\iiint (r')^n P_n(\cos\alpha)\,\rho(\vec{r}\,')\,d\tau',\]
+    where $\alpha$ is the angle between $\vec{r}$ and $\vec{r}\,'$. The $n = 0, 1, 2$ terms are the monopole ($V \sim 1/r$), dipole ($V \sim 1/r^2$) and quadrupole ($V \sim 1/r^3$) terms.
+\end{proposition}
+
+\subsubsection{The Monopole and Dipole Terms}
+\begin{definition}[Monopole and Dipole Moments]
+    The monopole and dipole terms are
+    \[V_\text{mon} = \frac{1}{4\pi\epsilon_0}\frac{Q}{r}, \qquad V_\text{dip} = \frac{1}{4\pi\epsilon_0}\frac{\vec{p}\cdot\hat{r}}{r^2},\]
+    with total charge $Q = \iiint \rho\,d\tau'$ and dipole moment $\vec{p} = \iiint \vec{r}\,'\rho\,d\tau'$. For point charges, $\vec{p} = \sum_i q_i\vec{r}_i\,'$.
+\end{definition}
+\begin{remark}
+    A physical dipole ($\pm q$ separated by $\vec{d}$, so $\vec{p} = q\vec{d}$) has higher-order terms. A pure dipole is the limit $d \to 0$, $q \to \infty$ with $qd$ fixed, where only the dipole term survives.
+\end{remark}
+
+\subsubsection{Origin of Coordinates in Multipole Expansions}
+\begin{proposition}
+    Shifting the origin by $\vec{a}$ changes the dipole moment to $\vec{p} - Q\vec{a}$. So if $Q = 0$, $\vec{p}$ does not depend on the origin. In general, only the first non-vanishing moment is origin-independent.
+\end{proposition}
+
+
+\section{Electric Fields in Matter}
+\subsection{Polarization}
+\subsubsection{Dielectrics}
+\subsubsection{Induced Dipoles}
+\subsubsection{Alignment of Polar Molecules}
+\subsubsection{Polarization}
+
+\subsection{The Field of a Polarized Object}
+\subsubsection{Bound Charges}
+\subsubsection{Physical Interpretation of Bound Charges}
+
+\subsection{The Electric Displacement}
+\subsubsection{Gauss's Law in the Presence of Dielectrics}
+\subsubsection{A Deceptive Parallel}
+\subsubsection{Boundary Conditions}
+
+\subsection{Linear Dielectrics}
+\subsubsection{Susceptibility, Permittivity, Dielectric Constant}
+\subsubsection{Boundary Value Problems with Linear Dielectrics}
+\subsubsection{Energy in Dielectric Systems}
+\subsubsection{Forces on Dielectrics}
+
+
+\section{Magnetostatics}
+\subsection{The Lorentz Force Law}
+\subsubsection{Magnetic Fields}
+\subsubsection{Magnetic Forces}
+\subsubsection{Currents}
+
+\subsection{The Biot--Savart Law}
+\subsubsection{Steady Currents}
+\subsubsection{The Magnetic Field of a Steady Current}
+
+\subsection{The Divergence and Curl of $\vec{B}$}
+\subsubsection{Straight-Line Currents}
+\subsubsection{The Divergence and Curl of $\vec{B}$}
+\subsubsection{Amp\`ere's Law}
+\subsubsection{Comparison of Magnetostatics and Electrostatics}
+
+\subsection{Magnetic Vector Potential}
+\subsubsection{The Vector Potential}
+\subsubsection{Boundary Conditions}
+\subsubsection{Multipole Expansion of the Vector Potential}
+
 
 \section{Magnetic Fields in Matter}
+\subsection{Magnetization}
+\subsubsection{Diamagnets, Paramagnets, Ferromagnets}
+\subsubsection{Torques and Forces on Magnetic Dipoles}
+\subsubsection{Effect of a Magnetic Field on Atomic Orbits}
+\subsubsection{Magnetization}
+
+\subsection{The Field of a Magnetized Object}
+\subsubsection{Bound Currents}
+\subsubsection{Physical Interpretation of Bound Currents}
+\subsubsection{The Magnetic Field inside Matter}
+
+\subsection{The Auxiliary Field $\vec{H}$}
+\subsubsection{Amp\`ere's Law in Magnetized Materials}
+\subsubsection{A Deceptive Parallel}
+\subsubsection{Boundary Conditions}
+
+\subsection{Linear Media}
+\subsubsection{Magnetic Susceptibility and Permeability}
 
 
 \section{Electrodynamics}
+\subsection{Electromotive Force}
+\subsubsection{Ohm's Law}
+\subsubsection{Electromotive Force}
+\subsubsection{Motional EMF}
+
+\subsection{Electromagnetic Induction}
+\subsubsection{Faraday's Law}
+\subsubsection{The Induced Electric Field}
+\subsubsection{Inductance}
+\subsubsection{Energy in Magnetic Fields}
+
+\subsection{Maxwell's Equations}
+\subsubsection{Electrodynamics before Maxwell}
+\subsubsection{How Maxwell Fixed Amp\`ere's Law}
+\subsubsection{Maxwell's Equations}
+\subsubsection{Magnetic Charge}
+\subsubsection{Maxwell's Equations in Matter}
+\subsubsection{Boundary Conditions}
 
 \newpage
 \appendix
@@ -944,6 +1152,25 @@ There are several ways to find $\vec{E}$. Coulomb's law, Equation~\eqref{eq:E-co
     \[dW = PA\,dx = \frac{\epsilon_0}{2}E^2\,(A\,dx).\]
     $E$ is unchanged, so this work only fills a new volume $A\,dx$ with field:
     \[u = \frac{\epsilon_0}{2}E^2.\]
+\end{proof}
+
+\subsection{Uniqueness Theorem}
+
+\label{app:uniqueness}
+\begin{proof}
+    Suppose $V_1$ and $V_2$ both satisfy Laplace's equation in $\mathcal{V}$ and take the given values on $S$. Let $V_3 = V_1 - V_2$. Then
+    \[\nabla^2 V_3 = \nabla^2 V_1 - \nabla^2 V_2 = 0,\]
+    and $V_3 = 0$ on $S$. Since solutions of Laplace's equation have no local maxima or minima, the extreme values of $V_3$ occur on $S$, so its maximum and minimum are both $0$. Hence $V_3 = 0$ throughout $\mathcal{V}$, and $V_1 = V_2$.
+\end{proof}
+\begin{proof}
+    If $V_1$ and $V_2$ both satisfy Poisson's equation $\nabla^2 V = -\rho/\epsilon_0$, then $V_3 = V_1 - V_2$ satisfies
+    \[\nabla^2 V_3 = -\frac{\rho}{\epsilon_0} + \frac{\rho}{\epsilon_0} = 0,\]
+    with $V_3 = 0$ on all boundaries. By the theorem, $V_3 = 0$, so $V_1 = V_2$.
+\end{proof}
+\begin{proof}[Proof of Theorem~\ref{thm:uniqueness2}]
+    Let $\vec{E}_3 = \vec{E}_1 - \vec{E}_2$ be the difference of two solutions. Then $\nabla\cdot\vec{E}_3 = 0$ in $\mathcal{V}$, $\oiint_{S_i}\vec{E}_3\cdot d\vec{a} = 0$ over each conductor (same total charge), and $V_3$ is constant on each conductor (equipotentials). Since $\nabla\cdot(V_3\vec{E}_3) = -E_3^2$, the divergence theorem gives
+    \[\oiint_S V_3\vec{E}_3\cdot d\vec{a} = -\iiint_{\mathcal{V}} E_3^2\,d\tau.\]
+    On each conductor $V_3$ comes out of the integral, leaving zero flux, and at infinity $V_3 \to 0$. So $\iiint_{\mathcal{V}} E_3^2\,d\tau = 0$, hence $\vec{E}_3 = 0$ and $\vec{E}_1 = \vec{E}_2$.
 \end{proof}
 
 
