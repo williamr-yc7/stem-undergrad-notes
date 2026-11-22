@@ -315,7 +315,7 @@ Two types of auxiliary conditions will be studied in this course.
 
 \section{First-Order PDEs}
 \marginpar{September 9 - 16, 2026}
-\subsection{}
+\subsection{Transport Equation}
 \begin{definition}[Solution Operator (ODE)]
     For times $t_0,t_1$, the solution operator is the map
     \[S_{t_0\to t_1}(x_0):=x(t_1),\]
@@ -329,6 +329,25 @@ Two types of auxiliary conditions will be studied in this course.
     If $v = c$, then $S_{0\to t}(x_0) = x_0 + ct$ and $S_{t\to 0}(x) = x - ct$.\\
     If $v = -x$, then $S_{0\to t}(x_0) = x_0 e^{-t}$ and $S_{t\to 0}(x) = x e^{t}$.
 \end{example}
+\begin{definition}[Transport Label]
+    To find which particle is at position $x$ at time $t$, we run the ODE backwards, it is the particle that started at $x_0 = S_{t\to0}(x)$, hence
+    \[u(x,t) = g\big(S_{t\to 0}(x)\big).\]
+\end{definition}
+\begin{example}
+    $v = c$ gives $u(x,t) = g(x-ct)$.\\
+    $v = -x$ gives $u(x,t) = g(xe^t)$.
+\end{example}
+\begin{definition}[Linear Transport Equation]
+    The linear transport equation is defined to be
+    \begin{equation}
+        \label{eq:transport}
+        u_t+v(x,t)u_x=0,\quad u(x,0)=g(x).
+    \end{equation}
+\end{definition}
+\begin{remark}
+    For every linear transport equation in this chapter, the solution recipe is flow backwards, read the label.
+    \[\text{ODE flow}\to\text{transported labels}\to\text{PDE}.\]
+\end{remark}
 
 \section{Distributions}
 \subsection{Classes of functions}

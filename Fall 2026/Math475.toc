@@ -22,20 +22,20 @@
 \contentsline {subsection}{\numberline {3.5}Auxiliary Conditions}{5}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}Well-Posedness}{6}{subsection.3.6}%
 \contentsline {section}{\numberline {4}First-Order PDEs}{6}{section.4}%
-\contentsline {subsection}{\numberline {4.1}}{6}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Distributions}{6}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Classes of functions}{6}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Derivative of the Heaviside}{6}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Fourier}{6}{section.6}%
-\contentsline {section}{\numberline {7}Diffusion}{6}{section.7}%
-\contentsline {section}{\numberline {8}Laplace}{6}{section.8}%
+\contentsline {subsection}{\numberline {4.1}Transport Equation}{6}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Distributions}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Classes of functions}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Derivative of the Heaviside}{7}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Fourier}{7}{section.6}%
+\contentsline {section}{\numberline {7}Diffusion}{7}{section.7}%
+\contentsline {section}{\numberline {8}Laplace}{7}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Harmonic Functions}{7}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Boundary Value Problems}{7}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}The Mean Value Property}{7}{subsection.8.3}%
 \contentsline {subsection}{\numberline {8.4}The Maximum Principle}{7}{subsection.8.4}%
 \contentsline {subsection}{\numberline {8.5}Uniqueness \& Stability}{7}{subsection.8.5}%
 \contentsline {subsection}{\numberline {8.6}Rotational Invariance}{7}{subsection.8.6}%
-\contentsline {subsection}{\numberline {8.7}Polar Coordinates in the Plane}{7}{subsection.8.7}%
-\contentsline {subsection}{\numberline {8.8}Laplacian of a Radial Function}{7}{subsection.8.8}%
-\contentsline {section}{\numberline {A}Solutions}{8}{appendix.A}%
-\contentsline {section}{\numberline {B}Useful Links}{8}{appendix.B}%
+\contentsline {subsection}{\numberline {8.7}Polar Coordinates in the Plane}{8}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}Laplacian of a Radial Function}{8}{subsection.8.8}%
+\contentsline {section}{\numberline {A}Solutions}{9}{appendix.A}%
+\contentsline {section}{\numberline {B}Useful Links}{9}{appendix.B}%
