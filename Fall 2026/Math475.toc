@@ -32,16 +32,19 @@
 \contentsline {subsection}{\numberline {5.1}Classes of functions}{10}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Test Functions}{10}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Definition of a Distribution}{10}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Fourier}{11}{section.6}%
-\contentsline {section}{\numberline {7}Diffusion}{11}{section.7}%
-\contentsline {section}{\numberline {8}Laplace}{11}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Harmonic Functions}{11}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Boundary Value Problems}{11}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}The Mean Value Property}{11}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}The Maximum Principle}{11}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Uniqueness \& Stability}{11}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}Rotational Invariance}{11}{subsection.8.6}%
+\contentsline {subsection}{\numberline {5.4}Functions as Distributions}{11}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Delta Function}{11}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Derivative of a Distribution}{11}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Fourier}{12}{section.6}%
+\contentsline {section}{\numberline {7}Diffusion}{12}{section.7}%
+\contentsline {section}{\numberline {8}Laplace}{12}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Harmonic Functions}{12}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Boundary Value Problems}{12}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}The Mean Value Property}{12}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}The Maximum Principle}{12}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Uniqueness \& Stability}{12}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Rotational Invariance}{12}{subsection.8.6}%
 \contentsline {subsection}{\numberline {8.7}Polar Coordinates in the Plane}{12}{subsection.8.7}%
-\contentsline {subsection}{\numberline {8.8}Laplacian of a Radial Function}{12}{subsection.8.8}%
-\contentsline {section}{\numberline {A}Solutions}{13}{appendix.A}%
-\contentsline {section}{\numberline {B}Useful Links}{13}{appendix.B}%
+\contentsline {subsection}{\numberline {8.8}Laplacian of a Radial Function}{13}{subsection.8.8}%
+\contentsline {section}{\numberline {A}Solutions}{14}{appendix.A}%
+\contentsline {section}{\numberline {B}Useful Links}{14}{appendix.B}%

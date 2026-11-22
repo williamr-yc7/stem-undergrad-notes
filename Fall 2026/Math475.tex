@@ -496,6 +496,9 @@ To count such $u$ as solutions, we need distributions: instead of asking for the
 \end{example}
 
 \subsection{Definition of a Distribution}
+\begin{definition}[Functional]
+    A functional is a map whose inputs are functions.
+\end{definition}
 \begin{definition}[Distribution]
     A distribution $F$, also called a generalized function, is a rule assigning to each test function $\phi \in C^{\infty}_{c}(\R)$ a real number, written
     \begin{equation}
@@ -505,15 +508,12 @@ To count such $u$ as solutions, we need distributions: instead of asking for the
     which is linear and continuous.
 \end{definition}
 \begin{remark}
-    The expression $\langle F,\phi\rangle$ is notation, we could equally write $F(\phi)$ in functional notation. The notation emphasizes the special case of an integral. 
+    The expression $\langle F,\phi\rangle$ is notation; we could equally write $F(\phi)$ in functional notation. The notation emphasizes the special case of an integral. 
 \end{remark}
-\begin{definition}[Functional]
-    A functional is a map whose inputs are functions.
-\end{definition}
-\begin{proposition}
+\begin{remark}
     Distributions are linear:
     \[\langle F, a\phi+b\psi \rangle = a\langle F, \phi\rangle + b\langle F, \psi \rangle, \quad \forall a,b \in\R, \phi,\psi \in C^{\infty}_c(\R).\]
-\end{proposition}
+\end{remark}
 \begin{definition}[Convergence of Test Functions]
     $\phi_n \to \phi$ in $C^{\infty}_c(\R)$ if
     \begin{enumerate}[label=(\roman*)]
@@ -526,9 +526,46 @@ To count such $u$ as solutions, we need distributions: instead of asking for the
     A functional $F$ is continuous if $\phi_n\to\phi$ in $C^{\infty}_c(\R)$ implies $\langle F,\phi_n\rangle \to \langle F,\phi\rangle$.
 \end{definition}
 
+\subsection{Functions as Distributions}
+\begin{proposition}
+    Let $f$ be locally integrable on $\R$. Then
+    \begin{equation}
+        \label{eq:function-distribution}
+        \langle F_f,\phi \rangle := \int_{-\infty}^{\infty}f(x)\phi(x)\,dx,\quad \phi\in C_c^{\infty}(\R)
+    \end{equation}
+    defines a distribution $F_f$.
+\end{proposition}
+\begin{proof}
+    If $\phi$ vanishes outside $[-a,a]$, then $\left|\langle F_f,\phi\rangle\right| \le \max|\phi|\int_{-a}^{a}|f|\,dx < \infty$, so $F_f$ is well defined. Linearity follows from linearity of the integral. For continuity, if $\phi_n\to\phi$ in $C_c^\infty(\R)$, all supports lie in one $[-a,a]$, so
+    \[\left|\langle F_f,\phi_n\rangle - \langle F_f,\phi\rangle\right| \le \max_{x}|\phi_n(x)-\phi(x)|\int_{-a}^{a}|f|\,dx \to 0.\]
+\end{proof}
 
+\subsection{Delta Function}
+\begin{definition}[Delta Function]
+    As a distribution, $\delta_0$ is defined by
+    \[\langle \delta_0,\phi \rangle := \phi(0),\quad \phi\in C_c^{\infty}(\R).\]
+\end{definition}
+\begin{remark}
+    By tradition we call it the delta function, even though it is a distribution and not a function, so $\delta_0(x)$ has no value at a point. Likewise, $\int\delta_0(x)\phi(x)\,dx = \phi(0)$ is only shorthand for $\langle\delta_0,\phi\rangle$, not an actual integral.
+\end{remark}
 
-
+\subsection{Derivative of a Distribution}
+\begin{definition}[]
+    Let $F$ be a distribution. Its derivative $F'$ is the distribution
+    \begin{equation}
+        \label{eq:}
+        \langle F',\phi \rangle := -\langle F,\phi'\rangle.
+    \end{equation}
+\end{definition}
+\begin{remark}
+    If $f\in C^1(\R)$, then $(F_f)' = F_{f'}$.
+\end{remark}
+\begin{proof}
+    \[\langle (F_f)',\phi \rangle = -\langle F_f,\phi' \rangle = -\int f\phi' dx = \int f'\phi dx = \langle F_{f'},\phi\rangle\]
+\end{proof}
+\begin{definition}
+    
+\end{definition}
 \section{Fourier}
 
 
