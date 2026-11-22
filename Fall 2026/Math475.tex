@@ -210,6 +210,24 @@ The gradient is the vector that converts a small step $\vec{h}$ into the resulti
     \[L(u+cv) = L(u)+cL(v)\]
 \end{definition}
 
+\subsection{Special Functions}
+\begin{definition}[Dirac Delta]
+    \label{def:dirac-delta}
+    The Dirac delta $\delta_a$ at a point $a$ is the object with
+    \begin{equation}
+        \label{eq:dirac-delta}
+        \int_{-\infty}^{\infty}\delta_a(x)\,dx = 1 \quad\text{and}\quad \delta_a(x) = 0 \text{ for } x\neq a.
+    \end{equation}
+    The case $a=0$ is written $\delta_0$.
+\end{definition}
+\begin{definition}[Heaviside Function]
+    The Heaviside function, named after Oliver Heaviside (1850--1925), is the step function that jumps from $0$ to $1$ at $x=a$:\footnote{The case $a=0$ is written $H(x)$.}
+    \begin{equation}
+        \label{eq:heaviside}
+        H(x-a) :=\begin{cases}0, & x<a\\1, & x\geq a\end{cases}.
+    \end{equation}
+\end{definition}
+
 
 \section{Introduction}
 \marginpar{August 31 - September 2, 2026}
@@ -438,9 +456,78 @@ For PDEs, we let each particle carry a value $u$ that stays constant as it moves
 \end{remark}
 
 \section{Distributions}
-\subsection{Classes of functions}
+Classical solutions must be differentiable, but some natural solutions are not.
+\begin{example}[Non-Differentiable Solution]
+    For the transport equation $u_t+cu_x=0$ with a jump in the initial data,
+    \[g(x)=\begin{cases}1, & x<0\\0, & x>0\end{cases},\]
+    the solution $u(x,t)=g(x-ct)$ is a step moving at speed $c$. It is clearly the right answer, but $u_t$ and $u_x$ do not exist along the line $x=ct$, so $u$ does not satisfy the PDE in the classical sense.
+\end{example}
+To count such $u$ as solutions, we need distributions: instead of asking for the value of an object at a point, we ask what it does when integrated against a smooth, localized test function $\phi$.
 
-\subsection{Derivative of the Heaviside}
+\subsection{Classes of functions}
+\begin{definition}[Integrable Function]
+    A function $f$ defined on $\R$ is integrable if
+    \[\int_{-\infty}^{\infty}|f(x)|dx < \infty.\]
+\end{definition}
+\begin{definition}[Locally Integrable Function]
+    A function $f$ defined on $\R$ is locally integrable if $\forall a<b$,
+    \[\int_{a}^{b}|f(x)|dx < \infty.\]    
+\end{definition}
+\begin{remark}
+    Integration cannot see the value at a single point, so two functions that differ only at a point are treated as the same function.
+\end{remark}
+
+\subsection{Test Functions}
+\begin{definition}[Support]
+    The support of a continuous function $\phi$ is the closure of the set where $\phi \neq 0$.
+\end{definition}
+\begin{definition}[Compact Support]
+    A continuous function on $\R$ has compact support if it is zero outside some closed bounded interval $[-a,a]$.
+\end{definition}
+\begin{definition}[Test Functions]
+    Test functions are the elements of $C_c^{\infty}(\R)$, which is the set of functions $\phi: \R \to \R$ that are infinitely differentiable and have compact support.
+\end{definition}
+\begin{example}
+    The standard example of a test function is the bump function
+    \begin{equation}
+        \label{eq:bump}
+        \phi_a(x) := \begin{cases}e^{-\frac{1}{a^2-x^2}}, & |x|<a\\0, & |x|\geq a\end{cases}.
+    \end{equation}
+\end{example}
+
+\subsection{Definition of a Distribution}
+\begin{definition}[Distribution]
+    A distribution $F$, also called a generalized function, is a rule assigning to each test function $\phi \in C^{\infty}_{c}(\R)$ a real number, written
+    \begin{equation}
+        \label{eq:distribution}
+        \langle F,\phi\rangle,
+    \end{equation}
+    which is linear and continuous.
+\end{definition}
+\begin{remark}
+    The expression $\langle F,\phi\rangle$ is notation, we could equally write $F(\phi)$ in functional notation. The notation emphasizes the special case of an integral. 
+\end{remark}
+\begin{definition}[Functional]
+    A functional is a map whose inputs are functions.
+\end{definition}
+\begin{proposition}
+    Distributions are linear:
+    \[\langle F, a\phi+b\psi \rangle = a\langle F, \phi\rangle + b\langle F, \psi \rangle, \quad \forall a,b \in\R, \phi,\psi \in C^{\infty}_c(\R).\]
+\end{proposition}
+\begin{definition}[Convergence of Test Functions]
+    $\phi_n \to \phi$ in $C^{\infty}_c(\R)$ if
+    \begin{enumerate}[label=(\roman*)]
+        \item there is one $a>0$ such that every $\phi_n$ and $\phi$ vanish for $|x|\geq a$, and
+        \item for every $k=0,1,2,\dots$, the $k$-th derivatives converge uniformly:
+        \[\max_{x\in\R}\left|\phi_n^{(k)}(x)-\phi^{(k)}(x)\right| \xrightarrow{n\to\infty} 0.\]
+    \end{enumerate}
+\end{definition}
+\begin{definition}[Continuity of a Functional]
+    A functional $F$ is continuous if $\phi_n\to\phi$ in $C^{\infty}_c(\R)$ implies $\langle F,\phi_n\rangle \to \langle F,\phi\rangle$.
+\end{definition}
+
+
+
 
 \section{Fourier}
 
