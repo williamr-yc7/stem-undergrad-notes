@@ -23,19 +23,23 @@
 \contentsline {subsection}{\numberline {3.6}Well-Posedness}{6}{subsection.3.6}%
 \contentsline {section}{\numberline {4}First-Order PDEs}{6}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Transport Equation}{6}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Distributions}{7}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Classes of functions}{7}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Derivative of the Heaviside}{7}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Fourier}{7}{section.6}%
-\contentsline {section}{\numberline {7}Diffusion}{7}{section.7}%
-\contentsline {section}{\numberline {8}Laplace}{7}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Harmonic Functions}{7}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Boundary Value Problems}{7}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}The Mean Value Property}{7}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}The Maximum Principle}{7}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Uniqueness \& Stability}{7}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}Rotational Invariance}{7}{subsection.8.6}%
-\contentsline {subsection}{\numberline {8.7}Polar Coordinates in the Plane}{8}{subsection.8.7}%
-\contentsline {subsection}{\numberline {8.8}Laplacian of a Radial Function}{8}{subsection.8.8}%
-\contentsline {section}{\numberline {A}Solutions}{9}{appendix.A}%
-\contentsline {section}{\numberline {B}Useful Links}{9}{appendix.B}%
+\contentsline {subsection}{\numberline {4.2}Characteristic}{7}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}General Solution}{7}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Initial Value Problem}{8}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Linear Equations}{8}{subsubsection.4.2.3}%
+\contentsline {section}{\numberline {5}Distributions}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Classes of functions}{9}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Derivative of the Heaviside}{9}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Fourier}{9}{section.6}%
+\contentsline {section}{\numberline {7}Diffusion}{9}{section.7}%
+\contentsline {section}{\numberline {8}Laplace}{9}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Harmonic Functions}{10}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Boundary Value Problems}{10}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}The Mean Value Property}{10}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}The Maximum Principle}{10}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Uniqueness \& Stability}{10}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Rotational Invariance}{10}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Polar Coordinates in the Plane}{10}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}Laplacian of a Radial Function}{10}{subsection.8.8}%
+\contentsline {section}{\numberline {A}Solutions}{11}{appendix.A}%
+\contentsline {section}{\numberline {B}Useful Links}{11}{appendix.B}%

@@ -329,14 +329,7 @@ Two types of auxiliary conditions will be studied in this course.
     If $v = c$, then $S_{0\to t}(x_0) = x_0 + ct$ and $S_{t\to 0}(x) = x - ct$.\\
     If $v = -x$, then $S_{0\to t}(x_0) = x_0 e^{-t}$ and $S_{t\to 0}(x) = x e^{t}$.
 \end{example}
-\begin{definition}[Transport Label]
-    To find which particle is at position $x$ at time $t$, we run the ODE backwards, it is the particle that started at $x_0 = S_{t\to0}(x)$, hence
-    \[u(x,t) = g\big(S_{t\to 0}(x)\big).\]
-\end{definition}
-\begin{example}
-    $v = c$ gives $u(x,t) = g(x-ct)$.\\
-    $v = -x$ gives $u(x,t) = g(xe^t)$.
-\end{example}
+For PDEs, we let each particle carry a value $u$ that stays constant as it moves along its trajectory $x'(t) = v(x,t)$.
 \begin{definition}[Linear Transport Equation]
     The linear transport equation is defined to be
     \begin{equation}
@@ -344,9 +337,104 @@ Two types of auxiliary conditions will be studied in this course.
         u_t+v(x,t)u_x=0,\quad u(x,0)=g(x).
     \end{equation}
 \end{definition}
+\begin{definition}[Transport Label]
+    To find which particle is at position $x$ at time $t$, we run the ODE backwards: it is the particle that started at $x_0 = S_{t\to0}(x)$, hence
+    \[u(x,t) = g\big(S_{t\to 0}(x)\big).\]
+\end{definition}
+\begin{example}
+    $v = c$ gives $u(x,t) = g(x-ct)$.\\
+    $v = -x$ gives $u(x,t) = g(xe^t)$.
+\end{example}
 \begin{remark}
-    For every linear transport equation in this chapter, the solution recipe is flow backwards, read the label.
+    For \eqref{eq:transport}, the solution recipe is: flow backwards, read the label.
     \[\text{ODE flow}\to\text{transported labels}\to\text{PDE}.\]
+\end{remark}
+
+\subsection{Characteristic}
+\begin{definition}[Characteristic]
+    A characteristic of a PDE is a curve in the domain along which the PDE degenerates into an ODE.\footnote{Knowing $u$ at one point of the curve, makes the PDE determine the value of u along the entire curve.}
+\end{definition}
+\begin{proposition}[Method of Characteristics]
+    Given a first-order PDE with data on a curve $\Gamma$:
+    \begin{enumerate}
+        \item Find the characteristics.
+        \item Solve the ODE for $u$ along each one, starting from the data on $\Gamma$.
+        \item To get $u$ at a point, find the characteristic through it and read off the value.
+    \end{enumerate}
+    So $u$ at a point only depends on the data at one point of $\Gamma$.
+\end{proposition}
+
+\subsubsection{General Solution}
+\begin{example}[Constant Coefficients]
+    \label{ex:constant-coeff}
+    Consider the PDE with $a,b \in\R$
+    \[au_x+bu_y=\langle a,b\rangle\cdot\nabla u = 0.\]
+    So the derivative of $u$ in the direction $\langle a,b\rangle$ is zero, and $u$ is constant along lines parallel to $\langle a,b\rangle$. These lines have the form $bx-ay=c$. Thus the general solution to this PDE is a function of $bx-ay$ only:
+    \[u(x,y) = f(bx-ay),\]
+    where $f$ is just an arbitrary function.
+\end{example}
+\begin{example}[Variable Coefficients]
+    Consider the following PDE
+    \[u_x+yu_y=\langle 1,y\rangle\cdot\nabla u=0.\]
+    So $u$ is constant along curves whose tangent is $\langle 1,y\rangle$ at every point, i.e.\ curves with slope
+    \[\frac{dy}{dx} = \frac{y}{1} = y.\]
+    The general solution of $y'=y$ is $y=Ce^x$. Two points lie on the same characteristic exactly when they give the same value of $C=e^{-x}y$, so the general solution is
+    \[u(x,y) = f(e^{-x}y),\]
+    where $f$ is just an arbitrary function.
+\end{example}
+
+\subsubsection{Initial Value Problem}
+\begin{example}
+    Consider the following PDE with initial data
+    \[3u_x+2u_y = 0, \quad u(x,0) = x^3.\]
+    From Example~\ref{ex:constant-coeff} the general solution is $u(x,y) = f(2x-3y)$. The initial data determines $f$:
+    \[u(x,0) = f(2x) = x^3.\]
+    Let $w = 2x$, then $x=\frac{w}{2}$ and
+    \[f(w) = \frac{w^3}{8},\]
+    therefore taking $w=2x-3y$ gives the specific solution
+    \[u(x,y) = f(2x-3y) = \frac{(2x-3y)^3}{8}.\]
+\end{example}
+
+\subsubsection{Linear Equations}
+\begin{definition}[Linear First-Order PDE]
+    The general linear first-order PDE in two variables, with data $g$ on a curve $\Gamma$, is
+    \begin{equation}
+        \label{eq:linear-first-order}
+        a(x,y)u_x+b(x,y)u_y = c_1(x,y)u + c_2(x,y),\quad u = g \text{ on } \Gamma.
+    \end{equation}
+\end{definition}
+\begin{proposition}[Characteristic Equations]
+    \label{prop:characteristic-eqs}
+    To solve \eqref{eq:linear-first-order}, define the characteristic curves $(x(s),y(s))$ by
+    \[x'(s) = a(x(s),y(s)),\quad y'(s) = b(x(s),y(s)).\]
+    Then let $z(s)$ denote the values of $u$ on the curve $z(s) := u(x(s),y(s))$. By the chain rule we get
+    \[z'(s) = u_xx'(s) + u_yy'(s) = u_xa(x(s),y(s))+u_yb(x(s),y(s)),\]
+    which is the left side of the PDE along the curve, so
+    \[z'(s) = c_1(x(s),y(s))z(s)+c_2(x(s),y(s)).\]
+    Collecting, we arrive at the characteristic equations
+    \[\begin{cases}x'(s)=a(x(s),y(s))\\y'(s)=b(x(s),y(s))\\z'(s)=c_1(x(s),y(s))z(s)+c_2(x(s),y(s))\end{cases}\]
+    with $(x(0),y(0))\in\Gamma$ and $z(0)=g(x(0),y(0))$. Solving these and eliminating $s$ and the starting point gives $u(x,y)$.
+\end{proposition}
+\begin{example}[Rotational Characteristics]
+    Consider the following PDE
+    \[-yu_x+xu_y=u,\quad u(x,0)=g(x),\quad x>0.\]
+    The characteristic equations are
+    \[x'=-y,\quad y'=x, \quad z'=z.\]
+    With $x(0)=x_0$, $y(0) = 0$, then
+    \[x(s) = x_0\cos(s),\quad y(s) = x_0\sin(s).\]
+    For $z$, with $z(0)=g(x_0)$,
+    \[z(s)=g(x_0)e^s.\]
+    Now we need to find $x_0,s$ in terms of $x,y$. For $x_0$, take
+    \[x^2+y^2 = x_0^2\left(\cos^2(s)+\sin^2(s)\right) = x_0^2 \quad\Rightarrow\quad x_0=\sqrt{x^2+y^2},\]
+    taking the positive root since $x_0>0$. For $s$, take $\frac{y(s)}{x(s)} = \frac{x_0\sin(s)}{x_0\cos(s)}=\tan(s)$, so $s$ is the polar angle $\theta$ of $(x,y)$, which for $x>0$ is
+    \[s = \arctan\left(\frac{y}{x}\right).\]
+    Therefore
+    \[u(x,y) = g\left(\sqrt{x^2+y^2}\right)e^{\theta}.\]
+\end{example}
+\begin{remark}
+    When one variable is time and data is given at $t=0$, dividing by the coefficient of $u_t$ writes the PDE as
+    \[u_t+b(x,t)u_x=c_1(x,t)u+c_2(x,t).\]
+    Then the characteristic ODE for $t$ is $t'(s)=1$ with $t(0)=0$, so $t=s$ and $t$ itself can be used as the parameter.\footnote{This works for any variable, as long as its coefficient is nonzero and the data is given where that variable is constant, e.g.\ $y=0$.}
 \end{remark}
 
 \section{Distributions}
