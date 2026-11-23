@@ -67,10 +67,18 @@ Textbook used is JS Townsend, \emph{A Modern Approach to Quantum Mechanics}, 2nd
 
 
 \section{Mathematical Background}
+
+\subsection{Deltas}
 \begin{definition}[Kronecker delta]
     The Kronecker delta is a function of two indices that equals $1$ when they are equal and $0$ otherwise:
     \begin{equation}
         \delta_{ij} = \begin{cases} 1 & i = j, \\ 0 & i \neq j. \end{cases}
+    \end{equation}
+\end{definition}
+\begin{definition}[Dirac delta function]
+    The continuous analog of the Kronecker delta: $\delta(x - x')$ is zero for $x \neq x'$, and for any function $f$,
+    \begin{equation}
+        \int_{-\infty}^{\infty} f(x)\,\delta(x - x')\,dx = f(x').
     \end{equation}
 \end{definition}
 
@@ -1533,7 +1541,117 @@ so its spins are opposite along every axis $\hat{n}$, while the classical pair g
 \section{Wave Mechanics in One Dimension}
 \marginpar{}
 \chapterstart{6}
+So far, only observables with a finite number of outcomes, like $S_z$, have been considered. The position $x$ of a particle in one dimension is now studied; since it can take any real value, sums over outcomes are replaced by integrals.
 
+\subsection{Notation}
+\begin{definition}[Position eigenstate]
+    By analogy with $\ket{\pm\hat{z}}$ for $S_z$, the position eigenstate $\ket{x}$ satisfies
+    \begin{equation}
+        \hat{x}\ket{x} = x\ket{x},
+    \end{equation}
+    where $\hat{x}$ is the position operator\footnote{Not to be confused with the unit vector $\hat{x}$.} and $x$ its eigenvalue.
+\end{definition}
+\begin{remark}
+    Positions can be treated as discrete, $\id = \sum_i\ket{x_i}\bra{x_i}$, for electrons sitting on the sites of a crystal\footnote{If you only care which atom an electron is near, not where it is inside that atom.}. This fails for motion inside a single atom, where $x$ can take any value in $(-\infty, \infty)$.
+\end{remark}
+\begin{definition}[Completeness relation]
+    For a continuous variable, the sum becomes an integral:
+    \begin{equation}
+        \label{eq:position-completeness}
+        \id = \int_{-\infty}^{\infty} dx\,\ket{x}\bra{x}, \qquad \text{so} \qquad \ket{\psi} = \int_{-\infty}^{\infty} dx\,\ket{x}\braket{x|\psi}.
+    \end{equation}
+\end{definition}
+\begin{definition}[Wavefunction]
+    The amplitude for finding the particle at $x$,
+    \begin{equation}
+        \label{eq:wavefunction}
+        \psi(x) = \braket{x|\psi}.
+    \end{equation}
+\end{definition}
+\begin{definition}[Dirac delta function]
+    The function $\delta(x - x')$ such that, for any function $f$,
+    \begin{equation}
+        \int_{-\infty}^{\infty} dx\, f(x)\,\delta(x - x') = f(x').
+    \end{equation}
+\end{definition}
+\begin{proposition}[Orthonormality of position eigenstates]
+    \begin{equation}
+        \braket{x'|x} = \delta(x' - x).
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    By \eqref{eq:position-completeness}, $\ket{x} = \int dx'\,\ket{x'}\braket{x'|x}$, which holds only if $\braket{x'|x} = \delta(x' - x)$.
+\end{proof}
+
+\subsection{Statistics}
+\subsubsection{Normalization}
+\begin{proposition}[Normalization]
+    \begin{equation}
+        \braket{\psi|\psi} = \int_{-\infty}^{\infty} dx\,|\psi(x)|^2 = 1.
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    Inserting the identity, $\braket{\psi|\psi} = \int dx\,\braket{\psi|x}\braket{x|\psi} = \int dx\,|\braket{x|\psi}|^2 = \int dx\,|\psi(x)|^2$.
+\end{proof}
+\begin{definition}[Probability density]
+    $|\psi(x)|^2\,dx$ is the probability of finding the particle in $(x, x + dx)$, so $|\psi(x)|^2$ is a probability per unit length: $\big[|\psi(x)|^2\big] = 1/\text{length}$.
+\end{definition}
+
+\subsubsection{Expectation Value}
+\begin{proposition}
+    \begin{equation}
+        \braket{x} = \braket{\psi|\hat{x}|\psi} = \int_{-\infty}^{\infty} dx\, x\,|\psi(x)|^2.
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    Inserting the identity, $\braket{\psi|\hat{x}|\psi} = \int dx\,\braket{\psi|\hat{x}|x}\braket{x|\psi} = \int dx\, x\,\braket{\psi|x}\braket{x|\psi} = \int dx\, x\,|\psi(x)|^2$.
+\end{proof}
+
+\subsubsection{Overlap \& Inner Product}
+\begin{proposition}
+    \begin{equation}
+        \braket{\phi|\psi} = \int_{-\infty}^{\infty} dx\,\phi^*(x)\,\psi(x).
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    Inserting the identity, $\braket{\phi|\psi} = \int dx\,\braket{\phi|x}\braket{x|\psi}$, with $\braket{\phi|x} = \braket{x|\phi}^* = \phi^*(x)$.
+\end{proof}
+
+\subsection{Translation Operator}
+\begin{definition}[Translation operator]
+    The operator $T(a)$ that shifts a position eigenstate by $a$:
+    \begin{equation}
+        T(a)\ket{x} = \ket{x + a}.
+    \end{equation}
+\end{definition}
+\begin{proposition}[Translated wavefunction]
+    For $\ket{\psi'} = T(a)\ket{\psi}$,
+    \begin{equation}
+        \psi'(x) = \psi(x - a).
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    Inserting the identity, $\ket{\psi'} = \int dx\,\psi(x)\,T(a)\ket{x} = \int dx\,\psi(x)\ket{x + a}$. Then
+    \[\psi'(x') = \braket{x'|\psi'} = \int dx\,\psi(x)\,\delta\big(x' - (x + a)\big) = \psi(x' - a).\]
+\end{proof}
+\begin{remark}
+    A wave packet centred at $b$ moves to $b + a$: shifting the state by $+a$ shifts the argument of $\psi$ by $-a$.
+\end{remark}
+\begin{proposition}[Unitarity]
+    $T(a)$ preserves normalization, so it is unitary:
+    \begin{equation}
+        T^\dagger(a)\,T(a) = \id, \qquad T^\dagger(a) = T^{-1}(a) = T(-a).
+    \end{equation}
+\end{proposition}
+\begin{proof}
+    $1 = \braket{\psi'|\psi'} = \braket{\psi|T^\dagger T|\psi}$ for every $\ket{\psi}$, so $T^\dagger T = \id$. The inverse of a shift by $a$ is a shift by $-a$.
+\end{proof}
+\begin{result}
+    Taking the adjoint of $T(a)\ket{x} = \ket{x + a}$ gives $\bra{x}T^\dagger(a) = \bra{x + a}$, so $\bra{x}T(a) = \bra{x - a}$ and
+    \begin{equation}
+        \braket{x|T(a)|\psi} = \psi(x - a).
+    \end{equation}
+\end{result}
 
 
 \newpage

@@ -1,17 +1,18 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Mathematical Background}{1}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Series}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Taylor series}{2}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Euler's formula and trigonometric identities}{2}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Bases}{2}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.1}Deltas}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Series}{1}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Taylor series}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Euler's formula and trigonometric identities}{2}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Bases}{2}{subsection.2.5}%
 \contentsline {section}{\numberline {3}Introduction to Quantum Mechanics}{2}{section.3}%
-\contentsline {subsection}{\numberline {3.1}The Classical Picture}{2}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Angular Momentum}{2}{subsubsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1}The Classical Picture}{3}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Angular Momentum}{3}{subsubsection.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}Magnetic Moment}{3}{subsubsection.3.1.2}%
 \contentsline {subsubsection}{\numberline {3.1.3}Gyromagnetic Ratio}{3}{subsubsection.3.1.3}%
 \contentsline {subsubsection}{\numberline {3.1.4}Force in a Nonuniform $\vec {B}$-field}{3}{subsubsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.2}The Quantum Picture}{3}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Spin}{3}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2}The Quantum Picture}{4}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Spin}{4}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Spin Quantization}{4}{subsubsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.3}Intrinsic Moment}{4}{subsubsection.3.2.3}%
 \contentsline {subsubsection}{\numberline {3.2.4}Magnetons}{5}{subsubsection.3.2.4}%
@@ -76,7 +77,13 @@
 \contentsline {subsection}{\numberline {9.6}Quantum Teleportation}{33}{subsection.9.6}%
 \contentsline {subsection}{\numberline {9.7}Quantum Circuits}{33}{subsection.9.7}%
 \contentsline {section}{\numberline {10}Wave Mechanics in One Dimension}{33}{section.10}%
-\contentsline {section}{\numberline {A}Solutions}{34}{appendix.A}%
-\contentsline {section}{\numberline {B}Proofs}{34}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Action of the ladder operators}{34}{subsection.B.1}%
-\contentsline {section}{\numberline {C}Useful Links}{34}{appendix.C}%
+\contentsline {subsection}{\numberline {10.1}Notation}{33}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Statistics}{34}{subsection.10.2}%
+\contentsline {subsubsection}{\numberline {10.2.1}Normalization}{34}{subsubsection.10.2.1}%
+\contentsline {subsubsection}{\numberline {10.2.2}Expectation Value}{34}{subsubsection.10.2.2}%
+\contentsline {subsubsection}{\numberline {10.2.3}Overlap \& Inner Product}{34}{subsubsection.10.2.3}%
+\contentsline {subsection}{\numberline {10.3}Translation Operator}{35}{subsection.10.3}%
+\contentsline {section}{\numberline {A}Solutions}{36}{appendix.A}%
+\contentsline {section}{\numberline {B}Proofs}{36}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Action of the ladder operators}{36}{subsection.B.1}%
+\contentsline {section}{\numberline {C}Useful Links}{36}{appendix.C}%
