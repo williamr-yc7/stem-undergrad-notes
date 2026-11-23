@@ -57,11 +57,12 @@
 \contentsline {subsubsection}{\numberline {7.3.2}Integer and Half-Integer $j$}{27}{subsubsection.7.3.2}%
 \contentsline {subsection}{\numberline {7.4}Matrix Elements}{28}{subsection.7.4}%
 \contentsline {section}{\numberline {8}Time Evolution}{28}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Time Parameter}{28}{subsection.8.1}%
 \contentsline {section}{\numberline {9}A System of Two Spin-1/2 Particles}{28}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Direct Product States}{28}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.1}Direct Product States}{29}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2}Hyperfine Splitting}{29}{subsection.9.2}%
 \contentsline {subsubsection}{\numberline {9.2.1}Hamiltonian}{29}{subsubsection.9.2.1}%
-\contentsline {subsubsection}{\numberline {9.2.2}The 21-cm Line}{30}{subsubsection.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.2}The 21-cm Line}{31}{subsubsection.9.2.2}%
 \contentsline {subsubsection}{\numberline {9.2.3}Total Spin}{31}{subsubsection.9.2.3}%
 \contentsline {subsection}{\numberline {9.3}Density Operator}{31}{subsection.9.3}%
 \contentsline {subsection}{\numberline {9.4}EPR paradox \& Bell Inequalities}{33}{subsection.9.4}%
