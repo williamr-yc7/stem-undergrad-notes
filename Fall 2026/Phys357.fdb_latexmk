@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1795469292.14802 "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys357.tex" "Phys357.pdf" "Phys357" 1795469297.07079 0
+["pdflatex"] 1795473342.58045 "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys357.tex" "Phys357.pdf" "Phys357" 1795473349.07168 0
   "../Images/Stern-Gerlach_apparatus.png" 1788906536 26824 57c4d3ea9550f8354c3e416ebc680541 ""
   "C:/Users/erenr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1790466715 82666 6ae954049cbd801ff08c004e318ae5a8 ""
   "C:/Users/erenr/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1767801684 11548 9ea6db1ff0b947846d8751dabcdcf90a ""
@@ -36,7 +36,6 @@
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmti7.tfm" 1136765053 1492 86331993fe614793f5e7e755835c31c5 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmtt10.tfm" 1136765053 768 1321e9409b4137d6fb428ac9dc956269 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/tfm/public/doublestroke/dsrom10.tfm" 1030470372 452 168d896d9b2ead965bf08c9db69c947f ""
-  "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/tfm/public/doublestroke/dsrom12.tfm" 1030470372 452 d8b5931fd510ede40dce06480d31d007 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/tfm/public/doublestroke/dsrom8.tfm" 1030470372 452 dc44cdd7c88ff2b15557f125edfc277b ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1247596666 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
@@ -44,7 +43,6 @@
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb" 1247596667 32001 6aeea3afe875097b1eb0da29acd61e28 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
-  "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247596667 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1247596667 37912 07513ec114ac737ab54cea0152f4424b ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
@@ -251,11 +249,11 @@
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/tools/indentfirst.sty" 1761901070 1618 30b01152766afcef2ed8f904cfdd3cc6 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/erenr/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "Phys357.aux" 1795469296 13604 b833ec749217b10bcbe26bc96c25d553 "pdflatex"
-  "Phys357.out" 1795469296 13531 9b3bb516ef8ef1f3c90fb7dd76bb829a "pdflatex"
-  "Phys357.tex" 1795469290 87708 8eca0a8997eeadf96ee4fe69983134f7 ""
-  "Phys357.toc" 1795469296 7348 45539b5d0e9490706130deb421f0af72 "pdflatex"
-  "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys357.tex" 1795469290 87708 8eca0a8997eeadf96ee4fe69983134f7 ""
+  "Phys357.aux" 1795473348 13644 32c75375eaf28d0b0afb52b2bc459604 "pdflatex"
+  "Phys357.out" 1795473348 13225 d18a4104dcd91af3e9cecd99ca7e928d "pdflatex"
+  "Phys357.tex" 1795473334 85773 72ba42f8348d57c017a6d000eb8db0fa ""
+  "Phys357.toc" 1795473348 7322 642f9d6c720972bbf71034093e5fcf2b "pdflatex"
+  "c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys357.tex" 1795473334 85773 72ba42f8348d57c017a6d000eb8db0fa ""
   (generated)
   "Phys357.aux"
   "Phys357.log"
