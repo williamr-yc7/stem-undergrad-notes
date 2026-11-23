@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  23 NOV 2026 13:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  23 NOV 2026 14:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -614,7 +614,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `Phys357.toc'.
 
- [3]
+ [3] [4]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -635,118 +635,145 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--144
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.156 \[L_{z} = mvr.\]
-                       [2]
+l.155     \[L = I_{0}\omega,\]
+                               [2]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 180.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 180.
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.190 \end{equation}
-                     [3] [4
-pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.229 \end{remark}
-                  ]
-<../Images/Stern-Gerlach_apparatus.png, id=474, 587.19376pt x 257.96375pt>
+l.210     \[
+            h \approx 6.626 \times 10^{-34} [J\cdot s].\] [3]
+Overfull \hbox (6.8781pt too wide) in paragraph at lines 233--234
+[][]\OT1/cmr/bx/n/10 Definition 23 \OT1/cmr/m/n/10 (g--fac-tor)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 The di-men-sion-less num-ber $\OML/cmm/m/it/10 g$ \OT1/cmr/m/it/10 de-fines how much stronger
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.262 \end{remark}
+                   [4]
+<../Images/Stern-Gerlach_apparatus.png, id=496, 587.19376pt x 257.96375pt>
 File: ../Images/Stern-Gerlach_apparatus.png Graphic file (type png)
 <use ../Images/Stern-Gerlach_apparatus.png>
-Package pdftex.def Info: ../Images/Stern-Gerlach_apparatus.png  used on input line 240.
+Package pdftex.def Info: ../Images/Stern-Gerlach_apparatus.png  used on input line 273.
 (pdftex.def)             Requested size: 172.5pt x 75.7798pt.
  [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.259 ..._{z} = -\frac{g_{e}|e|}{2m_{e}c}\,S_{z}\]
-                                                   <../Images/Stern-Gerlach_apparatus.png (PNG copy)>] [6] [7] [8
+l.292     C
+           lassically the screen should show a continuous smear. It shows tw... <../Images/Stern-Gerlach_apparatus.png (PNG copy)>] [6] [7
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.409     N
-           o state has definite values of both $S_x$ and $S_z$. Measuring $S...] [9]
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 478.
+l.425 
+      ]
+Runaway argument?
+{resu Experiment 3 showed each half alone gives 50/50. Instead the tw\ETC.
+c:/Users/erenr/Documents/McGill/Latex Notes/Fall 2026/Phys357.tex:445: Paragraph ended before \begin was complete.
+<to be read again> 
+                   \par 
+l.445 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+[8]
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 500.
  (C:\Users\erenr\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [10]
-Overfull \hbox (23.24481pt too wide) in paragraph at lines 537--538
+) [9]
+Overfull \hbox (23.24481pt too wide) in paragraph at lines 559--560
 [][]\OT1/cmr/bx/n/10 Proposition 4. []\OT1/cmr/m/it/10 A global phase changes no prob-a-bil-ity: $[][] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 e[]\OMS/cmsy/m/n/10 j[] [][] \OT1/cmr/m/n/10 =
  []
 
-[11] [12] [13] [14] [15] [16] [17]
-Overfull \hbox (16.93588pt too wide) in paragraph at lines 813--814
+[10] [11] [12] [13] [14] [15] [16]
+Overfull \hbox (16.93588pt too wide) in paragraph at lines 835--836
 [][]\OT1/cmr/bx/n/10 Remark 22. []\OT1/cmr/m/it/10 So nor-mal-iza-tion does not de-pend on the ba-sis: $\OML/cmm/m/it/10  [] [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10  []U[]U [] \OT1/cmr/m/n/10 =
  []
 
-[18] [19] [20]
-Overfull \hbox (33.41965pt too wide) in paragraph at lines 955--956
+[17] [18] [19]
+Overfull \hbox (33.41965pt too wide) in paragraph at lines 977--978
 [][]\OT1/cmr/bx/n/10 Remark 28 \OT1/cmr/m/n/10 (Recipe)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 In any ba-sis $\OMS/cmsy/m/n/10 f[]g$ \OT1/cmr/m/it/10 this reads $\OML/cmm/m/it/10 VDV[]$\OT1/cmr/m/it/10 , with $\OML/cmm/m/it/10 D \OT1/cmr/m/n/10 = [] []$
  []
 
 
-Overfull \hbox (45.23611pt too wide) detected at line 964
+Overfull \hbox (45.23611pt too wide) detected at line 986
 \OML/cmm/m/it/10 R\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^^[]\OT1/cmr/m/n/10 ) [] [] [] [] [] = [] [] \OML/cmm/m/it/10 ;
  []
 
+[20]
 
-LaTeX Warning: Reference `prob:Rz-y' on page 21 undefined on input line 968.
+LaTeX Warning: Reference `prob:Rz-y' on page 21 undefined on input line 990.
 
 [21] [22]
-Overfull \hbox (1.81723pt too wide) in paragraph at lines 1032--1034
+Overfull \hbox (1.81723pt too wide) in paragraph at lines 1054--1056
 \OT1/cmr/m/it/10 The same holds for the cyclic per-mu-ta-tions of $\OML/cmm/m/it/10 x$\OT1/cmr/m/it/10 , $\OML/cmm/m/it/10 y$\OT1/cmr/m/it/10 , $\OML/cmm/m/it/10 z$\OT1/cmr/m/it/10 , in agree-ment with $\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 J[]; J[]\OT1/cmr/m/n/10 ] =
  []
 
-[23] [24] [25]
-Overfull \hbox (4.43936pt too wide) in paragraph at lines 1140--1141
-[][]\OT1/cmr/bx/n/10 Definition 55 \OT1/cmr/m/n/10 (An-gu-lar mo-men-tum eigen-states)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 The an-gu-lar mo-men-tum eigen-
+[23] [24]
+Overfull \hbox (4.43936pt too wide) in paragraph at lines 1162--1163
+[][]\OT1/cmr/bx/n/10 Definition 62 \OT1/cmr/m/n/10 (An-gu-lar mo-men-tum eigen-states)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 The an-gu-lar mo-men-tum eigen-
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1146.
+(hyperref)                removing `math shift' on input line 1168.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1146.
+(hyperref)                removing `math shift' on input line 1168.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1146.
+(hyperref)                removing `math shift' on input line 1168.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1146.
+(hyperref)                removing `math shift' on input line 1168.
 
-[26]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1190.
-
+[25]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1190.
+(hyperref)                removing `math shift' on input line 1212.
 
 
-Overfull \hbox (18.09549pt too wide) detected at line 1219
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1212.
+
+
+Overfull \hbox (18.09549pt too wide) detected at line 1241
 [][][][] \OML/cmm/m/it/10 J[] [] \OT1/cmr/m/n/10 = \U/msb/m/n/10 ~[] \OML/cmm/m/it/10 ^^N[];  [] J[] [] \OT1/cmr/m/n/10 = \U/msb/m/n/10 ~\OML/cmm/m/it/10 m ^^N[]:
  []
 
-[27] [28]
-Overfull \hbox (0.45227pt too wide) detected at line 1277
+[26] [27]
+Overfull \hbox (0.45227pt too wide) detected at line 1297
 \OML/cmm/m/it/10 S[] [] \OT1/cmr/m/n/10 = (\U/dsrom/m/n/10 1 \OMS/cmsy/m/n/10 
  \OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 ) [] = [] \OMS/cmsy/m/n/10 
  [] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@[] [] \OML/cmm/m/it/10 :
  []
 
-[29] [30] [31]
-Overfull \hbox (15.28163pt too wide) in paragraph at lines 1426--1427
+[28] [29] [30]
+Overfull \hbox (15.28163pt too wide) in paragraph at lines 1446--1447
 []\OT1/cmr/m/n/10 For a pure state, in-sert-ing the iden-tity twice, $\OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 A\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 = [][] [] [] \OML/cmm/m/it/10 A [] [] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (2.58904pt too wide) in paragraph at lines 1435--1436
+Overfull \hbox (2.58904pt too wide) in paragraph at lines 1455--1456
 []\OT1/cmr/m/n/10 With $\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = [] []$ and the Schr^^?odinger equa-tion, $[] [] = \OMS/cmsy/m/n/10 ^^@[]\OML/cmm/m/it/10 H []$
  []
 
-[32] [33] [34] [35] (Phys357.aux)
+[31] [32] [33] [34] (Phys357.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -755,21 +782,24 @@ L3 programming layer <2025-12-24>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `Phys357.out' has not changed.
-(rerunfilecheck)             Checksum: BB3C5977338634FF11592617CACC5BCE;12887.
+(rerunfilecheck)             Checksum: 81271F9403C83302EF800DE3D6131980;12886.
  ) 
 Here is how much of TeX's memory you used:
- 49718 strings out of 467871
- 1291341 string characters out of 5418377
- 2038433 words of memory out of 5000000
- 77683 multiletter control sequences out of 15000+600000
+ 49729 strings out of 467871
+ 1291517 string characters out of 5418377
+ 2042609 words of memory out of 5000000
+ 77684 multiletter control sequences out of 15000+600000
  639861 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,118p,797b,859s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\erenr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/doublestroke/dsrom10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm5.pfb><C:/Users/erenr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Phys357.pdf (38 pages, 617838 bytes).
+Output written on Phys357.pdf (38 pages, 615299 bytes).
 PDF statistics:
- 1050 PDF objects out of 1200 (max. 8388607)
- 353 named destinations out of 1000 (max. 500000)
- 626 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1066 PDF objects out of 1200 (max. 8388607)
+ 363 named destinations out of 1000 (max. 500000)
+ 634 words of extra memory for PDF output out of 10000 (max. 10000000)
 
