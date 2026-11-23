@@ -453,50 +453,66 @@ Filter $+\hat{z}$, pass it through a modified SG$x$ with neither path blocked, t
 
 \section{Quantum States}
 \label{sec:states}
+\marginpar{September 11-18, 2026}
+\begin{definition}[$n$-level System]
+    An $n$-level system is one whose measurements have $n$ possible outcomes \eqref{eq:Sz-quantized}.
+\end{definition}
 
-\subsubsection{Ket Notation}
+\subsection{Dirac Notation}
+\subsubsection{Kets \& Bras}
 \begin{definition}[Ket]
     \label{def:ket}
-    A ket $\ket{\,\cdot\,}$ is a label for a quantum state, treated as a vector. For electron spin, the two possible values of $S_z$ give
-    \[\ket{+\hat{z}} \equiv \ket{\uparrow} \; \text{for } S_{z} = +\frac{\hbar}{2}, \qquad \ket{-\hat{z}} \equiv \ket{\downarrow} \; \text{for } S_{z} = -\frac{\hbar}{2},\]
-    and likewise $\ket{\pm\hat{x}}$ for $S_x = \pm\hbar/2$, and so on for any axis. We follow Townsend and use the $\ket{\pm\hat{n}}$ labels.
+    A ket $\ket{\,\cdot\,}$ is a label for a quantum state, treated as a vector.
 \end{definition}
-
-
-\marginpar{September 11-18, 2026}
-Throughout, an \emph{$n$-level system} is one whose measurements have $n$ possible outcomes \eqref{eq:spin-quantization}.
-
-\subsection{Kets, bras and bases}
+\begin{example}
+    For electron spin, the two possible values of $S_z$ give
+    \[\ket{\pm\hat{z}} \; \text{for } S_{z} = \pm\frac{\hbar}{2},\]
+    and likewise $\ket{\pm\hat{n}}$ for $S_n = \pm\hbar/2$, the spin component along any axis $\hat{n}$ (e.g.\ $\ket{\pm\hat{x}}$).
+\end{example}
 \begin{definition}[Bra]
-    Every ket (Def.~\ref{Ket-def}) $\ket{\psi}$ has a matching bra $\bra{\psi}$, its conjugate transpose (adjoint): the ket's coefficients are complex conjugated, and the column becomes a row, its derivation is shown in Section~\ref{sec:bras}.
+    Every ket $\ket{\,\cdot\,}$ has a matching bra $\bra{\,\cdot\,}$, its adjoint. How to obtain it is derived in Section~\ref{sec:bras}.
 \end{definition}
+
+\subsubsection{Products \& Orthonormal Bases}
 \begin{definition}[Inner product]
-    A bra followed by a ket gives a complex number, the inner product $\braket{\phi|\psi} \in \mathbb{C}$.
+    The inner product $\braket{\phi|\psi} \in \mathbb{C}$ is the complex number obtained by multiplying the bra $\bra{\phi}$ and the ket $\ket{\psi}$.
+\end{definition}
+\begin{proposition}[Linearity]
+    Let $a, b \in \mathbb{C}$, then
+    \begin{equation}
+        \bra{\phi}\big(a\ket{\psi_1} + b\ket{\psi_2}\big) = a\braket{\phi|\psi_1} + b\braket{\phi|\psi_2}
+    \end{equation}
+    \begin{equation}
+        \big(a\bra{\phi_1} + b\bra{\phi_2}\big)\ket{\psi} = a\braket{\phi_1|\psi} + b\braket{\phi_2|\psi}
+    \end{equation}
+\end{proposition}
+\begin{definition}[Orthogonal states]
+    Two states are orthogonal if $\braket{\phi|\psi} = 0$.
+\end{definition}
+\begin{definition}[Outer product]
+    The outer product $\ket{\psi}\bra{\phi}$ is the operator obtained by multiplying the ket $\ket{\psi}$ and the bra $\bra{\phi}$.
 \end{definition}
 \begin{definition}[Orthonormal basis]
-    The outcome states $\{\ket{j} : j = 1,\dots,n\}$ of one measurement form an orthonormal basis of the $n$-dimensional state space:
+    Label the $n$ possible outcomes\footnote{Not to be confused with $\hat{n}$: the axis.} of one measurement by $j = 1, \dots, n$, with $\ket{j}$ the state for outcome $j$. These states form an orthonormal basis of the $n$-dimensional state space:
     \begin{equation}
-        \braket{i|j} = \delta_{ij} = \begin{cases}1 & \text{if } i = j, \\ 0 & \text{if } i \neq j.\end{cases} \quad \forall i, j \in \{1,\dots,n\},
+        \braket{i|j} = \delta_{ij} = \begin{cases}1 & \text{if } i = j, \\ 0 & \text{if } i \neq j.\end{cases}
     \end{equation}
 \end{definition}
 \begin{example}
-    For spin-$\tfrac12$ this is $\braket{\pm\hat{z}|\pm\hat{z}} = 1$ and $\braket{\pm\hat{z}|\mp\hat{z}} = 0$, and the same holds for $\{\ket{\pm\hat{n}}\}$.
+    For a particle with spin-$\tfrac12$ this is $\braket{\pm\hat{z}|\pm\hat{z}} = 1$ and $\braket{\pm\hat{z}|\mp\hat{z}} = 0$, and the same holds for $\{\ket{\pm\hat{n}}\}$.
 \end{example}
-\begin{remark}
-    The label $j$ counts \emph{outcomes}, not axes. Choosing to measure $S_x$ gives $\ket{1} = \ket{+\hat{x}}$, $\ket{2} = \ket{-\hat{x}}$; choosing $S_z$ gives $\ket{1} = \ket{+\hat{z}}$, $\ket{2} = \ket{-\hat{z}}$. Either way $n = 2$.
-\end{remark}
-\begin{remark}
-    A ket may also carry several labels, usually the quantum numbers that pin it down: $\ket{s,m}$. For the deuteron $\ket{1,+1}, \ket{1,0}, \ket{1,-1}$.
-\end{remark}
+
+\subsubsection{Superposition}
 \begin{definition}[Superposition]
     Any state is a linear combination of basis kets,
     \begin{equation}
-        \ket{\psi} = \sum_{j=1}^{n} c_j\ket{j}, \qquad c_j \in \mathbb{C}.
+        \ket{\psi} = \sum_{j=1}^{n} c_j\ket{j},
     \end{equation}
+    where $c_j \in \mathbb{C}$ are complex coefficients.
 \end{definition}
 \begin{example}
-    A state in the $S_z$ basis is a superposition of the two outcomes, with complex coefficients $c_\pm$:
-    \[\text{spin-}\tfrac12: \ \ket{\psi} = c_{+}\ket{+\hat{z}} + c_{-}\ket{-\hat{z}}.\]
+    For a particle with spin-$\tfrac{1}{2}$, a state in the $S_z$ basis is a superposition of the two outcomes:
+    \[\ket{\psi} = c_{+}\ket{+\hat{z}} + c_{-}\ket{-\hat{z}}.\]
 \end{example}
 \begin{proposition}[Coefficients are inner products]
     \begin{equation}
@@ -504,13 +520,18 @@ Throughout, an \emph{$n$-level system} is one whose measurements have $n$ possib
     \end{equation}
 \end{proposition}
 \begin{proof}
-    $\braket{i|\psi} = \sum_j c_j\braket{i|j} = \sum_j c_j\delta_{ij} = c_i$.
+    By linearity, $\braket{i|\psi} = \bra{i}\sum_j c_j\ket{j} = \sum_j c_j\braket{i|j} = \sum_j c_j\delta_{ij} = c_i$.
 \end{proof}
+
+\subsubsection{Projectors \& Completeness}
 \begin{definition}[Projector]
-    The outer product (a ket times a bra) $P_j = \ket{j}\bra{j}$. It is an operator that keeps only the $\ket{j}$ part of a state,
-    \[P_j\ket{\psi} = \ket{j}\braket{j|\psi} = c_j\ket{j},\]
-    and projecting twice changes nothing: $P_j^2 = \ket{j}\braket{j|j}\bra{j} = P_j$.
+    The projector onto $\ket{j}$ is the outer product
+    \[P_j = \ket{j}\bra{j}.\]
+    It keeps only the $\ket{j}$ part of a state: $P_j\ket{\psi} = \ket{j}\braket{j|\psi} = c_j\ket{j}$.
 \end{definition}
+\begin{remark}
+    Projecting twice changes nothing: $P_j^2 = \ket{j}\braket{j|j}\bra{j} = P_j$.
+\end{remark}
 \begin{proposition}[Completeness relation]
     Because every state can be expanded in the basis, the projectors sum to the identity:
     \begin{equation}
@@ -518,11 +539,9 @@ Throughout, an \emph{$n$-level system} is one whose measurements have $n$ possib
     \end{equation}
 \end{proposition}
 \begin{example}
-    \[\text{spin-}\tfrac12: \ \id = \ket{+\hat{n}}\bra{+\hat{n}} + \ket{-\hat{n}}\bra{-\hat{n}} \text{ for any axis } \hat{n}.\]
+    For a particle with spin-$\tfrac{1}{2}$, and for any axis $\hat{n}$,
+    \[\id = \ket{+\hat{n}}\bra{+\hat{n}} + \ket{-\hat{n}}\bra{-\hat{n}}.\]
 \end{example}
-\begin{remark}[Inserting the identity]
-    Writing $\id$ in this form in front of a state reproduces its expansion, $\ket{\psi} = \id\ket{\psi} = \sum_j\ket{j}\braket{j|\psi}$. This trick is used in almost every derivation below.
-\end{remark}
 
 \subsection{Measurement and probability}
 \begin{definition}[Observable]
