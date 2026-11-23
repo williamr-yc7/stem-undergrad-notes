@@ -165,7 +165,7 @@ Textbook used is JS Townsend, \emph{A Modern Approach to Quantum Mechanics}, 2nd
     \end{equation}
 \end{definition}
 
-\subsubsection{Gyromagnetic ratio}
+\subsubsection{Gyromagnetic Ratio}
 \begin{definition}[Gyromagnetic ratio]
     The constant $\gamma$ relating magnetic moment to angular momentum,
     \begin{equation}
@@ -207,14 +207,37 @@ Textbook used is JS Townsend, \emph{A Modern Approach to Quantum Mechanics}, 2nd
 \end{remark}
 \begin{definition}[Planck constant]
     The constant $h$ sets the scale at which quantization matters. It relates photon energy to frequency, $E = h\nu$, and
-    \[h \approx 6.626 \times 10^{-34} [J\cdot s].\]
+    \[h \approx 6.626 \times 10^{-34}\ \mathrm{J\,s}.\]
 \end{definition}
 \begin{definition}[Reduced Planck constant]
     The reduced Planck constant is the natural unit of angular momentum in quantum mechanics,
-    \[\hbar = \frac{h}{2\pi} \approx 1.055 \times 10^{-34} [J\cdot s].\]
+    \[\hbar = \frac{h}{2\pi} \approx 1.055 \times 10^{-34}\ \mathrm{J\,s}.\]
+    In Gaussian units, $\hbar = 1.055 \times 10^{-27}\ \mathrm{erg\,s}$, needed when plugging into formulas with $c$.
 \end{definition}
 
+\subsubsection{Spin Quantization}
+\begin{definition}[Spin quantum number]
+    The spin quantum number $s$ is fixed by the particle type and takes values $s = 0, \tfrac12, 1, \tfrac32, \dots$
+\end{definition}
+\begin{proposition}
+    A measurement of $S_z$ can only give
+    \begin{equation}
+        \label{eq:Sz-quantized}
+        S_z = -s\hbar,\ (-s+1)\hbar,\ \dots,\ s\hbar,
+    \end{equation}
+    so there are $2s+1$ possible values, spaced by $\hbar$.
+\end{proposition}
+\begin{example}
+    For the electron, $s = \tfrac12$, so $S_z = \pm\frac{\hbar}{2}$.
+\end{example}
+\begin{remark}
+    $S_z$ is a component. The magnitude is $|\vec{S}| = \hbar\sqrt{s(s+1)}$, which for the electron is $\hbar\sqrt{3}/2$.
+\end{remark}
+
 \subsubsection{Intrinsic Moment}
+\begin{definition}[g-factor]
+    The dimensionless number $g$ defines how much stronger or weaker the moment is than the classical value ($g = 1$).\footnote{It must be measured or derived from relativistic quantum theory.}
+\end{definition}
 \begin{definition}[Intrinsic Moment]
     The intrinsic magnetic moment $\vec{\mu}_s$ of a particle is the magnetic moment it carries because of its spin $\vec{S}$.
     \begin{equation}
@@ -229,9 +252,6 @@ Textbook used is JS Townsend, \emph{A Modern Approach to Quantum Mechanics}, 2nd
         \gamma_s = g\,\frac{q}{2mc}
     \end{equation}
 \end{definition}
-\begin{definition}[g-factor]
-    The dimensionless number $g$ defines how much stronger or weaker the moment is than the classical value ($g = 1$).\footnote{It must be measured or derived from relativistic quantum theory.}
-\end{definition}
 
 \subsubsection{Magnetons}
 \begin{definition}[Magneton]
@@ -241,13 +261,13 @@ Textbook used is JS Townsend, \emph{A Modern Approach to Quantum Mechanics}, 2nd
     \end{equation}
 \end{definition}
 \begin{definition}[Bohr Magneton]
-    The natural units of magnetic moment for the electron.
+    The natural unit of magnetic moment for the electron.
     \begin{equation}
         \mu_{B} = \frac{|e|\hbar}{2m_{e}c}.
     \end{equation}
 \end{definition}
 \begin{definition}[Nuclear Magneton]
-    The natural units of magnetic moment for nucleons, i.e.\ protons and neutrons.
+    The natural unit of magnetic moment for nucleons, i.e.\ protons and neutrons.
     \begin{equation}
         \mu_{N} = \frac{|e|\hbar}{2m_{p}c} \approx \frac{\mu_B}{1836}
     \end{equation}
@@ -260,85 +280,56 @@ where the minus sign for the electron comes from its negative charge.
 \begin{remark}
     Classically $\mu = (q/2mc)L_z$ vanishes when $q = 0$, yet the neutral neutron has a moment. This is because the neutron is made of three charged quarks (one up, $+\tfrac23|e|$, and two down, $-\tfrac13|e|$ each). Their charges add to zero, but their spin and motion give moments that do not cancel.
 \end{remark}
-\begin{remark}
-    Since $m_{p} \gg m_{e}$, $\mu_{N} \ll \mu_{B}$, so nuclei are deflected far less than electrons in a Stern-Gerlach device.
-\end{remark}
 
-\subsection{The Stern-Gerlach Experiment}
-\begin{definition}[Stern-Gerlach (SG) apparatus]
+\subsection{The Stern--Gerlach Experiment}
+\begin{definition}[Stern--Gerlach (SG) apparatus]
     A device that measures one component of a particle's magnetic moment. A beam of neutral atoms passes through a magnet shaped so that the field strength changes along a chosen axis, here $z$ (a field \emph{gradient}). The gradient pushes each atom by an amount proportional to $\mu_z$, and a screen records where it lands.
 \end{definition}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{../Images/Stern-Gerlach_apparatus.png}
-    \caption{Illustration of the Stern-Gerlach apparatus.}
+    \caption{Illustration of the Stern--Gerlach apparatus.}
     \label{fig:stern-gerlach-apparatus}
 \end{figure}
 
+\subsubsection{Silver Atoms}
+The Stern--Gerlach experiment used silver atoms, and its result was later understood as the first direct evidence of electron spin.
+\begin{remark}
+    Silver has zero net orbital angular momentum, $\vec{L} = 0$, and its whole moment comes from one unpaired outermost (valence) electron, so the atom behaves like a single electron spin.
+\end{remark}
+\begin{remark}
+    Since $m_{p} \gg m_{e}$, $\mu_{N} \ll \mu_{B}$, so the nucleus contributes negligibly to the atom's moment.
+\end{remark}
+With $\mu_{z} = -\frac{g_{e}|e|}{2m_{e}c}\,S_{z}$ and a gradient $\partial B_{z}/\partial z < 0$, the force that deflects the atom in the Stern--Gerlach apparatus is
+\[F_{z} = g_{e}\frac{|e|}{2m_{e}c}\left|\frac{\partial B_{z}}{\partial z}\right| S_{z},\]
+so the deflection measures the $z$ component of spin directly.
 
-
-\subsubsection{Silver atoms}
-Silver has zero net orbital angular momentum, $\vec{L} = 0$, and its whole moment comes from one unpaired outermost (valence) electron, so the atom behaves like a single electron spin. With
-\[\mu_{z} = -\frac{g_{e}|e|}{2m_{e}c}\,S_{z}\]
-and a gradient $\partial B_{z}/\partial z < 0$,
-\[F_{z} = g_{e}\frac{|e|}{2m_{e}c}\left|\frac{\partial B_{z}}{\partial z}\right| S_{z}.\]
-\begin{result}
-    $F_{z} \propto S_{z}$: the deflection measures the $z$ component of spin directly.
-\end{result}
-
-\subsubsection{Classical prediction versus observation}
+\subsubsection{Classical Prediction \& Observation}
 Atoms leave the oven with spins pointing in random directions, so $S_z = |\vec{S}|\cos\theta$ takes every value in $[-|\vec{S}|,|\vec{S}|]$.
 \begin{remark}
-    Classically the screen should show a continuous smear. It shows two spots.
+    Classically the screen should show a continuous smear. Experimentally, it shows two spots.
 \end{remark}
-\begin{result}[Quantization of spin]
-    The electron's spin component, if prepared in the $\ket{+\hat{z}}$ state, is quantized:
+\begin{proposition}
+    Each allowed value of $S_z$ gives one beam, so the number of spots on the screen is
     \begin{equation}
-        S_{z} = \pm\frac{\hbar}{2}.
+        \label{eq:number-of-beams}
+        n = 2s+1.
     \end{equation}
-\end{result}
-
-\subsection{Spin quantization}
-Now if we generalize the SG experiment for any random particles (electron, deutron, atoms, proton, neutron...), we get a specific amount of spots on the screen. The number of spots is the number of beams $n$, which is related to the spin quantum number $s$ by
-\begin{equation}
-    \label{eq:spin-quantization}
-    n=2s+1.
-\end{equation}
-\begin{definition}[Spin quantum number]
-    From the amount of beams on the screen, we can determine the spin quantum number $s$ of the particle.
-    \[s = \frac{n-1}{2}.\]
-\end{definition}
-The number $s$, fixed by the particle type, taking values $s = 0, \tfrac12, 1, \tfrac32, \dots$ A measurement of $S_z$ gives
-\begin{equation}
-    \label{eq:Sz-quantized}
-    S_z = m\hbar.
-\end{equation}
-\begin{definition}[Magnetic quantum number]
-    The number $m$ is called the magnetic quantum number, it defines the orientation of the spin, and it takes values
-    \[m = -s, -s+1, \dots, +s.\]
-\end{definition}
+\end{proposition}
 \begin{example}
-    To get the values of the spin of an electron we use the silver atom in the SG apparatus, since the spin of silver is defined by its lonely valence electron. We get 2 beams, so $n=2$, therefore $s=1/2$, and the possible values of $m$ are $m = -1/2, +1/2$, which gives the two possible values of $S_z$:
-    \[S_z = \pm\frac{\hbar}{2}.\]
+    Silver gives $n = 2$ spots, so $s = \tfrac12$, the spin of its valence electron.
 \end{example}
-\begin{remark}
-    $S_z$ is a component. The magnitude is $|\vec{S}| = \hbar\sqrt{s(s+1)}$, which for the electron ($s=1/2$) is $\hbar\sqrt{3}/2$.
-\end{remark}
-
-\subsection{Sequential Stern-Gerlach experiments}
-We write SG$z$ for a device whose gradient points along $z$, and SG$x$ for the same device rotated by $90^\circ$ about the beam axis.
-\begin{definition}[Ket]
-    \label{Ket-def}
-    A ket $\ket{\,\cdot\,}$ is a label for a quantum state, treated as a vector. For electron spin, the two outcomes of an SG$z$ give
-    \[\ket{+\hat{z}} \equiv \ket{\uparrow} \; \text{for } S_{z} = +\frac{\hbar}{2}, \qquad \ket{-\hat{z}} \equiv \ket{\downarrow} \; \text{for } S_{z} = -\frac{\hbar}{2},\]
-    and likewise $\ket{\pm\hat{x}}$ for $S_x = \pm\hbar/2$, and so on for any axis. We follow Townsend and use the $\ket{\pm\hat{n}}$ labels.
-\end{definition}
-\begin{definition}[Filter]
-    Each device sends atoms into two beams. A filter blocks one of them.
-\end{definition}
 \begin{remark}
     A beam straight from the oven always splits 50/50 in any SG device, whatever its orientation.
 \end{remark}
+
+\subsection{Sequential Stern--Gerlach Experiments}
+\begin{remark}
+    We write SG$z$ for a device whose gradient points along $z$, and SG$x$ for the same device rotated by $90^\circ$ about the beam axis.
+\end{remark}
+\begin{definition}[Filter]
+    Each device sends atoms into two beams. A filter blocks one of them.
+\end{definition}
 \begin{figure}[H]
 \centering
 \resizebox{\textwidth}{!}{%
@@ -413,32 +404,47 @@ We write SG$z$ for a device whose gradient points along $z$, and SG$x$ for the s
 \end{scope}
 \end{tikzpicture}%
 }
-\caption{Sequential Stern-Gerlach experiments. Thick bars block a beam. Percentages are the fractions of atoms entering the last device. Every oven starts with $N_0$ atoms.}
+\caption{Sequential Stern--Gerlach experiments. Thick bars block a beam. Percentages are the fractions of atoms entering the last device. Every oven starts with $N_0$ atoms.}
 \label{fig:sequential-sg}
 \end{figure}
 \begin{remark}
-    The lecture notes use $N_0$ for the number of atoms entering the \emph{second} device rather than leaving the oven, so their counts are twice the ones below.
+    The lecture notes use $N_0$ for the number of atoms entering the second device rather than leaving the oven, so their counts are twice the ones below.
 \end{remark}
 
 \subsubsection{\texorpdfstring{Experiment 1: SG$z$ then SG$z$}{Experiment 1: SGz then SGz}}
-Filter the $+\hat{z}$ beam and send it into a second SG$z$. Every atom comes out $+\hat{z}$. The measurement is repeatable: an atom found with $S_z = +\hbar/2$ gives the same answer again, so it left the first device in $\ket{+\hat{z}}$. We end with $N_0/2$ atoms in $\ket{+\hat{z}}$.
+Filter the $+\hat{z}$ beam and send it into a second SG$z$. 
+\begin{result}
+    Every atom comes out $+\hat{z}$ from the second SG$z$, ending with $N_0/2$ atoms in the $+\hat{z}$ beam. 
+\end{result}
+\begin{remark}
+    The measurement is repeatable: an atom found with $S_z = +\hbar/2$ gives the same answer again, so it left the first device as $+\hat{z}$.
+\end{remark}
 
 \subsubsection{\texorpdfstring{Experiment 2: SG$z$ then SG$x$}{Experiment 2: SGz then SGx}}
-Filter $+\hat{z}$ and send it into an SG$x$. Half come out $+\hat{x}$, half $-\hat{x}$: knowing $S_z$ tells us nothing about $S_x$. We end with $N_0/4$ in each of $\ket{\pm\hat{x}}$.
+Filter $+\hat{z}$ and send it into an SG$x$. 
+\begin{result}
+    Half come out $+\hat{x}$, half $-\hat{x}$, ending with $N_0/4$ in each of the $\pm\hat{x}$ beams.
+\end{result}
+\begin{remark}
+    Knowing $S_z$ tells us nothing about $S_x$.
+\end{remark}
 
 \subsubsection{\texorpdfstring{Experiment 3: SG$z$, SG$x$, then SG$z$}{Experiment 3: SGz, SGx, then SGz}}
-Filter $+\hat{z}$, filter $+\hat{x}$, then measure $S_z$ again. The beam splits 50/50 even though every atom was $+\hat{z}$ at the start. Blocking $+\hat{x}$ instead gives the same result. We end with $N_0/8$ in each of $\ket{\pm\hat{z}}$.
+Filter $+\hat{z}$, filter $+\hat{x}$, then measure $S_z$ again.
 \begin{result}
-    No state has definite values of both $S_x$ and $S_z$. Measuring $S_x$ destroys what we knew about $S_z$.
+    Half come out $+\hat{z}$, half $-\hat{z}$, in the second SG$z$, ending with $N_0/8$ in each of the $\pm\hat{z}$ beams.
 \end{result}
+\begin{remark}
+    The beam splits 50/50 even though every atom was $+\hat{z}$ at the start, and blocking $+\hat{x}$ instead gives the same result. So no state has definite values of both $S_x$ and $S_z$: measuring $S_x$ destroys what we knew about $S_z$.
+\end{remark}
 
 \subsubsection{\texorpdfstring{Experiment 4: SG$z$, modified SG$x$, then SG$z$}{Experiment 4: SGz, modified SGx, then SGz}}
 \begin{definition}[Modified SG device]
-    An SG device that splits the beam according to $S_n$ and then recombines the two beams, so both outcomes exit at the same place without being recorded.
+    An SG device that splits the beam according to the spin component along an axis $\hat{n}$ and then recombines the two beams, so both outcomes exit at the same place without being recorded.
 \end{definition}
-Filter $+\hat{z}$, pass it through a modified SG$x$ with neither path blocked, then measure $S_z$. Every atom comes out $+\hat{z}$: all $N_0/2$ end in $\ket{+\hat{z}}$.
+Filter $+\hat{z}$, pass it through a modified SG$x$ with neither path blocked, then measure $S_z$. 
 \begin{result}
-    The atoms cannot be going half through $+\hat{x}$ and half through $-\hat{x}$, since Experiment 3 showed each half alone gives 50/50. Instead the two paths \emph{interfere}: as with water or light waves, contributions from the two paths add and can cancel, here cancelling the $-\hat{z}$ outcome. No definite path can be assigned to an atom. Section~\ref{sec:states} makes this precise.
+    Every atom comes out $+\hat{z}$, ending with $N_0/2$ in the $+\hat{z}$ beam.
 \end{result}
 \begin{remark}
     With one path blocked, a modified SG acts exactly like an ordinary SG.
@@ -447,6 +453,16 @@ Filter $+\hat{z}$, pass it through a modified SG$x$ with neither path blocked, t
 
 \section{Quantum States}
 \label{sec:states}
+
+\subsubsection{Ket Notation}
+\begin{definition}[Ket]
+    \label{def:ket}
+    A ket $\ket{\,\cdot\,}$ is a label for a quantum state, treated as a vector. For electron spin, the two possible values of $S_z$ give
+    \[\ket{+\hat{z}} \equiv \ket{\uparrow} \; \text{for } S_{z} = +\frac{\hbar}{2}, \qquad \ket{-\hat{z}} \equiv \ket{\downarrow} \; \text{for } S_{z} = -\frac{\hbar}{2},\]
+    and likewise $\ket{\pm\hat{x}}$ for $S_x = \pm\hbar/2$, and so on for any axis. We follow Townsend and use the $\ket{\pm\hat{n}}$ labels.
+\end{definition}
+
+
 \marginpar{September 11-18, 2026}
 Throughout, an \emph{$n$-level system} is one whose measurements have $n$ possible outcomes \eqref{eq:spin-quantization}.
 
@@ -1537,5 +1553,5 @@ so its spins are opposite along every axis $\hat{n}$, while the classical pair g
 
 
 \section{Useful Links}
-\noindent Stern-Gerlach experiment:\\ \url{https://www.youtube.com/shorts/QG7kJXxN1Kk}
+\noindent Stern--Gerlach experiment:\\ \url{https://www.youtube.com/shorts/QG7kJXxN1Kk}
 \end{document}

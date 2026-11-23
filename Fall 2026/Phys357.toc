@@ -8,22 +8,23 @@
 \contentsline {subsection}{\numberline {3.1}The Classical Picture}{2}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Angular Momentum}{2}{subsubsection.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}Magnetic Moment}{3}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Gyromagnetic ratio}{3}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.3}Gyromagnetic Ratio}{3}{subsubsection.3.1.3}%
 \contentsline {subsubsection}{\numberline {3.1.4}Force in a Nonuniform $\vec {B}$-field}{3}{subsubsection.3.1.4}%
 \contentsline {subsection}{\numberline {3.2}The Quantum Picture}{3}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Spin}{3}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Intrinsic Moment}{4}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Magnetons}{4}{subsubsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.3}The Stern-Gerlach Experiment}{5}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Silver atoms}{5}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Classical prediction versus observation}{6}{subsubsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.4}Spin quantization}{6}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Sequential Stern-Gerlach experiments}{7}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Experiment 1: SG$z$ then SG$z$}{8}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Experiment 2: SG$z$ then SG$x$}{8}{subsubsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.3}Experiment 3: SG$z$, SG$x$, then SG$z$}{8}{subsubsection.3.5.3}%
-\contentsline {subsubsection}{\numberline {3.5.4}Experiment 4: SG$z$, modified SG$x$, then SG$z$}{8}{subsubsection.3.5.4}%
+\contentsline {subsubsection}{\numberline {3.2.2}Spin Quantization}{4}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Intrinsic Moment}{4}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Magnetons}{5}{subsubsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.3}The Stern--Gerlach Experiment}{5}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Silver Atoms}{6}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Classical Prediction \& Observation}{6}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}Sequential Stern--Gerlach Experiments}{6}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Experiment 1: SG$z$ then SG$z$}{7}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Experiment 2: SG$z$ then SG$x$}{7}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Experiment 3: SG$z$, SG$x$, then SG$z$}{8}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}Experiment 4: SG$z$, modified SG$x$, then SG$z$}{8}{subsubsection.3.4.4}%
 \contentsline {section}{\numberline {4}Quantum States}{8}{section.4}%
+\contentsline {subsubsection}{\numberline {4.0.1}Ket Notation}{8}{subsubsection.4.0.1}%
 \contentsline {subsection}{\numberline {4.1}Kets, bras and bases}{8}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Measurement and probability}{10}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Bras}{10}{subsubsection.4.2.1}%
