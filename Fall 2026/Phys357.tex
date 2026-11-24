@@ -497,13 +497,20 @@ Filter $+\hat{z}$, pass it through a modified SG$x$ with neither path blocked, t
 \begin{definition}[Orthogonal states]
     Two states are orthogonal if $\braket{\phi|\psi} = 0$.
 \end{definition}
+\begin{definition}[Operator]
+    An operator $A$ maps kets to kets. It is linear if it respects superpositions,
+    \[A\big(a\ket{\psi} + b\ket{\phi}\big) = aA\ket{\psi} + bA\ket{\phi}, \qquad a, b \in \mathbb{C}.\]
+\end{definition}
+\begin{remark}
+    Every operator in this course is linear.    
+\end{remark}
 \begin{definition}[Outer product]
     The outer product $\ket{\psi}\bra{\phi}$ is the operator obtained by multiplying the ket $\ket{\psi}$ and the bra $\bra{\phi}$.
 \end{definition}
 \begin{definition}[Orthonormal basis]
     Label the $n$ possible outcomes\footnote{Not to be confused with $\hat{n}$: the axis.} of one measurement by $j = 1, \dots, n$, with $\ket{j}$ the state for outcome $j$. These states form an orthonormal basis of the $n$-dimensional state space:
     \begin{equation}
-        \braket{i|j} = \delta_{ij} = \begin{cases}1 & \text{if } i = j, \\ 0 & \text{if } i \neq j.\end{cases}
+        \braket{i|j} = \delta_{ij}.
     \end{equation}
 \end{definition}
 \begin{example}
@@ -689,42 +696,38 @@ Setting this to $\tfrac12$ (from the overlaps above) forces $\gamma - \delta = \
 \end{result}
 
 
-\section{Matrix Mechanics}%read and annotate
+\section{Matrix Mechanics}
 \marginpar{September 21-25, 2026}
 \chapterstart{2}
 
-\subsection{States as column vectors}
-\begin{definition}[Representation of a state]
-    In a basis, a ket is represented by the column of its coefficients and its bra by the conjugate row (the adjoint, $\dagger$). In the $S_z$ basis:
-    \begin{equation}
-        \ket{\psi} \xrightarrow{S_z} \psi = \begin{pmatrix} c_+ \\ c_- \end{pmatrix}, \qquad
-        \bra{\psi} \xrightarrow{S_z} \psi^\dagger = \begin{pmatrix} c_+^* & c_-^* \end{pmatrix}, \qquad c_\pm = \braket{\pm\hat{z}|\psi}.
-    \end{equation}
+\subsection{States}
+\begin{definition}[Kets as matrices]
+    In a specific basis, a ket is represented by the column of its coefficients and its bra by the conjugate row (the adjoint, $\dagger$).
 \end{definition}
-\begin{remark}
-    Write $\ket{\psi} \xrightarrow{S_z} \psi$, not $\ket{\psi} = \psi$: the ket is basis-independent, the column is not.
-\end{remark}
 \begin{example}
     \[\ket{+\hat{z}} \xrightarrow{S_z} \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \qquad \ket{-\hat{z}} \xrightarrow{S_z} \begin{pmatrix} 0 \\ 1 \end{pmatrix},\]
     \[\ket{\pm\hat{x}} \xrightarrow{S_z} \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ \pm 1 \end{pmatrix}, \qquad \ket{\pm\hat{y}} \xrightarrow{S_z} \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ \pm i \end{pmatrix}.\]
 \end{example}
+\begin{remark}
+    Write $\ket{\psi} \xrightarrow{S_z} \psi$, not $\ket{\psi} = \psi$: the ket is basis-independent, the column is not.
+\end{remark}
 \begin{proposition}[Inner product as a matrix product]
-    If $\ket{\phi} \xrightarrow{S_z} \phi$ and $\ket{\psi} \xrightarrow{S_z} \psi$, then $\braket{\phi|\psi} = \phi^\dagger\psi$ (row times column), so $P(\phi\,|\,\psi) = \left|\phi^\dagger\psi\right|^2$ and $\braket{\psi|\psi} = \psi^\dagger\psi$.
+    If $\ket{\phi} \xrightarrow{S_z} \phi$ and $\ket{\psi} \xrightarrow{S_z} \psi$, then $\braket{\phi|\psi} = \phi^\dagger\psi$ (row times column).
 \end{proposition}
 \begin{remark}
-    For a state given in another basis, replace each basis ket by its $S_z$ column and add. For $\ket{\psi} = a\ket{+\hat{y}} + b\ket{-\hat{y}}$,
-    \[\psi \xrightarrow{S_z} \frac{a}{\sqrt{2}}\begin{pmatrix} 1 \\ i \end{pmatrix} + \frac{b}{\sqrt{2}}\begin{pmatrix} 1 \\ -i \end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix} a+b \\ i(a-b) \end{pmatrix}.\]
-    Checking $\psi^\dagger\psi = 1$ before going further catches most mistakes. A cleaner systematic method is in Section~\ref{sec:change-basis}.
+    For $\ket{\phi} = \ket{\psi}$, the norm is the column times its own conjugate row, $\braket{\psi|\psi} = \psi^\dagger\psi$, so a state is normalized when $\psi^\dagger\psi = 1$.
 \end{remark}
+\begin{proposition}[Born rule in matrix form]
+    If $\ket{a_j} \xrightarrow{S_z} a_j$, then
+    \[P(A = a_j) = \left|a_j^\dagger\psi\right|^2.\]
+\end{proposition}
 
-\subsection{Operators as matrices}
-\begin{definition}[Linear operator]
-    A map $A$ from kets to kets that respects superpositions, $A\left(a\ket{\psi} + b\ket{\phi}\right) = aA\ket{\psi} + bA\ket{\phi}$. Every operator in this course is linear.
-\end{definition}
+\subsection{Operators}
+\subsubsection{Matrix Element}
 \begin{definition}[Matrix of an operator]
-    In a basis $\{\ket{j}\}$, $A$ is represented by the matrix of \emph{matrix elements}
+    In a basis $\{\ket{j}\}$, an operator $A$ is represented by the matrix of its \emph{matrix elements}:
     \begin{equation}
-        A_{ij} = \bra{i}A\ket{j}.
+        A_{ij} = \bra{i}A\ket{j}, \qquad A = \sum_{i,j}A_{ij}\ket{i}\bra{j}.
     \end{equation}
 \end{definition}
 \begin{proposition}[Operator acting on a state]
@@ -737,22 +740,20 @@ Setting this to $\tfrac12$ (from the overlaps above) forces $\gamma - \delta = \
 \end{proof}
 \begin{example}
     The projectors and identity in the $S_z$ basis:
-    \[P_{+\hat{z}} \xrightarrow{S_z} \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}, \qquad P_{-\hat{z}} \xrightarrow{S_z} \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}, \qquad \id \xrightarrow{S_z} \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix},\]
-    and indeed $P_{+\hat{z}}\psi = (c_+, 0)^T$.
+    \[P_{+\hat{z}} \xrightarrow{S_z} \begin{pmatrix} 1 \\ 0 \end{pmatrix}\begin{pmatrix} 1 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}, \qquad P_{-\hat{z}} \xrightarrow{S_z} \begin{pmatrix} 0 \\ 1 \end{pmatrix}\begin{pmatrix} 0 & 1 \end{pmatrix} = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix},\]
+    \[\id = P_{+\hat{z}} + P_{-\hat{z}} \xrightarrow{S_z} \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}.\]
 \end{example}
+
+\subsubsection{Adjoint}
 \begin{definition}[Adjoint]
-    The adjoint $A^\dagger$ is the conjugate transpose: $(A^\dagger)_{ij} = A_{ji}^*$. In operator form, writing $A = \sum_{i,j}A_{ij}\ket{i}\bra{j}$,
+    In a basis $\{\ket{j}\}$, the adjoint $A^\dagger$ of an operator $A$ is represented by its conjugate transpose:
     \begin{equation}
-        A^\dagger = \sum_{i,j}A_{ij}^*\ket{j}\bra{i}.
+        (A^\dagger)_{ij} = A_{ji}^*, \qquad A^\dagger = \sum_{i,j}A_{ij}^*\ket{j}\bra{i}.
     \end{equation}
-    For real entries it is just the transpose.
 \end{definition}
 \begin{proposition}[Bra of a transformed state]
     If $\ket{\psi'} = A\ket{\psi}$, then $\bra{\psi'} = \bra{\psi}A^\dagger$.
 \end{proposition}
-\begin{proof}
-    The column of $\ket{\psi'}$ is $A\psi$, and its bra is the conjugate transpose, $(A\psi)^\dagger = \psi^\dagger A^\dagger$.
-\end{proof}
 \begin{proposition}[Adjoint of a product]
     \begin{equation}
         \left(AB\right)^\dagger = B^\dagger A^\dagger.
@@ -760,13 +761,16 @@ Setting this to $\tfrac12$ (from the overlaps above) forces $\gamma - \delta = \
     The order reverses; $A^\dagger B^\dagger$ is a different matrix in general.
 \end{proposition}
 
-\subsection{Observables as operators}
+\subsection{Observables}
+\subsubsection{Eigenstates}
 \begin{definition}[Eigenstate and eigenvalue]
     $\ket{a}$ is an eigenstate of $A$ with eigenvalue $a$ if
     \begin{equation}
-        A\ket{a} = a\ket{a},
+        A\ket{a} = a\ket{a}.
     \end{equation}
-    the familiar $Mv = \lambda v$ in matrix form. A general operator turns a state into a different state; eigenstates come back as themselves times a number. A basis made of eigenstates of $A$ is called an \emph{eigenbasis} of $A$.
+\end{definition}
+\begin{definition}[Eigenbasis]
+    An eigenbasis of an operator $A$ is a basis made of eigenstates of $A$.
 \end{definition}
 \begin{remark}[Eigenstate vs eigenvector]
     Same thing in two languages. ``Eigenstate'' is the physics word for the ket, e.g.\ $\ket{+\hat{x}}$. ``Eigenvector'' is the linear-algebra word, usually for its column in some basis, e.g.\ $\frac{1}{\sqrt{2}}(1,1)^T$ in the $S_z$ basis.
@@ -776,55 +780,20 @@ Setting this to $\tfrac12$ (from the overlaps above) forces $\gamma - \delta = \
     \begin{equation}
         \hat{A} = \sum_j a_j\ket{a_j}\bra{a_j}.
     \end{equation}
-    Then $\hat{A}\ket{a_j} = a_j\ket{a_j}$ (the outcomes are its eigenvalues, the outcome states its eigenstates), and
+    Then $\hat{A}\ket{a_j} = a_j\ket{a_j}$: the outcomes are its eigenvalues, the outcome states its eigenstates.
+\end{proposition}
+\begin{proposition}[Expectation values in operator form]
     \begin{equation}
         \braket{A} = \bra{\psi}\hat{A}\ket{\psi}, \qquad \braket{A^2} = \bra{\psi}\hat{A}^2\ket{\psi}.
     \end{equation}
 \end{proposition}
-\begin{proof}
-    $\hat{A}\ket{a_k} = \sum_j a_j\ket{a_j}\delta_{jk} = a_k\ket{a_k}$, and
-    $\bra{\psi}\hat{A}\ket{\psi} = \sum_j a_j\braket{\psi|a_j}\braket{a_j|\psi} = \sum_j a_j\left|\braket{a_j|\psi}\right|^2 = \braket{A}$. Likewise $\hat{A}^2 = \sum_j a_j^2\ket{a_j}\bra{a_j}$.
-\end{proof}
 \begin{proposition}[An operator is diagonal in its own eigenbasis]
     \begin{equation}
         \bra{a_i}\hat{A}\ket{a_j} = a_j\delta_{ij}, \qquad \hat{A} \xrightarrow{\ket{a_j}} D = \begin{pmatrix} a_1 & & 0 \\ & \ddots & \\ 0 & & a_n \end{pmatrix}.
     \end{equation}
 \end{proposition}
 
-\subsubsection{Spin operators and Pauli matrices}
-\begin{definition}[Spin operators]
-    Applying the operator of an observable to spin, for $\hat{n} \in \{\hat{x},\hat{y},\hat{z}\}$,
-    \begin{equation}
-        \hat{S}_n = \frac{\hbar}{2}\left(\ket{+\hat{n}}\bra{+\hat{n}} - \ket{-\hat{n}}\bra{-\hat{n}}\right), \qquad \hat{S}_n\ket{\pm\hat{n}} = \pm\frac{\hbar}{2}\ket{\pm\hat{n}}.
-    \end{equation}
-\end{definition}
-\begin{example}
-    Each spin operator in its own eigenbasis, using $\hat{S}_n\ket{\pm\hat{n}} = \pm\frac{\hbar}{2}\ket{\pm\hat{n}}$ and orthonormality:
-    \[\bra{\pm\hat{n}}\hat{S}_n\ket{\pm\hat{n}} = \pm\frac{\hbar}{2}, \qquad \bra{\pm\hat{n}}\hat{S}_n\ket{\mp\hat{n}} = \mp\frac{\hbar}{2}\braket{\pm\hat{n}|\mp\hat{n}} = 0,\]
-    so
-    \[\hat{S}_x \xrightarrow{S_x} \frac{\hbar}{2}\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}, \qquad
-    \hat{S}_y \xrightarrow{S_y} \frac{\hbar}{2}\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}, \qquad
-    \hat{S}_z \xrightarrow{S_z} \frac{\hbar}{2}\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.\]
-\end{example}
-In the $S_z$ basis the matrix elements of $\hat{S}_n$ are
-\[\bra{i}\hat{S}_n\ket{j} = \frac{\hbar}{2}\Big(\braket{i|+\hat{n}}\braket{+\hat{n}|j} - \braket{i|-\hat{n}}\braket{-\hat{n}|j}\Big), \qquad i,j \in \{+\hat{z},-\hat{z}\}.\]
-\begin{remark}[Shortcut]
-    Write each projector as a column times its conjugate row, e.g.
-    \[\ket{\pm\hat{x}}\bra{\pm\hat{x}} \xrightarrow{S_z} \frac{1}{2}\begin{pmatrix} 1 \\ \pm1 \end{pmatrix}\begin{pmatrix} 1 & \pm1 \end{pmatrix} = \frac{1}{2}\begin{pmatrix} 1 & \pm1 \\ \pm1 & 1 \end{pmatrix},\]
-    then subtract and multiply by $\hbar/2$.
-\end{remark}
-\begin{definition}[Pauli matrices]
-    The results, all in the $S_z$ basis:
-    \begin{equation}
-        \hat{S}_j = \frac{\hbar}{2}\sigma_j, \qquad
-        \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \quad
-        \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \quad
-        \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
-    \end{equation}
-    Each equals its own adjoint and squares to $\id$, so $\hat{S}_j^2 = \tfrac{\hbar^2}{4}\id$. Collected into the vector of Pauli matrices $\vec{\sigma} = \sigma_x\hat{x} + \sigma_y\hat{y} + \sigma_z\hat{z}$, this reads $\vec{S} \xrightarrow{S_z} \frac{\hbar}{2}\vec{\sigma}$.
-\end{definition}
-
-\subsubsection{Hermitian operators}
+\subsubsection{Hermitian Operators}
 \begin{definition}[Hermitian operator]
     \label{def:hermitian}
     $A$ is Hermitian if it equals its own adjoint, $A = A^\dagger$ (e.g.\ the Pauli matrices).
@@ -840,73 +809,85 @@ In the $S_z$ basis the matrix elements of $\hat{S}_n$ are
     If $A\ket{a} = a\ket{a}$, the bra is $\bra{a}A^\dagger = a^*\bra{a}$, so $a\braket{a|a} = \bra{a}A\ket{a} = \bra{a}A^\dagger\ket{a} = a^*\braket{a|a}$, and $a = a^*$.
 \end{proof}
 
-\subsection{Change of basis}
+\subsection{Spin}
+\begin{definition}[Spin operators]
+    Applying the operator of an observable to spin, for $\hat{n} \in \{\hat{x},\hat{y},\hat{z}\}$,
+    \begin{equation}
+        \hat{S}_n = \frac{\hbar}{2}\left(\ket{+\hat{n}}\bra{+\hat{n}} - \ket{-\hat{n}}\bra{-\hat{n}}\right), \qquad \hat{S}_n\ket{\pm\hat{n}} = \pm\frac{\hbar}{2}\ket{\pm\hat{n}}.
+    \end{equation}
+\end{definition}
+\begin{example}
+    Each spin operator in its own eigenbasis, using orthonormality:
+    \[\bra{\pm\hat{n}}\hat{S}_n\ket{\pm\hat{n}} = \pm\frac{\hbar}{2}, \qquad \bra{\pm\hat{n}}\hat{S}_n\ket{\mp\hat{n}} = 0 \qquad\Longrightarrow\qquad \hat{S}_n \xrightarrow{S_n} \frac{\hbar}{2}\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.\]
+\end{example}
+
+\subsubsection{Pauli Matrices}
+\begin{definition}[Pauli matrices]
+    In the $S_z$ basis, $\hat{S}_j \xrightarrow{S_z} \frac{\hbar}{2}\sigma_j$, with
+    \begin{equation}
+        \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \quad
+        \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \quad
+        \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
+    \end{equation}
+    Each equals its own adjoint and squares to $\id$.
+\end{definition}
+\begin{remark}
+    So $\hat{S}_j^2 = \tfrac{\hbar^2}{4}\id$, and with $\vec{\sigma} = \sigma_x\hat{x} + \sigma_y\hat{y} + \sigma_z\hat{z}$, $\vec{S} \xrightarrow{S_z} \frac{\hbar}{2}\vec{\sigma}$.
+\end{remark}
+
+\subsection{Change of Basis}
 \label{sec:change-basis}
-Take an $n$-level system with two orthonormal bases, $\{\ket{j}\}$ and $\{\ket{\alpha}\}$, $j,\alpha = 1,\dots,n$. Within each basis the overlaps are Kronecker deltas, but across bases they are not: $\braket{+\hat{x}|+\hat{z}} = \tfrac{1}{\sqrt{2}}$ is neither $0$ nor $1$. The same ket then has two columns,
-\[\ket{\psi} \xrightarrow{\ket{j}} \psi^{j} = \begin{pmatrix} \braket{1|\psi} \\ \vdots \\ \braket{n|\psi} \end{pmatrix}, \qquad
-\ket{\psi} \xrightarrow{\ket{\alpha}} \psi^{\alpha} = \begin{pmatrix} \braket{\alpha{=}1|\psi} \\ \vdots \\ \braket{\alpha{=}n|\psi} \end{pmatrix}.\]
-Inserting $\id = \sum_\alpha\ket{\alpha}\bra{\alpha}$ into each $\ket{j}$ amplitude,
+\subsubsection{States}
+Take two orthonormal bases $\{\ket{j}\}$ and $\{\ket{\alpha}\}$ of an $n$-level system. The same ket has a column in each, $\psi^j_k = \braket{k|\psi}$ and $\psi^\alpha_k = \braket{\alpha{=}k|\psi}$. Inserting $\id = \sum_\alpha\ket{\alpha}\bra{\alpha}$,
 \[\braket{j|\psi} = \sum_{\alpha}\braket{j|\alpha}\braket{\alpha|\psi}.\]
 \begin{result}[Change-of-basis matrix]
     \begin{equation}
         \psi^{j} = U\psi^{\alpha}, \qquad \psi^{\alpha} = U^\dagger\psi^{j}, \qquad U_{j\alpha} = \braket{j|\alpha}.
     \end{equation}
-    The columns of $U$ are the new basis kets $\ket{\alpha}$ written in the old basis $\{\ket{j}\}$.
+    The columns of $U$ are the kets $\ket{\alpha}$ written in the basis $\{\ket{j}\}$.
 \end{result}
 \begin{definition}[Unitary operator]
-    $U$ is unitary if $U^\dagger U = UU^\dagger = \id$, i.e.\ its inverse is its adjoint.
+    $U$ is unitary if $U^\dagger U = UU^\dagger = \id$.
 \end{definition}
 \begin{theorem}
     The change-of-basis matrix $U$ is unitary.
 \end{theorem}
 \begin{proof}
-    With $(U^\dagger)_{\alpha j} = \braket{j|\alpha}^* = \braket{\alpha|j}$ and completeness of $\{\ket{j}\}$,
-    \[(U^\dagger U)_{\alpha\beta} = \sum_j\braket{\alpha|j}\braket{j|\beta} = \braket{\alpha|\beta} = \delta_{\alpha\beta}.\]
-    Completeness of $\{\ket{\alpha}\}$ gives $UU^\dagger = \id$ the same way.
+    By completeness of $\{\ket{j}\}$, $(U^\dagger U)_{\alpha\beta} = \sum_j\braket{\alpha|j}\braket{j|\beta} = \braket{\alpha|\beta} = \delta_{\alpha\beta}$. Likewise $UU^\dagger = \id$.
 \end{proof}
 \begin{remark}
-    So normalization does not depend on the basis: $\psi^{j\dagger}\psi^{j} = \psi^{\alpha\dagger}U^\dagger U\psi^{\alpha} = \psi^{\alpha\dagger}\psi^{\alpha}$.
-\end{remark}
-\begin{remark}
-    If a unitary $U$ maps $\ket{\psi}$ to $c\ket{\phi}$ with $\ket{\phi}$ normalized, then $1 = \bra{\psi}U^\dagger U\ket{\psi} = |c|^2$, so $c = e^{i\varphi}$. In particular, eigenvalues of a unitary are pure phases, and $U$ leaves a physical state unchanged only when that state is an eigenstate of $U$.
+    Normalization is basis-independent: $\psi^{j\dagger}\psi^{j} = \psi^{\alpha\dagger}U^\dagger U\psi^{\alpha} = \psi^{\alpha\dagger}\psi^{\alpha}$. Likewise, eigenvalues of a unitary are pure phases $e^{i\varphi}$.
 \end{remark}
 \begin{example}[Between $S_x$ and $S_z$]
-    With $\ket{j} = \ket{\pm\hat{z}}$ and $\ket{\alpha} = \ket{\pm\hat{x}}$, the columns of $U$ are the $S_z$ columns of $\ket{\pm\hat{x}}$:
+    The columns of $U$ are the $S_z$ columns of $\ket{\pm\hat{x}}$:
     \begin{equation}
         \label{eq:Uzx}
-        U = \begin{pmatrix} \braket{+\hat{z}|+\hat{x}} & \braket{+\hat{z}|-\hat{x}} \\ \braket{-\hat{z}|+\hat{x}} & \braket{-\hat{z}|-\hat{x}} \end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}.
+        U = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}, \qquad \psi^z = U\psi^x, \qquad \psi^x = U^\dagger\psi^z = U\psi^z,
     \end{equation}
-    The two directions are
-    \[S_x \to S_z: \ \psi^z = U\psi^x, \qquad S_z \to S_x: \ \psi^x = U^\dagger\psi^z = U\psi^z,\]
-    since $U$ is real and symmetric, so $U^\dagger = U$: the same matrix goes both ways ($U^2 = \id$). Bill calls $U$ ``$R\left(\tfrac{\pi}{2}\hat{y}\right)$'', but it is not the actual rotation matrix (see the warning in Section~\ref{sec:any-axis}).
+    since $U$ is real and symmetric. Bill calls $U$ ``$R\left(\tfrac{\pi}{2}\hat{y}\right)$'', but it is not the actual rotation matrix (Section~\ref{sec:any-axis}).
 \end{example}
 \begin{remark}
-    Between $S_y$ and $S_z$ the matrix has columns $\frac{1}{\sqrt{2}}(1, \pm i)^T$,
-    \[U_y = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ i & -i \end{pmatrix}, \qquad \psi^z = U_y\psi^y, \qquad \psi^y = U_y^\dagger\psi^z,\]
-    and here $U_y^\dagger \neq U_y$, so the reverse direction needs the actual adjoint.
+    For $S_y$, $U_y = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ i & -i \end{pmatrix}$ and $U_y^\dagger \neq U_y$, so the reverse direction needs the actual adjoint.
 \end{remark}
 
-\subsubsection{Operators in another basis}
-Let $\{\ket{j}\} = \{\ket{a_j}\}$ be the eigenbasis of $\hat{A}$, so $\hat{A} \xrightarrow{\ket{a_j}} D$ (diagonal), and $U_{j\alpha} = \braket{a_j|\alpha}$.
+\subsubsection{Operators}
 \begin{proposition}[Similarity transformation]
+    If $\hat{A} \xrightarrow{\ket{a_j}} D$ (diagonal in its eigenbasis) and $U_{j\alpha} = \braket{a_j|\alpha}$, then
     \begin{equation}
-        \hat{A} \xrightarrow{\ket{\alpha}} A^{\alpha} = U^\dagger D\,U.
+        \hat{A} \xrightarrow{\ket{\alpha}} U^\dagger D\,U.
     \end{equation}
-    Rewriting the same operator in a new basis this way is called a similarity transformation.
 \end{proposition}
 \begin{proof}
-    Insert the identity twice:
-    \[\bra{\alpha}\hat{A}\ket{\beta} = \sum_{i,j}\braket{\alpha|a_i}\bra{a_i}\hat{A}\ket{a_j}\braket{a_j|\beta} = \sum_{i,j}(U^\dagger)_{\alpha i}D_{ij}U_{j\beta} = (U^\dagger D\,U)_{\alpha\beta}.\]
+    $\bra{\alpha}\hat{A}\ket{\beta} = \sum_{i,j}\braket{\alpha|a_i}\bra{a_i}\hat{A}\ket{a_j}\braket{a_j|\beta} = (U^\dagger D\,U)_{\alpha\beta}$.
 \end{proof}
 \begin{result}[Expectation value in any basis]
     \begin{equation}
-        \braket{A} = \psi^{j\dagger}D\,\psi^{j} = \psi^{\alpha\dagger}\left[U^\dagger D\,U\right]\psi^{\alpha}.
+        \braket{A} = \psi^{j\dagger}D\,\psi^{j} = \psi^{\alpha\dagger}\left(U^\dagger D\,U\right)\psi^{\alpha}.
     \end{equation}
-    Either move the state to the eigenbasis, or move the operator to the state's basis. Both give the same number.
 \end{result}
 
 
-\section{Rotations}
+\section{Rotations}%correct
 \marginpar{September 21-28, 2026}
 
 \subsection{The rotation operator}
@@ -1568,12 +1549,6 @@ So far, only observables with a finite number of outcomes, like $S_z$, have been
         \psi(x) = \braket{x|\psi}.
     \end{equation}
 \end{definition}
-\begin{definition}[Dirac delta function]
-    The function $\delta(x - x')$ such that, for any function $f$,
-    \begin{equation}
-        \int_{-\infty}^{\infty} dx\, f(x)\,\delta(x - x') = f(x').
-    \end{equation}
-\end{definition}
 \begin{proposition}[Orthonormality of position eigenstates]
     \begin{equation}
         \braket{x'|x} = \delta(x' - x).
@@ -1598,7 +1573,7 @@ So far, only observables with a finite number of outcomes, like $S_z$, have been
 \end{definition}
 
 \subsubsection{Expectation Value}
-\begin{proposition}
+\begin{proposition}[Expectation value]
     \begin{equation}
         \braket{x} = \braket{\psi|\hat{x}|\psi} = \int_{-\infty}^{\infty} dx\, x\,|\psi(x)|^2.
     \end{equation}
@@ -1608,7 +1583,7 @@ So far, only observables with a finite number of outcomes, like $S_z$, have been
 \end{proof}
 
 \subsubsection{Overlap \& Inner Product}
-\begin{proposition}
+\begin{proposition}[Inner product]
     \begin{equation}
         \braket{\phi|\psi} = \int_{-\infty}^{\infty} dx\,\phi^*(x)\,\psi(x).
     \end{equation}

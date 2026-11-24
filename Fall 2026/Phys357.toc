@@ -32,58 +32,63 @@
 \contentsline {subsubsection}{\numberline {4.1.4}Projectors \& Completeness}{10}{subsubsection.4.1.4}%
 \contentsline {subsection}{\numberline {4.2}Measurement \& Probability}{10}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}The Born Rule}{10}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Normalization}{10}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2}Normalization}{11}{subsubsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.3}Phases}{11}{subsubsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.3}Statistics}{11}{subsection.4.3}%
 \contentsline {subsubsection}{\numberline {4.3.1}Expectation Value}{11}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Uncertainty}{11}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2}Uncertainty}{12}{subsubsection.4.3.2}%
 \contentsline {subsubsection}{\numberline {4.3.3}Measured Averages \& Shot Noise}{12}{subsubsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.4}Axes}{12}{subsection.4.4}%
 \contentsline {subsubsection}{\numberline {4.4.1}Amplitudes}{12}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Convention}{12}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2}Convention}{13}{subsubsection.4.4.2}%
 \contentsline {section}{\numberline {5}Matrix Mechanics}{13}{section.5}%
-\contentsline {subsection}{\numberline {5.1}States as column vectors}{13}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Operators as matrices}{14}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Observables as operators}{15}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}Spin operators and Pauli matrices}{15}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Hermitian operators}{16}{subsubsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.4}Change of basis}{16}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Operators in another basis}{18}{subsubsection.5.4.1}%
-\contentsline {section}{\numberline {6}Rotations}{18}{section.6}%
-\contentsline {subsection}{\numberline {6.1}The rotation operator}{18}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Generators of rotations}{19}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Functions of an operator}{19}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Rotations about $\hat {z}$}{20}{subsubsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.4}Rotations about any axis}{20}{subsection.6.4}%
-\contentsline {section}{\numberline {7}Angular Momentum}{21}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Commutation}{21}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Commuting Operators}{23}{subsubsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.2}Uncertainty Relations}{24}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Eigenstates of Angular Momentum}{25}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Allowed Values of $j$ and $m$}{25}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Integer and Half-Integer $j$}{26}{subsubsection.7.3.2}%
-\contentsline {subsection}{\numberline {7.4}Matrix Elements}{27}{subsection.7.4}%
-\contentsline {section}{\numberline {8}Time Evolution}{27}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Time Parameter}{27}{subsection.8.1}%
-\contentsline {section}{\numberline {9}A System of Two Spin-1/2 Particles}{27}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Direct Product States}{28}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Hyperfine Splitting}{28}{subsection.9.2}%
-\contentsline {subsubsection}{\numberline {9.2.1}Hamiltonian}{28}{subsubsection.9.2.1}%
-\contentsline {subsubsection}{\numberline {9.2.2}The 21-cm Line}{30}{subsubsection.9.2.2}%
-\contentsline {subsubsection}{\numberline {9.2.3}Total Spin}{30}{subsubsection.9.2.3}%
-\contentsline {subsection}{\numberline {9.3}Density Operator}{30}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}EPR paradox \& Bell Inequalities}{32}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Entanglement}{33}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}Quantum Teleportation}{33}{subsection.9.6}%
-\contentsline {subsection}{\numberline {9.7}Quantum Circuits}{33}{subsection.9.7}%
-\contentsline {section}{\numberline {10}Wave Mechanics in One Dimension}{33}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Notation}{33}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Statistics}{34}{subsection.10.2}%
-\contentsline {subsubsection}{\numberline {10.2.1}Normalization}{34}{subsubsection.10.2.1}%
-\contentsline {subsubsection}{\numberline {10.2.2}Expectation Value}{34}{subsubsection.10.2.2}%
-\contentsline {subsubsection}{\numberline {10.2.3}Overlap \& Inner Product}{34}{subsubsection.10.2.3}%
-\contentsline {subsection}{\numberline {10.3}Translation Operator}{35}{subsection.10.3}%
-\contentsline {section}{\numberline {A}Solutions}{36}{appendix.A}%
-\contentsline {section}{\numberline {B}Proofs}{36}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Action of the ladder operators}{36}{subsection.B.1}%
-\contentsline {section}{\numberline {C}Useful Links}{36}{appendix.C}%
+\contentsline {subsection}{\numberline {5.1}States}{13}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Operators}{14}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Matrix Element}{14}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Adjoint}{14}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}Observables}{14}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Eigenstates}{14}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Hermitian Operators}{15}{subsubsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.4}Spin}{15}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Pauli Matrices}{16}{subsubsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.5}Change of Basis}{16}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}States}{16}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}Operators}{17}{subsubsection.5.5.2}%
+\contentsline {section}{\numberline {6}Rotations}{17}{section.6}%
+\contentsline {subsection}{\numberline {6.1}The rotation operator}{17}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Generators of rotations}{17}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Functions of an operator}{18}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Rotations about $\hat {z}$}{19}{subsubsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.4}Rotations about any axis}{19}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Angular Momentum}{20}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Commutation}{20}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Commuting Operators}{21}{subsubsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.2}Uncertainty Relations}{23}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Eigenstates of Angular Momentum}{23}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Allowed Values of $j$ and $m$}{24}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Integer and Half-Integer $j$}{25}{subsubsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.4}Matrix Elements}{25}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Time Evolution}{26}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Time Parameter}{26}{subsection.8.1}%
+\contentsline {section}{\numberline {9}A System of Two Spin-1/2 Particles}{26}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Direct Product States}{26}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Hyperfine Splitting}{27}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Hamiltonian}{27}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}The 21-cm Line}{28}{subsubsection.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.3}Total Spin}{28}{subsubsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.3}Density Operator}{29}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}EPR paradox \& Bell Inequalities}{30}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Entanglement}{31}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Quantum Teleportation}{31}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}Quantum Circuits}{31}{subsection.9.7}%
+\contentsline {section}{\numberline {10}Wave Mechanics in One Dimension}{31}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Notation}{32}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Statistics}{32}{subsection.10.2}%
+\contentsline {subsubsection}{\numberline {10.2.1}Normalization}{32}{subsubsection.10.2.1}%
+\contentsline {subsubsection}{\numberline {10.2.2}Expectation Value}{32}{subsubsection.10.2.2}%
+\contentsline {subsubsection}{\numberline {10.2.3}Overlap \& Inner Product}{33}{subsubsection.10.2.3}%
+\contentsline {subsection}{\numberline {10.3}Translation Operator}{33}{subsection.10.3}%
+\contentsline {section}{\numberline {A}Solutions}{34}{appendix.A}%
+\contentsline {section}{\numberline {B}Proofs}{34}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Action of the ladder operators}{34}{subsection.B.1}%
+\contentsline {section}{\numberline {C}Useful Links}{34}{appendix.C}%
