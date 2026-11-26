@@ -26,10 +26,11 @@
 \newtheorem{proposition}{Proposition}
 \newtheorem{method}{Method}
 \newtheorem{principle}{Principle}
-\newcommand{\Span}{\operatorname{span}}
+\newcommand{\Span}[1]{\operatorname{span}(#1)}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\D}{C_c^\infty(\R)}
-\newcommand{\ip}[2]{\langle #1, #2 \rangle}
+\newcommand{\ip}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\intinf}{\int_{-\infty}^{\infty}}
 \newenvironment{amatrix}[1]{%
   \left(\begin{array}{@{}*{#1}{c}|c@{}}
 }{%
@@ -210,13 +211,27 @@ The gradient is the vector that converts a small step $\vec{h}$ into the resulti
     \[L(u+cv) = L(u)+cL(v)\]
 \end{definition}
 
+\subsection{Analysis}
+\begin{definition}[Maximum and minimum]
+    $\underset{x\in A}{\max} f(x)$ is the largest value $f$ takes on $A$, and $\underset{x\in A}{\min} f(x)$ the smallest. The subscript says which inputs $x$ we look over.
+\end{definition}
+\begin{definition}[Supremum and infimum]
+    $\underset{x\in A}{\sup} f(x)$ is the smallest number that is $\geq$ every value of $f$ on $A$, and $\underset{x\in A}{\inf} f(x)$ the largest number that is $\leq$ every value.
+\end{definition}
+\begin{example}
+    They exist even when no maximum or minimum is reached: for $f(x)=1-e^{-x}$ on $[0,\infty)$, $\sup f = 1$ but $f$ never equals $1$.
+\end{example}
+\begin{remark}
+    Functions that are bounded always carry a supremum, but may not have a maximum (like the example above). However, if the function has a maximum, then its supremum is always the maximum.
+\end{remark}
+
 \subsection{Special Functions}
 \begin{definition}[Dirac Delta]
     \label{def:dirac-delta}
     The Dirac delta $\delta_a$ at a point $a$ is the object with
     \begin{equation}
         \label{eq:dirac-delta}
-        \int_{-\infty}^{\infty}\delta_a(x)\,dx = 1 \quad\text{and}\quad \delta_a(x) = 0 \text{ for } x\neq a.
+        \intinf\delta_a(x)\,dx = 1 \quad\text{and}\quad \delta_a(x) = 0 \text{ for } x\neq a.
     \end{equation}
     The case $a=0$ is written $\delta_0$.
 \end{definition}
@@ -467,7 +482,7 @@ To count such $u$ as solutions, we need distributions: instead of asking for the
 \subsection{Classes of functions}
 \begin{definition}[Integrable Function]
     A function $f$ defined on $\R$ is integrable if
-    \[\int_{-\infty}^{\infty}|f(x)|dx < \infty.\]
+    \[\intinf|f(x)|dx < \infty.\]
 \end{definition}
 \begin{definition}[Locally Integrable Function]
     A function $f$ defined on $\R$ is locally integrable if $\forall a<b$,
@@ -494,6 +509,14 @@ To count such $u$ as solutions, we need distributions: instead of asking for the
         \phi_a(x) := \begin{cases}e^{-\frac{1}{a^2-x^2}}, & |x|<a\\0, & |x|\geq a\end{cases}.
     \end{equation}
 \end{example}
+\begin{definition}[Convergence of Test Functions]
+    $\phi_n \to \phi$ in $C^{\infty}_c(\R)$ if
+    \begin{enumerate}[label=(\roman*)]
+        \item there is one $a>0$ such that every $\phi_n$ and $\phi$ vanish for $|x|\geq a$, and
+        \item for every $k=0,1,2,\dots$, the $k$-th derivatives converge uniformly:
+        \[\max_{x\in\R}\left|\phi_n^{(k)}(x)-\phi^{(k)}(x)\right| \xrightarrow{n\to\infty} 0.\]
+    \end{enumerate}
+\end{definition}
 
 \subsection{Definition of a Distribution}
 \begin{definition}[Functional]
@@ -503,27 +526,19 @@ To count such $u$ as solutions, we need distributions: instead of asking for the
     A distribution $F$, also called a generalized function, is a rule assigning to each test function $\phi \in C^{\infty}_{c}(\R)$ a real number, written
     \begin{equation}
         \label{eq:distribution}
-        \langle F,\phi\rangle,
+        \ip{F}{\phi},
     \end{equation}
     which is linear and continuous.
 \end{definition}
 \begin{remark}
-    The expression $\langle F,\phi\rangle$ is notation; we could equally write $F(\phi)$ in functional notation. The notation emphasizes the special case of an integral. 
+    The expression $\ip{F}{\phi}$ is notation; we could equally write $F(\phi)$ in functional notation. The notation emphasizes the special case of an integral.
 \end{remark}
 \begin{remark}
     Distributions are linear:
-    \[\langle F, a\phi+b\psi \rangle = a\langle F, \phi\rangle + b\langle F, \psi \rangle, \quad \forall a,b \in\R, \phi,\psi \in C^{\infty}_c(\R).\]
+    \[\ip{F}{a\phi+b\psi} = a\ip{F}{\phi} + b\ip{F}{\psi}, \quad \forall a,b \in\R, \phi,\psi \in C^{\infty}_c(\R).\]
 \end{remark}
-\begin{definition}[Convergence of Test Functions]
-    $\phi_n \to \phi$ in $C^{\infty}_c(\R)$ if
-    \begin{enumerate}[label=(\roman*)]
-        \item there is one $a>0$ such that every $\phi_n$ and $\phi$ vanish for $|x|\geq a$, and
-        \item for every $k=0,1,2,\dots$, the $k$-th derivatives converge uniformly:
-        \[\max_{x\in\R}\left|\phi_n^{(k)}(x)-\phi^{(k)}(x)\right| \xrightarrow{n\to\infty} 0.\]
-    \end{enumerate}
-\end{definition}
 \begin{definition}[Continuity of a Functional]
-    A functional $F$ is continuous if $\phi_n\to\phi$ in $C^{\infty}_c(\R)$ implies $\langle F,\phi_n\rangle \to \langle F,\phi\rangle$.
+    A functional $F$ is continuous if $\phi_n\to\phi$ in $C^{\infty}_c(\R)$ implies $\ip{F}{\phi_n} \to \ip{F}{\phi}$.
 \end{definition}
 
 \subsection{Functions as Distributions}
@@ -531,41 +546,149 @@ To count such $u$ as solutions, we need distributions: instead of asking for the
     Let $f$ be locally integrable on $\R$. Then
     \begin{equation}
         \label{eq:function-distribution}
-        \langle F_f,\phi \rangle := \int_{-\infty}^{\infty}f(x)\phi(x)\,dx,\quad \phi\in C_c^{\infty}(\R)
+        \ip{F_f}{\phi} := \intinf f(x)\phi(x)\,dx,\quad \phi\in C_c^{\infty}(\R)
     \end{equation}
     defines a distribution $F_f$.
 \end{proposition}
 \begin{proof}
-    If $\phi$ vanishes outside $[-a,a]$, then $\left|\langle F_f,\phi\rangle\right| \le \max|\phi|\int_{-a}^{a}|f|\,dx < \infty$, so $F_f$ is well defined. Linearity follows from linearity of the integral. For continuity, if $\phi_n\to\phi$ in $C_c^\infty(\R)$, all supports lie in one $[-a,a]$, so
-    \[\left|\langle F_f,\phi_n\rangle - \langle F_f,\phi\rangle\right| \le \max_{x}|\phi_n(x)-\phi(x)|\int_{-a}^{a}|f|\,dx \to 0.\]
+    If $\phi$ vanishes outside $[-a,a]$, then $\left|\ip{F_f}{\phi}\right| \le \max|\phi|\int_{-a}^{a}|f|\,dx < \infty$, so $F_f$ is well defined. Linearity follows from linearity of the integral. For continuity, if $\phi_n\to\phi$ in $\D$, all supports lie in one $[-a,a]$, so
+    \[\left|\ip{F_f}{\phi_n} - \ip{F_f}{\phi}\right| \le \max_{x}|\phi_n(x)-\phi(x)|\int_{-a}^{a}|f|\,dx \to 0.\]
 \end{proof}
 
 \subsection{Delta Function}
 \begin{definition}[Delta Function]
     As a distribution, $\delta_0$ is defined by
-    \[\langle \delta_0,\phi \rangle := \phi(0),\quad \phi\in C_c^{\infty}(\R).\]
+    \[\ip{\delta_0}{\phi} := \phi(0),\quad \phi\in C_c^{\infty}(\R).\]
 \end{definition}
 \begin{remark}
-    By tradition we call it the delta function, even though it is a distribution and not a function, so $\delta_0(x)$ has no value at a point. Likewise, $\int\delta_0(x)\phi(x)\,dx = \phi(0)$ is only shorthand for $\langle\delta_0,\phi\rangle$, not an actual integral.
+    By tradition we call it the delta function, even though it is a distribution and not a function, so $\delta_0(x)$ has no value at a point. Likewise, $\int\delta_0(x)\phi(x)\,dx = \phi(0)$ is only shorthand for $\ip{\delta_0}{\phi}$, not an actual integral.
 \end{remark}
 
-\subsection{Derivative of a Distribution}
-\begin{definition}[]
+\subsection{Derivatives of a Distribution}
+\begin{definition}[Derivatives of a Distribution]
     Let $F$ be a distribution. Its derivative $F'$ is the distribution
     \begin{equation}
-        \label{eq:}
-        \langle F',\phi \rangle := -\langle F,\phi'\rangle.
+        \label{eq:distribution-derivative}
+        \ip{F'}{\phi} := -\ip{F}{\phi'}.
     \end{equation}
+    For a more general case $F^{(n)}$, the distribution becomes
+    \[\ip{F^{(n)}}{\phi} = (-1)^n\ip{F}{\phi^{(n)}}\]
 \end{definition}
 \begin{remark}
     If $f\in C^1(\R)$, then $(F_f)' = F_{f'}$.
 \end{remark}
 \begin{proof}
-    \[\langle (F_f)',\phi \rangle = -\langle F_f,\phi' \rangle = -\int f\phi' dx = \int f'\phi dx = \langle F_{f'},\phi\rangle\]
+    \[\ip{(F_f)'}{\phi} = -\ip{F_f}{\phi'} = -\int f\phi' dx = \int f'\phi dx = \ip{F_{f'}}{\phi}\]
 \end{proof}
-\begin{definition}
-    
+\begin{example}[Derivative of the delta function]
+    \[\ip{\delta_0'}{\phi} = -\ip{\delta_0}{\phi'} = -\phi'(0).\]
+\end{example}
+
+\subsection{Derivatives of Piecewise Smooth Functions}
+\begin{example}[Derivative of the Heaviside function]
+    For any test function $\phi$ vanishing outside $[-a,a]$,
+    \begin{align*}
+        \ip{(F_H)'}{\phi}=-\ip{F_H}{\phi'} &= -\intinf H(x)\phi'(x)\,dx\\ &= -\int_0^{a}\phi'(x)\,dx\\ &=-(\phi(a)-\phi(0)) = \phi(0) = \ip{\delta_0}{\phi}.
+    \end{align*}
+    Thus $H'=\delta_0$ in the sense of distributions.
+\end{example}
+\begin{example}[Derivative of the absolute value]
+    For $f(x)=|x|$ and any test function $\phi$,
+    \begin{align*}
+        \ip{(F_f)'}{\phi} &= -\intinf |x|\phi'(x)\,dx = -\int_{-\infty}^{0}(-x)\phi'(x)\,dx-\int_{0}^{\infty}x\phi'(x)\,dx\\ &\underset{\text{By parts}}{=} -[-x\phi(x)]_{-\infty}^0-\int_{-\infty}^0\phi(x)\,dx - [x\phi(x)]_0^{\infty} + \int_{0}^{\infty}\phi(x)\,dx\\ &= \intinf \operatorname{sgn}(x)\phi(x)\,dx.
+    \end{align*}
+    Thus $\tfrac{d}{dx}|x|=\operatorname{sgn}(x)=\begin{cases}-1, & x<0\\0, & x=0\\1, & x>0\end{cases}$ in the sense of distributions.
+\end{example}
+\begin{remark}
+    Using the same steps as the previous example, we can find that $|x|'' = \operatorname{sgn}' = 2\delta_0$ in the sense of distributions.
+\end{remark}
+\begin{theorem}[Derivative of a function with a jump]
+    Let $f$ be $C^1$ on $\R$ except at $x_0$, and suppose $f$ and $f'$ have one-sided limits at $x_0$. Denote $a=\lim_{x\to x_0^-}f(x)$, $b=\lim_{x\to x_0^+}f(x)$, and $g(x) = f'(x)$ for $x\neq x_0$ ($g(x_0) = 0$). Then, in the sense of distributions,
+    \begin{equation}
+        \label{eq:jump}
+        f'=g+(b-a)\delta_{x_0}.
+    \end{equation}
+\end{theorem}
+
+\subsection{Convergence}
+\begin{definition}[Convergence of distributions]
+    A sequence of distributions $F_n$ converges to a distribution $F$ in the sense of distributions if
+    \[\ip{F_n}{\phi}\overset{n\to\infty}{\to}\ip{F}{\phi},\quad \forall \phi\in\D.\]
 \end{definition}
+\begin{definition}[Convergence of functions]
+    A sequence of locally integrable functions $f_n$ converges in the sense of distributions to a distribution $F$ if $F_{f_n}\to F$,
+    \begin{equation}
+        \intinf f_n(x)\phi(x)\,dx \overset{n\to\infty}{\to}\ip{F}{\phi},\quad \forall\phi\in\D.
+    \end{equation}
+\end{definition}
+\begin{proposition}[Convergence of derivatives]
+    \label{prop:derivatives-converge}
+    If $F_m\to F$ in the sense of distributions, then $F_m^{(n)}\to F^{(n)}$.
+\end{proposition}
+
+\subsubsection{Pointwise Convergence}
+\begin{definition}[Pointwise convergence]
+    Pointwise convergence of $f_n$ to $f$ means: for every $x$, the numbers $f_n(x)$ converge to $f(x)$.
+\end{definition}
+\begin{proposition}[Pointwise implies distributional]
+    Let $f_n$ be locally integrable, converging pointwise to a locally integrable $f$, and suppose there is locally integrable $g$ with $|f_n(x)|\leq g(x), \forall n,x$. Then $f_n\to f$ in the sense of distributions.
+\end{proposition}
+
+\subsubsection{Convergence to $\delta_0$}
+\begin{example}
+    Four sequences converge to $\delta_0$ in the sense of distributions, with $\sigma_n=\frac1n$:
+    \begin{enumerate}
+        \item Hats: $f_n(x) = \begin{cases}\frac{n}{2}, & |x|\leq\sigma_n\\0, & \text{otherwise}\end{cases}$
+        \item Spikes: $f_n(x) = \begin{cases}n-n^2|x|, & |x|<\sigma_n\\0, & \text{otherwise}\end{cases}$
+        \item Derivative of arctangent: $f_n(x) = \frac{1}{\pi}\frac{\sigma_n}{x^2+\sigma_n^2}$
+        \item Gaussians: $f_n(x) = \frac{1}{\sqrt{2\pi\sigma_n}}e^{-\frac{x^2}{2\sigma_n}}$
+    \end{enumerate}
+\end{example}
+\begin{remark}
+    Such sequences are called approximations to the identity. They share three properties:
+    \begin{enumerate}
+        \item Nonnegativity: $f_n(x)\geq 0,\quad\forall x,n$.
+        \item Unit mass: $\intinf f_n(x)\,dx = 1,\quad \forall n$.
+        \item Concentration at $0$: as $n\to\infty$, the mass of $f_n$ concentrates near $x=0$.
+    \end{enumerate}
+\end{remark}
+\begin{theorem}[Approximations to the identity]
+    Let $f$ be a nonnegative integrable function with $\intinf f(x)\,dx = 1$, and put $f_n(x) := nf(nx)$. Then $f_n\to\delta_0$ in the sense of distributions.
+\end{theorem}
+\begin{proof}
+    Substituting $y=nx$,
+    \[\ip{F_{f_n}}{\phi} = \intinf nf(nx)\phi(x)\,dx = \intinf f(y)\phi\left(\tfrac{y}{n}\right)dy.\]
+    As $n\to\infty$, $\phi(y/n)\to\phi(0)$ for every $y$, and $|f(y)\phi(y/n)|\leq \max|\phi|\,f(y)$, which is integrable. By dominated convergence, the limit passes inside: $\ip{F_{f_n}}{\phi}\to\phi(0)\intinf f(y)\,dy = \phi(0)$.
+\end{proof}
+\begin{remark}
+    Hats, spikes and the arctangent sequence are all of the form $nf(nx)$ (from their $n=1$ member). The Gaussians are the same with $\sqrt{n}$ in place of $n$, and the same proof works.
+\end{remark}
+\begin{remark}
+    Difference quotients of $\delta_0$ converge to $\delta_0'$: for any test function $\phi$,
+    \[\ip{\frac{\delta_0-\delta_h}{h}}{\phi} = \frac{\phi(0)-\phi(h)}{h}\xrightarrow{h\to0}-\phi'(0) = \ip{\delta_0'}{\phi}.\]
+    Two opposite point sources of size $\frac1h$, close together, converge to a dipole.
+\end{remark}
+
+\subsubsection{Convergence of Sinusoids}
+\begin{theorem}[Oscillations converge to zero]
+    $\sin(nx),\cos(nx) \to 0$ in the sense of distributions.
+\end{theorem}
+\begin{proof}
+    For any test function $\phi$ vanishing outside $[-a,a]$, integrating by parts (the boundary terms vanish),
+    \[\left|\intinf\sin(nx)\phi(x)\,dx\right| = \left|\frac{1}{n}\intinf\cos(nx)\phi'(x)\,dx\right| \leq \frac{1}{n}\int_{-a}^{a}|\phi'(x)|\,dx \to 0.\]
+    The same argument works for $\cos(nx)$.
+\end{proof}
+\begin{remark}[Riemann--Lebesgue lemma]
+    The result holds with $\phi$ replaced by any integrable function $f$: $\intinf f(x)\sin(nx)\,dx\to0$, and the same for $\cos(nx)$. This is why Fourier coefficients of an integrable function tend to zero.
+\end{remark}
+\begin{remark}
+    By Proposition~\ref{prop:derivatives-converge}, $(\sin(nx))'=n\cos(nx)\to 0$ in the sense of distributions, even though its amplitude $n$ is unbounded.
+\end{remark}
+\begin{remark}
+    If $f$ is periodic with period $l$ and integral $A$ over a period, then $f(nx) \to \frac{A}{l}$, the average of $f$, in the sense of distributions.
+\end{remark}
+
+
 \section{Fourier}
 
 
