@@ -704,50 +704,60 @@ To count such $u$ as solutions, we need distributions: instead of asking for the
     If $f$ is periodic with period $l$ and integral $A$ over a period, then $f(nx) \to \frac{A}{l}$, the average of $f$, in the sense of distributions.
 \end{remark}
 
-\section{Fourier}
-\subsection{Properties of sinusoids}
+\section{Fourier Series}
+\subsection{Orthogonality}
+\begin{lemma}[Exponentials integrate to zero over a period]
+    For an integer $k$,
+    \[\int_{-\pi}^\pi e^{ik\theta}\,d\theta = \begin{cases}2\pi, & k=0,\\0, & k\neq0.\end{cases}\]
+\end{lemma}
 \begin{proposition}[Orthogonality relations]
     Let $l>0$. For positive integers $n\neq m$,
-    \[\int_0^l\sin(\frac{n\pi x}{l})\sin(\frac{m\pi x}{l})dx=0,\]
+    \[\int_0^l\sin\left(\frac{n\pi x}{l}\right)\sin\left(\frac{m\pi x}{l}\right)dx=0,\]
     and for every positive integer $n$,
-    \[\int_0^l\sin^2(\frac{n\pi x}{l})dx = \frac{l}{2}.\]
+    \[\int_0^l\sin^2\left(\frac{n\pi x}{l}\right)dx = \frac{l}{2}.\]
+    The same holds for cosines on $(0,l)$, except $\int_0^l 1^2\,dx = l$. On $(-l,l)$, all sines and cosines are mutually orthogonal, with squared norms $l$, and $2l$ for the constant.
 \end{proposition}
-\begin{lemma}
-    For an integer $k$,
-    \[\int_{-\pi}^\pi e^{ik\theta}d\theta = \begin{cases}2\pi, k=0,\\0, k\neq0.\end{cases}\]
-\end{lemma}
 
 \subsection{Coefficients}
 \begin{proposition}[Coefficients of sine series]
-    For a function $\phi(x) = \sum_{m=1}^\infty b_m\sin(\frac{m\pi x}{l}), for x\in(0,l)$, its coefficient is
+    If $\phi(x) = \sum_{m=1}^\infty b_m\sin\left(\frac{m\pi x}{l}\right)$ for $x\in(0,l)$, and the series can be integrated term by term, then its coefficients are
     \begin{equation}
-        \label{eq:}
-        b_n = \frac{2}{l}\int_0^l\phi(x)\sin(\frac{n\pi x}{l})dx.
+        \label{eq:sine-coeff}
+        b_n = \frac{2}{l}\int_0^l\phi(x)\sin\left(\frac{n\pi x}{l}\right)dx.
     \end{equation}
 \end{proposition}
 \begin{proposition}[Coefficients of cosine series]
+    If $\phi(x) = \frac{1}{2}a_0+\sum_{m=1}^\infty a_m\cos\left(\frac{m\pi x}{l}\right)$ for $x\in(0,l)$, under the same assumption,
     \begin{equation}
-        a_n = \frac{2}{l}\int_0^l \phi(x)\cos(\frac{n\pi x}{l})dx
+        \label{eq:cosine-coeff}
+        a_n = \frac{2}{l}\int_0^l \phi(x)\cos\left(\frac{n\pi x}{l}\right)dx,\quad n\geq0.
+    \end{equation}
+\end{proposition}
+\begin{proposition}[Coefficients of full series]
+    For the full series on $(-l,l)$, under the same assumption,
+    \begin{equation}
+        \label{eq:full-coeff}
+        a_n = \frac{1}{l}\int_{-l}^l \phi(x)\cos\left(\frac{n\pi x}{l}\right)dx,\quad b_n = \frac{1}{l}\int_{-l}^l \phi(x)\sin\left(\frac{n\pi x}{l}\right)dx.
     \end{equation}
 \end{proposition}
 
 \subsection{Fourier Series}
 \begin{definition}[Fourier sine series]
-    Let $\phi$ be integrable on $(0,l)$ and define $b_n$ by Equation.\eqref{eq:}. The series is then
+    Let $\phi$ be integrable on $(0,l)$ and define $b_n$ by \eqref{eq:sine-coeff}. The Fourier sine series of $\phi$ on $(0,l)$ is
     \begin{equation}
-        \sum_{n=1}^\infty b_n\sin(\frac{n\pi x}{l}).
+        \sum_{n=1}^\infty b_n\sin\left(\frac{n\pi x}{l}\right).
     \end{equation}
 \end{definition}
 \begin{definition}[Fourier cosine series]
-    With $a_n$ given, the fourier cosine series of $\phi$ on $(0,l)$ is
+    With $a_n$ given by \eqref{eq:cosine-coeff}, the Fourier cosine series of $\phi$ on $(0,l)$ is
     \begin{equation}
-        \phi(x) = \frac{1}{2}a_0 + \sum_{n=1}^\infty a_n\cos(\frac{n\pi x}{l}).
+        \frac{1}{2}a_0 + \sum_{n=1}^\infty a_n\cos\left(\frac{n\pi x}{l}\right).
     \end{equation}
 \end{definition}
-\begin{definition}[Full fourier series]
-    With $a_n,b_n$ given, the full fourier series of $\phi(x)$ on $(-l,l)$ is
+\begin{definition}[Full Fourier series]
+    With $a_n,b_n$ given by \eqref{eq:full-coeff}, the full Fourier series of $\phi$ on $(-l,l)$ is
     \begin{equation}
-        \frac{1}{2}a_0 + \sum_{n=1}^\infty [a_n\cos(\frac{n\pi x}{l}) + b_n\sin(\frac{n\pi x}{l})].
+        \frac{1}{2}a_0 + \sum_{n=1}^\infty \left[a_n\cos\left(\frac{n\pi x}{l}\right) + b_n\sin\left(\frac{n\pi x}{l}\right)\right].
     \end{equation}
 \end{definition}
 
