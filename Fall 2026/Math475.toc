@@ -44,14 +44,15 @@
 \contentsline {subsection}{\numberline {6.1}Orthogonality}{16}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Coefficients}{16}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Fourier Series}{16}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Convergence}{17}{subsection.6.4}%
 \contentsline {section}{\numberline {7}Diffusion}{17}{section.7}%
 \contentsline {section}{\numberline {8}Laplace}{17}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Harmonic Functions}{17}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Boundary Value Problems}{17}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}The Mean Value Property}{17}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}The Maximum Principle}{17}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Uniqueness \& Stability}{17}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}Rotational Invariance}{17}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.1}Harmonic Functions}{18}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Boundary Value Problems}{18}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}The Mean Value Property}{18}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}The Maximum Principle}{18}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Uniqueness \& Stability}{18}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Rotational Invariance}{18}{subsection.8.6}%
 \contentsline {subsection}{\numberline {8.7}Polar Coordinates in the Plane}{18}{subsection.8.7}%
 \contentsline {subsection}{\numberline {8.8}Laplacian of a Radial Function}{18}{subsection.8.8}%
 \contentsline {section}{\numberline {A}Solutions}{19}{appendix.A}%

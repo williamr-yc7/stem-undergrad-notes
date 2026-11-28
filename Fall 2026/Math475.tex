@@ -761,6 +761,27 @@ To count such $u$ as solutions, we need distributions: instead of asking for the
     \end{equation}
 \end{definition}
 
+\subsection{Convergence}
+\begin{definition}[Piecewise continuous]
+    A function $\phi$ on $(a,b)$ is piecewise continuous if it is continuous except at finitely many points, at each of which the one-sided limits
+    \[\phi(x+) := \lim_{h\to0^+}\phi(x+h),\quad \phi(x-):=\lim_{h\to0^+}\phi(x-h),\]
+    exist and are finite, and if $\phi(a+)$ and $\phi(b-)$ exist and are finite.
+\end{definition}
+\begin{definition}[Extensions]
+    For $\phi$ on $(0,l)$, the odd (even) extension to $(-l,l)$ sets $\phi(-x) := -\phi(x)$ ($\phi(-x) := \phi(x)$). The periodic extension repeats a function on $(-l,l)$ with period $2l$, and the odd (even) periodic extension is the periodic extension of the odd (even) extension.
+\end{definition}
+\begin{theorem}[Pointwise convergence]
+    Suppose $\phi$ and $\phi'$ are piecewise continuous on the sampled interval. Let $\phi_{\text{ext}}$ be
+    \begin{enumerate}
+        \item the odd periodic extension of $\phi$, for the sine series on $(0,l)$,
+        \item the even periodic extension of $\phi$, for the cosine series on $(0,l)$,
+        \item the periodic extension of $\phi$, for the full series on $(-l,l)$.
+    \end{enumerate}
+    Then for every $x\in\R$ the series converges to
+    \[\frac{1}{2}[\phi_{\text{ext}}(x+)+\phi_{\text{ext}}(x-)].\]
+    In particular, where $\phi_{\text{ext}}$ is continuous, the series converges to $\phi_{\text{ext}}(x)$.
+\end{theorem}
+
 \section{Diffusion}
 
 
