@@ -204,11 +204,27 @@ The gradient is the vector that converts a small step $\vec{h}$ into the resulti
 \end{definition}
 
 \subsection{Linear Algebra}
-\subsubsection{Linearity}
 \begin{definition}[Linearity]
     \label{def:linearity}
     An operator $L$ is \emph{linear} if for all functions $u, v$ and constants $c$,
     \[L(u+cv) = L(u)+cL(v)\]
+\end{definition}
+\begin{definition}[Orthogonal basis]
+    A basis $\{v_1,\dots,v_N\}$ of $\R^N$ is an orthogonal basis if $v_i\cdot v_j = 0, \forall i\neq j$.
+\end{definition}
+\begin{definition}[Inner product, norm, orthogonality]
+    For real-valued functions $f,g$ on $(a,b)$ whose integrals below are finite, the inner product is 
+    \[(f,g) := \int_a^b f(x)g(x)dx.\]
+    The norm is 
+    \[||f|| := (f,f)^{1/2},\quad ||f||^2=\int_a^b f^2 dx.\]
+    Two functions are orthogonal on $(a,b)$ if $(f,g) = 0$.
+\end{definition}
+\begin{remark}
+    For complex-valued functions the inner product is $(f,g) := \int f\overline{g}dx$.
+\end{remark}
+\begin{definition}[Projection]
+    The projection of $f$ onto $g\neq 0$ is
+    \[Proj_gf := \frac{(f,g)}{||g||^2}g.\]
 \end{definition}
 
 \subsection{Analysis}
@@ -688,9 +704,52 @@ To count such $u$ as solutions, we need distributions: instead of asking for the
     If $f$ is periodic with period $l$ and integral $A$ over a period, then $f(nx) \to \frac{A}{l}$, the average of $f$, in the sense of distributions.
 \end{remark}
 
-
 \section{Fourier}
+\subsection{Properties of sinusoids}
+\begin{proposition}[Orthogonality relations]
+    Let $l>0$. For positive integers $n\neq m$,
+    \[\int_0^l\sin(\frac{n\pi x}{l})\sin(\frac{m\pi x}{l})dx=0,\]
+    and for every positive integer $n$,
+    \[\int_0^l\sin^2(\frac{n\pi x}{l})dx = \frac{l}{2}.\]
+\end{proposition}
+\begin{lemma}
+    For an integer $k$,
+    \[\int_{-\pi}^\pi e^{ik\theta}d\theta = \begin{cases}2\pi, k=0,\\0, k\neq0.\end{cases}\]
+\end{lemma}
 
+\subsection{Coefficients}
+\begin{proposition}[Coefficients of sine series]
+    For a function $\phi(x) = \sum_{m=1}^\infty b_m\sin(\frac{m\pi x}{l}), for x\in(0,l)$, its coefficient is
+    \begin{equation}
+        \label{eq:}
+        b_n = \frac{2}{l}\int_0^l\phi(x)\sin(\frac{n\pi x}{l})dx.
+    \end{equation}
+\end{proposition}
+\begin{proposition}[Coefficients of cosine series]
+    \begin{equation}
+        a_n = \frac{2}{l}\int_0^l \phi(x)\cos(\frac{n\pi x}{l})dx
+    \end{equation}
+\end{proposition}
+
+\subsection{Fourier Series}
+\begin{definition}[Fourier sine series]
+    Let $\phi$ be integrable on $(0,l)$ and define $b_n$ by Equation.\eqref{eq:}. The series is then
+    \begin{equation}
+        \sum_{n=1}^\infty b_n\sin(\frac{n\pi x}{l}).
+    \end{equation}
+\end{definition}
+\begin{definition}[Fourier cosine series]
+    With $a_n$ given, the fourier cosine series of $\phi$ on $(0,l)$ is
+    \begin{equation}
+        \phi(x) = \frac{1}{2}a_0 + \sum_{n=1}^\infty a_n\cos(\frac{n\pi x}{l}).
+    \end{equation}
+\end{definition}
+\begin{definition}[Full fourier series]
+    With $a_n,b_n$ given, the full fourier series of $\phi(x)$ on $(-l,l)$ is
+    \begin{equation}
+        \frac{1}{2}a_0 + \sum_{n=1}^\infty [a_n\cos(\frac{n\pi x}{l}) + b_n\sin(\frac{n\pi x}{l})].
+    \end{equation}
+\end{definition}
 
 \section{Diffusion}
 
